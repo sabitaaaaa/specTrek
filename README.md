@@ -1,1 +1,1 @@
-# specTrek
+hello! Welcome to speckTrek.
