@@ -1,0 +1,278 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #1f7a1f; /* dark green */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #b6f27e;
+  letter-spacing: 2px;
+}
+
+.navbar nav a {
+  color: #b6f27e;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #d4ff9e;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('img/himalayas-dark.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: #b6f27e;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #60c060;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background-color: #60c060;
+  border: none;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  color: #121212;
+  cursor: pointer;
+  box-shadow: 0 5px 10px #4f9c4f;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #80e080;
+}
+
+/* Trek Cards */
+.trek-list {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trek-list h2 {
+  color: #b6f27e;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.trek-card {
+  background: #202020;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.trek-card:hover {
+  transform: translateY(-10px);
+}
+
+.trek-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+}
+
+.trek-card:hover img {
+  filter: brightness(1);
+}
+
+.info {
+  padding: 20px;
+  color: #d0d0d0;
+}
+
+.info h3 {
+  margin: 0 0 10px;
+  color: #a3de8f;
+}
+
+.info p {
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+
+.info button {
+  background-color: #60c060;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  color: #121212;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info button:hover {
+  background-color: #80e080;
+}
+
+/* Weather Section */
+.weather-section {
+  background: #1a1a1a;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.weather-section h2 {
+  color: #b6f27e;
+  margin-bottom: 20px;
+}
+
+#weatherInfo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d0d0d0;
+}
+
+/* Map Section */
+.map-section {
+  background: #121212;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#mapContainer {
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #60c060;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+  background: #1f7a1f;
+  color: #121212;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.subscribe-section h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.subscribe-section p {
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Modal Login */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #202020;
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 320px;
+  color: #b6f27e;
+  box-shadow: 0 0 15px #60c060;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  background: #60c060;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #121212;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.modal-content button:hover {
+  background: #80e080;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #b6f27e;
+}
+
+/* Footer */
+footer {
+  background: #121212;
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #7bbf72;
+}
