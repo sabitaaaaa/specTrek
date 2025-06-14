@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpecTrek - Home</title>
+  <link rel="stylesheet" href="demo.css">
+ <script src="demo.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SpecTrek</div>
+    <nav>
+      <a href="#treks">Treks</a>
+      <a href="#weather">Weather</a>
+      <a href="#map">Map</a>
+      <a href="#login" onclick="toggleLogin()">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Discover Nepal, One Trek at a Time</h1>
+    <p>Plan smarter. Trek safer. Explore deeper.</p>
+    <button class="cta-btn">Start Exploring</button>
+  </section>
+
+  <section id="treks" class="trek-list">
+    <h2>Popular Treks</h2>
+    <div class="cards">
+      <div class="trek-card">
+        <img src="Framework\DEMOPROJECT\front\images\Langtang-Valley-Trek-1.webp" alt="Langtang Trek">
+        <div class="info">
+          <h3>Langtang</h3>
+          <p>Moderate | 7 Days</p>
+          <button>See Details</button>
+        </div>
+      </div>
+      <div class="trek-card">
+        <img src="https://source.unsplash.com/280x180/?annapurna,nepal" alt="Annapurna Base Camp">
+        <div class="info">
+          <h3>ABC</h3>
+          <p>Difficult | 12 Days</p>
+          <button>See Details</button>
+        </div>
+      </div>
+      <div class="trek-card">
+        <img src="https://source.unsplash.com/280x180/?forest,trail,nepal" alt="Ama Yangri">
+        <div class="info">
+          <h3>Shivapuri</h3>
+          <p>Easy | 1 Day</p>
+          <button>See Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="weather" class="weather-section">
+    <h2>Current Weather</h2>
+    <div id="weatherInfo">Loading...</div>
+  </section>
+
+  <section id="map" class="map-section">
+    <h2>Interactive Map</h2>
+    <div id="mapContainer" style="height: 400px;"></div>
+  </section>
+
+  <section class="subscribe-section">
+    <h2>Unlock Hidden Trails</h2>
+    <p>Subscribe for Rs. 99 and access real-time alerts, hidden treks, and expert insights.</p>
+    <button class="cta-btn">Subscribe</button>
+  </section>
+
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <span onclick="toggleLogin()" class="close">&times;</span>
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="username">
+      <input type="password" placeholder="Password" id="password">
+      <button onclick="login()">Login</button>
+      <p id="loginMsg"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SpecTrek • Explore Nepal, the Smart Way</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

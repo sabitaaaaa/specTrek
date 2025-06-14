@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 // making another route and change in the place of welcome replace it with required file name
 // Route::get('/view', function () {
 //     return view('home');
@@ -30,3 +31,14 @@ Route::get('/about/{name}', function ($name) {
  Route ::get('/Tours',function(){
     return view('Tours');
  });
+=======
+
+// routes/web.php
+Route::get('/recommend', [TrekRecommendationController::class, 'showForm'])->name('recommendation.form');
+Route::post('/recommend', [TrekRecommendationController::class, 'processForm'])->name('recommendation.process');
+
+
+Route::get('/form', function () {
+    return view('form');
+});
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
