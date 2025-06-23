@@ -6,6 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // making another route and change in the place of welcome replace it with required file name
 // Route::get('/view', function () {
 //     return view('home');
@@ -32,10 +33,16 @@ Route::get('/about/{name}', function ($name) {
     return view('Tours');
  });
 
+// routes/web.php
+Route::get('/recommend', [TrekRecommendationController::class, 'showForm'])->name('recommendation.form');
+Route::post('/recommend', [TrekRecommendationController::class, 'processForm'])->name('recommendation.process');
+
+
 
 Route::get('/form', function () {
     return view('form');
 });
+
 
 
 
@@ -60,3 +67,4 @@ Route::post('/logout', function () {
 use App\Http\Controllers\TrekController;
 
 Route::get('/tours', [TrekController::class, 'showTours']);
+

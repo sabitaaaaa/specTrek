@@ -36,11 +36,14 @@ return [
     ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     'weather' => [
     'key' => env('WEATHER_API_KEY'),
 ],
 
 
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 ];
