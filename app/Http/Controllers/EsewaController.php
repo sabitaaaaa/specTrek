@@ -7,20 +7,27 @@ use App\Models\PremiumPayment;
 
 class EsewaController extends Controller
 {
+    public function pay()
+    {
+        return view('pay'); // This will load resources/views/pay.blade.php
+    }
+
     public function success(Request $request)
     {
-        // Here you handle the payment success logic.
         $amount = $request->input('amt');
         $pid = $request->input('pid');
 
-        // Save payment record
         PremiumPayment::create([
             'transaction_id' => $pid,
             'amount' => $amount,
             'status' => 'success',
         ]);
 
-        // Redirect to see-more page with a success message
         return redirect('/see-more')->with('message', 'Payment successful! Enjoy premium content.');
+    }
+
+    public function failure()
+    {
+        return redirect('/see-more')->with('message', 'Payment failed.');
     }
 }

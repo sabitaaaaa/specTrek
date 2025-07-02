@@ -509,8 +509,8 @@
         </div>
           <div class="fade-overlay"></div>
         </div>
-        <a href="{{ route('see_more') }}" class="see-more-button">See More</a>
-      </div>
+        <button id="see-more-btn" class="see-more-button">See More</button>
+    </div>
     </div>
   </div>
 
