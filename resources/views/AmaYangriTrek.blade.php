@@ -509,7 +509,15 @@
         </div>
           <div class="fade-overlay"></div>
         </div>
-        <a href="{{ route('see_more') }}" class="see-more-button">See More</a>
+        <script async
+        src="https://js.stripe.com/v3/buy-button.js">
+      </script>
+
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RgSCw2EZhQjvwUDvcMN1a8X"
+        publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1"
+      >
+      </stripe-buy-button>
       </div>
     </div>
   </div>
@@ -581,6 +589,7 @@ s
     });
   }
   </script>
+
 </body>
 </html>
 
