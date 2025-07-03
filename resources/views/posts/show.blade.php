@@ -6,7 +6,8 @@
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f6f8;
-        padding: 20px;
+        line-height: 1.6;
+         padding: 0; 
     }
 
     h2 {
@@ -32,7 +33,7 @@
     a.back-link {
         display: inline-block;
         margin-top: 20px;
-        background-color: #007bff;
+        background-color: #027478;
         color: white;
         padding: 8px 12px;
         text-decoration: none;
@@ -40,7 +41,7 @@
     }
 
     a.back-link:hover {
-        background-color: #0056b3;
+        background-color:rgb(5, 74, 77);
     }
 </style>
 

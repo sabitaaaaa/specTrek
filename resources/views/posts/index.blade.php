@@ -6,7 +6,8 @@
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f6f8;
-        padding: 20px;
+        line-height: 1.6;
+         padding: 0; 
     }
 
     h2 {
@@ -16,7 +17,7 @@
 
     a.create-btn {
         display: inline-block;
-        background-color: #007bff;
+        background-color: #027478;
         color: white;
         padding: 8px 12px;
         border-radius: 4px;
@@ -25,15 +26,8 @@
     }
 
     a.create-btn:hover {
-        background-color: #0056b3;
+        background-color:rgb(5, 74, 77);
     }
-
-    .success-message {
-        color: green;
-        margin-bottom: 15px;
-        font-weight: bold;
-    }
-
     .post-item {
         background: #fff;
         padding: 15px;
@@ -63,7 +57,7 @@
         display: inline-block;
         margin-right: 10px;
         text-decoration: none;
-        color: #007bff;
+        color: #027478;
         font-size: 14px;
         border: none;
         background: none;
@@ -91,13 +85,9 @@
     }
 </style>
 
-<h2>All Blog Posts</h2>
+<h2>All Posts</h2>
 
 <a href="{{ route('posts.create') }}" class="create-btn">+ Create New Post</a>
-
-@if(session('success'))
-    <p class="success-message">{{ session('success') }}</p>
-@endif
 
 @foreach($posts as $post)
     <div class="post-item">
@@ -105,7 +95,8 @@
         <p><strong>Author:</strong> {{ $post->author }}</p>
 
         @if($post->image)
-            <img src="{{ asset('uploads/' . $post->image) }}" alt="Post Image">
+            <img src="{{ asset('uploads/' . $post->image) }}" alt="Post Image" style="height: 300px; width: 300px;">
+
         @endif
 
         <p>{{ Str::limit($post->content, 100) }}</p>

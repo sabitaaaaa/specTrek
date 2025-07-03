@@ -1,18 +1,35 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Post</title>
 
-@section('content')
+
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f6f8;
-        padding: 20px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+      padding: 0; 
+    }
+   
+ 
 
     h2 {
         color: #333;
         margin-bottom: 20px;
     }
+    
+
+    /* -------------------form part --------------- */
 
     form {
         background: #fff;
@@ -48,7 +65,7 @@
 
     button {
         margin-top: 20px;
-        background-color: #007bff;
+        background-color: #027478;
         color: white;
         border: none;
         padding: 10px 15px;
@@ -58,7 +75,7 @@
     }
 
     button:hover {
-        background-color: #0056b3;
+        background-color:rgb(5, 74, 77);
     }
 
     .errors {
@@ -70,8 +87,17 @@
         border: 1px solid #f5c2c7;
     }
 </style>
+</head>
 
-<h2>Create New Blog Post</h2>
+
+
+<body>
+ 
+
+  @extends('layouts.app')
+
+@section('content')
+<h2>Share your SpecTrek adventure through the post</h2>
 
 @if ($errors->any())
     <div class="errors">
@@ -101,4 +127,8 @@
     <button type="submit">Publish</button>
 </form>
 
+
 @endsection
+
+</body>
+<html>

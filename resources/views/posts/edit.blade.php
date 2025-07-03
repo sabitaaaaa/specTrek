@@ -6,7 +6,8 @@
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f6f8;
-        padding: 20px;
+       line-height: 1.6;
+         padding: 0; 
     }
 
     h2 {
@@ -48,7 +49,7 @@
 
     button {
         margin-top: 20px;
-        background-color: #28a745;
+        background-color: #027478;
         color: white;
         border: none;
         padding: 10px 15px;
@@ -58,7 +59,7 @@
     }
 
     button:hover {
-        background-color: #218838;
+        background-color:rgb(5, 74, 77);
     }
 
     img {

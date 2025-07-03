@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Minor Blog</title>
+    <title>SpecTrek Blog</title>
     <style>
         /* Reset some default browser styles */
         * {
@@ -10,13 +10,57 @@
             padding: 0;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9fafb;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
+       body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         background-color: #f9fafb;
+         color: #333;
+         line-height: 1.6;
+         padding: 0; 
+}
+        /* ----------------navbar ---------------------- */
+.navbar {
+    background-color: #027478;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 80px;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
 
         h1 {
             text-align: center;
@@ -58,7 +102,19 @@
     </style>
 </head>
 <body>
-    <h1>Minor Blog Website</h1>
+    <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Emergency</a></li>
+      <li><a href="#">Tour</a></li>
+      <li><a href="#">User</a></li>
+      <li><a href="#" class="btn">Login</a></li>
+      <li><a href="#" class="btn">Signup</a></li>
+    </ul>
+  </nav>
+    <h1>SpecTrek Blog</h1>
     <hr>
     <div class="container">
         @yield('content')
