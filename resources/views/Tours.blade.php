@@ -9,9 +9,14 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+<nav class="navbar navbar-expand-lg px-4 !important text-white" style="background-color: #027478;">
+  <style>
+  .navbar .nav-link {
+    color: white !important;
+  }
+</style>
   <a class="navbar-brand" href="#">
-   <img src="{{ asset('images/Logo-spectrek.png') }}" alt="SpecTrek" style="height: 50px;">
+   <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 75px; width: 100px;">
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
@@ -25,6 +30,8 @@
       <li class="nav-item mx-2">
         <a class="nav-link" href="#">Tours</a>
       </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link" href="#">User</a>
       <li class="nav-item mx-2">
         <a class="nav-link" href="#">Login</a>
       </li>
@@ -40,28 +47,49 @@
       <div class="container mt-4">
     <div class="row">
             <h5>Filter by Price</h5>
-            <input type="range" class="form-range custom-slider" min="0" max="3" step="1" id="priceRange">
-            <div class="d-flex justify-content-between mt-2 px-1 number-line">
-                <span>5K</span>
-                <span>25K</span>
-                <span>45K</span>
-                <span>65K</span>
-            </div>
 
-            <p class="mt-2">Selected Price: <span id="valueDisplay">5000</span></p>
+  <form action="{{ route('recommendation') }}" method="GET" id="priceForm">
+          <input type="hidden" name="price" id="priceInput" value="5000">
+          <input type="range" class="form-range custom-slider" min="0" max="4" step="1" id="priceRange">
+      <div class="d-flex justify-content-between mt-2 px-1 number-line">
+                  <span>5K</span>
+                  <span>25K</span>
+                  <span>45K</span>
+                  <span>65K</span>
+                  <span>90K</span>
+    </div>
+    <p class="mt-2">Selected Price: <span id="valueDisplay">5000</span></p>
+    
+</form>
     </div>
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const prices = [5000, 25000, 45000, 65000];
-        const range = document.getElementById('priceRange');
-        const display = document.getElementById('valueDisplay');
+   document.addEventListener('DOMContentLoaded', function () {
+    const prices = [5000, 25000, 45000, 65000,90000];
+    const range = document.getElementById('priceRange');
+    const display = document.getElementById('valueDisplay');
 
-        range.addEventListener('input', function () {
-            display.textContent = prices[this.value];
+    range.addEventListener('input', function () {
+        const selectedPrice = prices[this.value];
+        display.textContent = selectedPrice;
+
+        const cards = document.querySelectorAll('.col[data-price]');
+
+        cards.forEach(card => {
+            const cardPrice = parseInt(card.getAttribute('data-price'), 10);
+            if (cardPrice <= selectedPrice) {
+                card.style.display = '';  // reset display to default (show)
+            } else {
+                card.style.display = 'none';  // hide
+            }
         });
     });
+
+    // Trigger input event on page load to apply filter immediately
+    range.dispatchEvent(new Event('input'));
+});
+
 </script>
 </div>
     
@@ -69,7 +97,7 @@
       <div class="row row-cols-1 row-cols-md-3 g-4">
 
       
-        <div class="col">
+        <div class="col" data-price="65000">
           <div class="card h-100">
            <img src="{{ asset('images/Annapurna.jpeg') }}" alt="SpecTrek" style="height: 115px;">
             <div class="card-body">
@@ -78,9 +106,8 @@
             </div>
           </div>
         </div>
-
     
-        <div class="col">
+        <div class="col" data-price="65000">
           <div class="card h-100">
             <img src="{{ asset('images/SheyPhoksundo.jpeg') }}" alt="SpecTrek" style="height: 115px;">
             <div class="card-body">
@@ -90,7 +117,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col"data-price="45000">
           <div class="card h-100">
             <img src="{{ asset('images/Langtang.jpeg') }}" alt="SpecTrek" style="height: 115px;">
             <div class="card-body">
@@ -100,7 +127,7 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col" data-price="25000">
           <div class="card h-100">
             <img src="{{ asset('images/Amayangri.jpeg') }}" alt="SpecTrek" style="height: 115px;">
             <div class="card-body">
@@ -110,12 +137,22 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col" data-price="5000">
           <div class="card h-100">
             <img src="{{ asset('images/Shivapuri.jpg') }}" alt="SpecTrek" style="height: 115px;">
             <div class="card-body">
               <h5 class="card-title">Shivapuri</h5>
               <p class="card-text">Starts at NPR 5000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-price="90000">
+          <div class="card h-100">
+            <img src="{{ asset('images/manaslu.jpg') }}" alt="SpecTrek" style="height: 115px;">
+            <div class="card-body">
+              <h5 class="card-title">Manaslu</h5>
+              <p class="card-text">Starts at NPR 90000</p>
             </div>
           </div>
         </div>

@@ -1,16 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\EsewaController;
->>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\RecommendationController;
+use App\Http\Controllers\TrekController;
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
 // making another route and change in the place of welcome replace it with required file name
 // Route::get('/view', function () {
 //     return view('home');
@@ -36,18 +37,33 @@ Route::get('/about/{name}', function ($name) {
  Route ::get('/Tours',function(){
     return view('Tours');
  });
-=======
 
+Route::get('/home', function () {
+    return view('home');
+});
 // routes/web.php
 Route::get('/recommend', [TrekRecommendationController::class, 'showForm'])->name('recommendation.form');
 Route::post('/recommend', [TrekRecommendationController::class, 'processForm'])->name('recommendation.process');
+
+// ====API
+Route::get('/api/weather-places', [WeatherController::class, 'fetchAllWeatherData'])->name('weather.places');
+Route::get('/weathermap', function () {
+    return view('weathermap');
+});
+Route::get('/weather/test-all', [WeatherController::class, 'fetchAllWeatherData']);
+
+
+//TOURS PAGE ROUTE
+Route ::get('/Tours',function(){
+    return view('Tours');
+ })->name('tours');
+// use App\Http\Controllers\TrekController;
+Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
 
 
 Route::get('/form', function () {
     return view('form');
 });
->>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
-=======
 
 Route::get('/AmaYangriTrek', function () {
     return view('AmaYangriTrek');
@@ -69,4 +85,26 @@ Route::get('/see-more', function() {
 Route::get('/esewa-pay', [EsewaController::class, 'pay'])->name('esewa.pay');
 Route::get('/esewa-success', [EsewaController::class, 'success']);
 Route::get('/esewa-failure', [EsewaController::class, 'failure']);
->>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+
+
+
+Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
+
+// Route::get('/recommend', [RecommendationController::class, 'showForm'])->name('recommend.form');
+// Route::post('/recommend', [RecommendationController::class, 'processForm'])->name('recommend.process');
+
+
+
+// Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
+// Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
+
+
+//RECOMENDATION
+Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
+Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
+Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
+
+
+
+
+
