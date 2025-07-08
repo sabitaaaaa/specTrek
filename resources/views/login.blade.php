@@ -147,7 +147,7 @@
         </form>
 
         <p class="mt-3 text-center text-muted">
-          Don't have an account? <a href="/register">Sign up here</a>
+          Still, Don't have an account? <a href="/register">Sign up here</a>
         </p>
       </div>
     </div>
