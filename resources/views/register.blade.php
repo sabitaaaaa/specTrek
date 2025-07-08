@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html> <!-- Declares the document type and version (HTML5) -->
 <html lang="en"> <!-- Begins the HTML document and sets the language to English -->
 <head>
@@ -40,19 +38,16 @@
       position: relative;
     }
 
-   
     .form-container {
-  width: 100%;
-  max-width: 420px;
-  padding: 1rem 1.5rem; /* reduced top-bottom padding */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  background-color: #fdfdfd;
-}
-
+      width: 100%;
+      max-width: 420px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      background-color: #fdfdfd;
+    }
 
     .form-header {
-      /* Header section of the form */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -62,31 +57,30 @@
     }
 
     .form-header img {
-      height: 45px; /* Logo image size */
+      height: 45px;
     }
 
     .form-header .brand {
-      font-size: 24px; /* Brand text styling */
+      font-size: 24px;
       font-weight: bold;
       color: #28a745;
     }
 
     .form-header .tagline {
-      font-size: 14px; /* Tagline text styling */
+      font-size: 14px;
       color: #6c757d;
     }
 
     .form-control {
-      border-radius: 8px; /* Rounded input fields */
+      border-radius: 8px;
     }
 
     .form-control:focus {
       box-shadow: none;
-      border-color: #28a745; /* Green border when focused */
+      border-color: #28a745;
     }
 
     .btn-primary {
-      /* Green button styling */
       background-color: #28a745;
       border: none;
       border-radius: 8px;
@@ -97,49 +91,48 @@
       margin: 0 auto;
       transition: all 0.3s ease;
       box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
-    } 
-    .error {
-  font-size: 12px;
-  color: red;
-}
-
+    }
 
     .btn-primary:hover {
-      background-color: #218838; /* Darker green on hover */
-      transform: translateY(-2px); /* Lift button on hover */
+      background-color: #218838;
+      transform: translateY(-2px);
       box-shadow: 0 6px 12px rgba(33, 136, 56, 0.4);
     }
 
     .text-muted a {
-      color: #28a745; /* Link color */
+      color: #28a745;
       text-decoration: none;
     }
 
     .text-muted a:hover {
       text-decoration: underline;
     }
+
+    .error {
+      font-size: 12px;
+      color: red;
+    }
   </style>
 </head>
 <body>
-  <div class="row g-0"> 
-    
+  <div class="row g-0">
     <!-- Left side background image (hidden on small screens) -->
     <div class="col-md-6 split-left d-none d-md-block"></div>
 
     <!-- Right side form area -->
-    <div class="col-md-6 split-right"> 
-      <div class="form-container"> <!-- Box that holds the form -->
-        
+    <div class="col-md-6 split-right">
+      <div class="form-container">
+
         <!-- Form header section with logo and brand -->
-        <div class="form-header"> 
-          <img src="{{ asset('images/logoo.jpg') }}" alt="Logo"> <!-- Logo image -->
-          <div class="brand">SpecTrek</div> <!-- Brand name -->
-          <div class="tagline">Explore safely, trek freely</div> <!-- Tagline -->
+        <div class="form-header">
+          <img src="{{ asset('images/logoo.jpg') }}" alt="Logo">
+          <div class="brand">SpecTrek</div>
+          <div class="tagline">Explore safely, trek freely</div>
         </div>
 
         <!-- Registration form -->
-        <form method="POST" action="/register"> <!-- Sends POST request to /register -->
-          @csrf <!-- Blade directive to insert CSRF token for form security -->
+        <form method="POST" action="/register">
+          @csrf
 
           <!-- Full Name input -->
           <div class="mb-3">
@@ -155,26 +148,17 @@
 
           <!-- Password input -->
           <div class="mb-3">
-  <label class="form-label">Password</label>
-  <input type="password" id="password" name="password" class="form-control" required />
-  <div class="error" id="password-error"></div>
-</div>
+            <label class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required />
+            <div class="error" id="password-error"></div>
+          </div>
 
-<div class="mb-3">
-  <label class="form-label">Confirm Password</label>
-  <input type="password" id="confirm-password" name="password_confirmation" class="form-control" required />
-  <div class="error" id="confirm-password-error"></div>
-</div>
-
-        <!-- Role Dropdown -->
-<div class="mb-3">
-  <label class="form-label">Register As</label>
-  <select name="role" class="form-control" required>
-    <option value="">-- Select Role --</option>
-    <option value="admin">Admin</option>
-    <option value="user">User</option>
-  </select>
-</div>
+          <!-- Confirm Password input -->
+          <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" id="confirm-password" name="password_confirmation" class="form-control" required />
+            <div class="error" id="confirm-password-error"></div>
+          </div>
 
           <!-- Submit button -->
           <button class="btn btn-primary">Sign Up</button>
@@ -187,56 +171,51 @@
 
         <!-- Laravel error display if validation fails -->
         @if ($errors->any())
-        <div class="alert alert-danger mt-3">
-          <ul class="mb-0">
-            @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li> <!-- Each error listed -->
-            @endforeach
-          </ul>
-        </div>
+          <div class="alert alert-danger mt-3">
+            <ul class="mb-0">
+              @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
         @endif
 
-      </div> <!-- End form-container -->
-    </div> <!-- End right split -->
-  </div> <!-- End row -->
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript for password validation -->
-  
   <script>
-  const form = document.querySelector('form');
-  const password = document.getElementById('password');
-  const confirmPassword = document.getElementById('confirm-password');
-  const passwordError = document.getElementById('password-error');
-  const confirmPasswordError = document.getElementById('confirm-password-error');
+    const form = document.querySelector('form');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm-password');
+    const passwordError = document.getElementById('password-error');
+    const confirmPasswordError = document.getElementById('confirm-password-error');
 
-  form.addEventListener('submit', function (e) {
-    // Reset previous errors
-    passwordError.textContent = '';
-    confirmPasswordError.textContent = '';
+    form.addEventListener('submit', function (e) {
+      passwordError.textContent = '';
+      confirmPasswordError.textContent = '';
 
-    const passwordValue = password.value;
-    const confirmValue = confirmPassword.value;
-    let valid = true;
+      const passwordValue = password.value;
+      const confirmValue = confirmPassword.value;
+      let valid = true;
 
-    // Password strength regex
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+      const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
-    if (!passwordRegex.test(passwordValue)) {
-      passwordError.textContent = 'Password must be 8+ chars, include 1 uppercase, 1 lowercase & 1 number';
-      valid = false;
-    }
+      if (!passwordRegex.test(passwordValue)) {
+        passwordError.textContent = 'Password must be 8+ chars, include 1 uppercase, 1 lowercase & 1 number';
+        valid = false;
+      }
 
-    if (passwordValue !== confirmValue) {
-      confirmPasswordError.textContent = 'Passwords do not match.';
-      valid = false;
-    }
+      if (passwordValue !== confirmValue) {
+        confirmPasswordError.textContent = 'Passwords do not match.';
+        valid = false;
+      }
 
-    if (!valid) {
-      e.preventDefault();
-    }
-  });
-</script>
-
-
+      if (!valid) {
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>

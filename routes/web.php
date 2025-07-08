@@ -1,70 +1,97 @@
+
+
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TrekController;
+use App\Http\Controllers\Admin\UserControllers;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;  
+use App\Http\Controllers\AdminUserController; 
+
+
+Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
+
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home'); // Make sure home.blade.php exists
 });
-
-
-// making another route and change in the place of welcome replace it with required file name
-// Route::get('/view', function () {
-//     return view('home');
-// });
-
-
-//Short cut of putting a route
-// Route::view('/home','home');
-// Route::view("/about","about");
-
-
-Route::get('/about', function () {
-     return view('about');
- });
-// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera 
-
-// suppose euta certain naam ko manche ko appear huna paryore data the we should:
-Route::get('/about/{name}', function ($name) {
-    echo "$name";//first way to show name
-     return view('about',["name"=>$name]);//second way to show name
- });
- Route::get('/weather', [WeatherController::class, 'getWeather']);
- Route ::get('/Tours',function(){
-    return view('Tours');
- });
-
-// routes/web.php
-Route::get('/recommend', [TrekRecommendationController::class, 'showForm'])->name('recommendation.form');
-Route::post('/recommend', [TrekRecommendationController::class, 'processForm'])->name('recommendation.process');
-
-
 
 Route::get('/form', function () {
     return view('form');
 });
 
-
-
-
-use App\Http\Controllers\AuthController;
-
 Route::get('/register', [AuthController::class, 'showRegister']);
 Route::post('/register', [AuthController::class, 'register']);
 
-Route::get('/login', [AuthController::class, 'showLogin']);
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
 
 Route::post('/logout', function () {
     Auth::logout();
     return redirect('/login');
+})->name('logout');
+
+/*
+|--------------------------------------------------------------------------
+| Authenticated Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware(['auth'])->group(function () {
+    
+    // User Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
+
+    // Admin Dashboard - by checking email (sabita23@gmail.com)
+    Route::get('/admin-dashboard', function () {
+        if (Auth::user()->email !== 'sabita23@gmail.com') {
+            abort(403, 'Unauthorized');
+        }
+
+        $userCount = User::count();
+        return view('admin-dashboard', compact('userCount'));
+    })->name('admin.dashboard');
+
+    // Trek view
+    Route::get('/tours', [TrekController::class, 'showTours']);
+
+    // Admin Panel Routes
+    Route::prefix('admin')->group(function () {
+        Route::get('/dashboard', [UserControllers::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/users', [UserControllers::class, 'index'])->name('admin.users.index');
+        Route::get('/users/create', [UserControllers::class, 'create'])->name('admin.users.create');
+        Route::post('/users', [UserControllers::class, 'store'])->name('admin.users.store');
+        Route::get('/users/{user}/edit', [UserControllers::class, 'edit'])->name('admin.users.edit');
+        Route::put('/users/{user}', [UserControllers::class, 'update'])->name('admin.users.update');
+        Route::delete('/users/{user}', [UserControllers::class, 'destroy'])->name('admin.users.destroy');
+    });
 });
 
 
-use App\Http\Controllers\TrekController;
+Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
 
-Route::get('/tours', [TrekController::class, 'showTours']);
+
+
+
+// Route::middleware(['auth', 'role:Admin'])->prefix('admin')->group(function () {
+//     Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
+//     Route::get('/users/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.users.edit');
+//     Route::put('/users/{user}', [AdminUserController::class, 'update'])->name('admin.users.update');
+//     Route::delete('/users/{user}', [AdminUserController::class, 'destroy'])->name('admin.users.destroy');
+// }); 
+
+
+
+Route::resource('/admin/users', UserController::class);
+
+
+
+
 

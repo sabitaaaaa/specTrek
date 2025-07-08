@@ -1,12 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 abstract class Controller
 {
-<<<<<<< HEAD
-  
-=======
-    //
->>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+
+public function adminDashboard()
+{
+    $userCount = User::count(); 
+
+    return view('admin-dashboard', ['userCount' => $userCount]);
 }
+
+} 
+
+
+

@@ -1,6 +1,6 @@
 <?php
 
-    namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Notifications\LoginNotification;
@@ -37,18 +37,26 @@ class AuthController extends Controller
         return view('login');
     }
 
-    public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
+ 
 
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
-            $user->notify(new LoginNotification());
+
+public function login(Request $request)
+{
+    $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt($credentials)) {
+        $user = Auth::user();
+        $user->notify(new LoginNotification());
+
+        //  Fix: compare to actual email, not 'admin'
+        if (strtolower($user->email) === 'sabita23@gmail.com') {
+            return redirect('/admin-dashboard');
+        } else {
             return redirect('/dashboard');
         }
-
-        return redirect()->back()->with('error', 'Invalid login credentials');
     }
+
+    return redirect()->back()->with('error', 'Invalid login credentials');
 }
 
-
+    }
