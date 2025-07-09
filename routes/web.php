@@ -91,6 +91,7 @@ Route::get('/admin/users/create', [UserController::class, 'create'])->name('user
 
 Route::resource('/admin/users', UserController::class);
 
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 

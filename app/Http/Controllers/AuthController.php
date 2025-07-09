@@ -6,14 +6,22 @@ use App\Models\User;
 use App\Notifications\LoginNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Hash; 
+
 
 class AuthController extends Controller
 {
     public function showRegister()
     {
         return view('register');
-    }
+    } 
+
+public function logout()
+{
+    Auth::logout();
+    return redirect('/login'); // Redirects to login page
+}
+
 
     public function register(Request $request)
     {
@@ -53,8 +61,10 @@ public function login(Request $request)
             return redirect('/admin-dashboard');
         } else {
             return redirect('/dashboard');
-        }
-    }
+        } 
+
+        
+    } 
 
     return redirect()->back()->with('error', 'Invalid login credentials');
 }
