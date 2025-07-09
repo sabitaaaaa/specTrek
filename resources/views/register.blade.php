@@ -1,13 +1,12 @@
-<!DOCTYPE html> <!-- Declares the document type and version (HTML5) -->
-<html lang="en"> <!-- Begins the HTML document and sets the language to English -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" /> <!-- Sets the character encoding to UTF-8 -->
-  <title>SpecTrek | Register</title> <!-- Sets the title shown on the browser tab -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures responsiveness on mobile devices -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" /> <!-- Links Bootstrap CSS -->
+  <meta charset="UTF-8" />
+  <title>SpecTrek | Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
-    /* Basic styling for page layout */
     html, body {
       height: 100%;
       margin: 0;
@@ -15,7 +14,7 @@
     }
 
     .row {
-      height: 100vh; /* Full height row */
+      height: 100vh;
       margin: 0;
     }
 
@@ -23,14 +22,7 @@
       padding: 0;
     }
 
-    .split-left {
-      /* Left side background image */
-      background: url('https://images.unsplash.com/photo-1608897013039-91a5cd1d598f?auto=format&fit=crop&w=1350&q=80') no-repeat center center;
-      background-size: cover;
-    }
-
     .split-right {
-      /* Right side with the form */
       background-color: #ffffff;
       display: flex;
       align-items: center;
@@ -41,7 +33,7 @@
     .form-container {
       width: 100%;
       max-width: 420px;
-      padding: 1rem 1.5rem;
+      padding: 2rem;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
       background-color: #fdfdfd;
@@ -57,7 +49,10 @@
     }
 
     .form-header img {
-      height: 45px;
+      height: 60px;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .form-header .brand {
@@ -86,7 +81,6 @@
       border-radius: 8px;
       padding: 8px 24px;
       font-size: 14px;
-      width: auto;
       display: block;
       margin: 0 auto;
       transition: all 0.3s ease;
@@ -114,62 +108,51 @@
     }
   </style>
 </head>
+
 <body>
   <div class="row g-0">
-    <!-- Left side background image (hidden on small screens) -->
     <div class="col-md-6 split-left d-none d-md-block"></div>
 
-    <!-- Right side form area -->
     <div class="col-md-6 split-right">
       <div class="form-container">
-
-        <!-- Form header section with logo and brand -->
         <div class="form-header">
           <img src="{{ asset('images/logoo.jpg') }}" alt="Logo">
           <div class="brand">SpecTrek</div>
           <div class="tagline">Explore safely, trek freely</div>
         </div>
 
-        <!-- Registration form -->
         <form method="POST" action="/register">
           @csrf
 
-          <!-- Full Name input -->
           <div class="mb-3">
             <label class="form-label">Full Name</label>
             <input type="text" name="name" class="form-control" required />
           </div>
 
-          <!-- Email input -->
           <div class="mb-3">
             <label class="form-label">Email</label>
             <input type="email" name="email" class="form-control" required />
           </div>
 
-          <!-- Password input -->
           <div class="mb-3">
             <label class="form-label">Password</label>
             <input type="password" id="password" name="password" class="form-control" required />
             <div class="error" id="password-error"></div>
           </div>
 
-          <!-- Confirm Password input -->
           <div class="mb-3">
             <label class="form-label">Confirm Password</label>
             <input type="password" id="confirm-password" name="password_confirmation" class="form-control" required />
             <div class="error" id="confirm-password-error"></div>
           </div>
 
-          <!-- Submit button -->
           <button class="btn btn-primary">Sign Up</button>
         </form>
 
-        <!-- Link to login page -->
         <p class="mt-3 text-center text-muted">
           Already registered? <a href="/login">Login</a>
         </p>
 
-        <!-- Laravel error display if validation fails -->
         @if ($errors->any())
           <div class="alert alert-danger mt-3">
             <ul class="mb-0">
@@ -179,12 +162,10 @@
             </ul>
           </div>
         @endif
-
       </div>
     </div>
   </div>
 
-  <!-- JavaScript for password validation -->
   <script>
     const form = document.querySelector('form');
     const password = document.getElementById('password');
