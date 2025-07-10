@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>SpecTrek Navbar</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="{{ asset('js/Price-range.js') }}"></script>
   
 </head>
 <body>
@@ -32,6 +33,7 @@
       </li>
       <li class="nav-item mx-2">
         <a class="nav-link" href="#">User</a>
+</li>
       <li class="nav-item mx-2">
         <a class="nav-link" href="#">Login</a>
       </li>
@@ -63,7 +65,6 @@
 </form>
     </div>
 </div>
-
 <script>
    document.addEventListener('DOMContentLoaded', function () {
     const prices = [5000, 25000, 45000, 65000,90000];
@@ -88,15 +89,11 @@
 
     // Trigger input event on page load to apply filter immediately
     range.dispatchEvent(new Event('input'));
-});
-
+}); 
 </script>
-</div>
-    
-    <div class="col-md-9">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
 
-      
+   <div class="col-md-9">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col" data-price="65000">
           <div class="card h-100">
            <img src="{{ asset('images/Annapurna.jpeg') }}" alt="SpecTrek" style="height: 115px;">
@@ -161,8 +158,5 @@
 
   </div>
 </div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
