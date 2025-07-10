@@ -509,8 +509,13 @@
         </div>
           <div class="fade-overlay"></div>
         </div>
-        <button id="see-more-btn" class="see-more-button">See More</button>
-    </div>
+        <script async
+        src="https://js.stripe.com/v3/buy-button.js">
+      </script>
+
+    <button id="see-more-btn" class="see-more-button">See More</button>
+
+      </div>
     </div>
   </div>
 
@@ -518,6 +523,7 @@
     <h1> "Here is a Normal map for AmaYangri" </h1>
     <img src="{{ asset('images/amap.jpg') }}">
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+  </div>
     <footer class="footer">
       <div class="footer-container">
         <p>&copy; 2025 AmaYangri Trek. All rights reserved.</p>
@@ -581,6 +587,7 @@ s
     });
   }
   </script>
+
 </body>
 </html>
 
