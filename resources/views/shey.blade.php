@@ -528,7 +528,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
-        <p>&copy; 2025 AmaYangri Trek. All rights reserved.</p>
+        <p>&copy;All rights reserved.</p>
         <p>Developed by SpecTrek Team</p>
       </div>
     </footer>
