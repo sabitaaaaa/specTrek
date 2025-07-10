@@ -105,6 +105,8 @@ Route::post('/recommend', [TrekController::class, 'processForm'])->name('recomme
 Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 
 
+//TOURS PRICE RANGE
+Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
 
 
 
