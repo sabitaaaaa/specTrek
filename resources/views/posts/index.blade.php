@@ -85,7 +85,7 @@
     }
 </style>
 
-<h2>All Posts</h2>
+<h2> All Posts</h2>
 
 <a href="{{ route('posts.create') }}" class="create-btn">+ Create New Post</a>
 

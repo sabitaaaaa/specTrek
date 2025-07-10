@@ -97,7 +97,7 @@
   @extends('layouts.app')
 
 @section('content')
-<h2>Share your SpecTrek adventure through the post</h2>
+<h2>Share your SpecTrek adventure</h2>
 
 @if ($errors->any())
     <div class="errors">
