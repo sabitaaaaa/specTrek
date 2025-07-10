@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> friend-code
 {
     "$schema": "https://getcomposer.org/schema.json",
     "name": "laravel/laravel",
@@ -8,8 +13,12 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^12.0",
+<<<<<<< HEAD
         "laravel/tinker": "^2.10.1",
         "stripe/stripe-php": "^17.4"
+=======
+        "laravel/tinker": "^2.10.1"
+>>>>>>> friend-code
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -49,8 +58,12 @@
             "@php artisan migrate --graceful --ansi"
         ],
         "dev": [
+<<<<<<< HEAD
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+=======
+            "Composer\\Config::disableProcessTimeout"
+>>>>>>> friend-code
         ],
         "test": [
             "@php artisan config:clear --ansi",
@@ -73,4 +86,8 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> friend-code
