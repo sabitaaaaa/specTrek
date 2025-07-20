@@ -10,46 +10,69 @@ class TrekController extends Controller
 {
     public function showForm()
     {
-        return view('recommend.form');
+        $userPreferences = null;
+        if (auth()->check()) {
+            $userPreferences = UserPreference::where('user_id', auth()->id())->first();
+        }
+        return view('recommend.form', compact('userPreferences'));
     }
 
     public function processForm(Request $request)
     {
-        // Save user preferences
-        UserPreference::create([
-            'user_id' => auth()->check() ? auth()->id() : null,
-            'budget' => $request->price_max ?? 0,
-            'available_days' => $request->duration_days ?? 0,
-            'difficulty_pref' => $request->difficulty,
-            'interest_tags' => $request->region,
-            'season_pref' => $request->best_season,
-            'expectation_notes' => null,
-        ]);
-
-        // Build query with filters
-        $query = Trek::query();
-
-        if ($request->filled('price_min')) {
-            $query->where('price', '>=', $request->price_min);
+        if (auth()->check()) {
+            UserPreference::updateOrCreate(
+                ['user_id' => auth()->id()],
+                [
+                    'budget' => $request->price_max,
+                    'available_days' => $request->duration_days,
+                    'difficulty_pref' => $request->difficulty,
+                    'interest_tags' => $request->region,
+                    'season_pref' => $request->best_season,
+                    'expectation_notes' => null,
+                ]
+            );
         }
-        if ($request->filled('price_max')) {
-            $query->where('price', '<=', $request->price_max);
+
+        // Strict query with all filters
+        $strictQuery = Trek::query();
+
+        if ($request->filled('price_min') && $request->filled('price_max')) {
+            $strictQuery->whereBetween('price', [$request->price_min, $request->price_max]);
         }
         if ($request->filled('duration_days')) {
-            $query->where('duration_days', '<=', $request->duration_days);
+            $strictQuery->where('duration_days', '<=', $request->duration_days);
         }
         if ($request->filled('best_season')) {
-            $query->where('best_season', $request->best_season);
+            $strictQuery->where('best_season', $request->best_season);
         }
         if ($request->filled('difficulty')) {
-            $query->where('difficulty', $request->difficulty);
+            $strictQuery->where('difficulty', $request->difficulty);
         }
         if ($request->filled('region')) {
-            $query->where('region', $request->region);
+            $strictQuery->where('region', $request->region);
+        }
+        if ($request->filled('group_size')) {
+            $strictQuery->where('group_size', $request->group_size);
+        }
+        if ($request->filled('accommodation')) {
+            $strictQuery->where('accommodation', $request->accommodation);
         }
 
-        $treks = $query->get();
+        $recommendedTreks = $strictQuery->get();
 
-        return view('recommend.results', compact('treks'));
+        // Fallback query
+        $fallbackQuery = Trek::query();
+        if ($request->filled('price_max')) {
+            $fallbackQuery->where('price', '<=', $request->price_max);
+        }
+        if ($recommendedTreks->isNotEmpty()) {
+            $fallbackQuery->whereNotIn('id', $recommendedTreks->pluck('id'));
+        }
+        $otherTreks = $fallbackQuery->get();
+
+        return view('recommend.results', [
+            'recommendedTreks' => $recommendedTreks->groupBy('name'),
+            'otherTreks' => $otherTreks->groupBy('name'),
+        ]);
     }
 }

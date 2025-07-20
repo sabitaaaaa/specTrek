@@ -15,8 +15,12 @@ class UserPreference extends Model
     'season_pref',
     'expectation_notes',
 ];
-
+public function user()
+{
+    return $this->belongsTo(User::class);
 }
+}
+
 
 
 
