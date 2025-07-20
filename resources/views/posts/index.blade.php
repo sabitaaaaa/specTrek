@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="icon" href="{{ asset('images/logo.png') }}">
 
 <style>
     body {
@@ -77,12 +78,35 @@
     .post-actions form button {
         color: red;
     }
-    img {
-        max-width: 100px;
-        height: auto;
-        border-radius: 6px;
-        margin-top: 10px;
-    }
+    .post-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+/*-------------------- arrow button ------------------ */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 22px;
+  background-color: #027478;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #035e61;
+  transform: scale(1.1);
+}
 </style>
 
 <h2> All Posts</h2>
@@ -95,7 +119,7 @@
         <p><strong>Author:</strong> {{ $post->author }}</p>
 
         @if($post->image)
-            <img src="{{ asset('uploads/' . $post->image) }}" alt="Post Image" style="height: 300px; width: 300px;">
+            <img src="{{ asset('uploads/' . $post->image) }}" alt="Post Image">
 
         @endif
 
@@ -111,6 +135,26 @@
             </form>
         </div>
     </div>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+<!-- ----------------arrow script ------ -->
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  </script>
 @endforeach
 
 @endsection

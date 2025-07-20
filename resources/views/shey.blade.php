@@ -525,15 +525,19 @@
 
 
 
-    <!-- Footer -->
+    
+  </main>
+<!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
+<<<<<<< Updated upstream
         <p>&copy;All rights reserved.</p>
+=======
+        <p>&copy; All rights reserved.</p>
+>>>>>>> Stashed changes
         <p>Developed by SpecTrek Team</p>
       </div>
     </footer>
-  </main>
-
 
 
   <script>

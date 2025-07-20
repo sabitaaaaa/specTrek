@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="icon" href="{{ asset('images/logo.png') }}">
 
 <style>
     body {
@@ -62,11 +63,18 @@
         background-color:rgb(5, 74, 77);
     }
 
-    img {
-        margin-top: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
+  img {
+    max-width: 400px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 10px;
+    object-fit: contain;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
     .errors {
         background: #f8d7da;

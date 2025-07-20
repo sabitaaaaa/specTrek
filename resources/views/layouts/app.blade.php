@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>SpecTrek Blog</title>
+    <link rel="icon" href="{{ asset('images/logo.png') }}">
+
     <style>
         /* Reset some default browser styles */
         * {
