@@ -21,7 +21,7 @@
 
         <div class="mb-3">
             <label for="price_max" class="form-label">Maximum Price</label>
-            <input type="number" name="price_max" id="price_max" class="form-control" placeholder="Enter maximum price"max="0" />
+            <input type="number" name="price_max" id="price_max" class="form-control" placeholder="Enter maximum price" max="90000" min="0" />
         </div>
 
         <div class="mb-3">
@@ -55,10 +55,7 @@
                 <option value="Helambu">Helambu</option>
                 <option value="Manaslu">Manaslu</option>
             </select>
-
         </div>
-
-        
 
         <div class="mb-3">
             <label for="group_size" class="form-label">Group Size</label>
@@ -77,16 +74,14 @@
                 <option value="Basic">Basic</option>
                 <option value="Standard">Standard</option>
                 <option value="Premium">Premium</option>
+                <option value="Tea House">Tea House</option>
             </select>
         </div>
 
-       <div class="d-flex justify-content-between gap-2">
-  <button type="submit" class="btn btn-primary w-50">Find Treks</button>
-  <button type="reset" class="btn btn-secondary w-50">Clear</button>
-</div>
-
-
-
+        <div class="d-flex justify-content-between gap-2">
+            <button type="submit" class="btn btn-primary w-50">Find Treks</button>
+            <button type="reset" class="btn btn-secondary w-50">Clear</button>
+        </div>
     </form>
 </div>
 </body>
