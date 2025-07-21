@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.log
 .DS_Store
 .env
@@ -16,6 +17,25 @@
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
+=======
+/.phpunit.cache
+=======
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
 /node_modules
 /public/build
 /public/hot
@@ -24,10 +44,13 @@
 /storage/pail
 /vendor
 <<<<<<< HEAD
+<<<<<<< HEAD
 Homestead.json
 Homestead.yaml
 Thumbs.db
 =======
+=======
+>>>>>>> feature/trekking-mapp
 .env
 .env.backup
 .env.production
@@ -44,9 +67,17 @@ yarn-error.log
 /.vscode
 /.zed
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 
  
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 >>>>>>> feature-admin
+=======
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp

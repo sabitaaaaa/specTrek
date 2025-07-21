@@ -488,6 +488,7 @@
         </div>
           <div class="fade-overlay"></div>
         </div>
+<<<<<<< HEAD
         <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
@@ -497,6 +498,10 @@
         publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1"
       >
       </stripe-buy-button>      </div>
+=======
+        <button id="see-more-btn" class="see-more-button">See More</button>
+      </div>
+>>>>>>> feature/trekking-mapp
     </div>
   </div>
 
@@ -504,7 +509,10 @@
     <h1> "Here is a Normal map for Shivapuri" </h1>
     <img src="{{ asset('images/smap.jpg') }}">
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+<<<<<<< HEAD
   </div>
+=======
+>>>>>>> feature/trekking-mapp
     <footer class="footer">
       <div class="footer-container">
         <p>&copy; 2025 Shivapuri Trek. All rights reserved.</p>

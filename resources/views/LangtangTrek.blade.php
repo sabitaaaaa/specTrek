@@ -26,7 +26,11 @@
     position: relative;
     z-index: 1000;
     border-bottom: 2px solid #ddd; /* horizontal line */
+<<<<<<< HEAD
     }
+=======
+}
+>>>>>>> feature/trekking-mapp
 
     .navbar-brand img {
       height: 120px;
@@ -102,6 +106,7 @@
       font-size: 21px;
     }
 
+<<<<<<< HEAD
     /* --------to fit the contents in itienary--------------- */
     /* .row {
     display: flex;
@@ -113,6 +118,19 @@
     .col-lg-6 {
         flex: 0 0 45%; /* 45% + 45% + 2rem gap fits nicely */
     }
+=======
+/* --------to fit the contents in itienary--------------- */
+/* .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+} */
+
+.col-lg-6 {
+  flex: 0 0 45%; /* 45% + 45% + 2rem gap fits nicely */
+}
+>>>>>>> feature/trekking-mapp
 
     .border-box {
       border-left: 5px solid #2c3e50;
@@ -157,6 +175,7 @@
     }
 
     .itinerary-section {
+<<<<<<< HEAD
         margin-top: 2rem;
         background-color: #ffffff;
         padding: 2rem;
@@ -169,6 +188,20 @@
     .col-lg-6 {
         flex: 0 0 48%;
     }
+=======
+  margin-top: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.col-lg-6 {
+  flex: 0 0 48%;
+}
+>>>>>>> feature/trekking-mapp
 
     .itinerary-section h2 {
       color: #2c3e50;
@@ -179,6 +212,7 @@
       margin-bottom: 0.5rem;
     }
 
+<<<<<<< HEAD
     .fade-box {
         position: relative;
         max-height: 370px;
@@ -302,6 +336,131 @@
         padding: 1rem 0;
         margin-top: 3rem;
         }
+=======
+.fade-box {
+  position: relative;
+  max-height: 370px;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  padding-right: 10px;
+}
+
+.fade-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7; /* more vertical space between lines */
+}
+
+.extra-content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease, height 0.6s ease;
+  padding-top: 1rem;
+}
+
+
+.extra-content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease, height 0.6s ease;
+}
+
+.fade-box.expanded {
+  max-height: 2000px;
+}
+
+.fade-box.expanded .extra-content {
+  opacity: 1;
+  height: auto;
+}
+
+.fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, white, transparent);
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.fade-box.expanded .fade-overlay {
+  opacity: 0;
+}
+
+.see-more-button {
+  margin-top: 10px;
+  background-color: #027478;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.see-more-button:hover {
+  background-color: #035e61;
+}
+
+.itinerary-wrapper.fullscreen .itinerary-section {
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+  padding: 2rem 5%;
+}
+
+.itinerary-wrapper.fullscreen .day-itinerary {
+  display: none;
+}
+
+.itinerary-wrapper.fullscreen .detailed-itinerary-box {
+  width: 100%;
+}
+
+.itinerary-wrapper.fullscreen .fade-box {
+  max-height: none;
+  background-color: #fafafa;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+/* ----------------------- map ----------------------- */
+
+.nonInteractiveMap{
+    margin-top: 50px;
+}
+.nonInteractiveMap h1{
+    text-align: center;
+    color:rgb(23, 30, 38);
+    font-size: 31px;
+    margin-bottom: 50px;
+ }
+.nonInteractiveMap img{
+    height:500px;
+    width:600px;
+    margin-left:270px;
+    box-shadow: 0 0 20px rgba(2, 2, 2, 0.5);
+    border-radius: 30px;
+ }
+ .nonInteractiveMap img:hover{
+    box-shadow: 0 8px 200px rgba(0, 0, 0, 0.4); /* deeper hover shadow */
+    border-radius: 25px;
+    transform: scale(1.02); /* slight zoom effect */
+}
+/* -------------------------- footer ------------------------- */
+.footer {
+      background-color: #027478;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+>>>>>>> feature/trekking-mapp
 
     .footer-container {
       max-width: 1200px;
@@ -311,6 +470,7 @@
     /* ------------------------ scrollbtn ----------------------- */
 
     #scrollTopBtn {
+<<<<<<< HEAD
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -337,6 +497,34 @@
 </head>
 
 <body>
+=======
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 22px;
+  background-color: #027478;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #035e61;
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+
+>>>>>>> feature/trekking-mapp
   <nav class="navbar">
     <a href="#" class="navbar-brand">
       <img src="{{ asset('images/logo.jpg') }}" alt="Logo" />
@@ -400,6 +588,7 @@
       <div class="col-lg-6 day-itinerary">
         <h2>Day-to-Day Itinerary</h2>
         <ul>
+<<<<<<< HEAD
             <li>Day 1: Drive from Kathmandu to Syabrubesi (7–8 hours)</li>
             <li>Day 2: Trek from Syabrubesi to Lama Hotel (6–7 hours)</li>
             <li>Day 3: Trek from Lama Hotel to Langtang Village (5–6 hours)</li>
@@ -415,6 +604,23 @@
 
         <div class="col-lg-6 detailed-itinerary-box">
             <h2>Detailed Itinerary</h2>
+=======
+        <li>Day 1: Drive from Kathmandu to Syabrubesi (7–8 hours)</li>
+  <li>Day 2: Trek from Syabrubesi to Lama Hotel (6–7 hours)</li>
+  <li>Day 3: Trek from Lama Hotel to Langtang Village (5–6 hours)</li>
+  <li>Day 4: Trek from Langtang Village to Kyanjin Gompa (3–4 hours)</li>
+  <li>Day 5: Acclimatization day explore Kyanjin Gompa or hike to Kyanjin Ri</li>
+  <li>Day 6: Optional hike to Tserko Ri (early morning) </li>
+  <li>Day 7: Trek back from Kyanjin Gompa to Lama Hotel (6–7 hours)</li>
+  <li>Day 8: Trek from Lama Hotel to Syabrubesi (5–6 hours)</li>
+  <li>Day 9: Drive back from Syabrubesi to Kathmandu</li>
+  <li>Day 10: Rest or buffer day in Kathmandu</li>
+          </ul>
+      </div>
+
+      <div class="col-lg-6 detailed-itinerary-box">
+        <h2>Detailed Itinerary</h2>
+>>>>>>> feature/trekking-mapp
         <div id="detailed-itinerary" class="fade-box">
 
         <div class="fade-content">
@@ -460,8 +666,13 @@
             <strong>MORE INFORMATIONS</strong>
             <br>
             <br>
+<<<<<<< HEAD
     {{------------------------------------------- Table -------------------------------------------}}
     <table style="width: 100%; border-collapse: collapse; background: white;">
+=======
+{{------------------------------------------- Table -------------------------------------------}}
+<table style="width: 100%; border-collapse: collapse; background: white;">
+>>>>>>> feature/trekking-mapp
                 <thead style="background-color: #027478; color: white;">
                   <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Option</th>
@@ -530,6 +741,7 @@
           <div class="fade-overlay"></div>
         </div>
 
+<<<<<<< HEAD
         <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
@@ -539,6 +751,9 @@
         publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1"
       >
       </stripe-buy-button>
+=======
+        <button id="see-more-btn" class="see-more-button">See More</button>
+>>>>>>> feature/trekking-mapp
       </div>
     </div>
   </div>
@@ -547,7 +762,11 @@
     <h1> "Here is a Normal map for Langtang" </h1>
     <img src="{{ asset('images/lmap.jpg') }}">
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+<<<<<<< HEAD
   </div>
+=======
+
+>>>>>>> feature/trekking-mapp
     <footer class="footer">
       <div class="footer-container">
         <p>&copy; 2025 Langtang Trek. All rights reserved.</p>

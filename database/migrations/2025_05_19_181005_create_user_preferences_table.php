@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('user_preferences', function (Blueprint $table) {
         $table->id();
-        $table->unsignedBigInteger('user_id')->nullable(); // Optional, for logged-in users
+        $table->unsignedBigInteger('user_id')->nullable()->unique(); // Optional, for logged-in users
         $table->integer('budget');
         $table->integer('available_days');
         $table->string('difficulty_pref');

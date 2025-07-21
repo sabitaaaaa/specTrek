@@ -509,6 +509,7 @@
         </div>
           <div class="fade-overlay"></div>
         </div>
+<<<<<<< HEAD
         <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
@@ -517,6 +518,9 @@
         buy-button-id="buy_btn_1RgSCw2EZhQjvwUDvcMN1a8X"
         publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1">
       </stripe-buy-button>
+=======
+        <button id="see-more-btn" class="see-more-button">See More</button>
+>>>>>>> feature/trekking-mapp
       </div>
     </div>
   </div>
@@ -525,7 +529,10 @@
     <h1> "Here is a Normal map for AmaYangri" </h1>
     <img src="{{ asset('images/amap.jpg') }}">
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+<<<<<<< HEAD
   </div>
+=======
+>>>>>>> feature/trekking-mapp
     <footer class="footer">
       <div class="footer-container">
         <p>&copy; 2025 AmaYangri Trek. All rights reserved.</p>
@@ -589,7 +596,10 @@ s
     });
   }
   </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/trekking-mapp
 </body>
 </html>
 
