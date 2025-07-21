@@ -31,7 +31,11 @@ Route::get('/', function () {
 // Route::get('/about', function () {
 //      return view('about');
 //  });
+<<<<<<< HEAD
 // /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera
+=======
+// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera 
+>>>>>>> feature/trekking-mapp
 
 // suppose euta certain naam ko manche ko appear huna paryore data the we should:
 Route::get('/about/{name}', function ($name) {
@@ -65,6 +69,7 @@ Route ::get('/Tours',function(){
 // use App\Http\Controllers\TrekController;
 Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
 
+<<<<<<< HEAD
 
 
 
@@ -89,12 +94,17 @@ Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
 Route::get('/', function () {
     return view('home'); // Make sure home.blade.php exists
 });
+=======
+>>>>>>> feature/trekking-mapp
 
 Route::get('/form', function () {
     return view('form');
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
 Route::get('/AmaYangriTrek', function () {
     return view('AmaYangriTrek');
 });
@@ -146,6 +156,7 @@ Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
 Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
 Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
 Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
+<<<<<<< HEAD
 Route::get('/register', [AuthController::class, 'showRegister']);
 =======
 Rouste::get('/register', [AuthController::class, 'showRegister']);
@@ -198,11 +209,14 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
+=======
+>>>>>>> feature/trekking-mapp
 
 
 
 
 
+<<<<<<< HEAD
 Route::get('/example', function () {
     return view('example');
 });
@@ -245,3 +259,5 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 
+=======
+>>>>>>> feature/trekking-mapp

@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -148,6 +151,7 @@ function validatePassword(password) {
         </script>
           
 </body>
+<<<<<<< HEAD
 </html>
 =======
   <meta charset="UTF-8" />
@@ -337,3 +341,6 @@ function validatePassword(password) {
 </body>
 </html>
 >>>>>>> feature-admin
+=======
+</html>
+>>>>>>> feature/trekking-mapp

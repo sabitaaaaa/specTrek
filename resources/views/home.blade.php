@@ -38,7 +38,11 @@
         </div>
         <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> feature/trekking-mapp
 </svg>
 
     </header>
@@ -161,35 +165,61 @@
 
 <section class="hex-section">
   <h2>VISUALIZING THE PLACES</h2>
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> feature/trekking-mapp
 
   <!-- Top row - 5 hexes -->
   <div class="hex-row">
     <div class="hex" style="background-image: url('{{ asset('images/view-1.jpg') }}');">
       <div class="hex-content">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-2.jpg') }}');">
       <div class="hex-content">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-3.jpg') }}');">
       <div class="hex-content">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-4.jpg') }}');">
       <div class="hex-content">
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-5.jpg') }}');">
       <div class="hex-content">
+<<<<<<< HEAD
 
       </div>
 
+=======
+      
+      </div>
+      
+>>>>>>> feature/trekking-mapp
     </div>
   </div>
 
@@ -197,7 +227,11 @@
   <div class="hex-row hex-row-offset">
    <div class="hex" style="background-image: url('{{ asset('images/view-6.jpg') }}');">
       <div class="hex-content">
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-7.jpg') }}');">
@@ -323,4 +357,7 @@
 <script src="js/Home-mountain.js"></script>
 </body>
 </html>
+<<<<<<< HEAD
 <h1>WELCOMEEE. HELLO</h1>
+=======
+>>>>>>> feature/trekking-mapp

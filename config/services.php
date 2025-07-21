@@ -17,20 +17,27 @@ return [
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> feature/payment
+=======
+>>>>>>> feature/trekking-mapp
     'resend' => [
         'key' => env('RESEND_KEY'),
     ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> friend-code
 >>>>>>> feature/payment
+=======
+
+>>>>>>> feature/trekking-mapp
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
@@ -38,15 +45,23 @@ return [
     ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> feature/trekking-mapp
     'resend' => [
         'key' => env('RESEND_KEY'),
     ],
 
+<<<<<<< HEAD
 >>>>>>> friend-code
 >>>>>>> feature/payment
+=======
+
+>>>>>>> feature/trekking-mapp
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
@@ -67,5 +82,12 @@ return [
 
 >>>>>>> friend-code
 >>>>>>> feature/payment
+
+
+
+   'weather' => [
+    'key' => env('WEATHER_API_KEY'),
+],
+
 
 ];

@@ -2,12 +2,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /.phpunit.cache
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 =======
 >>>>>>> feature/payment
+=======
+/.phpunit.cache
+=======
+>>>>>>> feature/trekking-mapp
 *.log
 .DS_Store
 .env
@@ -24,6 +29,7 @@
 /auth.json
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 =======
 >>>>>>> feature/itinerary-and-blogs
@@ -35,6 +41,9 @@
 /.phpunit.cache
 >>>>>>> friend-code
 >>>>>>> feature/payment
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
 /node_modules
 /public/build
 /public/hot
@@ -42,6 +51,7 @@
 /storage/*.key
 /storage/pail
 /vendor
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +64,8 @@ Homestead.yaml
 Thumbs.db
 =======
 >>>>>>> feature/payment
+=======
+>>>>>>> feature/trekking-mapp
 .env
 .env.backup
 .env.production
@@ -70,11 +82,15 @@ yarn-error.log
 /.vscode
 /.zed
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
 =======
 Homestead.json
 Homestead.yaml
 Thumbs.db
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+<<<<<<< HEAD
 =======
 Homestead.json
 Homestead.yaml
@@ -92,3 +108,5 @@ Thumbs.db
 =======
 >>>>>>> friend-code
 >>>>>>> feature/payment
+=======
+>>>>>>> feature/trekking-mapp

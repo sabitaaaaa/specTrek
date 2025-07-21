@@ -14,6 +14,7 @@ return [
     | persist session data. Database storage is a great default choice.
     |
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     | Supported: "file", "cookie", "database", "memcached",
@@ -31,10 +32,19 @@ return [
 =======
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
+=======
+<<<<<<< HEAD
+    | Supported: "file", "cookie", "database", "apc",
+    |            "memcached", "redis", "dynamodb", "array"
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+>>>>>>> feature/trekking-mapp
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
@@ -49,6 +59,9 @@ return [
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 >>>>>>> friend-code
 >>>>>>> feature/payment
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
     |
     */
 
@@ -135,10 +148,14 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
     | Affects: "apc", "dynamodb", "memcached", "redis"
 =======
     | Affects: "dynamodb", "memcached", "redis"
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+<<<<<<< HEAD
 =======
     | Affects: "dynamodb", "memcached", "redis"
 >>>>>>> feature/itinerary-and-blogs
@@ -151,6 +168,8 @@ return [
     | Affects: "apc", "dynamodb", "memcached", "redis"
 >>>>>>> friend-code
 >>>>>>> feature/payment
+=======
+>>>>>>> feature/trekking-mapp
     |
     */
 

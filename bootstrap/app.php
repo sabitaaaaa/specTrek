@@ -11,6 +11,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
     ->withMiddleware(function (Middleware $middleware) {
         //
     })
@@ -28,5 +29,11 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
 >>>>>>> friend-code
 >>>>>>> feature/payment
+=======
+    ->withMiddleware(function (Middleware $middleware) {
+        //
+    })
+    ->withExceptions(function (Exceptions $exceptions) {
+>>>>>>> feature/trekking-mapp
         //
     })->create();
