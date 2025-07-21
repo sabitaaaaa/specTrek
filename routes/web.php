@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EsewaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,3 +32,34 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
 Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update');
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+Route::get('/AmaYangriTrek', function () {
+    return view('AmaYangriTrek');
+});
+
+
+Route::get('/LangtangTrek', function () {
+    return view('LangtangTrek');
+});
+
+Route::get('/ShivapuriTrek', function () {
+    return view('ShivapuriTrek');
+});
+
+Route::get('/AmaYangriPaid', function () {
+    return view('AmaYangriPaid');
+});
+
+Route::get('/Langtangpaid', function () {
+    return view('Langtangpaid');
+});
+
+Route::get('/Shivapuripaid', function () {
+    return view('Shivapuripaid');
+});
+
+
+
+use App\Http\Controllers\PaymentController;
+
+Route::post('/charge', [PaymentController::class, 'charge']);
