@@ -17,3 +17,7 @@ public function adminDashboard()
 
 
 
+abstract class Controller
+{
+    //
+}

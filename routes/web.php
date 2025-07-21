@@ -252,3 +252,4 @@ Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
 
 
 
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');

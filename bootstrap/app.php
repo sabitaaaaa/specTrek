@@ -12,10 +12,14 @@ return Application::configure(basePath: dirname(__DIR__))
     )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/itinerary-and-blogs
     ->withMiddleware(function (Middleware $middleware): void {
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/trekking-mapp
@@ -27,5 +31,7 @@ return Application::configure(basePath: dirname(__DIR__))
 >>>>>>> feature-admin
 =======
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature/itinerary-and-blogs
         //
     })->create();
