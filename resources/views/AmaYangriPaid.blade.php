@@ -513,10 +513,8 @@
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
 
-      <stripe-buy-button
-        buy-button-id="buy_btn_1RgSCw2EZhQjvwUDvcMN1a8X"
-        publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1">
-      </stripe-buy-button>
+    <button id="see-more-btn" class="see-more-button">See More</button>
+
       </div>
     </div>
   </div>

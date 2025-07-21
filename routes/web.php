@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\EsewaController;
 use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\RecommendationController;
@@ -10,12 +8,10 @@ use App\Http\Controllers\TrekController;
 
 
 
->>>>>>> feature/trekking-mapp
 
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
 Route::get('/example', function () {
     return view('example');
 });
@@ -53,7 +49,7 @@ use App\Models\User;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\TrekController;
+// use App\Http\Controllers\TrekController;
 use App\Http\Controllers\Admin\UserControllers;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;  
@@ -66,7 +62,6 @@ Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
 Route::get('/', function () {
     return view('home'); // Make sure home.blade.php exists
 });
-=======
 // making another route and change in the place of welcome replace it with required file name
 // Route::get('/view', function () {
 //     return view('home');
@@ -115,13 +110,11 @@ Route ::get('/Tours',function(){
 // use App\Http\Controllers\TrekController;
 Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
 
->>>>>>> feature/trekking-mapp
 
 Route::get('/form', function () {
     return view('form');
 });
 
-<<<<<<< HEAD
 Route::get('/register', [AuthController::class, 'showRegister']);
 Route::post('/register', [AuthController::class, 'register']);
 
@@ -197,7 +190,6 @@ use App\Http\Controllers\Admin\UsersController;
 Route::resource('users', UsersController::class);
 
 // Route::resource('admin/users', UserControllers::class);
-=======
 Route::get('/AmaYangriTrek', function () {
     return view('AmaYangriTrek');
 });
@@ -243,4 +235,3 @@ Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
 
 
 
->>>>>>> feature/trekking-mapp

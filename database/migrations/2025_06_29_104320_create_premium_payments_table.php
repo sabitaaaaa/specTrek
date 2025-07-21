@@ -13,9 +13,13 @@ return new class extends Migration
     {
         Schema::create('premium_payments', function (Blueprint $table) {
             $table->id();
+            $table->string('transaction_id')->nullable();
+            $table->decimal('amount', 10, 2)->nullable();
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
