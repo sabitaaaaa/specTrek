@@ -1,4 +1,4 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
 @section('content')
 <link rel="icon" href="{{ asset('images/logo.png') }}">
