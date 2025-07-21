@@ -105,10 +105,17 @@ return [
     |--------------------------------------------------------------------------
     |
 <<<<<<< HEAD
+<<<<<<< HEAD
     | Here you may define the number of seconds before a password confirmation
 =======
     | Here you may define the amount of seconds before a password confirmation
 >>>>>>> feature-admin
+=======
+    | Here you may define the amount of seconds before a password confirmation
+=======
+    | Here you may define the number of seconds before a password confirmation
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
     | window expires and users are asked to re-enter their password via the
     | confirmation screen. By default, the timeout lasts for three hours.
     |

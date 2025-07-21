@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Trek extends Model
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 public function run()
 {
     Trek::create(['name' => 'Annapurna base camp ', 'price' => 1200, 'days' => 12, 'region' => 'Annapurna', 'type' => 'Multi Day']);
@@ -17,4 +18,7 @@ public function run()
 =======
     //
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+=======
+    //
+>>>>>>> feature/trekking-mapp
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+<<<<<<< HEAD
 use App\Models\User;
 abstract class Controller
 {
@@ -16,3 +17,10 @@ public function adminDashboard()
 
 
 
+=======
+
+abstract class Controller
+{
+    //
+}
+>>>>>>> feature/trekking-mapp
