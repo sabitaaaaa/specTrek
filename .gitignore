@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /.phpunit.cache
 =======
 =======
@@ -22,6 +23,9 @@
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+/.phpunit.cache
+>>>>>>> feature-admin
 /node_modules
 /public/build
 /public/hot
@@ -31,6 +35,9 @@
 /vendor
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature-admin
 .env
 .env.backup
 .env.production
@@ -46,6 +53,7 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+<<<<<<< HEAD
 =======
 Homestead.json
 Homestead.yaml
@@ -56,3 +64,11 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 >>>>>>> feature/itinerary-and-blogs
+=======
+<<<<<<< HEAD
+ 
+
+ 
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
