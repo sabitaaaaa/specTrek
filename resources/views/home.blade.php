@@ -18,6 +18,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#">Emergency</a></li>
+                <li><a href="#">Blogs</a></li>
                 <li><a href="#">Tour</a></li>
                 <li><a href="#">User</a></li>
                 <li><a href="#">Login</a></li>
@@ -204,8 +205,6 @@
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-8.jpg') }}');">
     </div>
-    <div class="hex customize">
-      <div class="hex-content">
         <div class="hex" style="background-image: url('{{ asset('images/view-9.jpg') }}');">
       </div>
     </div>
@@ -215,14 +214,13 @@
 <!--================== VIDEO-SECTION========================================= -->
 <section class="video-section">
   <h2>#SPECTREK</h2>
-  <div class="video-placeholder">
-    <div class="unavailable-message">
-      <div class="icon">❗</div>
-      <p class="title">Video unavailable</p>
-      <p class="subtitle">This video is unavailable</p>
-    </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4OiXfDdbtnM?autoplay=1&mute=1&loop=1&playlist=4OiXfDdbtnM&controls=0&showinfo=0&modestbranding=1"
+    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   </div>
 </section>
+
+
 <!-- =======================================UPPER-PART-OF-FOOTER======================================== -->
 <section class="quote-mountain-wrapper">
   <!-- Main scenic mountain -->

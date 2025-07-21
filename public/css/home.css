@@ -65,6 +65,16 @@ body, html {
   padding: 15px 40px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.navbar.scrolled {
+  background-color: #027478;
+}
 
 .nav-links {
   list-style: none;
@@ -324,7 +334,7 @@ body, html {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 20px 0;
+  margin: 20px 64px;
   width:1500px;
 }
 
@@ -413,6 +423,37 @@ body, html {
   font-size: 16px;
   color: #aaa;
 }
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.77vh; /* 100vh * (16/9 aspect ratio) */
+  height: 100vh;
+}
+
+/* fallback to keep it centered on resize */
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    width: 100vw;
+    height: 56.25vw; /* (9/16 aspect ratio) */
+  }
+}
+
 
 
 /* ======= footer uppeeer====== */

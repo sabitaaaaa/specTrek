@@ -42,3 +42,13 @@ dots.forEach((dot, i) => {
 });
 
 setInterval(nextTestimonial, 5000); // Auto-slide every 5 seconds
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+
