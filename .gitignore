@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /.phpunit.cache
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> feature/payment
 *.log
 .DS_Store
 .env
@@ -20,12 +23,18 @@
 /.zed
 /auth.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 =======
 >>>>>>> feature/itinerary-and-blogs
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
+=======
+=======
+/.phpunit.cache
+>>>>>>> friend-code
+>>>>>>> feature/payment
 /node_modules
 /public/build
 /public/hot
@@ -36,8 +45,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> feature-admin
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+=======
+>>>>>>> feature/payment
 .env
 .env.backup
 .env.production
@@ -71,4 +87,8 @@ Thumbs.db
  
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
 >>>>>>> feature-admin
+=======
+>>>>>>> friend-code
+>>>>>>> feature/payment

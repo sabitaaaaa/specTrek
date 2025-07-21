@@ -14,6 +14,13 @@ return [
     | persist session data. Database storage is a great default choice.
     |
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+=======
+>>>>>>> feature/payment
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +36,7 @@ return [
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 =======
     | Supported: "file", "cookie", "database", "memcached",
@@ -37,6 +45,10 @@ return [
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 >>>>>>> feature-admin
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> friend-code
+>>>>>>> feature/payment
     |
     */
 
@@ -122,6 +134,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     | Affects: "apc", "dynamodb", "memcached", "redis"
 =======
     | Affects: "dynamodb", "memcached", "redis"
@@ -132,6 +145,12 @@ return [
 =======
     | Affects: "apc", "dynamodb", "memcached", "redis"
 >>>>>>> feature-admin
+=======
+    | Affects: "dynamodb", "memcached", "redis"
+=======
+    | Affects: "apc", "dynamodb", "memcached", "redis"
+>>>>>>> friend-code
+>>>>>>> feature/payment
     |
     */
 

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <h1> WELCOME BACK </h1>
@@ -18,8 +19,10 @@
 =======
 =======
 >>>>>>> feature-admin
+=======
+>>>>>>> feature/payment
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_repls, '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,11 +32,15 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
 >>>>>>> feature/itinerary-and-blogs
 =======
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
+=======
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+>>>>>>> feature/payment
         <h1> hello , specTrek </h1>
 
 >>>>>>> feature-admin

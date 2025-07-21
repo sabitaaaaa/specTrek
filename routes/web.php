@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> feature/payment
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -89,6 +94,7 @@ Route::get('/form', function () {
     return view('form');
 });
 
+<<<<<<< HEAD
 Route::get('/AmaYangriTrek', function () {
     return view('AmaYangriTrek');
 });
@@ -141,6 +147,9 @@ Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendat
 Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
 Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 Route::get('/register', [AuthController::class, 'showRegister']);
+=======
+Rouste::get('/register', [AuthController::class, 'showRegister']);
+>>>>>>> feature/payment
 Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');

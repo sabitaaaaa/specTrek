@@ -18,25 +18,54 @@ return [
         'token' => env('POSTMARK_TOKEN'),
     ],
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> feature/payment
     'resend' => [
         'key' => env('RESEND_KEY'),
     ],
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> friend-code
+>>>>>>> feature/payment
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    'resend' => [
+        'key' => env('RESEND_KEY'),
+    ],
+
+>>>>>>> friend-code
+>>>>>>> feature/payment
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+<<<<<<< HEAD
 
     'weather' => [
         'key' => env('WEATHER_API_KEY'),
     ],
+=======
+<<<<<<< HEAD
+=======
+    'weather' => [
+    'key' => env('WEATHER_API_KEY'),
+],
+
+>>>>>>> friend-code
+>>>>>>> feature/payment
 
 ];
