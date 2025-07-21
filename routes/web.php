@@ -64,13 +64,13 @@ Route::middleware(['auth'])->group(function () {
 
     // Admin Panel Routes
     Route::prefix('admin')->group(function () {
-        Route::get('/dashboard', [UserControllers::class, 'dashboard'])->name('admin.dashboard');
-        Route::get('/users', [UserControllers::class, 'index'])->name('admin.users.index');
-        Route::get('/users/create', [UserControllers::class, 'create'])->name('admin.users.create');
-        Route::post('/users', [UserControllers::class, 'store'])->name('admin.users.store');
-        Route::get('/users/{user}/edit', [UserControllers::class, 'edit'])->name('admin.users.edit');
-        Route::put('/users/{user}', [UserControllers::class, 'update'])->name('admin.users.update');
-        Route::delete('/users/{user}', [UserControllers::class, 'destroy'])->name('admin.users.destroy');
+        Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+        Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
+        Route::post('/users', [UserController::class, 'store'])->name('admin.users.store');
+        Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('admin.users.edit');
+        Route::put('/users/{user}', [UserController::class, 'update'])->name('admin.users.update');
+        Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('admin.users.destroy');
     });
 });
 
@@ -90,9 +90,15 @@ Route::get('/admin/users/create', [UserController::class, 'create'])->name('user
 
 
 Route::resource('/admin/users', UserController::class);
+Route::resource('users', UsersController::class);
+
+Route::resource('/admin/users', UserController::class);
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 
+use App\Http\Controllers\Admin\UsersController;
+Route::resource('users', UsersController::class);
 
+// Route::resource('admin/users', UserControllers::class);
