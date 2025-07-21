@@ -1,0 +1,81 @@
+
+  body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .container {
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #027478; /* A teal color matching your branding */
+  }
+
+  label {
+    font-weight: 600;
+    color: #333;
+  }
+
+  input.form-control, select.form-select {
+    border: 1.5px solid #027478;
+    transition: border-color 0.3s ease;
+  }
+
+  input.form-control:focus, select.form-select:focus {
+    border-color: #025a56;
+    box-shadow: 0 0 5px rgba(2, 122, 120, 0.5);
+  }
+
+  /* button.btn-primary {
+    background-color: #027478;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  button.btn-primary:hover {
+    background-color: #025a56;
+  } */
+
+
+  button.btn-primary {
+  background-color: #027478;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+button.btn-primary:hover {
+  background-color: #025a56;
+}
+
+/* ✅ Added Clear Button Styling */
+button.btn-secondary {
+  background-color: #b2d8d8; /* Light teal-gray */
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  color: #024747; /* Deep teal text */
+}
+
+button.btn-secondary:hover {
+  background-color: #024747; /* Hover effect */
+}

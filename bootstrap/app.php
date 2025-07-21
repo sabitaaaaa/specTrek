@@ -11,15 +11,21 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
     ->withMiddleware(function (Middleware $middleware): void {
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
 =======
+=======
+>>>>>>> feature/trekking-mapp
     ->withMiddleware(function (Middleware $middleware) {
         //
     })
     ->withExceptions(function (Exceptions $exceptions) {
+<<<<<<< HEAD
 >>>>>>> feature-admin
+=======
+>>>>>>> feature/trekking-mapp
         //
     })->create();

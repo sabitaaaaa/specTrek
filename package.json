@@ -1,8 +1,9 @@
 {
-<<<<<<< HEAD
+
     "$schema": "https://json.schemastore.org/package.json",
-=======
->>>>>>> feature-admin
+
+   
+
     "private": true,
     "type": "module",
     "scripts": {
