@@ -1096,6 +1096,7 @@
             "name": "laravel/framework",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v12.19.3",
             "source": {
                 "type": "git",
@@ -1115,6 +1116,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
             "version": "v12.12.0",
             "source": {
                 "type": "git",
@@ -1126,6 +1129,9 @@
                 "url": "https://api.github.com/repos/laravel/framework/zipball/8f6cd73696068c28f30f5964556ec9d14e5d90d7",
                 "reference": "8f6cd73696068c28f30f5964556ec9d14e5d90d7",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature-admin
 =======
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
@@ -1146,12 +1152,18 @@
                 "reference": "84b142958d1638a7e89de94ce75c2821c601d3d7",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
                 "shasum": ""
             },
             "require": {
@@ -1194,6 +1206,7 @@
                 "laravel/serializable-closure": "^1.3|^2.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "league/commonmark": "^2.7",
 =======
 <<<<<<< HEAD
@@ -1201,10 +1214,16 @@
                 "league/commonmark": "^2.6",
 =======
                 "league/commonmark": "^2.7",
+=======
+                "league/commonmark": "^2.6",
+=======
+                "league/commonmark": "^2.7",
+>>>>>>> feature-admin
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
                 "league/commonmark": "^2.7",
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 
@@ -1216,6 +1235,8 @@
                 "league/commonmark": "^2.7",
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
                 "league/flysystem": "^3.25.1",
                 "league/flysystem-local": "^3.25.1",
                 "league/uri": "^7.5.1",
@@ -1309,6 +1330,7 @@
                 "phpunit/phpunit": "^10.5.35|^11.5.3|^12.0.1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "predis/predis": "^2.3|^3.0",
 =======
 <<<<<<< HEAD
@@ -1316,10 +1338,16 @@
                 "predis/predis": "^2.3",
 =======
                 "predis/predis": "^2.3|^3.0",
+=======
+                "predis/predis": "^2.3",
+=======
+                "predis/predis": "^2.3|^3.0",
+>>>>>>> feature-admin
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
                 "predis/predis": "^2.3|^3.0",
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 
@@ -1330,6 +1358,8 @@
                 "predis/predis": "^2.3|^3.0",
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
                 "resend/resend-php": "^0.10.0",
                 "symfony/cache": "^7.2.0",
                 "symfony/http-client": "^7.2.0",
@@ -1363,6 +1393,7 @@
                 "phpunit/phpunit": "Required to use assertions and run tests (^10.5.35|^11.5.3|^12.0.1).",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
 =======
 <<<<<<< HEAD
@@ -1370,10 +1401,16 @@
                 "predis/predis": "Required to use the predis connector (^2.3).",
 =======
                 "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
+=======
+                "predis/predis": "Required to use the predis connector (^2.3).",
+=======
+                "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
+>>>>>>> feature-admin
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
                 "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 
@@ -1383,6 +1420,8 @@
        "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^6.0|^7.0).",
                 "resend/resend-php": "Required to enable support for the Resend mail transport (^0.10.0).",
@@ -1441,10 +1480,13 @@
             },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-06-18T12:56:23+00:00"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> feature-admin
             "time": "2025-05-01T16:13:12+00:00"
 =======
             "time": "2025-05-13T17:50:51+00:00"
@@ -1452,6 +1494,9 @@
 =======
             "time": "2025-05-13T17:50:51+00:00"
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
+>>>>>>> feature-admin
+=======
 >>>>>>> feature-admin
         },
         {
@@ -2872,9 +2917,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
             "version": "v2.3.0",
             "source": {
                 "type": "git",
@@ -2885,6 +2933,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/52915afe6a1044e8b9cee1bcff836fb63acf9cda",
                 "reference": "52915afe6a1044e8b9cee1bcff836fb63acf9cda",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2899,6 +2948,11 @@
             "name": "nunomaduro/termwind",
 
 >>>>>>> feature/trekking-mapp
+=======
+=======
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
             "version": "v2.3.1",
             "source": {
                 "type": "git",
@@ -2911,6 +2965,7 @@
                 "reference": "dfa08f390e509967a15c22493dc0bac5733d9123",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
@@ -2920,11 +2975,17 @@
 =======
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": "^8.2",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2933,6 +2994,8 @@
 =======
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
                 "symfony/console": "^7.1.8"
             },
             "require-dev": {
@@ -2944,6 +3007,7 @@
                 "phpstan/phpstan-strict-rules": "^1.6.1",
                 "symfony/var-dumper": "^7.1.8",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
@@ -2951,6 +3015,11 @@
 =======
 
 >>>>>>> feature/trekking-mapp
+=======
+=======
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
                 "symfony/console": "^7.2.6"
             },
             "require-dev": {
@@ -2963,6 +3032,7 @@
                 "symfony/var-dumper": "^7.2.6",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
@@ -2972,6 +3042,11 @@
 =======
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
                 "thecodingmachine/phpstan-strict-rules": "^1.0.0"
             },
             "type": "library",
@@ -3016,6 +3091,7 @@
                 "issues": "https://github.com/nunomaduro/termwind/issues",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
 =======
 <<<<<<< HEAD
@@ -3023,10 +3099,16 @@
                 "source": "https://github.com/nunomaduro/termwind/tree/v2.3.0"
 =======
                 "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
+=======
+                "source": "https://github.com/nunomaduro/termwind/tree/v2.3.0"
+=======
+                "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
+>>>>>>> feature-admin
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
                 "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 
@@ -3037,6 +3119,8 @@
                 "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
             },
             "funding": [
                 {
@@ -3052,6 +3136,7 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2025-05-08T08:14:37+00:00"
@@ -3073,6 +3158,15 @@
             "time": "2025-05-08T08:14:37+00:00"
 
 >>>>>>> feature/trekking-mapp
+=======
+
+            "time": "2024-11-21T10:39:51+00:00"
+
+            "time": "2025-05-08T08:14:37+00:00"
+
+            "time": "2025-05-08T08:14:37+00:00"
+
+>>>>>>> feature-admin
         },
         {
             "name": "phpoption/phpoption",
@@ -8077,6 +8171,7 @@
                 "reference": "7ddfaa6523a675fae5c4123ee38fc6bfb8ee4f36",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 
@@ -8086,6 +8181,8 @@
             "name": "laravel/pint",
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
             "version": "v1.22.1",
             "source": {
                 "type": "git",
@@ -8098,12 +8195,16 @@
                 "reference": "941d1927c5ca420c22710e98420287169c7bcaf7",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> feature-admin
 =======
 
 >>>>>>> feature/trekking-mapp
+=======
+
+>>>>>>> feature-admin
                 "shasum": ""
             },
             "require": {
@@ -8117,6 +8218,7 @@
                 "friendsofphp/php-cs-fixer": "^3.75.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 "illuminate/view": "^11.44.2",
@@ -8124,12 +8226,19 @@
 
                "illuminate/view": "^11.44.2",
 >>>>>>> feature/trekking-mapp
+=======
+
+                "illuminate/view": "^11.44.2",
+>>>>>>> feature-admin
                 "larastan/larastan": "^3.3.1",
                 "laravel-zero/framework": "^11.36.1",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.3",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> feature-admin
+=======
 >>>>>>> feature-admin
                 "illuminate/view": "^11.44.7",
 =======
@@ -8141,6 +8250,10 @@
                 "nunomaduro/termwind": "^2.3.1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature-admin
 =======
 
 >>>>>>> feature-admin
@@ -8185,9 +8298,12 @@
             },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
 
             "time": "2025-04-08T22:11:45+00:00"
         },
@@ -8205,9 +8321,12 @@
                 "reference": "2edaaf77f3c07a4099965bb3d7dfee16e801c0f6",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
             "time": "2025-05-08T08:38:12+00:00"
         },
         {
@@ -8240,6 +8359,7 @@
                 "reference": "71a509b14b2621ce58574274a74290f933c687f7",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
             "version": "v1.43.1",
@@ -8254,6 +8374,8 @@
                 "reference": "3e7d899232a8c5e3ea4fc6dee7525ad583887e72",
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
                 "shasum": ""
             },
             "require": {
@@ -8305,10 +8427,13 @@
             },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-05-19T13:19:21+00:00"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> feature-admin
             "time": "2025-04-29T14:26:46+00:00"
 =======
             "time": "2025-05-13T13:34:34+00:00"
@@ -8316,6 +8441,7 @@
 =======
             "time": "2025-05-13T13:34:34+00:00"
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
           "time": "2025-04-29T14:26:46+00:00",
@@ -8323,6 +8449,8 @@
          "time": "2025-05-19T13:19:21+00:00"
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
         },
         {
             "name": "mockery/mockery",
@@ -9147,6 +9275,7 @@
             "name": "phpunit/phpunit",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "11.5.25",
             "source": {
                 "type": "git",
@@ -9161,6 +9290,9 @@
 
 =======
 >>>>>>> feature/trekking-mapp
+=======
+
+>>>>>>> feature-admin
 
             "version": "11.5.19",
             "source": {
@@ -9184,6 +9316,7 @@
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e6bdea63ecb7a8287d2cdab25bdde3126e0cfe6f",
                 "reference": "e6bdea63ecb7a8287d2cdab25bdde3126e0cfe6f",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> feature-admin
 =======
@@ -9199,6 +9332,9 @@
                 "reference": "86ebcd8a3dbcd1857d88505109b2a2b376501cde",
 
 >>>>>>> feature/trekking-mapp
+=======
+
+>>>>>>> feature-admin
                 "shasum": ""
             },
             "require": {
@@ -9292,10 +9428,13 @@
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.25"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> feature-admin
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.19"
 =======
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.20"
@@ -9303,6 +9442,7 @@
 =======
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.20"
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 
@@ -9314,6 +9454,8 @@
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.23"
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
             },
             "funding": [
                 {
@@ -9339,8 +9481,11 @@
             ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-06-27T04:36:07+00:00"
 =======
+=======
+>>>>>>> feature-admin
 
             "time": "2025-05-02T06:56:52+00:00"
 
@@ -9348,6 +9493,7 @@
 
             "time": "2025-05-11T06:39:52+00:00"
 
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 
@@ -9358,6 +9504,8 @@
             "time": "2025-06-13T05:47:49+00:00"
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
         },
         {
             "name": "sebastian/cli-parser",

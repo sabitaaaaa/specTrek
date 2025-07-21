@@ -1,3 +1,5 @@
+
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -7,10 +9,24 @@ use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\TrekController;
 
 
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminController;
+// use App\Http\Controllers\TrekController;
+use App\Http\Controllers\Admin\UserControllers;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;  
+use App\Http\Controllers\AdminUserController; 
+
+
+Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home'); // Make sure home.blade.php exists
 });
 Route::get('/example', function () {
     return view('example');
@@ -43,17 +59,17 @@ Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.de
 
 
 // use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-use App\Models\User;
+// use Illuminate\Support\Facades\Auth;
+// use App\Models\User;
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\AdminController;
+// use App\Http\Controllers\AuthController;
+// use App\Http\Controllers\LoginController;
+// use App\Http\Controllers\AdminController;
 // use App\Http\Controllers\TrekController;
-use App\Http\Controllers\Admin\UserControllers;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\UserController;  
-use App\Http\Controllers\AdminUserController; 
+// use App\Http\Controllers\Admin\UserControllers;
+// use App\Http\Controllers\DashboardController;
+// use App\Http\Controllers\UserController;  
+// use App\Http\Controllers\AdminUserController; 
 
 
 Route::get('/users', [UserControllers::class, 'index'])->name('users.index');

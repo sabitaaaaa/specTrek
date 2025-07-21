@@ -61,11 +61,15 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> feature-admin
     'weather' => [
     'key' => env('WEATHER_API_KEY'),
 ],
 
+<<<<<<< HEAD
 >>>>>>> feature-admin
 =======
 
@@ -76,5 +80,7 @@ return [
 ],
 
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
 
 ];
