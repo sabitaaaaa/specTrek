@@ -1,4 +1,4 @@
-<h1>WELCOMEEE. HELLO</h1> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +13,14 @@
 <body>
 
     <header class="hero">
-        <nav class="navbar">
+        <nav class="navbar"id="navbar">
             <div class="logo">
                 <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
             </div>
             <ul class="nav-links">
                 <li><a href="#">Emergency</a></li>
                 <li><a href="#">Blogs</a></li>
-                <li><a href="#">Tour</a></li>
+                <li><a href="#">Tour</a><a href="{{ route('tours') }}"></li>
                 <li><a href="#">User</a></li>
                 <li><a href="#">Login</a></li>
                 <li><a class="signup" href="#">Signup</a></li>
@@ -48,28 +48,40 @@
   <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
   <div class="features-grid top-row">
     <div class="feature-card">
+      <!-- changed -->
+      <a href="{{ route('ShivapuriTrek') }}">
       <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
-      <div class="overlay-text">SHIVAPURI</div>
+      <div class="overlay-text">SHIVAPURI</div> 
     </div>
     <div class="feature-card">
+      <!-- chnaged -->
+       <a href="{{ route('abc') }}">
       <img src="{{ asset('images/h-2.jpg') }}" alt="ABC">
-      <div class="overlay-text">ANNAPURNA BASE CAMP</div>
+      <div class="overlay-text">ANNAPURNA BASE CAMP</div>7
     </div>
     <div class="feature-card">
+      <!-- chnaged -->
+       <a href="{{ route('shey') }}">
       <img src="{{ asset('images/h-3.jpg') }}" alt="Shey Phoksundo">
       <div class="overlay-text">SHEY PHOKSUNDO</div>
     </div>
   </div>
   <div class="features-grid bottom-row">
     <div class="feature-card">
+      <!-- chnaged -->
+       <a href="{{ route('LangtangTrek') }}">
       <img src="{{ asset('images/h-4.jpg') }}" alt="Langtang">
       <div class="overlay-text">LANGTANG</div>
     </div>
     <div class="feature-card">
+      <!-- chnaged -->
+      <a href="{{ route('AmaYangriTrek') }}">
       <img src="{{ asset('images/h-5.jpg') }}" alt="Amayangri">
       <div class="overlay-text">AMAYANGRI</div>
     </div>
     <div class="feature-card">
+      <!-- changed -->
+       <a href="{{ route('manaslu') }}">
       <img src="{{ asset('images/h-6.jpg') }}" alt="Amayangri">
       <div class="overlay-text">MANASLU</div>
     </div>

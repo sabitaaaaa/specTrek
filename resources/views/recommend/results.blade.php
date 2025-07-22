@@ -9,7 +9,7 @@
 <div class="container mt-5">
     <h2 class="mb-4">Recommended Treks</h2>
 
-    @if($treks->isEmpty())
+   @if($recommendedTreks->isEmpty())
         <div class="alert alert-warning">No treks found matching your criteria.</div>
     @else
         <div class="row row-cols-1 row-cols-md-2 g-4">

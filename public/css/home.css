@@ -73,8 +73,9 @@ body, html {
   z-index: 100;
 }
 .navbar.scrolled {
-  background-color: #027478;
+  background-color: #22b8bd;
 }
+
 
 .nav-links {
   list-style: none;

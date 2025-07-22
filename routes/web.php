@@ -217,6 +217,49 @@ Route::get('/LangtangTrek', function () {
 Route::get('/ShivapuriTrek', function () {
     return view('ShivapuriTrek');
 });
+//changed
+Route::get('/shivapuri-trek', function() {
+    return view('ShivapuriTrek');
+})->name('ShivapuriTrek');
+
+Route::get('/annapurna-base-camp', function() {
+    return view('abc');
+})->name('abc');
+
+Route::get('/shey-phoksundo', function() {
+    return view('shey');
+})->name('shey');
+
+Route::get('/langtang-trek', function() {
+    return view('LangtangTrek');
+})->name('LangtangTrek');
+
+Route::get('/ama-yangri-trek', function() {
+    return view('AmaYangriTrek');
+})->name('AmaYangriTrek');
+
+Route::get('/manaslu-trek', function() {
+    return view('manaslu');
+})->name('manaslu');
+
+
+// changed routes for crud
+Route::get('/posts', function() {
+    return view('posts.index');
+})->name('posts.index');
+
+Route::get('/posts/create', function() {
+    return view('posts.create');
+})->name('posts.create');
+
+Route::get('/posts/{id}/edit', function($id) {
+    return view('posts.edit', compact('id'));
+})->name('posts.edit');
+
+Route::get('/posts/{id}', function($id) {
+    return view('posts.show', compact('id'));
+})->name('posts.show');
+
 
 Route::get('/see-more', function() {
     $hasPaid = \App\Models\PremiumPayment::where('status', 'success')->exists();
@@ -241,8 +284,8 @@ Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
 
 
 //RECOMENDATION
-Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
-Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
+Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
+Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.result');
 Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 
 
