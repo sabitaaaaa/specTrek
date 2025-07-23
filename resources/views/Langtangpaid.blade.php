@@ -27,10 +27,12 @@
     z-index: 1000;
     border-bottom: 2px solid #ddd; /* horizontal line */
     }
-
+    /* changed */
     .navbar-brand img {
-      height: 120px;
+      height: 73px;
+      object-fit: contain;
       margin-top: 15px;
+      margin-left: 70px;
     }
 
     .nav-links {
@@ -338,9 +340,10 @@
 
 <body>
   <nav class="navbar">
+       <!-- changed -->
     <a href="#" class="navbar-brand">
-      <img src="{{ asset('images/logo.jpg') }}" alt="Logo" />
-    </a>
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+      </a>
     <ul class="nav-links">
       <li><a href="#">Emergency</a></li>
       <li><a href="#">Tour</a></li>

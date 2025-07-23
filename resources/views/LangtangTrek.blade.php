@@ -27,10 +27,12 @@
     z-index: 1000;
     border-bottom: 2px solid #ddd; /* horizontal line */
     }
-
+    /* changed */
     .navbar-brand img {
-      height: 120px;
+      height: 73px;
+      object-fit: contain;
       margin-top: 15px;
+      margin-left: 70px;
     }
 
     .nav-links {
@@ -338,9 +340,10 @@
 
 <body>
   <nav class="navbar">
+       <!-- changed -->
     <a href="#" class="navbar-brand">
-      <img src="{{ asset('images/logo.jpg') }}" alt="Logo" />
-    </a>
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+      </a>
     <ul class="nav-links">
       <li><a href="#">Emergency</a></li>
       <li><a href="#">Tour</a></li>
@@ -548,14 +551,14 @@
     <img src="{{ asset('images/lmap.jpg') }}">
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
-    <footer class="footer">
-      <div class="footer-container">
-        <p>&copy; 2025 Langtang Trek. All rights reserved.</p>
-        <p>Developed by SpecTrek Team</p>
-      </div>
-    </footer>
-  </main>
 
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Langtang Trek. All rights reserved.</p>
+      <p>Developed by SpecTrek Team</p>
+    </div>
+  </footer>
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');

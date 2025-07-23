@@ -18,10 +18,10 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#">Emergency</a></li>
+                <li><a href="resources/views/posts">Blogs</a></li>
                 <li><a href="#">Tour</a></li>
-                <li><a href="#">User</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a class="signup" href="#">Signup</a></li>
+                <li><a href="login">Login</a></li>
+                <li><a class="signup" href="register">Signup</a></li>
             </ul>
         </nav>
 
@@ -38,11 +38,7 @@
         </div>
         <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> feature/trekking-mapp
 </svg>
 
     </header>
@@ -50,28 +46,40 @@
   <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
   <div class="features-grid top-row">
     <div class="feature-card">
+      <!-- changed -->
+      <a href="{{ route('ShivapuriTrek') }}">
       <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
       <div class="overlay-text">SHIVAPURI</div>
     </div>
     <div class="feature-card">
+      <!-- chnaged -->
+       <a href="{{ route('abc') }}">
       <img src="{{ asset('images/h-2.jpg') }}" alt="ABC">
-      <div class="overlay-text">ANNAPURNA BASE CAMP</div>
+      <div class="overlay-text">ANNAPURNA BASE CAMP</div>7
     </div>
     <div class="feature-card">
+      <!-- chnaged -->
+       <a href="{{ route('shey') }}">
       <img src="{{ asset('images/h-3.jpg') }}" alt="Shey Phoksundo">
       <div class="overlay-text">SHEY PHOKSUNDO</div>
     </div>
   </div>
   <div class="features-grid bottom-row">
     <div class="feature-card">
+      <!-- chnaged -->
+       <a href="{{ route('LangtangTrek') }}">
       <img src="{{ asset('images/h-4.jpg') }}" alt="Langtang">
       <div class="overlay-text">LANGTANG</div>
     </div>
     <div class="feature-card">
+      <!-- chnaged -->
+      <a href="{{ route('AmaYangriTrek') }}">
       <img src="{{ asset('images/h-5.jpg') }}" alt="Amayangri">
       <div class="overlay-text">AMAYANGRI</div>
     </div>
     <div class="feature-card">
+      <!-- changed -->
+       <a href="{{ route('manaslu') }}">
       <img src="{{ asset('images/h-6.jpg') }}" alt="Amayangri">
       <div class="overlay-text">MANASLU</div>
     </div>
@@ -165,61 +173,35 @@
 
 <section class="hex-section">
   <h2>VISUALIZING THE PLACES</h2>
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> feature/trekking-mapp
 
   <!-- Top row - 5 hexes -->
   <div class="hex-row">
     <div class="hex" style="background-image: url('{{ asset('images/view-1.jpg') }}');">
       <div class="hex-content">
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-2.jpg') }}');">
       <div class="hex-content">
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-3.jpg') }}');">
       <div class="hex-content">
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-4.jpg') }}');">
       <div class="hex-content">
-<<<<<<< HEAD
 
-=======
-     
->>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-5.jpg') }}');">
       <div class="hex-content">
-<<<<<<< HEAD
 
       </div>
 
-=======
-      
-      </div>
-      
->>>>>>> feature/trekking-mapp
     </div>
   </div>
 
@@ -227,19 +209,13 @@
   <div class="hex-row hex-row-offset">
    <div class="hex" style="background-image: url('{{ asset('images/view-6.jpg') }}');">
       <div class="hex-content">
-<<<<<<< HEAD
 
-=======
-     
->>>>>>> feature/trekking-mapp
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-7.jpg') }}');">
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-8.jpg') }}');">
     </div>
-    <div class="hex customize">
-      <div class="hex-content">
         <div class="hex" style="background-image: url('{{ asset('images/view-9.jpg') }}');">
       </div>
     </div>
@@ -249,14 +225,13 @@
 <!--================== VIDEO-SECTION========================================= -->
 <section class="video-section">
   <h2>#SPECTREK</h2>
-  <div class="video-placeholder">
-    <div class="unavailable-message">
-      <div class="icon">❗</div>
-      <p class="title">Video unavailable</p>
-      <p class="subtitle">This video is unavailable</p>
-    </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4OiXfDdbtnM?autoplay=1&mute=1&loop=1&playlist=4OiXfDdbtnM&controls=0&showinfo=0&modestbranding=1"
+    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   </div>
 </section>
+
+
 <!-- =======================================UPPER-PART-OF-FOOTER======================================== -->
 <section class="quote-mountain-wrapper">
   <!-- Main scenic mountain -->
@@ -350,14 +325,10 @@
 </svg>
 
   <div class="footer-bottom">
-    <p>© 2025 SpecTrek. All rights reserved.</p>
+    <p>©️ 2025 SpecTrek. All rights reserved.</p>
   </div>
 </footer>
 
 <script src="js/Home-mountain.js"></script>
 </body>
 </html>
-<<<<<<< HEAD
-<h1>WELCOMEEE. HELLO</h1>
-=======
->>>>>>> feature/trekking-mapp

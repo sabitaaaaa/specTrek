@@ -287,7 +287,7 @@
 /* ------------------------------------map image --------------- */
 
 .nonInteractiveMap{
-    margin-top: 50px;   
+    margin-top: 50px;
 }
 .nonInteractiveMap h1{
     text-align: center;
@@ -421,9 +421,9 @@
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
-        
+
       </div>
-    
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -532,15 +532,15 @@
   </div>
 
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <p>&copy; 2025 AmaYangri Trek. All rights reserved.</p>
-        <p>Developed by SpecTrek Team</p>
-      </div>
-    </footer>
-  </main>
 
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 AmaYangri Trek. All rights reserved.</p>
+      <p>Developed by SpecTrek Team</p>
+    </div>
+  </footer>
 
 
   <script>

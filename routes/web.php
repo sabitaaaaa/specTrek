@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> feature/payment
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -12,10 +7,93 @@ use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\TrekController;
 
 
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminController;
+// use App\Http\Controllers\TrekController;
+use App\Http\Controllers\Admin\UserControllers;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminUserController;
+
+/////////changed/////////
+
+Route::get('/shivapuri/payment', function () {
+    // Optional: restrict if already paid
+    if (Auth::check()) {
+        return view('payment-options');
+    }
+    return redirect('/login?redirect=/shivapuri/payment');
+})->name('shivapuri.payment')->middleware('auth');
+
+Route::get('/stripe', function () {
+    return view('stripe');
+});
+
+
+Route::get('/Khalti', function () {
+    return view('Khalti');
+});
+////////////////
+
+Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home'); // Make sure home.blade.php exists
+});
+Route::get('/example', function () {
+    return view('example');
+});
+
+Route::get('/abc', function () {
+    return view('abc');
+});
+
+Route::get('/shey', function () {
+    return view('shey');
+});
+
+Route::get('/manaslu', function () {
+    return view('manaslu');
+});
+
+
+use App\Http\Controllers\PostController;
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
+Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update');
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+
+
+
+// use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Auth;
+// use App\Models\User;
+
+// use App\Http\Controllers\AuthController;
+// use App\Http\Controllers\LoginController;
+// use App\Http\Controllers\AdminController;
+// use App\Http\Controllers\TrekController;
+// use App\Http\Controllers\Admin\UserControllers;
+// use App\Http\Controllers\DashboardController;
+// use App\Http\Controllers\UserController;
+// use App\Http\Controllers\AdminUserController;
+
+
+Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
+
+
+Route::get('/', function () {
+    return view('home'); // Make sure home.blade.php exists
 });
 // making another route and change in the place of welcome replace it with required file name
 // Route::get('/view', function () {
@@ -31,11 +109,7 @@ Route::get('/', function () {
 // Route::get('/about', function () {
 //      return view('about');
 //  });
-<<<<<<< HEAD
 // /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera
-=======
-// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera 
->>>>>>> feature/trekking-mapp
 
 // suppose euta certain naam ko manche ko appear huna paryore data the we should:
 Route::get('/about/{name}', function ($name) {
@@ -69,98 +143,12 @@ Route ::get('/Tours',function(){
 // use App\Http\Controllers\TrekController;
 Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
 
-<<<<<<< HEAD
-
-
-
-
-
-use Illuminate\Support\Facades\Auth;
-use App\Models\User;
-
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\AdminController;
-
-use App\Http\Controllers\Admin\UserControllers;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\AdminUserController;
-
-
-Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
-
-
-Route::get('/', function () {
-    return view('home'); // Make sure home.blade.php exists
-});
-=======
->>>>>>> feature/trekking-mapp
 
 Route::get('/form', function () {
     return view('form');
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> feature/trekking-mapp
-Route::get('/AmaYangriTrek', function () {
-    return view('AmaYangriTrek');
-});
-
-
-Route::get('/LangtangTrek', function () {
-    return view('LangtangTrek');
-});
-
-Route::get('/ShivapuriTrek', function () {
-    return view('ShivapuriTrek');
-});
-
-Route::get('/AmaYangriPaid', function () {
-    return view('AmaYangriPaid');
-});
-
-Route::get('/Langtangpaid', function () {
-    return view('Langtangpaid');
-});
-
-Route::get('/Shivapuripaid', function () {
-    return view('Shivapuripaid');
-});
-
-
-
-use App\Http\Controllers\PaymentController;
-
-Route::post('/charge', [PaymentController::class, 'charge']);
-Route::get('/esewa-pay', [EsewaController::class, 'pay'])->name('esewa.pay');
-Route::get('/esewa-success', [EsewaController::class, 'success']);
-Route::get('/esewa-failure', [EsewaController::class, 'failure']);
-
-
-
-Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
-
-// Route::get('/recommend', [RecommendationController::class, 'showForm'])->name('recommend.form');
-// Route::post('/recommend', [RecommendationController::class, 'processForm'])->name('recommend.process');
-
-
-
-// Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
-// Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
-
-
-//RECOMENDATION
-Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
-Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
-Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
-<<<<<<< HEAD
 Route::get('/register', [AuthController::class, 'showRegister']);
-=======
-Rouste::get('/register', [AuthController::class, 'showRegister']);
->>>>>>> feature/payment
 Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -197,52 +185,22 @@ Route::middleware(['auth'])->group(function () {
 
     // Admin Panel Routes
     Route::prefix('admin')->group(function () {
-        Route::get('/dashboard', [UserControllers::class, 'dashboard'])->name('admin.dashboard');
-        Route::get('/users', [UserControllers::class, 'index'])->name('admin.users.index');
-        Route::get('/users/create', [UserControllers::class, 'create'])->name('admin.users.create');
-        Route::post('/users', [UserControllers::class, 'store'])->name('admin.users.store');
-        Route::get('/users/{user}/edit', [UserControllers::class, 'edit'])->name('admin.users.edit');
-        Route::put('/users/{user}', [UserControllers::class, 'update'])->name('admin.users.update');
-        Route::delete('/users/{user}', [UserControllers::class, 'destroy'])->name('admin.users.destroy');
+        Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+        Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
+        Route::post('/users', [UserController::class, 'store'])->name('admin.users.store');
+        Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('admin.users.edit');
+        Route::put('/users/{user}', [UserController::class, 'update'])->name('admin.users.update');
+        Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('admin.users.destroy');
     });
 });
 
 
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
-=======
->>>>>>> feature/trekking-mapp
 
 
 
 
-
-<<<<<<< HEAD
-Route::get('/example', function () {
-    return view('example');
-});
-
-Route::get('/abc', function () {
-    return view('abc');
-});
-
-Route::get('/shey', function () {
-    return view('shey');
-});
-
-Route::get('/manaslu', function () {
-    return view('manaslu');
-});
-
-
-use App\Http\Controllers\PostController;
-
-Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
-Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
-Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
-Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
-Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
-Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update');
-Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 // Route::middleware(['auth', 'role:Admin'])->prefix('admin')->group(function () {
 //     Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
 //     Route::get('/users/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.users.edit');
@@ -253,11 +211,96 @@ Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.de
 
 
 Route::resource('/admin/users', UserController::class);
+Route::resource('users', UsersController::class);
+
+Route::resource('/admin/users', UserController::class);
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 
+use App\Http\Controllers\Admin\UsersController;
+Route::resource('users', UsersController::class);
 
-=======
->>>>>>> feature/trekking-mapp
+// Route::resource('admin/users', UserControllers::class);
+Route::get('/AmaYangriTrek', function () {
+    return view('AmaYangriTrek');
+});
+
+Route::get('/LangtangTrek', function () {
+    return view('LangtangTrek');
+});
+
+Route::get('/ShivapuriTrek', function () {
+    return view('ShivapuriTrek');
+});
+
+Route::get('/ShivapuriTrek', function () {
+    return view('ShivapuriTrek');
+})->name('ShivapuriTrek');
+
+Route::get('/langtang-trek', function() {
+    return view('LangtangTrek');
+})->name('LangtangTrek');
+
+Route::get('/ama-yangri-trek', function() {
+    return view('AmaYangriTrek');
+})->name('AmaYangriTrek');
+
+
+Route::get('/annapurna-base-camp', function() {
+    return view('abc');
+})->name('abc');
+
+Route::get('/shey-phoksundo', function() {
+    return view('shey');
+})->name('shey');
+
+Route::get('/manaslu-trek', function() {
+    return view('manaslu');
+})->name('manaslu');
+
+
+// changed routes for crud
+Route::get('/posts', function() {
+    return view('posts.index');
+})->name('posts.index');
+
+Route::get('/posts/create', function() {
+    return view('posts.create');
+})->name('posts.create');
+
+Route::get('/posts/{id}/edit', function($id) {
+    return view('posts.edit', compact('id'));
+})->name('posts.edit');
+
+Route::get('/posts/{id}', function($id) {
+    return view('posts.show', compact('id'));
+})->name('posts.show');
+
+
+Route::get('/see-more', function() {
+    $hasPaid = \App\Models\PremiumPayment::where('status', 'success')->exists();
+    return view('see_more', compact('hasPaid'));
+});
+
+
+Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
+
+// Route::get('/recommend', [RecommendationController::class, 'showForm'])->name('recommend.form');
+// Route::post('/recommend', [RecommendationController::class, 'processForm'])->name('recommend.process');
+
+
+
+// Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
+// Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
+
+
+//RECOMENDATION
+Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
+Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
+Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
+
+
+//TOURS PRICE RANGE
+Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
