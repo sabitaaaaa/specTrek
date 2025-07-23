@@ -358,7 +358,7 @@
   <main>
     <div class="row">
       <div class="col-lg-7">
-{{------------------------------------------- images -------------------------------------------}}
+<!-- {{------------------------------------------- images -------------------------------------------}} -->
         <div class="slider">
             <img class="slide active" src="{{ asset('images/l1.jpg') }}" alt="Langtang Trek 1" />
             <img class="slide" src="{{ asset('images/l2.jpg') }}" alt="Langtang Trek 2" />
@@ -393,7 +393,7 @@
         </div>
       </div>
     </div>
-{{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}}
+<!-- {{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}} -->
 
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
@@ -460,7 +460,7 @@
             <strong>MORE INFORMATIONS</strong>
             <br>
             <br>
-    {{------------------------------------------- Table -------------------------------------------}}
+    <!-- {{------------------------------------------- Table -------------------------------------------}} -->
     <table style="width: 100%; border-collapse: collapse; background: white;">
                 <thead style="background-color: #027478; color: white;">
                   <tr>

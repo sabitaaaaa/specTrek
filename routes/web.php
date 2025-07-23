@@ -253,3 +253,14 @@ Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
 
 
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+// for review =================
+
+use App\Http\Controllers\ReviewController;
+
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);
+

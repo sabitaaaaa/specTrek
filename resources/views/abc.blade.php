@@ -20,14 +20,15 @@
     }
 
     .navbar {
-      background-color: #027478;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 50px;
-      height: 90px;
-      border-bottom: 2px solid #ddd;
-    }
+  background-image: linear-gradient(90deg, #027478, #38b6b1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 90px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
     .navbar-brand img {
       height: 73px;
@@ -305,7 +306,7 @@
  .nonInteractiveMap img:hover{
     box-shadow: 0 8px 200px rgba(0, 0, 0, 0.4); /* deeper hover shadow */
     border-radius: 25px;
-    transform: scale(1.02); /* slight zoom effect */
+    transform: scale(1.02); /* slight zoom effect */
 }
 /*-------------------- arrow button ------------------ */
 #scrollTopBtn {
@@ -537,11 +538,7 @@
 <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
-<<<<<<< Updated upstream
-        <p>&copy;All rights reserved.</p>
-=======
         <p>&copy; All rights reserved.</p>
->>>>>>> Stashed changes
         <p>Developed by SpecTrek Team</p>
       </div>
     </footer>
