@@ -13,15 +13,4 @@ public function adminDashboard()
     return view('admin-dashboard', ['userCount' => $userCount]);
 }
 
-} 
-// abstract class Controller
-// {
-
-// public function adminDashboard()
-// {
-//     $userCount = User::count(); 
-
-//     return view('admin-dashboard', ['userCount' => $userCount]);
-// }
-
-// } 
+}
