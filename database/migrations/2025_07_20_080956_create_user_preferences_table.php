@@ -12,18 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('user_preferences', function (Blueprint $table) {
-            Schema::create('user_preferences', function (Blueprint $table) {
-    $table->id();
-    $table->foreignId('user_id')->constrained()->onDelete('cascade');
-    $table->integer('budget')->nullable();
-    $table->integer('available_days')->nullable();
-    $table->string('difficulty_pref')->nullable();
-    $table->string('interest_tags')->nullable(); // example: region
-    $table->string('season_pref')->nullable();
-    $table->text('expectation_notes')->nullable();
-    $table->timestamps();
-});
-
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->integer('budget')->nullable();
+            $table->integer('available_days')->nullable();
+            $table->string('difficulty_pref')->nullable();
+            $table->string('interest_tags')->nullable(); // example: region or tags
+            $table->string('season_pref')->nullable();
+            $table->text('expectation_notes')->nullable();
+            $table->timestamps();
         });
     }
 

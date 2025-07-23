@@ -1,4 +1,4 @@
-<h1>WELCOMEEE. HELLO</h1> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,7 @@
         <img src="{{ asset('images/mounteverest-2.png') }}" class="layer mid" alt="Middle Lower Mountain">
         <img src="{{ asset('images/mounteverest-3.png') }}" class="layer front" alt="Front Mountain">
 
-        <!-- ✅ Hero Content -->
+        <!-- Hero Content -->
         <div class="hero-content">
             <p class="to-the">SETTING THE </p>
             <h1>CLEAR PATH</h1>

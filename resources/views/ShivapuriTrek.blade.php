@@ -28,9 +28,12 @@
     border-bottom: 2px solid #ddd; /* horizontal line */
 }
 
-    .navbar-brand img {
-      height: 120px;
+        /* changed */
+.navbar-brand img {
+      height: 73px;
+      object-fit: contain;
       margin-top: 15px;
+      margin-left: 70px;
     }
 
     .nav-links {
@@ -331,9 +334,10 @@
 <body>
 
   <nav class="navbar">
+       <!-- changed -->
     <a href="#" class="navbar-brand">
-      <img src="{{ asset('images/logo.jpg') }}" alt="Logo" />
-    </a>
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+      </a>
     <ul class="nav-links">
       <li><a href="#">Emergency</a></li>
       <li><a href="#">Tour</a></li>
@@ -488,15 +492,26 @@
         </div>
           <div class="fade-overlay"></div>
         </div>
-        <script async
-        src="https://js.stripe.com/v3/buy-button.js">
-      </script>
+        <button id="see-more-btn" class="see-more-button">See More</button>
 
-      <stripe-buy-button
-        buy-button-id="buy_btn_1RgdsM2EZhQjvwUDz1emsHhO"
-        publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1"
-      >
-      </stripe-buy-button>      </div>
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
+
+
+
+</div>
     </div>
   </div>
 
@@ -505,14 +520,13 @@
     <img src="{{ asset('images/smap.jpg') }}">
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
-    <footer class="footer">
-      <div class="footer-container">
-        <p>&copy; 2025 Shivapuri Trek. All rights reserved.</p>
-        <p>Developed by SpecTrek Team</p>
-      </div>
-    </footer>
   </main>
-
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Shivapuri Trek. All rights reserved.</p>
+      <p>Developed by SpecTrek Team</p>
+    </div>
+  </footer>
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
@@ -570,4 +584,3 @@
   </script>
 </body>
 </html>
-

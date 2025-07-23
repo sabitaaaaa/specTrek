@@ -60,22 +60,32 @@
         }
 
         .content {
-            padding: 20px;
+            padding: 10px;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 10px;
             justify-content: center;
+        } 
+
+        .card , .card1 {   
+            padding: 18px;
+            flex: 1 1 50px; 
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(20, 18, 18, 0.05); 
+            border-radius: 5px; 
+            font-size: 18px;
+            text-align: center; 
         }
 
-        .card {
+        /* .card {
             background-color: white;
-            padding: 20px;
-            flex: 1 1 200px;
-            border-radius: 10px;
+            padding: 18px;
+            flex: 1 1 50px;
+            border-radius: 5px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             font-size: 18px;
             text-align: center;
-        }
+        } */
 
         .chart-container {
             background-color: white;
@@ -111,8 +121,11 @@
             </header>
 
             <section class="content">
-                <div class="card">Total Users: {{ $userCount }}</div>
-            </section>
+                <div class="card">Total Users: {{ $userCount }}</div> 
+                <div class="card1"> Total Places</div>
+            </section> 
+
+            
 
             <section class="content">
                 <div class="chart-container">
