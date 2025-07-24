@@ -19,16 +19,16 @@
       background-color: #f9f9f9;
     }
 
-    .navbar {
-      background-color: #027478;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 50px;
-      height: 90px;
-      border-bottom: 2px solid #ddd;
-    }
-
+     .navbar {
+  background-image: linear-gradient(90deg, #027478, #38b6b1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 90px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
     .navbar-brand img {
       height: 73px;
       object-fit: contain;
@@ -276,7 +276,7 @@
 /* ------------------------------------map image --------------- */
 
 .nonInteractiveMap{
-    margin-top: 50px;   
+    margin-top: 50px;
 }
 .nonInteractiveMap h1{
     text-align: center;
@@ -333,7 +333,7 @@
 }
 /* -----------------------------------------------------footer part -------------------- */
     .footer {
-      background-color: #027478;
+      background-color: black;
       color: white;
       text-align: center;
       padding: 1rem 0;
@@ -392,7 +392,7 @@
               <li>Ringmo village, a traditional Bon village perched near the lake.</li>
               <li>Tshowa Gompa, A 900-year-old Bon monastery that sits on a cliff above Phoksundo Lake.</li>
               <li>Dho Tarap villge, A traditional Tibetan village with walled compounds, barley fields, and Tibetan-style houses.</li>
-            
+
             </ul>
           </div>
           <div class="best-time">
@@ -417,13 +417,13 @@
           <li><strong>Day 5:</strong> Descend from Phoksundo Lake through forests to Chhepka village.</li>
           <li><strong>Day 6:</strong> Trek from Chhepka to Juphal via Sulighat, completing the circuit.</li>
           <li><strong>Day 7:</strong> Take a scenic morning flight from Juphal back to Nepalgunj.</li>
-       
+
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
-        
+
       </div>
-    
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -506,34 +506,49 @@
                   <li><strong>Mysterious Bon Monasteries:</strong> Hidden away in the hills around the lake are small Bonpo shrines, often accessible only on foot. Inside, murals and statues hold centuries of spiritual history, and locals light butter lamps here to pay homage to their ancestors.</li>
                 </ul>
               </div>
-              
+
           </div>
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
-      </div>
+
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
+          </div>
     </div>
   </div>
 
   <div class="nonInteractiveMap">
     <h1> "Here is a Normal map for Shey Phoksundo Trek" </h1>
     <img src="{{ asset('images/map2.jpg') }}">
-    
+
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
 
   </div>
 
 
 
-    <!-- Footer -->
+
+  </main>
+<!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
-        <p>&copy; 2025 AmaYangri Trek. All rights reserved.</p>
+        <p>&copy; All rights reserved.</p>
         <p>Developed by SpecTrek Team</p>
       </div>
     </footer>
-  </main>
-
 
 
   <script>

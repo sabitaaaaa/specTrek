@@ -20,14 +20,15 @@
     }
 
     .navbar {
-      background-color: #027478;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 50px;
-      height: 90px;
-      border-bottom: 2px solid #ddd;
-    }
+  background-image: linear-gradient(90deg, #027478, #38b6b1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 90px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
     .navbar-brand img {
       height: 73px;
@@ -305,7 +306,7 @@
  .nonInteractiveMap img:hover{
     box-shadow: 0 8px 200px rgba(0, 0, 0, 0.4); /* deeper hover shadow */
     border-radius: 25px;
-    transform: scale(1.02); /* slight zoom effect */
+    transform: scale(1.02); /* slight zoom effect */
 }
 /*-------------------- arrow button ------------------ */
 #scrollTopBtn {
@@ -332,7 +333,7 @@
 }
 /* -----------------------------------------------------footer part -------------------- */
     .footer {
-      background-color: #027478;
+      background-color: black;
       color: white;
       text-align: center;
       padding: 1rem 0;
@@ -520,7 +521,22 @@
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
-      </div>
+
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
+          </div>
     </div>
   </div>
 
@@ -534,13 +550,13 @@
 
 
   </main>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <p>&copy; 2025 AmaYangri Trek. All rights reserved.</p>
-      <p>Developed by SpecTrek Team</p>
-    </div>
-  </footer>
+<!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; All rights reserved.</p>
+        <p>Developed by SpecTrek Team</p>
+      </div>
+    </footer>
 
 
   <script>

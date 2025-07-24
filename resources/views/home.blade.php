@@ -7,6 +7,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <script src="{{ asset('js/Home-mountains.js') }}"></script>
+<style>
+  /* Navbar base styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .signup {
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Scrolled styles */
+  .navbar.scrolled {
+    background-color: rgba(34, 184, 189, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.scrolled .nav-links li a,
+  .navbar.scrolled .signup {
+    color: black;
+    border-color: black;
+  }
+  .hero {
+  background: url('{{ asset('images/your-bg.jpg') }}') no-repeat center center / cover;
+  height: 100vh;
+  position: relative;
+}
+
+</style>
 
 </head>
 <body>
@@ -18,10 +76,11 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#">Emergency</a></li>
-                <li><a href="resources/views/posts">Blogs</a></li>
+                <li><a href="#">Blogs</a></li>
                 <li><a href="#">Tour</a></li>
-                <li><a href="login">Login</a></li>
-                <li><a class="signup" href="register">Signup</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a class="signup" href="#">Signup</a></li>
             </ul>
         </nav>
 
@@ -30,7 +89,7 @@
         <img src="{{ asset('images/mounteverest-2.png') }}" class="layer mid" alt="Middle Lower Mountain">
         <img src="{{ asset('images/mounteverest-3.png') }}" class="layer front" alt="Front Mountain">
 
-        <!-- ✅ Hero Content -->
+        <!-- Hero Content -->
         <div class="hero-content">
             <p class="to-the">SETTING THE </p>
             <h1>CLEAR PATH</h1>
@@ -46,129 +105,95 @@
   <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
   <div class="features-grid top-row">
     <div class="feature-card">
-      <!-- changed -->
-      <a href="{{ route('ShivapuriTrek') }}">
       <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
       <div class="overlay-text">SHIVAPURI</div>
     </div>
     <div class="feature-card">
-      <!-- chnaged -->
-       <a href="{{ route('abc') }}">
       <img src="{{ asset('images/h-2.jpg') }}" alt="ABC">
-      <div class="overlay-text">ANNAPURNA BASE CAMP</div>7
+      <div class="overlay-text">ANNAPURNA BASE CAMP</div>
     </div>
     <div class="feature-card">
-      <!-- chnaged -->
-       <a href="{{ route('shey') }}">
       <img src="{{ asset('images/h-3.jpg') }}" alt="Shey Phoksundo">
       <div class="overlay-text">SHEY PHOKSUNDO</div>
     </div>
   </div>
   <div class="features-grid bottom-row">
     <div class="feature-card">
-      <!-- chnaged -->
-       <a href="{{ route('LangtangTrek') }}">
       <img src="{{ asset('images/h-4.jpg') }}" alt="Langtang">
       <div class="overlay-text">LANGTANG</div>
     </div>
     <div class="feature-card">
-      <!-- chnaged -->
-      <a href="{{ route('AmaYangriTrek') }}">
       <img src="{{ asset('images/h-5.jpg') }}" alt="Amayangri">
       <div class="overlay-text">AMAYANGRI</div>
     </div>
     <div class="feature-card">
-      <!-- changed -->
-       <a href="{{ route('manaslu') }}">
       <img src="{{ asset('images/h-6.jpg') }}" alt="Amayangri">
       <div class="overlay-text">MANASLU</div>
     </div>
   </div>
 </section>
 
+<!-- ===============================updated part ----------------------======================= -->
+
 <section class="testimonial-section">
-  <h2>HAPPY TRAVELERS</h2>
+  <h2 class="testimonial-heading">OUR HAPPY TRAVELLERS</h2>
 
   <div class="testimonial-slider">
-    <!-- 1. Priyanka MV -->
-    <div class="testimonial active">
-      <div class="profile">
-        <div class="hexagon">
-          <img src="images/user-1.jpeg" alt="Profile">
-        </div>
-        <h3>Priyanka MV</h3>
-      </div>
-      <div class="quote-icon">❝</div>
-      <p class="review-text">
-        “SpecTrek was exactly what I needed to plan my Langtang Valley trek. The detailed trail maps and budget filter saved me a lot of time and stress.”
-      </p>
-    </div>
+    @forelse($reviews as $index => $review)
+      <div class="testimonial {{ $index === 0 ? 'active' : '' }}">
 
-    <!-- 2. John Doe -->
-    <div class="testimonial">
-      <div class="profile">
-        <div class="hexagon">
-          <img src="images/user-2.jpeg" alt="Profile">
+        <div class="reviewer-name-container">
+          <h3 class="reviewer-name">
+            {{ $review->name }}
+          </h3>
         </div>
-        <h3>John Doe</h3>
-      </div>
-      <div class="quote-icon">❝</div>
-      <p class="review-text">
-        "I found hidden gems I never knew existed. Great for adventure!"
-      </p>
-    </div>
 
-    <!-- 3. Sarah K. -->
-    <div class="testimonial">
-      <div class="profile">
-        <div class="hexagon">
-          <img src="images/user-3.jpeg" alt="Profile">
+        <div class="review-text-container">
+          <span class="quote-icon">❝</span>
+          <p class="review-text">
+            {{ $review->review }}
+          </p>
+          <span class="quote-icon">❞</span>
         </div>
-        <h3>Sarah K.</h3>
-      </div>
-      <div class="quote-icon">❝</div>
-      <p class="review-text">
-        The design is clean and beginner-friendly, but I faced a few lags while exploring the Solukhumbu trek options. Hoping for an update soon.
-    </div>
 
-    <!-- 4. Daniel Lee -->
-    <div class="testimonial">
-      <div class="profile">
-        <div class="hexagon">
-          <img src="images/user-4.webp" alt="Profile">
-        </div>
-        <h3>Daniel Lee</h3>
       </div>
-      <div class="quote-icon">❝</div>
-      <p class="review-text">
-        SpecTrek offers one of the most personalized and genuine experiences I’ve had while trekking.
-    </div>
-
-    <!-- 5. Amina R. -->
-    <div class="testimonial">
-      <div class="profile">
-        <div class="hexagon">
-          <img src="images/user-5.jpeg" alt="Profile">
-        </div>
-        <h3>Amina R.</h3>
-      </div>
-      <div class="quote-icon">❝</div>
-      <p class="review-text">
-        “I’m not a professional hiker, but this app helped me feel prepared. From the safety checklist to nearby resources, I felt supported every step of the way.”
-      </p>
-    </div>
+    @empty
+      <p>No reviews yet. Be the first to submit one!</p>
+    @endforelse
   </div>
 
-  <!-- Dots for navigation -->
   <div class="dots">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    @foreach($reviews as $index => $r)
+      <span class="dot {{ $index === 0 ? 'active' : '' }}"></span>
+    @endforeach
   </div>
 </section>
 
+<!-- Review Button & Modal Form -->
+<button class="floating-btn" onclick="document.getElementById('popupForm').style.display='block'">
+   Review us
+</button>
+
+<div id="popupForm" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('popupForm').style.display='none'">&times;</span>
+    <form method="POST" action="{{ route('reviews.store') }}">
+      @csrf
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="review" rows="4" placeholder="Your review..." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+@if(session('success'))
+  <p style="color: green;">{{ session('success') }}</p>
+@endif
+
+
+<!------------------------------------- end review form part -------------------------------- -->
 
 
 <section class="hex-section">
@@ -286,36 +311,28 @@
 
     <div class="footer-column">
       <h4>Contact Us</h4>
-      <p><strong>Ashish Shrestha</strong><br>
-      <a href="mailto:spectrekobserve@spectrekapps.com">spectrekobserve@spectrekapps.com</a><br>
-      +977-9841370673</p>
+      <p><strong>Spectrek Team</strong><br>
+      <a href="mailto:spectrek29@email.com">spectrek29@gmail.com</a><br>
+      01-4567922 </p>
 
-      <p><strong>United States Office</strong><br>
-      2035 Sunset Lake Rd Suite B-2,<br>
-      Newark, New Castle, DE-19702.</p>
+      <p><strong>Nepal</strong><br>
+      2025 Apex college,<br>
+      mid baneshowr, kathmandu.</p>
 
-      <p><strong>India Office</strong><br>
-      Flat No 1-D, Top Floor, DDA Flats Pocket-1, Sector-7,<br>
-      Dwarka, New Delhi-110075, Delhi.</p>
 
-      <p><strong>Nepal Office</strong><br>
-      Nuwakott Ghar, Sanepa Chowk,<br>
-      Lalitpur-44700, Province Number-3.</p>
     </div>
-
     <div class="footer-column">
       <h4>Follow Us</h4>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://www.instagram.com/spectrek29/"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-google-plus-g"></i></a>
       </div>
 
       <h4>Secure Payments By</h4>
       <div class="payment-icons">
-        <img src="esewa.png" alt="eSewa">
+        <img src="stripe" alt="stripe">
         <img src="khalti.png" alt="Khalti">
       </div>
     </div>
@@ -323,12 +340,24 @@
 <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
 </svg>
-
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   <div class="footer-bottom">
     <p>©️ 2025 SpecTrek. All rights reserved.</p>
   </div>
 </footer>
 
-<script src="js/Home-mountain.js"></script>
+<script>
+
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+
 </body>
 </html>

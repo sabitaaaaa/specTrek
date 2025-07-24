@@ -20,14 +20,15 @@
     }
 
     .navbar {
-      background-color: #027478;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 50px;
-      height: 90px;
-      border-bottom: 2px solid #ddd;
-    }
+  background-image: linear-gradient(90deg, #027478, #38b6b1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 90px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
     .navbar-brand img {
       height: 73px;
@@ -287,7 +288,7 @@
 /* ------------------------------------map image --------------- */
 
 .nonInteractiveMap{
-    margin-top: 50px;   
+    margin-top: 50px;
 }
 .nonInteractiveMap h1{
     text-align: center;
@@ -332,7 +333,7 @@
 }
 /* -----------------------------------------------------footer part -------------------- */
     .footer {
-      background-color: #027478;
+      background-color: black;
       color: white;
       text-align: center;
       padding: 1rem 0;
@@ -398,7 +399,7 @@
             <p>The best time to trek the Manaslu Circuit is during autumn (September to November) and spring (March to May) when the weather is stable, skies are clear, and mountain views are at their best.</p>
           </div>
         </div>
-      </div> 
+      </div>
     </div>
 
  <!-- WRAPPER THAT CAN GO FULL WIDTH -->
@@ -427,9 +428,9 @@
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
-        
+
       </div>
-    
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -533,6 +534,20 @@
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
 
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
       </div>
     </div>
   </div>
@@ -545,15 +560,15 @@
   </div>
 
 
-    <!-- Footer -->
+
+  </main>
+ <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
-        <p>&copy; 2025 AmaYangri Trek. All rights reserved.</p>
+        <p>&copy;All rights reserved.</p>
         <p>Developed by SpecTrek Team</p>
       </div>
     </footer>
-  </main>
-
 
 
   <script>
@@ -621,4 +636,3 @@
 
 </body>
 </html>
-
