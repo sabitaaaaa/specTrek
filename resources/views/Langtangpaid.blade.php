@@ -16,18 +16,17 @@
       font-family: Arial, sans-serif;
       line-height: 1.5;
     }
+    
     .navbar {
-    background-color: #027478;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 50px;
-    height: 90px;
-    position: relative;
-    z-index: 1000;
-    border-bottom: 2px solid #ddd; /* horizontal line */
-    }
-
+  background-image: linear-gradient(90deg, #027478, #38b6b1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 90px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
     .navbar-brand img {
       height: 120px;
       margin-top: 15px;

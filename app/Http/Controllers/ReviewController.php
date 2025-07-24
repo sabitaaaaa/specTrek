@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;    // <-- add this line
+namespace App\Http\Controllers;
 
 use App\Models\Review;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;  // <-- import base Controller class explicitly
 
 class ReviewController extends Controller
 {
+    /**
+     * Store a newly submitted review.
+     */
     public function store(Request $request)
     {
-        // Validate input
+        // Validate input (image removed)
         $validated = $request->validate([
             'name' => 'required|string|max:100',
             'email' => 'required|email',

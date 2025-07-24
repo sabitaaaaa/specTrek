@@ -73,8 +73,9 @@ body, html {
   z-index: 100;
 }
 .navbar.scrolled {
-  background-color: #027478;
+  background-color: #22b8bd;
 }
+
 
 .nav-links {
   list-style: none;
@@ -616,3 +617,113 @@ body, html {
       font-size: 14px;
       color: #888;
     }
+    /* review form  */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background: white;
+        margin: 10% auto;
+        padding: 20px;
+        width: 400px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    input, textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        background-color: #e4d0bdff;
+        color: black;
+        padding: 10px;
+        border: none;
+    }
+
+    .floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e4d0bdff;
+    color: black;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.floating-btn:hover {
+    background-color: #baa99aff;;
+}
+.testimonial-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.testimonial-slider {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  margin-bottom: 60px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.reviewer-name-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+}
+
+.review-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 40px;
+  color: #ccc;
+}
+
+.review-text {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.quote-icon {
+  user-select: none;
+}
