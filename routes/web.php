@@ -15,7 +15,6 @@ use App\Models\User;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
-// use App\Http\Controllers\TrekController;
 use App\Http\Controllers\Admin\UserControllers;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;  
@@ -55,46 +54,13 @@ Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edi
 Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update');
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 
-
-
-
-// use Illuminate\Support\Facades\Route;
-// use Illuminate\Support\Facades\Auth;
-// use App\Models\User;
-
-// use App\Http\Controllers\AuthController;
-// use App\Http\Controllers\LoginController;
-// use App\Http\Controllers\AdminController;
-// use App\Http\Controllers\TrekController;
-// use App\Http\Controllers\Admin\UserControllers;
-// use App\Http\Controllers\DashboardController;
-// use App\Http\Controllers\UserController;  
-// use App\Http\Controllers\AdminUserController; 
-
-
 Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
 
 
 Route::get('/', function () {
     return view('home'); // Make sure home.blade.php exists
 });
-// making another route and change in the place of welcome replace it with required file name
-// Route::get('/view', function () {
-//     return view('home');
-// });
 
-
-//Short cut of putting a route
-// Route::view('/home','home');
-// Route::view("/about","about");
-
-
-// Route::get('/about', function () {
-//      return view('about');
-//  });
-// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera 
-
-// suppose euta certain naam ko manche ko appear huna paryore data the we should:
 Route::get('/about/{name}', function ($name) {
     echo "$name";//first way to show name
      return view('about',["name"=>$name]);//second way to show name
@@ -180,19 +146,6 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
-
-
-
-
-// Route::middleware(['auth', 'role:Admin'])->prefix('admin')->group(function () {
-//     Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
-//     Route::get('/users/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.users.edit');
-//     Route::put('/users/{user}', [AdminUserController::class, 'update'])->name('admin.users.update');
-//     Route::delete('/users/{user}', [AdminUserController::class, 'destroy'])->name('admin.users.destroy');
-// }); 
-
-
-
 Route::resource('/admin/users', UserController::class);
 Route::resource('users', UsersController::class);
 
@@ -291,6 +244,16 @@ Route::post('/recommend', [TrekController::class, 'processForm'])->name('recomme
 
 //TOURS PRICE RANGE
 Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
+
+// for review =================
+
+use App\Http\Controllers\ReviewController;
+
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 

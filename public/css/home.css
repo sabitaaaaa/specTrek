@@ -1,3 +1,9 @@
+/*
+=================================================================
+  General Body and Font Styles
+=================================================================
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -11,16 +17,19 @@ body, html {
   background-color: #fff;
 }
 
-/* ===============================
-   HERO (Main Section with Images)
-=============================== */
+/*
+=================================================================
+  Hero Section & Parallax Mountain Layers
+=================================================================
+*/
+
 .hero {
   position: relative;
-  height: 120vh; 
+  height: 120vh;
   overflow: hidden;
+  background: url('images/blue-mountain-0.jpg') center/cover no-repeat;
 }
 
-/* ✅ Layered mountain images */
 .layer {
   position: absolute;
   top: 0;
@@ -31,74 +40,85 @@ body, html {
   pointer-events: none;
 }
 
-
-.layer.bg { 
-  z-index: 1; 
-   top: -0px;
-   height:700px;
-   /* width:100%; */
+.layer.bg {
+  z-index: 1;
+  top: -0px;
+  height: 700px;
 }
 .layer.mid {
-   z-index: 2;
-   top: -140px; 
-   /* width:100%; */
-  }
+  z-index: 2;
+  top: -140px;
+}
 .layer.front {
-  z-index: 3; 
+  z-index: 3;
   top: -130px;
 }
 
+/*
+=================================================================
+  Navbar & Scroll Effect
+=================================================================
+*/
 
-/* =====================
-   ✅ Navbar on top of image
-===================== */
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  /* background-color: rgba(255, 255, 255, 0.9);  */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: transparent;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
-.navbar.scrolled {
-  background-color: #22b8bd;
-}
-
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
-  text-decoration:  #fff;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
+  transition: color 0.4s ease;
 }
 
 .signup {
-  border: 1px solid  #fff;
+  border: 1px solid #fff;
   padding: 6px 12px;
   border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.4s ease, border-color 0.4s ease;
 }
 
-/* ====================
-   HERO CENTER TEXT
-==================== */
+/* --- Scrolled State --- */
+.navbar.scrolled {
+  background-color: rgba(34, 184, 189, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .signup {
+  color: black;
+}
+
+.navbar.scrolled .signup {
+  border-color: black;
+}
+
+
+/*
+=================================================================
+  Hero Content
+=================================================================
+*/
+
 .hero-content {
   position: absolute;
   top: 55%;
@@ -130,15 +150,6 @@ body, html {
   margin-top: 20px;
   display: inline-block;
 }
-/* ====================
-   SVG CURVE TRANSITION
-==================== */
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background: url('images/blue-mountain-0.jpg') center/cover no-repeat;
-}
 
 .hero-curve {
   position: absolute;
@@ -150,8 +161,12 @@ body, html {
   pointer-events: none;
 }
 
+/*
+=================================================================
+  Features Section (Highlights)
+=================================================================
+*/
 
-/* ==========SEction============ */
 .features-section {
   text-align: center;
   padding: 60px 20px;
@@ -164,26 +179,21 @@ body, html {
   color: #333;
 }
 
-/* Shared Grid Styles */
 .features-grid {
   display: grid;
   gap: 30px 20px;
   margin-bottom: 40px;
+  justify-content: center;
 }
 
-/* Top row: 3 cards centered */
 .top-row {
   grid-template-columns: repeat(3, 220px);
-  justify-content: center;
 }
 
-/* Bottom row: 2 cards centered */
 .bottom-row {
   grid-template-columns: repeat(3, 220px);
-  justify-content: center;
 }
 
-/* Card styles */
 .feature-card {
   position: relative;
   border-radius: 16px;
@@ -212,23 +222,30 @@ body, html {
   font-size: 14px;
 }
 
-/* Responsive stacking for small screens */
 @media (max-width: 768px) {
   .top-row,
   .bottom-row {
     grid-template-columns: 1fr;
-    justify-content: center;
   }
 }
 
+/*
+=================================================================
+  Testimonial & Review Section
+=================================================================
+*/
 
-
-
-/* ====== ANOTHER SECTION============ */
 .testimonial-section {
   padding: 60px 20px;
   text-align: center;
   background: #f8f8f8;
+}
+
+.testimonial-heading {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 28px;
+  color: #333;
 }
 
 .testimonial-slider {
@@ -236,74 +253,54 @@ body, html {
   overflow: hidden;
   max-width: 900px;
   margin: 0 auto;
-  height: 300px;
+  min-height: 150px;
 }
 
 .testimonial {
-  display: flex;
+  display: none; /* Controlled by JS */
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 30px;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 100%;
-  opacity: 0;
-  transition: all 0.6s ease-in-out;
+  justify-content: center;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 .testimonial.active {
-  left: 0;
-  opacity: 1;
+  display: flex;
 }
 
-.profile {
-  flex: 0 0 180px;
-  text-align: center;
+.reviewer-name-container {
+  margin-bottom: 20px;
 }
 
-.hexagon {
-  width: 100px;
-  height: 110px;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  overflow: hidden;
-  margin: 0 auto;
+.reviewer-name {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #333;
 }
 
-.hexagon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.profile h3 {
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.review-content {
-  flex: 1;
-  padding-left: 40px;
-  text-align: justify;
+.review-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .review-text {
   font-size: 16px;
-  color: #333;
+  color: #444;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 .quote-icon {
   font-size: 40px;
   color: #ccc;
-  margin-bottom: 10px;
+  user-select: none;
 }
 
-/* Dots */
 .dots {
   margin-top: 20px;
-  
 }
 
 .dot {
@@ -313,21 +310,106 @@ body, html {
   margin: 0 6px;
   border-radius: 50%;
   background: #bbb;
-  background-color: #77e628;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .dot.active {
   background: #333;
 }
 
+/*
+=================================================================
+  Floating Review Button & Modal
+=================================================================
+*/
 
-   
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e4d0bd;
+  color: black;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
 
-/* ==========views========== */
+.floating-btn:hover {
+  background-color: #baa99a;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 15% auto;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal input, .modal textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #e4d0bd;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/*
+=================================================================
+  Hexagon Image Gallery
+=================================================================
+*/
+
 .hex-section {
   text-align: center;
   padding: 60px 20px;
+}
+
+.hex-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
 }
 
 .hex-row {
@@ -335,12 +417,11 @@ body, html {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 20px 64px;
-  width:1500px;
+  margin: 20px 0;
 }
 
 .hex-row-offset {
-  margin-top: -30px; /* shift second row up slightly for a tighter layout */
+  margin-top: -30px;
 }
 
 .hex {
@@ -354,14 +435,19 @@ body, html {
   align-items: flex-end;
   justify-content: center;
   color: white;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
   overflow: hidden;
+}
+
+.hex:hover {
+    transform: scale(1.05);
 }
 
 .hex-content {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
   padding: 10px;
+  text-align: center;
 }
 
 .hex-content h4 {
@@ -373,67 +459,33 @@ body, html {
   font-size: 12px;
 }
 
-.hex.customize {
-  background: #eee;
-  color: #333;
-}
 
-.hex.customize img {
-  width: 40px;
-  margin-bottom: 5px;
-}
+/*
+=================================================================
+  Video Section
+=================================================================
+*/
 
-
-/* =======video========= */
-.video-section {
-  background-color: #d0e3ee;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.video-placeholder {
-  width: 80%;
-  max-width: 960px;
-  height: 480px;
-  margin: 30px auto 0;
-  background-color: #1e1e1e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-}
-
-.unavailable-message {
-  color: #ccc;
-  text-align: center;
-}
-
-.unavailable-message .icon {
-  font-size: 48px;
-  color: #aaa;
-  margin-bottom: 10px;
-}
-
-.unavailable-message .title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #eee;
-}
-
-.unavailable-message .subtitle {
-  font-size: 16px;
-  color: #aaa;
-}
 .video-section {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.video-section h2 {
+    color: white;
+    z-index: 2;
+    position: relative;
 }
 
 .video-container {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -441,47 +493,46 @@ body, html {
 
 .video-container iframe {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 177.77vh; /* 100vh * (16/9 aspect ratio) */
+  width: 177.77vh; /* 100vh * 16/9 */
   height: 100vh;
+  min-width: 100vw;
+  min-height: 56.25vw; /* 100vw * 9/16 */
 }
 
-/* fallback to keep it centered on resize */
-@media (max-aspect-ratio: 16/9) {
-  .video-container iframe {
-    width: 100vw;
-    height: 56.25vw; /* (9/16 aspect ratio) */
-  }
-}
+/*
+=================================================================
+  Quote / Upper Footer Section
+=================================================================
+*/
 
-
-
-/* ======= footer uppeeer====== */
 .quote-mountain-wrapper {
-      position: relative;
-      width: 100%;
-      min-height: 800px;
-      text-align: center;
-      overflow: hidden;
-    }
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  text-align: center;
+  overflow: hidden;
+  background-color: #fff;
+}
 
-    .main-mountain {
+.main-mountain {
   width: 100%;
   display: block;
   position: relative;
   z-index: 1;
-  margin-top: 320px; /* Pushes the mountain down */
+  margin-top: 320px;
 }
 
-    .black-mountain {
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      width: 100%;
-      z-index: 2;
-      pointer-events: none;
-    }
+.black-mountain {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
 
 .quote-overlay {
   position: absolute;
@@ -493,6 +544,7 @@ body, html {
   align-items: flex-start;
   z-index: 3;
   pointer-events: none;
+  padding: 0 20px;
 }
 
 .quote {
@@ -518,102 +570,130 @@ body, html {
   margin-bottom: 10px;
 }
 
-.dot {
+.quote .dot {
   width: 16px;
   height: 16px;
   background-color: #027478;
   border-radius: 50%;
-  margin: 10px 0 0;
+  margin-top: 10px;
   transition: all 0.3s ease-in-out;
 }
 
 .line {
   width: 2px;
-  height: 0; /* hidden initially */
+  height: 0;
   background-color: black;
   margin-top: 5px;
   transition: height 0.4s ease;
 }
 
 .quote:hover .line {
-  height: 50px; /* grows on hover */
+  height: 50px;
+}
+/*-------------------- arrow button ------------------ */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 22px;
+  background-color: #027478;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
+#scrollTopBtn:hover {
+  background-color: #035e61;
+  transform: scale(1.1);
+}
+/*
+=================================================================
+  Main Footer
+=================================================================
+*/
 
+.site-footer {
+  background-color: #0c0c0c;
+  color: #fff;
+  padding: 60px 20px 30px;
+  z-index: 0;
+  position: relative;
+}
 
-    /* Footer */
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
 
-    .site-footer {
-      background-color: #0c0c0c;
-      color: #fff;
-      padding: 60px 20px 30px;
-      z-index: 0;
-      position: relative;
-    }
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff;
+}
 
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-    }
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
 
-    .footer-column h4 {
-      font-size: 18px;
-      margin-bottom: 15px;
-      color: #fff;
-    }
+.footer-column ul li {
+  margin-bottom: 10px;
+}
 
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-    }
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-    .footer-column ul li {
-      margin-bottom: 10px;
-    }
+.footer-column ul li a:hover {
+  color: #fff;
+}
 
-    .footer-column ul li a {
-      color: #ccc;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
 
-    .footer-column ul li a:hover {
-      color: #fff;
-    }
+.social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 20px;
+  color: #ccc;
+  transition: color 0.3s;
+}
 
-    .footer-column p {
-      font-size: 14px;
-      line-height: 1.6;
-      color: #ccc;
-    }
+.social-icons a:hover {
+  color: #fff;
+}
 
-    .social-icons a {
-      display: inline-block;
-      margin-right: 10px;
-      font-size: 18px;
-      color: #ccc;
-      transition: color 0.3s;
-    }
+.payment-icons img {
+  height: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+  filter: brightness(0) invert(1);
+}
 
-    .social-icons a:hover {
-      color: #fff;
-    }
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
 
-    .payment-icons img {
-      height: 30px;
-      margin-right: 10px;
-      margin-top: 10px;
-      filter: brightness(0) invert(1);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #333;
-      margin-top: 40px;
-      text-align: center;
-      padding-top: 20px;
-      font-size: 14px;
-      color: #888;
-    }
+.footer-bottom .hero-curve {
+    display: none; /* Hide the curve in the footer */
+}
