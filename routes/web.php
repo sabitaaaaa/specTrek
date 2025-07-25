@@ -12,21 +12,7 @@ use App\Http\Controllers\TrekController;
 Route::get('/', function () {
     return view('welcome');
 });
-// making another route and change in the place of welcome replace it with required file name
-// Route::get('/view', function () {
-//     return view('home');
-// });
 
-
-//Short cut of putting a route
-// Route::view('/home','home');
-// Route::view("/about","about");
-
-
-// Route::get('/about', function () {
-//      return view('about');
-//  });
-// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera 
 
 // suppose euta certain naam ko manche ko appear huna paryore data the we should:
 Route::get('/about/{name}', function ($name) {
@@ -197,17 +183,11 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
+// 
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
 
 
 
-
-// Route::middleware(['auth', 'role:Admin'])->prefix('admin')->group(function () {
-//     Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
-//     Route::get('/users/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.users.edit');
-//     Route::put('/users/{user}', [AdminUserController::class, 'update'])->name('admin.users.update');
-//     Route::delete('/users/{user}', [AdminUserController::class, 'destroy'])->name('admin.users.destroy');
-// }); 
 
 
 
@@ -269,10 +249,18 @@ Route::post('/profile', [AdminProfileController::class, 'update'])->name('profil
 
 
 
+//route for packages 
 
-// pacakage like abc route
-Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
-    Route::resource('trek-packages', App\Http\Controllers\Admin\TrekPackageController::class);
+use App\Http\Controllers\PackageController;
+
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    Route::get('/packages', [PackageController::class, 'index'])->name('packages.index');
 });
- 
-Route::get('/trek/{slug}', [App\Http\Controllers\TrekDisplayController::class, 'show']);
+
+
+
+// Show form
+Route::get('/packages/create', [PackageController::class, 'create'])->name('packages.create');
+
+// Store form data
+Route::post('/packages', [PackageController::class, 'store'])->name('packages.store');
