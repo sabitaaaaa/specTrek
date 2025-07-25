@@ -20,6 +20,18 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
 
+
+// dynamic view for user
+Route::get('/itinerary/{slug}', function ($slug) {
+    $itinerary = \App\Models\Itinerary::where('slug', $slug)->firstOrFail();
+    return view('itinerary.show', compact('itinerary'));
+})->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
+
+
+use App\Http\Controllers\ItineraryController;
+
+Route::resource('itinerary', ItineraryController::class);
+
 // change
 Route::controller(StripePaymentController::class)->group(function(){
     Route::get('stripe', 'stripe');
