@@ -15,21 +15,16 @@ class UserPreference extends Model
     'season_pref',
     'expectation_notes',
 ];
-<<<<<<< HEAD
 
-=======
+
 public function user()
 {
     return $this->belongsTo(User::class);
 }
->>>>>>> feature/trekking-mapp
 }
 
 
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> feature/trekking-mapp

@@ -16,7 +16,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\UserControllers;
-use App\Http\Controllers\DashboardController;
+
 use App\Http\Controllers\UserController;  
 use App\Http\Controllers\AdminUserController; 
 
@@ -256,4 +256,9 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
+//==========PACKAGES
+Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
+    Route::resource('trek-packages', App\Http\Controllers\Admin\TrekPackageController::class);
+});
 
+Route::get('/trek/{slug}', [App\Http\Controllers\TrekDisplayController::class, 'show']);

@@ -7,68 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <script src="{{ asset('js/Home-mountains.js') }}"></script>
-<style>
-  /* Navbar base styles */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: transparent;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-
-  .signup {
-    border: 1px solid white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease, border-color 0.3s ease;
-  }
-
-  /* Scrolled styles */
-  .navbar.scrolled {
-    background-color: rgba(34, 184, 189, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar.scrolled .nav-links li a,
-  .navbar.scrolled .signup {
-    color: black;
-    border-color: black;
-  }
-  .hero {
-  background: url('{{ asset('images/your-bg.jpg') }}') no-repeat center center / cover;
-  height: 100vh;
-  position: relative;
-}
-
-</style>
 
 </head>
 <body>
-
     <header class="hero">
         <nav class="navbar">
             <div class="logo">
@@ -83,12 +29,7 @@
                 <li><a class="signup" href="#">Signup</a></li>
             </ul>
         </nav>
-
-        <img src="{{ asset('images/mount-everest-00.png') }}" class="layer bg" alt="Background Layer">
-        <img src="{{ asset('images/mounteverest-1.png') }}" class="layer mid" alt="Middle Upper Mountain">
-        <img src="{{ asset('images/mounteverest-2.png') }}" class="layer mid" alt="Middle Lower Mountain">
-        <img src="{{ asset('images/mounteverest-3.png') }}" class="layer front" alt="Front Mountain">
-
+        <img src="{{ asset('images/pine.jpg') }}" class="layer front" alt="Front Mountain"> 
         <!-- Hero Content -->
         <div class="hero-content">
             <p class="to-the">SETTING THE </p>
@@ -103,35 +44,54 @@
     </header>
 <section class="features-section">
   <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
+  
   <div class="features-grid top-row">
     <div class="feature-card">
-      <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
-      <div class="overlay-text">SHIVAPURI</div>
+      <a href="{{ url('/ShivapuriTrek') }}">
+        <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
+        <div class="overlay-text">SHIVAPURI</div>
+      </a>
     </div>
+
     <div class="feature-card">
-      <img src="{{ asset('images/h-2.jpg') }}" alt="ABC">
-      <div class="overlay-text">ANNAPURNA BASE CAMP</div>
+      <a href="{{ url('/abc') }}">
+        <img src="{{ asset('images/h-2.jpg') }}" alt="ABC">
+        <div class="overlay-text">ANNAPURNA BASE CAMP</div>
+      </a>
     </div>
+
     <div class="feature-card">
-      <img src="{{ asset('images/h-3.jpg') }}" alt="Shey Phoksundo">
-      <div class="overlay-text">SHEY PHOKSUNDO</div>
+      <a href="{{ url('/shey') }}">
+        <img src="{{ asset('images/h-3.jpg') }}" alt="Shey Phoksundo">
+        <div class="overlay-text">SHEY PHOKSUNDO</div>
+      </a>
     </div>
   </div>
+
   <div class="features-grid bottom-row">
     <div class="feature-card">
-      <img src="{{ asset('images/h-4.jpg') }}" alt="Langtang">
-      <div class="overlay-text">LANGTANG</div>
+      <a href="{{ url('/Langtangtrek') }}">
+        <img src="{{ asset('images/h-4.jpg') }}" alt="Langtang">
+        <div class="overlay-text">LANGTANG</div>
+      </a>
     </div>
+
     <div class="feature-card">
-      <img src="{{ asset('images/h-5.jpg') }}" alt="Amayangri">
-      <div class="overlay-text">AMAYANGRI</div>
+      <a href="{{ url('/AmaYangriTrek') }}">
+        <img src="{{ asset('images/h-5.jpg') }}" alt="Amayangri">
+        <div class="overlay-text">AMAYANGRI</div>
+      </a>
     </div>
+
     <div class="feature-card">
-      <img src="{{ asset('images/h-6.jpg') }}" alt="Amayangri">
-      <div class="overlay-text">MANASLU</div>
+      <a href="{{ url('/manaslu') }}">
+        <img src="{{ asset('images/h-6.jpg') }}" alt="Manaslu">
+        <div class="overlay-text">MANASLU</div>
+      </a>
     </div>
   </div>
 </section>
+
 
 <!-- ===============================updated part ----------------------======================= -->
 
@@ -168,39 +128,9 @@
     @endforeach
   </div>
 </section>
-
-<!-- Review Button & Modal Form -->
-<button class="floating-btn" onclick="document.getElementById('popupForm').style.display='block'">
-   Review us
-</button>
-
-<div id="popupForm" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="document.getElementById('popupForm').style.display='none'">&times;</span>
-    <form method="POST" action="{{ route('reviews.store') }}">
-      @csrf
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="review" rows="4" placeholder="Your review..." required></textarea>
-
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
-  </div>
-</div>
-
-@if(session('success'))
-  <p style="color: green;">{{ session('success') }}</p>
-@endif
-
-
-<!------------------------------------- end review form part -------------------------------- -->
-
-
-<section class="hex-section">
+<!-- ===================================VISUALIZING============================================= -->
+<!-- <section class="hex-section">
   <h2>VISUALIZING THE PLACES</h2>
-  
-
-  <!-- Top row - 5 hexes -->
   <div class="hex-row">
     <div class="hex" style="background-image: url('{{ asset('images/view-1.jpg') }}');">
       <div class="hex-content">
@@ -228,10 +158,8 @@
       </div>
       
     </div>
-  </div>
-
-  <!-- Bottom row - 4 hexes -->
-  <div class="hex-row hex-row-offset">
+  </div> -->
+  <!-- <div class="hex-row hex-row-offset">
    <div class="hex" style="background-image: url('{{ asset('images/view-6.jpg') }}');">
       <div class="hex-content">
      
@@ -245,9 +173,30 @@
       </div>
     </div>
   </div>
+</section> -->
+<!-- STATS SECTION -->
+<section class="stats-banner">
+  <div class="stats-container">
+    <div class="stat-box">
+      <h3>120+</h3>
+      <p>TREKS COMPLETED</p>
+    </div>
+    <div class="stat-box">
+      <h3>95%</h3>
+      <p>CLIENT SATISFACTION</p>
+    </div>
+    <div class="stat-box">
+      <h3>6,476m</h3>
+      <p>HIGHEST ALTITUDE CONQUERED</p>
+    </div>
+    <div class="stat-box">
+      <h3>8</h3>
+      <p>REGIONS EXPLORED</p>
+    </div>
+  </div>
 </section>
 
-<!--================== VIDEO-SECTION========================================= -->
+<!-- VIDEO SECTION -->
 <section class="video-section">
   <h2>#SPECTREK</h2>
   <div class="video-container">
@@ -256,6 +205,13 @@
   </div>
 </section>
 
+<!-- QUOTE SECTION -->
+<section class="sherpa-banner">
+  <div class="banner-content">
+    <h2>“Because every summit begins with a single step.”</h2>
+    <p>A tribute to the spirit of the mountains and the legends who led the way.</p>
+  </div>
+</section>
 
 <!-- =======================================UPPER-PART-OF-FOOTER======================================== -->
 <section class="quote-mountain-wrapper">
@@ -332,32 +288,62 @@
 
       <h4>Secure Payments By</h4>
       <div class="payment-icons">
-        <img src="stripe" alt="stripe">
-        <img src="khalti.png" alt="Khalti">
+        <img src="{{ asset('images/stripe.png') }}" alt="Stripe" style="height: 30px;">
+        <img src="{{ asset('images/khalti.png') }}" alt="Khalti" style="height: 30px;">
+
       </div>
     </div>
   </div>
 <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
 </svg>
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+
   <div class="footer-bottom">
     <p>© 2025 SpecTrek. All rights reserved.</p>
   </div>
 </footer>
 
-<script>
-  
-  window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-</script>
+<script src="js/Home-mountain.js"></script>
+<!-- Floating Review Button -->
+<button class="floating-review-btn" onclick="toggleReviewModal(true)">
+  <i class="fas fa-comment-dots"></i> Review Us
+</button>
 
+<!-- Review Modal -->
+<div id="reviewModal" class="modern-modal" style="display: none;">
+  <div class="modern-modal-content">
+    <span class="modern-close" onclick="toggleReviewModal(false)">&times;</span>
+    <h3 class="modal-heading">We value your feedback 💬</h3>
+    <form method="POST" action="{{ route('reviews.store') }}">
+      @csrf
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="review" rows="4" placeholder="Share your thoughts..." required></textarea>
+      <button type="submit" class="btn btn-success mt-2">Submit Review</button>
+    </form>
+  </div>
+</div>
+
+<!-- Optional: Success Message -->
+<!-- @if(session('success'))
+  <p style="color: green;">{{ session('success') }}</p>
+@endif -->
+
+<!-- Toggle Modal Script -->
+<script>
+  function toggleReviewModal(show) {
+    const modal = document.getElementById('reviewModal');
+    modal.style.display = show ? 'flex' : 'none';
+  }
+
+  // Optional: Close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById('reviewModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+</script>
 
 </body>
 </html>

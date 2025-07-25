@@ -16,7 +16,7 @@
 
         <div class="mb-3">
             <label for="price_min" class="form-label">Minimum Price</label>
-            <input type="number" name="price_min" id="price_min" class="form-control" placeholder="Enter minimum price" min="0" />
+           <input type="number" name="price_min" id="price_min" class="form-control" placeholder="Enter minimum price" min="0" required />
         </div>
 
         <div class="mb-3">
