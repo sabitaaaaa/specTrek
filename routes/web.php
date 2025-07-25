@@ -232,13 +232,6 @@ Route::get('/esewa-failure', [EsewaController::class, 'failure']);
 
 Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
 
-// Route::get('/recommend', [RecommendationController::class, 'showForm'])->name('recommend.form');
-// Route::post('/recommend', [RecommendationController::class, 'processForm'])->name('recommend.process');
-
-
-
-// Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
-// Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
 
 
 //RECOMENDATION
@@ -253,3 +246,33 @@ Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
 
 
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+
+//profile 
+
+use App\Http\Controllers\AdminProfileController;
+
+Route::get('/admin/profile', [AdminProfileController::class, 'index'])->name('admin.profile');
+Route::post('/admin/profile/update', [AdminProfileController::class, 'update'])->name('admin.profile.update');
+
+
+
+
+Route::resource('users', UserController::class);
+
+
+//profile admin-dashboard 
+
+
+Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
+Route::post('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
+
+
+
+
+// pacakage like abc route
+Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
+    Route::resource('trek-packages', App\Http\Controllers\Admin\TrekPackageController::class);
+});
+ 
+Route::get('/trek/{slug}', [App\Http\Controllers\TrekDisplayController::class, 'show']);
