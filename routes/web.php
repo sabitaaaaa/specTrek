@@ -263,4 +263,3 @@ Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
-

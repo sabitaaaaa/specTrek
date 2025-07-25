@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
 class PremiumPayment extends Model
 {
     protected $fillable = [
@@ -13,10 +12,3 @@ class PremiumPayment extends Model
     ];
 }
 
-=======
-
-class PremiumPayment extends Model
-{
-    //
-}
->>>>>>> feature/trekking-mapp

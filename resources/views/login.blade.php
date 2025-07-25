@@ -5,7 +5,9 @@
   <title>SpecTrek | Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 
 <body class="h-screen font-sans m-0">
   <div class="flex h-full">
