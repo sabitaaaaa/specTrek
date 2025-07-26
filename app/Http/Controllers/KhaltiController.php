@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use Neputer\Facades\Khalti;
+use Khalti\Facades\Khalti;
 use Illuminate\Support\Facades\Redirect;
 
 class KhaltiController extends Controller {

@@ -1,6 +1,5 @@
 @extends('layouts.itinerary')
 
-
 @section('content')
 <h1>Edit Itinerary: {{ $itinerary->title }}</h1>
 
@@ -12,7 +11,7 @@
   </ul>
 @endif
 
-<form action="{{ route('itinerary.update', $itinerary->id) }}" method="POST">
+<form action="{{ route('itinerary.update', $itinerary->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
@@ -22,42 +21,63 @@
     <label>Slug:</label><br>
     <input type="text" name="slug" value="{{ old('slug', $itinerary->slug) }}" required><br><br>
 
-    <label>Hidden Gems (comma separated):</label><br>
-    <input type="text" name="hidden_gems" value="{{ old('hidden_gems', implode(',', json_decode($itinerary->hidden_gems, true) ?? [])) }}"><br><br>
+    <label>Quote:</label><br>
+    <textarea name="quote" class="rich-text">{{ old('quote', $itinerary->quote) }}</textarea><br><br>
 
-    <label>Day to Day Itinerary (each day on new line):</label><br>
-    <textarea name="day_to_day_itinerary" rows="5">{{ old('day_to_day_itinerary', implode("\n", json_decode($itinerary->day_to_day_itinerary, true) ?? [])) }}</textarea><br><br>
+    <label>Description:</label><br>
+    <textarea name="description" class="rich-text">{{ old('description', $itinerary->description) }}</textarea><br><br>
 
-    <label>Detailed Itinerary (HTML allowed):</label><br>
-    <textarea name="detailed_itinerary" rows="7">{{ old('detailed_itinerary', $itinerary->detailed_itinerary) }}</textarea><br><br>
 
-    <label>Transport Table (HTML allowed):</label><br>
-    <textarea name="transport_table" rows="5">{{ old('transport_table', $itinerary->transport_table) }}</textarea><br><br>
-
-    <label>Hidden Traditions (comma separated):</label><br>
-    <input type="text" name="hidden_traditions" value="{{ old('hidden_traditions', implode(',', json_decode($itinerary->hidden_traditions, true) ?? [])) }}"><br><br>
+    <label>Hidden Gems:</label><br>
+    <textarea name="hidden_gems" class="rich-text">{{ old('hidden_gems', $itinerary->hidden_gems) }}</textarea><br><br>
 
     <label>Best Time:</label><br>
-    <input type="text" name="best_time" value="{{ old('best_time', $itinerary->best_time) }}"><br><br>
+    <textarea name="best_time" class="rich-text">{{ old('best_time', $itinerary->best_time) }}</textarea><br><br>
+
+    <label>Day to Day Itinerary:</label><br>
+    <textarea name="day_to_day_itinerary" class="rich-text">{{ old('day_to_day_itinerary', $itinerary->day_to_day_itinerary) }}</textarea><br><br>
+
+    <label>Detailed Itinerary:</label><br>
+    <textarea name="detailed_itinerary" class="rich-text">{{ old('detailed_itinerary', $itinerary->detailed_itinerary) }}</textarea><br><br>
+
+    <label>Transport Table:</label><br>
+    <textarea name="transport_table" class="rich-text">{{ old('transport_table', $itinerary->transport_table) }}</textarea><br><br>
+
+    <label>Hidden Traditions:</label><br>
+    <textarea name="hidden_traditions" class="rich-text">{{ old('hidden_traditions', $itinerary->hidden_traditions) }}</textarea><br><br>
 
     <label>Note:</label><br>
-    <textarea name="note" rows="3">{{ old('note', $itinerary->note) }}</textarea><br><br>
+    <textarea name="note" class="rich-text">{{ old('note', $itinerary->note) }}</textarea><br><br>
 
-    <label>Image 1 filename:</label><br>
-    <input type="file" name="image1" value="{{ old('image1', $itinerary->image1) }}"><br><br>
+    <label>Image 1:</label><br>
+    <input type="file" name="image1"><br>
+    @if($itinerary->image1)
+        <small>Current: {{ $itinerary->image1 }}</small><br>
+    @endif
+    <br>
 
-    <label>Image 2 filename:</label><br>
-    <input type="file" name="image2" value="{{ old('image2', $itinerary->image2) }}"><br><br>
+    <label>Image 2:</label><br>
+    <input type="file" name="image2"><br>
+    @if($itinerary->image2)
+        <small>Current: {{ $itinerary->image2 }}</small><br>
+    @endif
+    <br>
 
-    <label>Image 3 filename:</label><br>
-    <input type="file" name="image3" value="{{ old('image3', $itinerary->image3) }}"><br><br>
+    <label>Image 3:</label><br>
+    <input type="file" name="image3"><br>
+    @if($itinerary->image3)
+        <small>Current: {{ $itinerary->image3 }}</small><br>
+    @endif
+    <br>
 
-    <label>Image 4 filename:</label><br>
-    <input type="file" name="image4" value="{{ old('image4', $itinerary->image4) }}"><br><br>
-
-    <label>Quote:</label><br>
-    <textarea name="quote" rows="2">{{ old('quote', $itinerary->quote) }}</textarea><br><br>
+    <label>Image 4:</label><br>
+    <input type="file" name="image4"><br>
+    @if($itinerary->image4)
+        <small>Current: {{ $itinerary->image4 }}</small><br>
+    @endif
+    <br>
 
     <button type="submit">Update Itinerary</button>
 </form>
 @endsection
+

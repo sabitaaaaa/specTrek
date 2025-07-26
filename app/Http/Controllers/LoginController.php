@@ -34,9 +34,9 @@ class LoginController extends Controller
 
             // Redirect based on role or custom URL
             if (Auth::user()->role === 'admin') {
-                return redirect('/admin-dashboard');
+                return redirect('/');
             } elseif ($redirectTo) {
-                return redirect($redirectTo); // e.g., /shivapuri/payment
+                return redirect($redirectTo);
             } else {
                 return redirect('/');
             }
@@ -51,6 +51,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/');
     }
 }

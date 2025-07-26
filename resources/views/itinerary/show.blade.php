@@ -5,7 +5,7 @@
 @section('content')
 <header>
   <h1>{{ $itinerary->title }}</h1>
-  <p class="subtitle">{{ $itinerary->quote ?? 'Explore the serene beauty of the Himalayan foothills' }}</p>
+  <p class="subtitle">{{ strip_tags($itinerary->quote) }}</p>
 </header>
 
 <main>
@@ -20,7 +20,7 @@
       </div>
 
       <section class="quote">
-        <h4>“{{ $itinerary->quote ?? 'Where the city fades, ' . $itinerary->title . ' awakens the soul.' }}”</h4>
+        <h4>“<p>{{ strip_tags($itinerary->description) }}</p>”</h4>
       </section>
     </div>
 
@@ -28,15 +28,19 @@
       <div class="border-box">
         <div>
           <h2 style="color: #2c3e50;">Hidden Gems</h2>
-          <ul>
+
+
+          <!-- for each gem to appear line by line without html formatting -->
+            <ul>
             @foreach(json_decode($itinerary->hidden_gems, true) ?? [] as $gem)
-              <li>{{ $gem }}</li>
-            @endforeach
+           <li>{{ strip_tags($gem) }}</li>
+          @endforeach
           </ul>
+
         </div>
         <div class="best-time">
           <h3 style="color: #2c3e50;">Best Time to Visit</h3>
-          <p>{{ $itinerary->best_time }}</p>
+          <p>{{ strip_tags($itinerary->best_time) }}</p>
         </div>
       </div>
     </div>
@@ -47,46 +51,75 @@
       <div class="col-lg-6 day-itinerary">
         <h2>Day-to-Day Itinerary</h2>
         <ul>
-          @foreach(json_decode($itinerary->day_to_day_itinerary, true) ?? [] as $day)
-            <li>{{ $day }}</li>
-          @endforeach
+
+        <!-- because of jason encoded here removal of html is different  -->
+      <h2>Day-to-Day Itinerary</h2>
+      <ul>
+        <!-- to make it appear line by line  -->
+        @foreach(json_decode($itinerary->day_to_day_itinerary, true) ?? [] as $day)
+        <li>{{ strip_tags($day) }}</li>
+        @endforeach
         </ul>
-        <p><strong> END OF TREK !! </strong></p>
+
+
       </div>
 
       <div class="col-lg-6 detailed-itinerary-box">
         <h2>Detailed Itinerary</h2>
         <div id="detailed-itinerary" class="fade-box">
           <div class="fade-content">
-            {!! $itinerary->detailed_itinerary !!}
+            <!-- just changed  -->
+             @foreach(preg_split('/\r\n|\r|\n/', strip_tags($itinerary->detailed_itinerary)) as $line)
+            <p>{{ trim($line) }}</p>
+             @endforeach
+
             <strong>MORE INFORMATIONS</strong><br><br>
-            {!! $itinerary->transport_table !!}
+
+            <!-- to remove the html show in browser  -->
+          {!! $itinerary->transport_table !!}
+
+
 
             <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
-              <strong>Note:</strong> {{ $itinerary->note }}
+            <p><strong>Note:</strong> {{ strip_tags($itinerary->note) }}</p>
+
             </p>
 
             <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
               <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
               <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
-                @foreach(json_decode($itinerary->hidden_traditions, true) ?? [] as $fact)
-                  <li>{{ $fact }}</li>
-                @endforeach
+                <ul>
+              @foreach(json_decode($itinerary->hidden_traditions, true) ?? [] as $fact)
+              <li>{{ strip_tags($fact) }}</li>
+             @endforeach
+              </ul>
+
               </ul>
             </div>
           </div>
           <div class="fade-overlay"></div>
         </div>
-        <button id="see-more-btn" class="see-more-button">See More</button>
+ <button id="see-more-btn" class="see-more-button">See More</button>
+
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
       </div>
     </div>
   </div>
 
-  <div class="nonInteractiveMap">
-    <h1>"Here is a Normal map for {{ $itinerary->title }}"</h1>
-    <img src="{{ asset('images/smap.jpg') }}">
-    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
-  </div>
+
 </main>
 
 <footer class="footer">

@@ -18,7 +18,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'has_paid_shivapuri', // Add this line
+        'is_premium',
     ];
 
     /**

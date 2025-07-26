@@ -7,6 +7,7 @@
   <title>@yield('title', 'Itinerary Editor Dashboard')</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
   <link rel="stylesheet" href="{{ asset('css/dynamic.css') }}">
+  <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -23,5 +24,17 @@
   <main style="padding: 20px;">
     @yield('content')
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.rich-text').forEach(function (textarea) {
+            ClassicEditor
+                .create(textarea)
+                .catch(error => {
+                    console.error(error);
+                });
+        });
+    });
+  </script>
 </body>
 </html>

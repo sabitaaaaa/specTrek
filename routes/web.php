@@ -19,6 +19,38 @@ use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
+//changed
+use App\Http\Controllers\StripePaymentController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/stripe', [StripePaymentController::class, 'stripe'])->name('stripe');
+    Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
+
+    Route::get('/payment-success', [StripePaymentController::class, 'paymentSuccess'])->name('payment.success');
+    Route::get('/payment-cancel', [StripePaymentController::class, 'paymentCancel'])->name('payment.cancel');
+
+    // Auth
+
+
+    Route::get('/premium-content', function () {
+        if (auth()->user()->is_premium) {
+            return view('premium-content');
+        }
+        return redirect('/stripe')->with('error', 'Please pay to access premium content.');
+    });
+});
+Route::get('/register', [AuthController::class, 'showRegister']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+})->name('logout.post');
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 // dynamic view for user
@@ -42,16 +74,6 @@ Route::controller(StripePaymentController::class)->group(function(){
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Auth
-Route::get('/register', [AuthController::class, 'showRegister']);
-Route::post('/register', [AuthController::class, 'register']);
-Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::post('/logout', function () {
-    Auth::logout();
-    return redirect('/login');
-})->name('logout.post');
 
 // Static Views
 Route::view('/abc', 'abc')->name('abc');
