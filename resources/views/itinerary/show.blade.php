@@ -18,26 +18,17 @@
           @endif
         @endforeach
       </div>
-
-      <section class="quote">
-        <h4>“<p>{{ strip_tags($itinerary->description) }}</p>”</h4>
-      </section>
     </div>
 
     <div class="col-lg-4">
       <div class="border-box">
-        <div>
-          <h2 style="color: #2c3e50;">Hidden Gems</h2>
-
-
-          <!-- for each gem to appear line by line without html formatting -->
-            <ul>
-            @foreach(json_decode($itinerary->hidden_gems, true) ?? [] as $gem)
-           <li>{{ strip_tags($gem) }}</li>
+        <h2 style="color: #2c3e50;">Hidden Gems</h2>
+        <ul>
+          @foreach(json_decode($itinerary->hidden_gems, true) ?? [] as $gem)
+            <li>{{ strip_tags($gem) }}</li>
           @endforeach
-          </ul>
+        </ul>
 
-        </div>
         <div class="best-time">
           <h3 style="color: #2c3e50;">Best Time to Visit</h3>
           <p>{{ strip_tags($itinerary->best_time) }}</p>
@@ -48,78 +39,73 @@
 
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
+      @php
+        $decoded = json_decode($itinerary->day_to_day_itinerary, true);
+        $text = is_array($decoded) ? implode("\n", $decoded) : $itinerary->day_to_day_itinerary;
+        $cleanText = strip_tags($text);
+        $cleanText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $cleanText);
+      @endphp
+
       <div class="col-lg-6 day-itinerary">
         <h2>Day-to-Day Itinerary</h2>
         <ul>
-
-        <!-- because of jason encoded here removal of html is different  -->
-      <h2>Day-to-Day Itinerary</h2>
-      <ul>
-        <!-- to make it appear line by line  -->
-        @foreach(json_decode($itinerary->day_to_day_itinerary, true) ?? [] as $day)
-        <li>{{ strip_tags($day) }}</li>
-        @endforeach
+          {!! nl2br(e($cleanText)) !!}
         </ul>
-
-
       </div>
 
       <div class="col-lg-6 detailed-itinerary-box">
         <h2>Detailed Itinerary</h2>
-        <div id="detailed-itinerary" class="fade-box">
-          <div class="fade-content">
-            <!-- just changed  -->
-             @foreach(preg_split('/\r\n|\r|\n/', strip_tags($itinerary->detailed_itinerary)) as $line)
-            <p>{{ trim($line) }}</p>
-             @endforeach
 
-            <strong>MORE INFORMATIONS</strong><br><br>
+        @php
+          $cleanDetailed = strip_tags($itinerary->detailed_itinerary);
+          $cleanDetailed = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $cleanDetailed);
+        @endphp
 
-            <!-- to remove the html show in browser  -->
-          {!! $itinerary->transport_table !!}
+        @if(auth()->check() && auth()->user()->is_premium)
+          <!--  Premium user: show all content -->
+          <div id="detailed-itinerary" class="fade-box expanded">
+            {!! nl2br(e($cleanDetailed)) !!}
+            <div class="fade-content">
+              <strong>MORE INFORMATIONS</strong><br><br>
+              {!! $itinerary->transport_table !!}
+              <p><strong>Note:</strong> {{ strip_tags($itinerary->note) }}</p>
 
-
-
-            <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
-            <p><strong>Note:</strong> {{ strip_tags($itinerary->note) }}</p>
-
-            </p>
-
-            <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
-              <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
-              <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
-                <ul>
-              @foreach(json_decode($itinerary->hidden_traditions, true) ?? [] as $fact)
-              <li>{{ strip_tags($fact) }}</li>
-             @endforeach
-              </ul>
-
-              </ul>
+              <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
+                <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
+                <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
+                  @foreach(json_decode($itinerary->hidden_traditions, true) ?? [] as $fact)
+                    <li>{{ strip_tags($fact) }}</li>
+                  @endforeach
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="fade-overlay"></div>
-        </div>
- <button id="see-more-btn" class="see-more-button">See More</button>
 
-        <script>
+        @else
+          <!--  Non-premium user: show locked version -->
+          <div id="detailed-itinerary" class="fade-box">
+            {!! nl2br(e($cleanDetailed)) !!}
+            <div class="fade-overlay"></div>
+          </div>
+
+          <button id="see-more-btn" class="see-more-button">See More</button>
+
+          <script>
             document.getElementById("see-more-btn").addEventListener("click", function () {
               const isLoggedIn = @json(Auth::check());
+              const trekSlug = "{{ $itinerary->slug }}";
 
               if (!isLoggedIn) {
-                // Send them to login with redirect
-                const intendedUrl = encodeURIComponent('/shivapuri/payment');
-                window.location.href = "/login?redirect=" + intendedUrl;
+                window.location.href = "/login?redirect=/itinerary/" + trekSlug;
               } else {
-                // Already logged in
-                window.location.href = "/shivapuri/payment";
+                window.location.href = "/" + trekSlug + "/payment";
               }
             });
           </script>
+        @endif
       </div>
     </div>
   </div>
-
-
 </main>
 
 <footer class="footer">
@@ -128,8 +114,26 @@
     <p>Developed by SpecTrek Team</p>
   </div>
 </footer>
+<script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+    </script>
 
 <script>
+  // Auto image slider
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
   const totalSlides = slides.length;
@@ -143,30 +147,5 @@
     showSlide(currentSlide);
   }
   setInterval(nextSlide, 3000);
-</script>
-
-<script>
-  const seeMoreBtn = document.getElementById('see-more-btn');
-  const fadeBox = document.getElementById('detailed-itinerary');
-  const wrapper = document.getElementById('itinerary-wrapper');
-  seeMoreBtn?.addEventListener('click', () => {
-    fadeBox.classList.toggle('expanded');
-    wrapper.classList.toggle('fullscreen');
-    seeMoreBtn.textContent = fadeBox.classList.contains('expanded') ? 'See Less' : 'See More';
-  });
-</script>
-
-<script>
-  const scrollBtn = document.getElementById("scrollTopBtn");
-  window.onscroll = function () {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  };
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
 </script>
 @endsection

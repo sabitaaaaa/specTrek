@@ -40,11 +40,30 @@ public function stripe()
 
         return redirect($session->url);
     }
-    public function paymentSuccess()
+    // In StripePaymentController.php
+    public function paymentSuccess(Request $request)
     {
-        auth()->user()->update(['is_premium' => true]);
-        return view('premium-content');
+        $user = auth()->user();
+
+        if (!$user) {
+            return redirect('/login');
+        }
+
+        // Get trek slug from session, route param, or request
+        $slug = $request->input('slug', session('trek_slug', '')); // fallback to '' if nothing found
+
+        // Update the user as premium
+        $user->is_premium = true;
+        $user->save();
+
+        // Optional: forget stored slug after use
+        session()->forget('trek_slug');
+
+        //  Redirect back to the trek page with success message
+        return redirect()->to('/' . $slug)->with('success', 'Premium unlocked!');
     }
+
+
 
     public function paymentCancel()
     {

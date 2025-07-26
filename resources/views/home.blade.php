@@ -47,11 +47,12 @@
 
   <div class="features-grid top-row">
     <div class="feature-card">
-      <a href="{{ url('/ShivapuriTrek') }}">
-        <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
-        <div class="overlay-text">SHIVAPURI</div>
-      </a>
-    </div>
+        <a href="{{ url('/itinerary/ShivapuriTrek') }}">
+          <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
+          <div class="overlay-text">SHIVAPURI</div>
+        </a>
+      </div>
+
 
     <div class="feature-card">
       <a href="{{ url('/abc') }}">

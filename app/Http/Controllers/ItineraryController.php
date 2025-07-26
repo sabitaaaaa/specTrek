@@ -7,26 +7,17 @@ use Illuminate\Http\Request;
 
 class ItineraryController extends Controller
 {
-    /**
-     * Display a listing of itineraries.
-     */
     public function index()
     {
         $itineraries = Itinerary::all();
         return view('itinerary.index', compact('itineraries'));
     }
 
-    /**
-     * Show the form for creating a new itinerary.
-     */
     public function create()
     {
         return view('itinerary.create');
     }
 
-    /**
-     * Store a newly created itinerary in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -47,42 +38,40 @@ class ItineraryController extends Controller
             'quote' => 'nullable|string',
         ]);
 
-        // Convert multiline textareas (one item per line) to JSON arrays
+        // Convert multiline textarea inputs to sanitized JSON arrays
         $hidden_gems = $request->input('hidden_gems')
-            ? json_encode(array_filter(array_map('trim', explode("\n", $request->input('hidden_gems')))))
+            ? json_encode(array_filter(array_map(fn($line) => strip_tags(trim($line)), explode("\n", $request->input('hidden_gems')))))
             : json_encode([]);
 
         $day_to_day_itinerary = $request->input('day_to_day_itinerary')
-            ? json_encode(array_filter(array_map('trim', explode("\n", $request->input('day_to_day_itinerary')))))
+            ? json_encode(array_filter(array_map(fn($line) => strip_tags(trim($line)), explode("\n", $request->input('day_to_day_itinerary')))))
             : json_encode([]);
 
         $hidden_traditions = $request->input('hidden_traditions')
-            ? json_encode(array_filter(array_map('trim', explode("\n", $request->input('hidden_traditions')))))
+            ? json_encode(array_filter(array_map(fn($line) => strip_tags(trim($line)), explode("\n", $request->input('hidden_traditions')))))
             : json_encode([]);
 
         // Handle image uploads
         $images = [];
         for ($i = 1; $i <= 4; $i++) {
             $file = $request->file("image{$i}");
-            if ($file) {
-                $images[$i] = $file->store('images', 'public'); // stored in storage/app/public/images
-            } else {
-                $images[$i] = null;
-            }
+            $images[$i] = $file ? $file->store('images', 'public') : null;
         }
 
-        // Create and save the itinerary
+        // Create itinerary with sanitized content
         $itinerary = new Itinerary();
-        $itinerary->title = $request->input('title');
-        $itinerary->slug = $request->input('slug');
+        $itinerary->title = strip_tags($request->input('title'));
+        $itinerary->slug = strip_tags($request->input('slug'));
         $itinerary->hidden_gems = $hidden_gems;
         $itinerary->day_to_day_itinerary = $day_to_day_itinerary;
-        $itinerary->detailed_itinerary = $request->input('detailed_itinerary');
-        $itinerary->transport_table = $request->input('transport_table');
+        $itinerary->detailed_itinerary = strip_tags($request->input('detailed_itinerary'));
+        $itinerary->transport_table = strip_tags($request->input('transport_table'));
         $itinerary->hidden_traditions = $hidden_traditions;
-        $itinerary->best_time = $request->input('best_time');
-        $itinerary->note = $request->input('note');
-        $itinerary->quote = $request->input('quote');
+        $itinerary->best_time = strip_tags($request->input('best_time'));
+        $itinerary->note = strip_tags($request->input('note'));
+        $itinerary->quote = strip_tags($request->input('quote'));
+
+        // *** Store raw HTML for description without strip_tags ***
         $itinerary->description = $request->input('description');
 
         $itinerary->image1 = $images[1];
@@ -96,27 +85,18 @@ class ItineraryController extends Controller
                          ->with('success', 'Itinerary created successfully!');
     }
 
-    /**
-     * Display the specified itinerary by slug.
-     */
     public function show(string $slug)
     {
         $itinerary = Itinerary::where('slug', $slug)->firstOrFail();
         return view('itinerary.show', compact('itinerary'));
     }
 
-    /**
-     * Show the form for editing the specified itinerary.
-     */
     public function edit(int $id)
     {
         $itinerary = Itinerary::findOrFail($id);
         return view('itinerary.edit', compact('itinerary'));
     }
 
-    /**
-     * Update the specified itinerary in storage.
-     */
     public function update(Request $request, int $id)
     {
         $request->validate([
@@ -139,20 +119,20 @@ class ItineraryController extends Controller
 
         $itinerary = Itinerary::findOrFail($id);
 
-        // Convert multiline textareas to JSON arrays
+        // Sanitize array fields
         $hidden_gems = $request->input('hidden_gems')
-            ? json_encode(array_filter(array_map('trim', explode("\n", $request->input('hidden_gems')))))
+            ? json_encode(array_filter(array_map(fn($line) => strip_tags(trim($line)), explode("\n", $request->input('hidden_gems')))))
             : json_encode([]);
 
         $day_to_day_itinerary = $request->input('day_to_day_itinerary')
-            ? json_encode(array_filter(array_map('trim', explode("\n", $request->input('day_to_day_itinerary')))))
+            ? json_encode(array_filter(array_map(fn($line) => strip_tags(trim($line)), explode("\n", $request->input('day_to_day_itinerary')))))
             : json_encode([]);
 
         $hidden_traditions = $request->input('hidden_traditions')
-            ? json_encode(array_filter(array_map('trim', explode("\n", $request->input('hidden_traditions')))))
+            ? json_encode(array_filter(array_map(fn($line) => strip_tags(trim($line)), explode("\n", $request->input('hidden_traditions')))))
             : json_encode([]);
 
-        // Handle image uploads (only replace if new file uploaded)
+        // Replace uploaded images if new ones uploaded
         for ($i = 1; $i <= 4; $i++) {
             $file = $request->file("image{$i}");
             if ($file) {
@@ -160,17 +140,19 @@ class ItineraryController extends Controller
             }
         }
 
-        // Update fields
-        $itinerary->title = $request->input('title');
-        $itinerary->slug = $request->input('slug');
+        // Update sanitized fields
+        $itinerary->title = strip_tags($request->input('title'));
+        $itinerary->slug = strip_tags($request->input('slug'));
         $itinerary->hidden_gems = $hidden_gems;
         $itinerary->day_to_day_itinerary = $day_to_day_itinerary;
-        $itinerary->detailed_itinerary = $request->input('detailed_itinerary');
-        $itinerary->transport_table = $request->input('transport_table');
+        $itinerary->detailed_itinerary = strip_tags($request->input('detailed_itinerary'));
+        $itinerary->transport_table = strip_tags($request->input('transport_table'));
         $itinerary->hidden_traditions = $hidden_traditions;
-        $itinerary->best_time = $request->input('best_time');
-        $itinerary->note = $request->input('note');
-        $itinerary->quote = $request->input('quote');
+        $itinerary->best_time = strip_tags($request->input('best_time'));
+        $itinerary->note = strip_tags($request->input('note'));
+        $itinerary->quote = strip_tags($request->input('quote'));
+
+        // *** Store raw HTML for description without strip_tags ***
         $itinerary->description = $request->input('description');
 
         $itinerary->save();
@@ -179,9 +161,6 @@ class ItineraryController extends Controller
                          ->with('success', 'Itinerary updated successfully!');
     }
 
-    /**
-     * Remove the specified itinerary from storage.
-     */
     public function destroy(int $id)
     {
         $itinerary = Itinerary::findOrFail($id);

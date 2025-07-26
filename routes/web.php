@@ -20,6 +20,10 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
 //changed
+Route::get('/{slug}/payment', function ($slug) {
+    // optionally you can validate if $slug exists in DB
+    return view('payment', ['slug' => $slug]);
+});
 
 use App\Http\Controllers\StripePaymentController;
 

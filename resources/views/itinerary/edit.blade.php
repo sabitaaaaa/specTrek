@@ -80,4 +80,3 @@
     <button type="submit">Update Itinerary</button>
 </form>
 @endsection
-
