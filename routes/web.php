@@ -20,6 +20,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
 //changed
+
 use App\Http\Controllers\StripePaymentController;
 
 Route::middleware(['auth'])->group(function () {
@@ -82,7 +83,6 @@ Route::view('/manaslu', 'manaslu')->name('manaslu');
 Route::view('/example', 'example');
 Route::view('/form', 'form');
 Route::view('/Tours', 'Tours')->name('tours');
-Route::view('/stripe', 'stripe');
 Route::view('/AmaYangriTrek', 'AmaYangriTrek')->name('AmaYangriTrek');
 Route::view('/LangtangTrek', 'LangtangTrek')->name('LangtangTrek');
 Route::view('/ShivapuriTrek', 'ShivapuriTrek')->name('ShivapuriTrek');

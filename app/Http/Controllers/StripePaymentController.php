@@ -7,10 +7,15 @@ use Stripe\Checkout\Session;
 
 class StripePaymentController extends Controller
 {
-    public function stripe()
-    {
-        return view('stripe');
+
+public function stripe()
+{
+    if (!auth()->check()) {
+        dd('NOT LOGGED IN');
     }
+
+    return view('stripe');
+}
 
     public function stripePost(Request $request)
     {
