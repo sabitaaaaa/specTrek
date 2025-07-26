@@ -147,7 +147,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
 Route::resource('/admin/users', UserController::class);
-Route::resource('users', UsersController::class);
+Route::resource('users', UserController::class);
 
 Route::resource('/admin/users', UserController::class);
 
@@ -155,8 +155,8 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 
-use App\Http\Controllers\Admin\UsersController;
-Route::resource('users', UsersController::class);
+// use App\Http\Controllers\Admin\UserController;
+Route::resource('users', UserController::class);
 
 // Route::resource('admin/users', UserControllers::class);
 Route::get('/AmaYangriTrek', function () {
@@ -226,16 +226,6 @@ Route::get('/esewa-failure', [EsewaController::class, 'failure']);
 
 
 Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
-
-// Route::get('/recommend', [RecommendationController::class, 'showForm'])->name('recommend.form');
-// Route::post('/recommend', [RecommendationController::class, 'processForm'])->name('recommend.process');
-
-
-
-// Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
-// Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
-
-
 //RECOMENDATION
 Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
 Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.result');
@@ -257,8 +247,3 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 //==========PACKAGES
-Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
-    Route::resource('trek-packages', App\Http\Controllers\Admin\TrekPackageController::class);
-});
-
-Route::get('/trek/{slug}', [App\Http\Controllers\TrekDisplayController::class, 'show']);

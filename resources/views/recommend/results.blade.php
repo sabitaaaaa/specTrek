@@ -48,7 +48,7 @@
         Couldn't find a perfect match for your query. Here are some similar treks you might like.
       </div>
     @endif
-
+    
     @if($perfectMatches->isNotEmpty())
       <h3>Perfect Matches</h3>
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
@@ -102,6 +102,16 @@
                     <li>Couple: Rs. {{ $prices['couple'] ? number_format($prices['couple']) : 'N/A' }}</li>
                     <li>Group: Rs. {{ $prices['group'] ? number_format($prices['group']) : 'N/A' }}</li>
                   </ul>
+                  @if (!empty($data['notes']) && collect($data['notes'])->filter()->isNotEmpty())
+  <div class="alert alert-info small mt-2">
+    @foreach ($data['notes'] as $note)
+      @if (!empty($note))
+        <p class="mb-1">{{ $note }}</p>
+      @endif
+    @endforeach
+  </div>
+@endif
+
                 </div>
               </div>
             </div>
