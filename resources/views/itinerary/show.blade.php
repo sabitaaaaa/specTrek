@@ -28,13 +28,18 @@
       <div class="border-box">
         <div>
           <h2 style="color: #2c3e50;">Hidden Gems</h2>
-          <ul>
-            @foreach(explode("\n", $itinerary->hidden_gems) as $gem)
-              @if(trim($gem) !== '')
-                <li>{{ trim($gem) }}</li>
-              @endif
-            @endforeach
-          </ul>
+          @php
+  $gems = preg_split('/[.,]/', strip_tags($itinerary->hidden_gems));
+@endphp
+
+<ul>
+  @foreach($gems as $gem)
+    @if(trim($gem) !== '')
+      <li>{{ trim($gem, ' "“”') }}</li>
+    @endif
+  @endforeach
+</ul>
+
         </div>
         <div class="best-time">
           <h3 style="color: #2c3e50;">Best Time to Visit</h3>
@@ -46,9 +51,11 @@
 
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
-      @php
-        $cleanDayText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", strip_tags($itinerary->day_to_day_itinerary));
-      @endphp
+    @php
+  $decodedDayText = html_entity_decode(strip_tags($itinerary->day_to_day_itinerary));
+  $cleanDayText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $decodedDayText);
+@endphp
+
 
       <div class="col-lg-6 day-itinerary">
         <h2>Day-to-Day Itinerary</h2>
@@ -65,8 +72,10 @@
         <h2>Detailed Itinerary</h2>
 
         @php
-          $cleanDetailed = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", strip_tags($itinerary->detailed_itinerary));
-        @endphp
+  $decodedDetailed = html_entity_decode(strip_tags($itinerary->detailed_itinerary));
+  $cleanDetailed = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $decodedDetailed);
+@endphp
+
 
         <div id="detailed-itinerary" class="fade-box">
           <ul>
@@ -77,6 +86,9 @@
             @endforeach
           </ul>
 
+          <br>
+          <br>
+
           <div class="fade-content">
             <strong>MORE INFORMATIONS</strong><br><br>
 
@@ -86,15 +98,24 @@
               <strong>Note:</strong> {{ strip_tags($itinerary->note) }}
             </p>
 
-            <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
-              <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
-              <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
-                @foreach(explode("\n", $itinerary->hidden_traditions) as $fact)
-                  @if(trim($fact) !== '')
-                    <li>{{ trim($fact) }}</li>
-                  @endif
-                @endforeach
-              </ul>
+            @php
+  // 1. Strip all HTML tags to get plain text
+  $plainText = strip_tags($itinerary->hidden_traditions);
+
+  // 2. Split the text by full stops (periods) followed by space or end of string
+  // The regex splits on ". " or "." at the end, but keeps the sentences clean.
+  $sentences = preg_split('/\.\s+|\.$/', $plainText, -1, PREG_SPLIT_NO_EMPTY);
+@endphp
+
+<div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
+  <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
+  <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
+    @foreach($sentences as $sentence)
+      <li>{!! trim($sentence) !!}.</li> {{-- Add period back since split removes it --}}
+    @endforeach
+  </ul>
+</div>
+
             </div>
           </div>
           <div class="fade-overlay"></div>

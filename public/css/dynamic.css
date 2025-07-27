@@ -205,8 +205,12 @@
   opacity: 1;
   height: auto;
 }
-
 .fade-overlay {
+  display: none; /* hide by default */
+}
+
+.fade-box:not(.expanded) .fade-overlay {
+  display: block; /* show only when not expanded */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -216,6 +220,7 @@
   pointer-events: none;
   transition: opacity 0.4s ease;
 }
+
 
 .fade-box.expanded .fade-overlay {
   opacity: 0;
@@ -280,7 +285,7 @@
 /* ------------------------------------map image --------------- */
 
 .nonInteractiveMap{
-    margin-top: 50px;   
+    margin-top: 50px;
 }
 .nonInteractiveMap h1{
     text-align: center;

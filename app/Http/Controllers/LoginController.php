@@ -27,9 +27,15 @@ class LoginController extends Controller
             if (Auth::user()->role === 'admin') {
                 return redirect('/admin-dashboard');
             }
-            else {
-                return redirect('/dashboard');
+            else if(Auth::user()->role=='editor') {
+                return redirect('/itinerary');
             }
+            else{
+
+            }
+
+
+
         }
 
         return back()->with('error', 'Invalid email or password.');
