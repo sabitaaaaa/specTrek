@@ -26,7 +26,7 @@ Route::get('/', function () {
 // Route::get('/about', function () {
 //      return view('about');
 //  });
-// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera 
+// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera
 
 // suppose euta certain naam ko manche ko appear huna paryore data the we should:
 Route::get('/about/{name}', function ($name) {
@@ -134,8 +134,8 @@ use App\Http\Controllers\AdminController;
 
 use App\Http\Controllers\Admin\UserControllers;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\UserController;  
-use App\Http\Controllers\AdminUserController; 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminUserController;
 
 
 Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
@@ -167,7 +167,7 @@ Route::post('/logout', function () {
 */
 
 Route::middleware(['auth'])->group(function () {
-    
+
     // User Dashboard
     Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
 
@@ -207,7 +207,7 @@ Route::get('/admin/users/create', [UserController::class, 'create'])->name('user
 //     Route::get('/users/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.users.edit');
 //     Route::put('/users/{user}', [AdminUserController::class, 'update'])->name('admin.users.update');
 //     Route::delete('/users/{user}', [AdminUserController::class, 'destroy'])->name('admin.users.destroy');
-// }); 
+// });
 
 
 
@@ -276,5 +276,12 @@ Route::get('/itinerary/{slug}', function ($slug) {
 use App\Http\Controllers\ItineraryController;
 
 Route::resource('itinerary', ItineraryController::class);
+
+//for user dashboard
+use App\Http\Controllers\UserDashboardController;
+
+Route::get('/dashboard', [UserDashboardController::class, 'index'])
+    ->middleware(['auth'])->name('dashboard');
+
 
 

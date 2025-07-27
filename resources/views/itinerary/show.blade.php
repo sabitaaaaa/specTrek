@@ -91,11 +91,23 @@
 
           <div class="fade-content">
             <strong>MORE INFORMATIONS</strong><br><br>
+@php
+    // Decode entities like &nbsp;, strip any HTML, and split by full stop
+    $transportText = html_entity_decode(strip_tags($itinerary->transport_table));
+    $transportSentences = preg_split('/\.\s+|\.$/', $transportText, -1, PREG_SPLIT_NO_EMPTY);
+@endphp
 
-            {!! $itinerary->transport_table !!}
-
-            <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
-              <strong>Note:</strong> {{ strip_tags($itinerary->note) }}
+<div class="transport-section" style="margin-top: 2rem;">
+  <h3 style="color: #2c3e50;">Transport Options</h3>
+  <ul style="font-size: 17px; line-height: 1.7;">
+    @foreach($transportSentences as $sentence)
+      @if(trim($sentence) !== '')
+        <li>{{ trim($sentence) }}.</li>
+      @endif
+    @endforeach
+  </ul>
+</div>
+>Note:</strong> {{ strip_tags($itinerary->note) }}
             </p>
 
             @php
