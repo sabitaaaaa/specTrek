@@ -263,3 +263,18 @@ Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
+
+
+
+// dynamic view for user
+Route::get('/itinerary/{slug}', function ($slug) {
+    $itinerary = \App\Models\Itinerary::where('slug', $slug)->firstOrFail();
+    return view('itinerary.show', compact('itinerary'));
+})->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
+
+
+use App\Http\Controllers\ItineraryController;
+
+Route::resource('itinerary', ItineraryController::class);
+
+
