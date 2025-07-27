@@ -29,7 +29,7 @@
                 <li><a class="signup" href="#">Signup</a></li>
             </ul>
         </nav>
-        <img src="{{ asset('images/pine .jpg') }}" class="layer front" alt="Front Mountain"> 
+        <img src="{{ asset('images/pine .jpg') }}" class="layer front" alt="Front Mountain">
         <!-- Hero Content -->
         <div class="hero-content">
             <p class="to-the">SETTING THE </p>
@@ -38,60 +38,36 @@
         </div>
         <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
-  
+
 </svg>
 
     </header>
 <section class="features-section">
   <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
-  
+
   <div class="features-grid top-row">
-    <div class="feature-card">
-      <a href="{{ url('/ShivapuriTrek') }}">
-        <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
-        <div class="overlay-text">SHIVAPURI</div>
-      </a>
-    </div>
-
-    <div class="feature-card">
-      <a href="{{ url('/abc') }}">
-        <img src="{{ asset('images/h-2.jpg') }}" alt="ABC">
-        <div class="overlay-text">ANNAPURNA BASE CAMP</div>
-      </a>
-    </div>
-
-    <div class="feature-card">
-      <a href="{{ url('/shey') }}">
-        <img src="{{ asset('images/h-3.jpg') }}" alt="Shey Phoksundo">
-        <div class="overlay-text">SHEY PHOKSUNDO</div>
-      </a>
-    </div>
+    @foreach($highlights->take(3) as $highlight)
+      <div class="feature-card">
+       <a href="{{ route('itinerary.show', $highlight->slug) }}">
+          <img src="{{ asset('storage/' . $highlight->image1) }}" alt="{{ $highlight->title }}">
+          <div class="overlay-text">{{ strtoupper($highlight->title) }}</div>
+        </a>
+      </div>
+    @endforeach
   </div>
 
   <div class="features-grid bottom-row">
-    <div class="feature-card">
-      <a href="{{ url('/Langtangtrek') }}">
-        <img src="{{ asset('images/h-4.jpg') }}" alt="Langtang">
-        <div class="overlay-text">LANGTANG</div>
-      </a>
-    </div>
+    @foreach($highlights->slice(3, 3) as $highlight)
+      <div class="feature-card">
+  <a href="{{ route('itinerary.show', $highlight->slug) }}">
 
-    <div class="feature-card">
-      <a href="{{ url('/AmaYangriTrek') }}">
-        <img src="{{ asset('images/h-5.jpg') }}" alt="Amayangri">
-        <div class="overlay-text">AMAYANGRI</div>
-      </a>
-    </div>
-
-    <div class="feature-card">
-      <a href="{{ url('/manaslu') }}">
-        <img src="{{ asset('images/h-6.jpg') }}" alt="Manaslu">
-        <div class="overlay-text">MANASLU</div>
-      </a>
-    </div>
+    <img src="{{ asset('storage/' . $highlight->image1) }}" alt="{{ $highlight->title }}">
+    <div class="overlay-text">{{ strtoupper($highlight->title) }}</div>
+  </a>
+</div>
+    @endforeach
   </div>
 </section>
-
 
 <!-- ===============================updated part ----------------------======================= -->
 
@@ -101,7 +77,7 @@
   <div class="testimonial-slider">
     @forelse($reviews as $index => $review)
       <div class="testimonial {{ $index === 0 ? 'active' : '' }}">
-        
+
         <div class="reviewer-name-container">
           <h3 class="reviewer-name">
             {{ $review->name }}
@@ -134,35 +110,35 @@
   <div class="hex-row">
     <div class="hex" style="background-image: url('{{ asset('images/view-1.jpg') }}');">
       <div class="hex-content">
-        
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-2.jpg') }}');">
       <div class="hex-content">
-        
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-3.jpg') }}');">
       <div class="hex-content">
-        
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-4.jpg') }}');">
       <div class="hex-content">
-     
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-5.jpg') }}');">
       <div class="hex-content">
-      
+
       </div>
-      
+
     </div>
   </div> -->
   <!-- <div class="hex-row hex-row-offset">
    <div class="hex" style="background-image: url('{{ asset('images/view-6.jpg') }}');">
       <div class="hex-content">
-     
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-7.jpg') }}');">
@@ -275,7 +251,7 @@
       2025 Apex college,<br>
       mid baneshowr, kathmandu.</p>
 
-      
+
     </div>
     <div class="footer-column">
       <h4>Follow Us</h4>

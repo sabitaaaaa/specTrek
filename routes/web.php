@@ -277,11 +277,7 @@ use App\Http\Controllers\ItineraryController;
 
 Route::resource('itinerary', ItineraryController::class);
 
-//for user dashboard
-use App\Http\Controllers\UserDashboardController;
 
-Route::get('/dashboard', [UserDashboardController::class, 'index'])
-    ->middleware(['auth'])->name('dashboard');
 
 
 

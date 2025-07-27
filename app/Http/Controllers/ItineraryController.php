@@ -47,6 +47,8 @@ class ItineraryController extends Controller
         $itinerary->hidden_gems = $request->input('hidden_gems');
         $itinerary->day_to_day_itinerary = $request->input('day_to_day_itinerary');
         $itinerary->hidden_traditions = $request->input('hidden_traditions');
+        $itinerary->is_featured = $request->has('is_featured');//for highlights
+
 
         // Handle image uploads if any
         foreach (['image1', 'image2', 'image3', 'image4'] as $field) {
@@ -95,6 +97,8 @@ class ItineraryController extends Controller
         $itinerary->hidden_gems = $request->input('hidden_gems');
         $itinerary->day_to_day_itinerary = $request->input('day_to_day_itinerary');
         $itinerary->hidden_traditions = $request->input('hidden_traditions');
+        $itinerary->is_featured = $request->has('is_featured'); //for highlights
+
 
         // Handle image uploads if any
         foreach (['image1', 'image2', 'image3', 'image4'] as $field) {
