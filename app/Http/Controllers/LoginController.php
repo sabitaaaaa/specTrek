@@ -13,26 +13,47 @@ class LoginController extends Controller
         return view('login'); 
     }
 
+    // public function login(Request $request)
+    // {
+    //     $request->validate([
+    //         'email' => 'required|email',
+    //         'password' => 'required'
+    //     ]);
+
+    //     if (Auth::attempt($request->only('email', 'password'))) {
+    //         $request->session()->regenerate();
+
+    //         // Redirect admin or user
+    //         if (Auth::user()->role === 'admin') {
+    //             return redirect('/admin-dashboard');
+    //         } else {
+    //             return redirect('/home');
+    //         }
+            
+    //     }
+
+    //     return back()->with('error', 'Invalid email or password.');
+    // }
     public function login(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
+{
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
 
-        if (Auth::attempt($request->only('email', 'password'))) {
-            $request->session()->regenerate();
+    if (Auth::attempt($request->only('email', 'password'))) {
+        $request->session()->regenerate();
 
-            // Redirect admin or user
-            if (Auth::user()->role === 'admin') {
-                return redirect('/admin-dashboard');
-            } else {
-                return redirect('/dashboard');
-            }
+        // Check role and redirect accordingly
+        if (Auth::user()->role === 'admin') {
+            return redirect('/admin-dashboard');
+        } else {
+            return redirect('/');
         }
-
-        return back()->with('error', 'Invalid email or password.');
     }
+
+    return back()->with('error', 'Invalid email or password.');
+}
 
     public function logout(Request $request)
     {

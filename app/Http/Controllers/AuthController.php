@@ -52,7 +52,7 @@ class AuthController extends Controller
                 return redirect('/admin-dashboard');
             }
 
-            return redirect('/dashboard');
+            return redirect('/home');
         }
 
         return back()->with('error', 'Invalid login credentials');

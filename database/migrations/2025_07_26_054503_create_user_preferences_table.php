@@ -9,16 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('user_preferences', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->decimal('budget', 10, 2)->nullable();
+            $table->integer('budget')->nullable();
             $table->integer('available_days')->nullable();
-            $table->string('difficulty_pref')->nullable();
-            $table->string('interest_tags')->nullable();
-            $table->string('season_pref')->nullable();
+            $table->string('region')->nullable();
+            $table->string('difficulty')->nullable();
             $table->timestamps();
         });
     }

@@ -17,18 +17,34 @@
 <body>
     <header class="hero">
         <nav class="navbar">
-            <div class="logo">
-                <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Emergency</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">User</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a class="signup" href="#">Signup</a></li>
-            </ul>
-        </nav>
+    <div class="logo">
+        <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Emergency</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Tour</a></li>
+        <li><a href="#">User</a></li>
+
+        @guest
+            <!-- Guest users see Login & Signup -->
+            <li><a href="{{ route('login') }}">Login</a></li>
+            <li><a class="signup" href="{{ route('register') }}">Signup</a></li>
+        @else
+            <!-- Logged-in users see Trek Recommendation and Logout -->
+            <li><a href="{{ route('recommend.form') }}">Trek Recommendation</a></li>
+            <li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-link nav-link" style="display:inline; padding:0; border:none; background:none;">
+                        Logout
+                    </button>
+                </form>
+            </li>
+        @endguest
+    </ul>
+</nav>
+
         <img src="{{ asset('images/pine.jpg') }}" class="layer front" alt="Front Mountain"> 
         <!-- Hero Content -->
         <div class="hero-content">
@@ -94,7 +110,7 @@
 
 
 <!-- ===============================updated part ----------------------======================= -->
-
+<!-- 
 <section class="testimonial-section">
   <h2 class="testimonial-heading">OUR HAPPY TRAVELLERS</h2>
 
@@ -127,7 +143,7 @@
       <span class="dot {{ $index === 0 ? 'active' : '' }}"></span>
     @endforeach
   </div>
-</section>
+</section> -->
 <!-- ===================================VISUALIZING============================================= -->
 <!-- <section class="hex-section">
   <h2>VISUALIZING THE PLACES</h2>

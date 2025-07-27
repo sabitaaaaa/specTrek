@@ -24,7 +24,7 @@
                 placeholder="Rs. 5000"
                 min="5000"
                 max="90000"
-                value="{{ old('price_min', auth()->user()->preferred_price_min ?? '') }}"
+             value="{{ old('price_min', $userPreferences->budget ?? '') }}"
                 required
             />
         </div>
@@ -32,16 +32,17 @@
         <div class="mb-3">
             <label for="price_max" class="form-label">Maximum Price</label>
             <input
-                type="number"
-                name="price_max"
-                id="price_max"
-                class="form-control"
-                placeholder="Rs. 5000 to 90000"
-                min="5000"
-                max="90000"
-                value="{{ old('price_max', auth()->user()->preferred_price_max ?? '') }}"
-                required
-            />
+  type="number"
+  name="price_max"
+  id="price_max"
+  class="form-control"
+  placeholder="Rs. 5000 to 90000"
+  min="5000"
+  max="90000"
+  value="{{ old('price_max', $userPreferences->budget ?? '') }}"
+  required
+/>
+
             @error('price_max')
                 <div class="text-danger small">{{ $message }}</div>
             @enderror
@@ -57,7 +58,7 @@
                 placeholder="3 to 14 days"
                 min="3"
                 max="14"
-                value="{{ old('duration_days', auth()->user()->preferred_duration ?? '') }}"
+               value="{{ old('duration_days', $userPreferences->available_days ?? '') }}"
                 required
             />
             @error('duration_days')
@@ -71,7 +72,8 @@
             <select name="experience_level" id="experience_level" class="form-select">
                 <option value="">-- Select Experience Level --</option>
                 @foreach(['Beginner', 'Moderate', 'Advanced'] as $exp)
-                    <option value="{{ $exp }}" {{ old('experience_level') === $exp ? 'selected' : '' }}>{{ $exp }}</option>
+                 <option value="{{ $exp }}" {{ (old('experience_level', $userPreferences->experience_level ?? '') === $exp) ? 'selected' : '' }}> {{ $exp }}
+                 </option>
                 @endforeach
             </select>
             @error('experience_level')
@@ -88,7 +90,7 @@
                 id="interest_tags"
                 class="form-control"
                 placeholder="e.g. lakes, mountains, culture"
-                value="{{ old('interest_tags') }}"
+               value="{{ old('interest_tags', $userPreferences->interest_tags ?? '') }}"
             />
             <small class="text-muted">Separate multiple interests using commas.</small>
             @error('interest_tags')
@@ -104,7 +106,7 @@
                 id="best_season"
                 class="form-control"
                 placeholder="e.g. Spring, Autumn"
-                value="{{ old('best_season') }}"
+                value="{{ old('best_season', $userPreferences->season_pref ?? '') }}"
             />
             @error('best_season')
                 <div class="text-danger small">{{ $message }}</div>
@@ -114,10 +116,12 @@
         <div class="mb-3">
             <label for="difficulty" class="form-label">Difficulty</label>
             <select name="difficulty" id="difficulty" class="form-select">
-                <option value="">-- Select Difficulty --</option>
-                @foreach(['Easy', 'Moderate', 'Hard'] as $level)
-                    <option value="{{ $level }}" {{ old('difficulty') === $level ? 'selected' : '' }}>{{ $level }}</option>
-                @endforeach
+    <option value="">-- Select Difficulty --</option>
+    @foreach(['Easy', 'Moderate', 'Hard'] as $level)
+      <option value="{{ $level }}" {{ (old('difficulty', $userPreferences->difficulty ?? '') === $level) ? 'selected' : '' }}>
+        {{ $level }}
+      </option>
+    @endforeach
             </select>
             @error('difficulty')
                 <div class="text-danger small">{{ $message }}</div>
@@ -129,7 +133,7 @@
             <select name="region" id="region" class="form-select">
                 <option value="">-- Select Region --</option>
                 @foreach(['Annapurna', 'Langtang', 'Kathmandu', 'Dolpa', 'Helambu', 'Manaslu'] as $region)
-                    <option value="{{ $region }}" {{ old('region') === $region ? 'selected' : '' }}>{{ $region }}</option>
+                    <option value="{{ $region }}" {{ (old('region', $userPreferences->region ?? '') === $region) ? 'selected' : '' }}>{{ $region }}</option>
                 @endforeach
             </select>
             @error('region')
@@ -142,7 +146,8 @@
             <select name="group_size" id="group_size" class="form-select">
                 <option value="">-- Select Group Size --</option>
                 @foreach(['Solo', 'Couple', 'Group'] as $size)
-                    <option value="{{ $size }}" {{ old('group_size') === $size ? 'selected' : '' }}>{{ $size }}</option>
+               <option value="{{ $size }}" {{ (old('group_size', $userPreferences->group_size ?? '') === $size) ? 'selected' : '' }}>{{ $size }}</option>
+
                 @endforeach
             </select>
             @error('group_size')
@@ -155,7 +160,7 @@
             <select name="accommodation" id="accommodation" class="form-select">
                 <option value="">-- Select Accommodation --</option>
                 @foreach(['Basic', 'Standard', 'Premium', 'Tea House'] as $acc)
-                    <option value="{{ $acc }}" {{ old('accommodation') === $acc ? 'selected' : '' }}>{{ $acc }}</option>
+                   <option value="{{ $acc }}" {{ (old('accommodation', $userPreferences->accommodation ?? '') === $acc) ? 'selected' : '' }}>{{ $acc }}</option>
                 @endforeach
             </select>
             @error('accommodation')
