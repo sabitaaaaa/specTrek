@@ -19,7 +19,7 @@ class AdminProfileController extends Controller
         // Ensure the folder exists
         $logoPath = public_path('logo');
         if (!File::exists($logoPath)) {
-            File::makeDirectory($logoPath, 0755, true);
+            File::makeDirectory($logoPath, 0777, true);
         }
 
         // Handle file upload

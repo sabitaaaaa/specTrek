@@ -258,7 +258,17 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 });
 
 
+// route for review
 
+
+
+use App\Http\Controllers\ReviewController;
+
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);
 // Show form
 Route::get('/packages/create', [PackageController::class, 'create'])->name('packages.create');
 
@@ -293,3 +303,13 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+
+
+
+
+//new chnages
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/upload-logo', [HomeController::class, 'updateLogo'])->name('site.uploadLogo');
+

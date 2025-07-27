@@ -15,10 +15,11 @@
 
 </head>
 <body>
+
     <header class="hero">
         <nav class="navbar">
             <div class="logo">
-                <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
+                <img src="{{ asset($site_logo) }}" alt="Site Logo" style="max-height: 120px;">
             </div>
             <ul class="nav-links">
                 <li><a href="#">Emergency</a></li>

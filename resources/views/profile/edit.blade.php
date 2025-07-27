@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container mt-5">
+
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
@@ -10,7 +11,7 @@
         <div class="alert alert-danger">{{ session('error') }}</div>
     @endif
 
-    <form action="{{ route('profile.uploadLogo') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('site.uploadLogo') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="site_logo" class="form-label">Choose Logo Image</label>
