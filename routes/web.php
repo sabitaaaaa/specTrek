@@ -27,6 +27,9 @@ Route::get('/{slug}/payment', function ($slug) {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+Route::get('/signup', function () {
+    return view('register');
+})->name('register');
 
 use App\Http\Controllers\StripePaymentController;
 
@@ -55,7 +58,7 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/logout', function () {
     Auth::logout();
-    return redirect('/login');
+    return redirect('/');
 })->name('logout.post');
 
 

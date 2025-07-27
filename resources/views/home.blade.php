@@ -18,11 +18,22 @@
             </div>
             <ul class="nav-links">
                 <button id="emergency-btn">Emergency</button>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">User</a></li>
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a class="signup" href="#">Signup</a></li>
+                <li class="naa">Blogs</a></li>
+                <li class="naa">Tour</a></li>
+                <li class="naa">User</a></li>
+                @auth
+                <div x-data="{ open: false }" class="mt-1 ms-2">
+                    <form method="POST" action="{{ route('logout') }}" @submit="open = false">
+                        @csrf
+                        <button class="naa">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+                @else
+                <li class="naa"><a href="{{ route('login') }}">Login</a></li>
+                <li class="naa"><a class="signup" href="{{ route('register') }}">register</a></li>
+                @endauth
             </ul>
         </nav>
         <img src="{{ asset('images/pine .jpg') }}" class="layer front" alt="Front Mountain">
@@ -195,7 +206,7 @@
 
 <!-- VIDEO SECTION -->
 <section class="video-section">
-  <h2>#SPECTREK</h2>
+  <h2>SPECTREK</h2>
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/4OiXfDdbtnM?autoplay=1&mute=1&loop=1&playlist=4OiXfDdbtnM&controls=0&showinfo=0&modestbranding=1"
     frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>

@@ -52,7 +52,7 @@ class AuthController extends Controller
                 return redirect('/admin-dashboard');
             }
 
-            return redirect('/dashboard');
+            return redirect('/');
         }
 
         return back()->with('error', 'Invalid login credentials');
@@ -61,6 +61,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/login');
+        return redirect('/');
     }
 }
