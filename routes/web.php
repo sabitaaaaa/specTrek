@@ -24,8 +24,12 @@ Route::get('/{slug}/payment', function ($slug) {
     // optionally you can validate if $slug exists in DB
     return view('payment', ['slug' => $slug]);
 });
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
 use App\Http\Controllers\StripePaymentController;
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/stripe', [StripePaymentController::class, 'stripe'])->name('stripe');

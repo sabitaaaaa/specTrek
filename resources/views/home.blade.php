@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <script src="{{ asset('js/Home-mountains.js') }}"></script>
     <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  rel="stylesheet"
-/>
-
-
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="hero">
@@ -21,11 +17,11 @@
                 <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
             </div>
             <ul class="nav-links">
-                <li><a href="#">Emergency</a></li>
+                <button id="emergency-btn">Emergency</button>
                 <li><a href="#">Blogs</a></li>
                 <li><a href="#">Tour</a></li>
                 <li><a href="#">User</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="{{ route('login') }}">Login</a></li>
                 <li><a class="signup" href="#">Signup</a></li>
             </ul>
         </nav>
@@ -345,6 +341,65 @@
     }
   };
 </script>
+
+<!-- Emergency Modal -->
+<div id="emergency-modal" style="
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+">
+  <div style="
+    background: white;
+    padding: 40px;
+    margin: 15% auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+  ">
+    <span id="close-modal" style="
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+    ">&times;</span>
+    <h2 id="Emergency"> Emergency Contacts</h2>
+    <br>
+    <ul style="padding-left: 0; list-style: none;">
+        <li><strong>Police:</strong> <a href="tel:100">100</a></li>
+        <li><strong>Fire Brigade:</strong>  <a href="tel:101">101</a></li>
+      <li><strong>Ambulance:</strong>  <a href="tel:102">102</a></li>
+      <li><strong>Traffic control:</strong> <a href="tel:103"> 103</a></li>
+      <li><strong>Missing Child Response:</strong> <a href="tel:104"> 104</a></li>
+      <li><strong>Tourist Police:</strong> <a href="tel:1144"> 1144</a></li>
+      <li><strong>Women Helpline:</strong> <a href="tel:1145"> 1145</a></li>
+
+    </ul>
+  </div>
+</div>
+<script>
+    const modal = document.getElementById("emergency-modal");
+    const close = document.getElementById("close-modal");
+
+    document.getElementById("emergency-btn").addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+
+    close.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Optional: close modal if user clicks outside of it
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 
 </body>
 </html>

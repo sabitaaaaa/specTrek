@@ -3,6 +3,36 @@
   General Body and Font Styles
 =================================================================
 */
+
+/* changed */
+
+#Emergency{
+    color: rgba(137, 5, 5, 0.55);
+}
+
+  .cta-button:hover {
+    background-color: #88C3CE;
+    color: white;
+    border-radius: 20px;
+  }
+
+    #emergency-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #emergency-btn:hover {
+    /* background-color: rgba(173, 196, 23, 0.586); */
+    color: #9e2b2bda;
+    border-radius: 30px;
+    }
+
+    /* till here */
+
 :root {
     --light-teal: #B8DDE3;
     --medium-teal: #88C3CE;
@@ -301,6 +331,7 @@
   }
 
   .cta-button {
+    transition: background-color 0.3s ease, color 0.3s ease;
     background-color: yellow;
     color: black;
     padding: 15px 25px;
@@ -309,7 +340,10 @@
     border-radius: 5px;
     margin-top: 20px;
     display: inline-block;
+    border-radius: 20px;
+
   }
+
 
   .hero-curve {
     position: absolute;

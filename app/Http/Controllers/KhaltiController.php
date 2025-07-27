@@ -7,6 +7,7 @@ use Khalti\Facades\Khalti;
 use Illuminate\Support\Facades\Redirect;
 
 class KhaltiController extends Controller {
+
     public function pay() {
         $return_url = "http://example.com/verify";
         $purchase_order_id = "your_transaction_id";
