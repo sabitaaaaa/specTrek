@@ -109,9 +109,9 @@
             <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
                 <i class="bi bi-people me-2"></i> Users
             </a> 
-            <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
+            <!-- <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
     <i class="bi bi-box-seam me-2"></i> Packages
-</a>
+</a> -->
             <a href="{{ url('/setting') }}" class="{{ request()->is('setting') ? 'active' : '' }}">
                 <i class="bi bi-gear me-2"></i> Settings
             </a> 

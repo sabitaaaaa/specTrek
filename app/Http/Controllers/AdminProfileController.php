@@ -2,25 +2,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class AdminProfileController extends Controller
-{
-    public function index()
+{public function index()
     {
-        $logo = setting('site_logo', 'default-logo.png');
-        $theme = setting('site_theme', 'light');
-        return view('admin.profile', compact('logo', 'theme'));
+        return view('profile.edit'); // Make sure this Blade file exists
     }
-
-    public function update(Request $request)
+    public function updateLogo(Request $request)
     {
-        // Logo upload
-        if ($request->hasFile('logo')) {
-            $logo = $request->file('logo')->store('logos', 'public');
-            save_setting('site_logo', $logo);
+        // Validate input
+        $request->validate([
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        // Ensure the folder exists
+        $logoPath = public_path('logo');
+        if (!File::exists($logoPath)) {
+            File::makeDirectory($logoPath, 0755, true);
         }
 
-        // Theme update
-} 
+        // Handle file upload
+        if ($request->hasFile('logo')) {
+            $file = $request->file('logo');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move($logoPath, $filename);
+
+            // Optional: Store file path in DB or session, example:
+            // Setting::updateOrInsert(['key' => 'site_logo'], ['value' => $filename]);
+
+            return back()->with('success', 'Logo uploaded successfully!');
+        }
+
+        return back()->with('error', 'Logo upload failed!');
+    }
 }

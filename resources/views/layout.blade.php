@@ -83,9 +83,9 @@
             <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
                 <i class="bi bi-people me-2"></i> Users
             </a>  
-            <a href="{{ route('packages.index') }}" class="{{ request()->is('admin/packages') ? 'active' : '' }}">
+            <!-- <a href="{{ route('packages.index') }}" class="{{ request()->is('admin/packages') ? 'active' : '' }}">
     <i class="bi bi-box-seam me-2"></i> Packages
-</a>
+</a> -->
 
  <!-- <a href="{{ route('packages.index') }}" class="{{ request()->is('admin/packages*') ? 'active' : '' }}">
     <i class="bi bi-box-seam me-2"></i> Packages

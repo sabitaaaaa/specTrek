@@ -83,9 +83,7 @@
             <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
                 <i class="bi bi-people me-2"></i> Users
             </a>  
-            <a href="{{ route('packages.index') }}" class="{{ request()->is('admin/packages') ? 'active' : '' }}">
-    <i class="bi bi-box-seam me-2"></i> Packages
-</a>
+     
 
  <!-- <a href="{{ route('packages.index') }}" class="{{ request()->is('admin/packages*') ? 'active' : '' }}">
     <i class="bi bi-box-seam me-2"></i> Packages
@@ -113,6 +111,13 @@
             <h4 class="mb-0">@yield('page-title', 'Admin Dashboard')</h4>
         </div>
 
+<!--sabita--> 
+@php
+    $setting = \App\Models\Setting::first();
+@endphp
+
+<img src="{{ asset($setting->site_logo ?? 'images/final-logo.png') }}?v={{ time() }}" alt="SpecTrek" style="height: 90px; width: 100px;">
+
         <!-- Page Content -->
         <div class="content-wrapper">
             @yield('content')
@@ -121,3 +126,7 @@
 </div>
 </body>
 </html>
+
+
+
+

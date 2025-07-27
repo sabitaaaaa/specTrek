@@ -1,4 +1,4 @@
- @extends('layout')
+ <!-- @extends('layout.design')
 
 @section('content')
 <div class="container-fluid px-4">
@@ -32,7 +32,7 @@
                 </div>
 
                 <!-- Future profile settings can go here -->
-                <hr class="my-4">
+                <!-- <hr class="my-4">
 
                 <div class="text-end">
                     <button type="submit" class="btn btn-primary">Update Profile</button>
@@ -41,4 +41,9 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --> -->
+
+
+
+
+

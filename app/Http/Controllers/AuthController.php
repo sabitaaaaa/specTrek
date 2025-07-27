@@ -51,6 +51,7 @@ class AuthController extends Controller
             if (strtolower($user->email) === 'sabita23@gmail.com') {
                 return redirect('/admin-dashboard');
             }
+            else
 
             return redirect('/dashboard');
         }

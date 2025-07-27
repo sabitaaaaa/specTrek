@@ -120,8 +120,8 @@ use App\Http\Controllers\AdminController;
 
 use App\Http\Controllers\Admin\UserControllers;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\UserController;  
-use App\Http\Controllers\AdminUserController; 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminUserController;
 
 
 Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
@@ -153,7 +153,7 @@ Route::post('/logout', function () {
 */
 
 Route::middleware(['auth'])->group(function () {
-    
+
     // User Dashboard
     Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
 
@@ -183,7 +183,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-// 
+//
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
 
 
@@ -228,7 +228,7 @@ Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 
 
-//profile 
+//profile
 
 use App\Http\Controllers\AdminProfileController;
 
@@ -241,7 +241,7 @@ Route::post('/admin/profile/update', [AdminProfileController::class, 'update'])-
 Route::resource('users', UserController::class);
 
 
-//profile admin-dashboard 
+//profile admin-dashboard
 
 
 Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
@@ -249,7 +249,7 @@ Route::post('/profile', [AdminProfileController::class, 'update'])->name('profil
 
 
 
-//route for packages 
+//route for packages
 
 use App\Http\Controllers\PackageController;
 
@@ -264,3 +264,32 @@ Route::get('/packages/create', [PackageController::class, 'create'])->name('pack
 
 // Store form data
 Route::post('/packages', [PackageController::class, 'store'])->name('packages.store');
+
+
+
+Route::get('/profile/edit', [AdminProfileController::class, 'index'])->name('profile.edit');
+Route::post('/profile/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+
+
+
+// Route::get('/edit-logo', [AdminProfileController::class, 'editLogo'])->name('profile.editLogo');
+// Route::post('/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+Route::get('/home', [HomeController::class, 'index']);
+
+
+
+Route::post('/logo/edit', [AdminProfileController::class, 'updateLogo'])->name('logo.edit');
+
+
+
+
+
+use App\Http\Controllers\ProfileController;
+
+// Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+// Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+// Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+// use App\Http\Controllers\ProfileController;
+
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
