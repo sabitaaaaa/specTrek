@@ -270,10 +270,12 @@
       </div>
     </div>
   </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+
 <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
 </svg>
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
 
 
   <div class="footer-bottom">
