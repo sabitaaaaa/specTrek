@@ -109,6 +109,10 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+>>>>>>> origin/merged-sabita
     | Here you may define the number of seconds before a password confirmation
 =======
     | Here you may define the amount of seconds before a password confirmation
@@ -162,6 +166,12 @@ return [
 >>>>>>> origin/merged-anushree
 >>>>>>> origin/merged-nishmi
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+    | Here you may define the number of seconds before a password confirmation
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-nishmi
     | window expires and users are asked to re-enter their password via the
     | confirmation screen. By default, the timeout lasts for three hours.
     |

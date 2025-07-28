@@ -7,10 +7,14 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
-    
+
     /**
      * Store a newly submitted review.
      */
+    /**
+     * Store a newly submitted review.
+     */
+
     public function store(Request $request)
     {
         // Validate input (image removed)

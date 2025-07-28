@@ -3,6 +3,333 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivapuri</title>
+  <link rel="icon" href="{{ asset('images/logo.jpg') }}">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .navbar {
+    background-color: #027478;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    height: 90px;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 2px solid #ddd; /* horizontal line */
+}
+
+        /* changed */
+.navbar-brand img {
+      height: 73px;
+      object-fit: contain;
+      margin-top: 15px;
+      margin-left: 70px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 6px 10px;
+    }
+
+    .nav-links a.btn {
+      background: none;
+      border-radius: 0;
+      padding: 6px 10px;
+      color: white;
+    }
+
+    header {
+      padding-top: 14px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #010102;
+      font-size: 3rem;
+      margin-bottom: 0;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #010102;
+      margin-top: 0.2rem;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .col-lg-7 {
+      flex: 0 0 60%;
+    }
+
+    .col-lg-4 {
+      flex: 0 0 35%;
+    }
+
+    .itinerary {
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      background-color: #e7e9eb;
+      border-radius: 0.5rem;
+      text-align: center;
+      color: #2c3e50;
+      font-size: 21px;
+    }
+
+    .border-box {
+      border-left: 5px solid #2c3e50;
+      border-right: 5px solid #2c3e50;
+      padding: 2rem 1.5rem;
+      background-color: #f8f9fa;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .best-time {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      text-align: left;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+.itinerary-section {
+  margin-top: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.col-lg-6 {
+  flex: 0 0 48%;
+}
+
+    .itinerary-section h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .itinerary-section ul li {
+      margin-bottom: 0.5rem;
+    }
+
+.fade-box {
+  position: relative;
+  max-height: 370px;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  padding-right: 10px;
+}
+
+.fade-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7; /* more vertical space between lines */
+}
+
+.extra-content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease, height 0.6s ease;
+  padding-top: 1rem;
+}
+
+
+.extra-content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease, height 0.6s ease;
+}
+
+.fade-box.expanded {
+  max-height: 2000px;
+}
+
+.fade-box.expanded .extra-content {
+  opacity: 1;
+  height: auto;
+}
+
+.fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, white, transparent);
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.fade-box.expanded .fade-overlay {
+  opacity: 0;
+}
+
+.see-more-button {
+  margin-top: 10px;
+  background-color: #027478;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.see-more-button:hover {
+  background-color: #035e61;
+}
+
+.itinerary-wrapper.fullscreen .itinerary-section {
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+  padding: 2rem 5%;
+}
+
+.itinerary-wrapper.fullscreen .day-itinerary {
+  display: none;
+}
+
+.itinerary-wrapper.fullscreen .detailed-itinerary-box {
+  width: 100%;
+}
+
+.itinerary-wrapper.fullscreen .fade-box {
+  max-height: none;
+  background-color: #fafafa;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+/* ----------------------- map ----------------------- */
+
+
+.nonInteractiveMap{
+    margin-top: 50px;
+}
+.nonInteractiveMap h1{
+    text-align: center;
+    color:rgb(23, 30, 38);
+    font-size: 31px;
+    margin-bottom: 50px;
+ }
+ .nonInteractiveMap img{
+    height:500px;
+    width:600px;
+    margin-left:270px;
+    box-shadow: 0 0 20px rgba(2, 2, 2, 0.5);
+    border-radius: 30px;
+ }
+ .nonInteractiveMap img:hover{
+    box-shadow: 0 8px 200px rgba(0, 0, 0, 0.4); /* deeper hover shadow */
+    border-radius: 25px;
+    transform: scale(1.02); /* slight zoom effect */
+}
+
+/* -------------------------- footer ------------------------- */
+
+.footer {
+      background-color: #027478;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+        /* ------------------------ scrollbtn ----------------------- */
+
+    #scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 22px;
+  background-color: #027478;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #035e61;
+  transform: scale(1.1);
+}
+
+  </style>
   <title>Shivapuri National park</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
 
@@ -351,7 +678,10 @@
 <body>
 
   <nav class="navbar">
+       <!-- changed -->
     <a href="#" class="navbar-brand">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+      </a>
       <img src="{{ asset('images/logo.png') }}" alt="Logo" />
     </a>
     <ul class="nav-links">
@@ -426,6 +756,9 @@
 
         </ul>
 
+      </div>
+
+
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
@@ -499,6 +832,7 @@
 
                   </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -507,6 +841,9 @@
 =======
 >>>>>>> origin/merged-anushree
 >>>>>>> origin/merged-nishmi
+=======
+
+>>>>>>> origin/merged-sabita
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -537,7 +874,10 @@
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/merged-sabita
 
         <script>
             document.getElementById("see-more-btn").addEventListener("click", function () {
@@ -555,7 +895,12 @@
           </script>
 
 
+<<<<<<< HEAD
 >>>>>>> origin/merged-anushree
+=======
+
+</div>
+>>>>>>> origin/merged-sabita
       </div>
     </div>
   </div>
@@ -567,6 +912,13 @@
 
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Shivapuri Trek. All rights reserved.</p>
+      <p>Developed by SpecTrek Team</p>
+    </div>
+  </footer>
 
 <<<<<<< HEAD
 =======
@@ -645,6 +997,10 @@
     });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  </script>
+>>>>>>> origin/merged-sabita
 
   </script>
 
@@ -653,6 +1009,7 @@
 
 </body>
 </html>
+<<<<<<< HEAD
 =======
   </script>
 </body>
@@ -669,3 +1026,5 @@
 =======
 >>>>>>> origin/merged-anushree
 >>>>>>> origin/merged-nishmi
+=======
+>>>>>>> origin/merged-sabita

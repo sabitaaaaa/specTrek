@@ -9,8 +9,7 @@
     <script src="{{ asset('js/Home-mountains.js') }}"></script>
     <link
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  rel="stylesheet"
-/>
+  rel="stylesheet"/>
 
 
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -18,6 +17,19 @@
 <body>
     <header class="hero">
         <nav class="navbar">
+            <div class="logo">
+                <img src="{{ asset($site_logo) }}" alt="Site Logo" style="max-height: 120px;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Emergency</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a class="signup" href="#">Signup</a></li>
+            </ul>
+        </nav>
+        <img src="{{ asset('images/pine .jpg') }}" class="layer front" alt="Front Mountain">
     <div class="logo">
         <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
     </div>
@@ -46,7 +58,7 @@
     </ul>
 </nav>
 
-        <img src="{{ asset('images/pine.jpg') }}" class="layer front" alt="Front Mountain"> 
+        <img src="{{ asset('images/pine.jpg') }}" class="layer front" alt="Front Mountain">
             <div class="logo">
                 <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
             </div>
@@ -71,6 +83,7 @@
             </ul>
         </nav>
         <img src="{{ asset('images/pine .jpg') }}" class="layer front" alt="Front Mountain">
+        <img src="{{ asset('images/pine.jpg') }}" class="layer front" alt="Front Mountain">
         <!-- Hero Content -->
         <div class="hero-content">
             <p class="to-the">SETTING THE </p>
@@ -85,7 +98,16 @@
     </header>
 <section class="features-section">
   <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
-  
+
+  <div class="features-grid top-row">
+    <div class="feature-card">
+        <a href="{{ url('/itinerary/ShivapuriTrek') }}">
+          <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
+          <div class="overlay-text">SHIVAPURI</div>
+        </a>
+      </div>
+
+
   <div class="features-grid top-row">
     <div class="feature-card">
       <a href="{{ url('/ShivapuriTrek') }}">
@@ -144,7 +166,8 @@
 
 
 <!-- ===============================updated part ----------------------======================= -->
- 
+
+
 
 <section class="testimonial-section">
   <h2 class="testimonial-heading">OUR HAPPY TRAVELLERS</h2>
@@ -152,7 +175,22 @@
   <div class="testimonial-slider">
     @forelse($reviews as $index => $review)
       <div class="testimonial {{ $index === 0 ? 'active' : '' }}">
-        
+
+        <div class="reviewer-name-container">
+          <h3 class="reviewer-name">
+            {{ $review->name }}
+          </h3>
+        </div>
+
+        <div class="review-text-container">
+          <span class="quote-icon">❝</span>
+          <p class="review-text">
+            {{ $review->review }}
+          </p>
+          <span class="quote-icon">❞</span>
+        </div>
+
+
         <div class="reviewer-name-container">
           <h3 class="reviewer-name">
             {{ $review->name }}
@@ -193,7 +231,8 @@
       <span class="dot {{ $index === 0 ? 'active' : '' }}"></span>
     @endforeach
   </div>
-</section> 
+</section>
+</section>
 </section>
 <!-- ===================================VISUALIZING============================================= -->
 <!-- <section class="hex-section">
@@ -221,9 +260,10 @@
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-5.jpg') }}');">
       <div class="hex-content">
-      
+
       </div>
-      
+
+
 
       </div>
 
@@ -346,7 +386,8 @@
       2025 Apex college,<br>
       mid baneshowr, kathmandu.</p>
 
-      
+
+
 
     </div>
     <div class="footer-column">

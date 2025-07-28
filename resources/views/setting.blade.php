@@ -1,10 +1,10 @@
-
+<!-- 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Settings - MyDash</title>
+  <title>Profile - MyDash</title>
   <style>
     body {
       margin: 0;
@@ -166,4 +166,11 @@
     }
   </script>
 </body>
-</html>
+</html> --> 
+
+
+
+
+
+
+

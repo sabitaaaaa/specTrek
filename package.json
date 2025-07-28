@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "$schema": "https://json.schemastore.org/package.json",
 =======
 <<<<<<< HEAD
@@ -18,6 +19,11 @@
 >>>>>>> origin/merged-anushree
 >>>>>>> origin/merged-nishmi
     "private": true,
+=======
+
+    "$schema": "https://json.schemastore.org/package.json",
+
+>>>>>>> origin/merged-sabita
     "type": "module",
     "scripts": {
       "dev": "vite",

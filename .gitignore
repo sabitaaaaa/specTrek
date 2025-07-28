@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
 =======
 =======
 <<<<<<< HEAD
@@ -28,6 +32,10 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
 =======
 >>>>>>> origin/merged-nishmi
 *.log
@@ -45,6 +53,10 @@
 /.zed
 /auth.json
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
@@ -100,6 +112,11 @@
 >>>>>>> origin/merged-anushree
 >>>>>>> origin/merged-nishmi
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-nishmi
 /node_modules
 /public/build
 /public/hot
@@ -107,6 +124,7 @@
 /storage/*.key
 /storage/pail
 /vendor
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -126,6 +144,11 @@
 >>>>>>> origin/merged-ayushma
 =======
 >>>>>>> origin/merged-anushree
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-nishmi
 Homestead.json
 Homestead.yaml
@@ -160,6 +183,7 @@ yarn-error.log
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-nishmi
 <<<<<<< HEAD
@@ -183,6 +207,8 @@ Thumbs.db
 >>>>>>> origin/merged-ayushma
 =======
 >>>>>>> origin/merged-anushree
+=======
+>>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-nishmi
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,7 +223,13 @@ Thumbs.db
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-nishmi
+>>>>>>> origin/merged-sabita
 >>>>>>> feature-admin
 =======
 <<<<<<< HEAD
@@ -208,6 +240,7 @@ Thumbs.db
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
 =======
+<<<<<<< HEAD
 >>>>>>> origin/merged-nishmi
 >>>>>>> feature-admin
 =======
@@ -227,4 +260,13 @@ Thumbs.db
 <<<<<<< HEAD
 =======
 >>>>>>> origin/merged-anushree
+=======
+<<<<<<< HEAD
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> feature-admin
+>>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-nishmi
