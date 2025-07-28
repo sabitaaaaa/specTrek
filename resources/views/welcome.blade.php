@@ -16,6 +16,7 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
 
+<<<<<<< HEAD
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
         <h1> hello , specTrek </h1>
@@ -26,6 +27,12 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+=======
+
+
+
+
+>>>>>>> origin/merged-ayushma
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -294,6 +301,16 @@
 </html>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-nishmi
 >>>>>>> origin/merged-sabita
+=======
+<<<<<<< HEAD
+
+
+<h1> WELCOME BACK </h1>
+=======
+>>>>>>> feature-admin
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-ayushma

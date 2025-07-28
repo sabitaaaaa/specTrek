@@ -16,17 +16,35 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/merged-anushree
+=======
+>>>>>>> origin/merged-ayushma
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-anushree
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> feature/payment
 >>>>>>> origin/merged-anushree
+=======
+>>>>>>> feature/payment
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-ayushma
 <<<<<<< HEAD
 =======
 >>>>>>> feature/trekking-mapp
@@ -48,6 +66,10 @@ return [
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-ayushma
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +81,10 @@ return [
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-ayushma
 >>>>>>> feature/trekking-mapp
 =======
 >>>>>>> feature-admin
@@ -73,6 +99,7 @@ return [
 =======
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,6 +115,8 @@ return [
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
 =======
+=======
+>>>>>>> origin/merged-ayushma
 <<<<<<< HEAD
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
@@ -112,10 +141,25 @@ return [
 >>>>>>> feature/payment
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> origin/merged-ayushma
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 >>>>>>> origin/merged-anushree
 =======
 >>>>>>> origin/merged-nishmi
+=======
+<<<<<<< HEAD
+=======
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-ayushma
 >>>>>>> origin/merged-sabita
     |
     */
@@ -205,14 +249,27 @@ return [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-nishmi
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-sabita
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-ayushma
     | Affects: "dynamodb", "memcached", "redis"
 =======
     | Affects: "apc", "dynamodb", "memcached", "redis"
 >>>>>>> feature-admin
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,12 +277,18 @@ return [
 =======
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-anushree
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-ayushma
     | Affects: "apc", "dynamodb", "memcached", "redis"
 =======
     | Affects: "dynamodb", "memcached", "redis"
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/merged-ayushma
 <<<<<<< HEAD
 =======
     | Affects: "dynamodb", "memcached", "redis"
@@ -240,6 +303,7 @@ return [
 >>>>>>> friend-code
 >>>>>>> feature/payment
 =======
+<<<<<<< HEAD
 >>>>>>> origin/merged-anushree
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
@@ -248,6 +312,17 @@ return [
 >>>>>>> feature/itinerary-and-blogs
 =======
 >>>>>>> origin/merged-nishmi
+=======
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+=======
+    | Affects: "dynamodb", "memcached", "redis"
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
+>>>>>>> origin/merged-ayushma
     |
     */
 

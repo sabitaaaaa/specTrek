@@ -21,12 +21,18 @@ class Itinerary extends Model
         'image3',
         'image4',
         'quote',
+        'is_featured', // important if you use it in filtering
     ];
 
+    // Relationship: An itinerary belongs to a trek
     public function trek()
-{
-    return $this->belongsTo(Trek::class);
-}
+    {
+        return $this->belongsTo(Trek::class);
+    }
 
+    // Use slug instead of ID in route model binding
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
-

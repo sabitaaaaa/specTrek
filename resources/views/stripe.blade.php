@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -43,6 +44,8 @@
   </div>
 </body>
 </html>
+=======
+>>>>>>> origin/merged-ayushma
 <html>
 <head>
     <meta charset="UTF-8">

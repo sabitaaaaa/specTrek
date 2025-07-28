@@ -9,7 +9,9 @@
 <a href="{{ route('itinerary.create') }}" class="btn btn-primary">Add New Itinerary</a>
 
 @if(session('success'))
-  <div class="alert alert-success" style="margin-top: 20px;">{{ session('success') }}</div>
+  <div class="alert alert-success" style="margin-top: 20px;">
+    {{ session('success') }}
+  </div>
 @endif
 
 <table border="1" cellpadding="10" cellspacing="0" style="width:100%; margin-top:20px;">
@@ -31,7 +33,9 @@
                 <form action="{{ route('itinerary.destroy', $itinerary->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
-                    <button onclick="return confirm('Are you sure to delete this itinerary?')" type="submit">Delete</button>
+                    <button onclick="return confirm('Are you sure you want to delete this itinerary?')" type="submit">
+                        Delete
+                    </button>
                 </form>
             </td>
         </tr>

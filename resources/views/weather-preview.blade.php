@@ -3,7 +3,7 @@
 <head>
     <title>Weather API Preview</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         body {
@@ -43,9 +43,9 @@
         <p>🌡 Temp: {{ $place->temp }}°C</p>
         <p>Status:
             @if ($place->suitable)
-                <span style="color:green">Suitable ✅</span>
+                <span style="color:green">Suitable </span>
             @else
-                <span style="color:red">Not Suitable ❌</span>
+                <span style="color:red">Not Suitable </span>
             @endif
         </p>
         <div id="map{{ $index }}" class="map"></div>

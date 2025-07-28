@@ -4,11 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Langtang</title>
-  <link rel="icon" href="{{ asset('images/logo.png') }}">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="{{ asset('css/langtang.css') }}">
-=======
-
+  <link rel="icon" href="{{ asset('images/logo.jpg') }}">
   <style>
     * {
       box-sizing: border-box;
@@ -16,16 +12,15 @@
       padding: 0;
     }
 
-<<<<<<< HEAD
-  <link rel="icon" href="{{ asset('images/logo.png') }}">
-</head>
-=======
     body {
       font-family: Arial, sans-serif;
       line-height: 1.5;
-      background-color: #f9f9f9;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/merged-anushree
     .navbar {
   background-image: linear-gradient(90deg, #027478, #38b6b1);
   display: flex;
@@ -36,18 +31,15 @@
   border-bottom: 2px solid #ddd;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
     .navbar-brand img {
-      height: 73px;
-      object-fit: contain;
+      height: 120px;
       margin-top: 15px;
-      margin-left: 70px;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 18px;
+      gap: 20px;
     }
 
     .nav-links a {
@@ -56,11 +48,11 @@
       font-size: 18px;
       font-weight: 500;
       padding: 6px 10px;
-      transition: color 0.3s;
     }
 
-    .nav-links a.btn:hover {
-      color: #ccc;
+    .nav-links a.btn {
+      padding: 6px 10px;
+      color: white;
     }
 
     header {
@@ -72,6 +64,7 @@
       color: #010102;
       font-size: 3rem;
       margin-bottom: 0;
+      line-height: 1.1;
     }
 
     .subtitle {
@@ -101,47 +94,42 @@
     .col-lg-4 {
       flex: 0 0 35%;
     }
-/* ------------------------------------------------------slider ---------------------- */
-    .slider {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      overflow: hidden;
-      border-radius: 8px;
-    }
 
-    .slide {
-      width: 100%;
-      height: 100%;
-      display: none;
-      object-fit: cover;
-      border-radius: 8px;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 8px;
-    }
-/*--------------------------------------- text part -------------------------- */
-    .quote {
+    .itinerary {
       margin-top: 1.5rem;
       padding: 1rem 2rem;
+      background-color: #e7e9eb;
+      border-radius: 0.5rem;
       text-align: center;
       color: #2c3e50;
       font-size: 21px;
+    }
+
+    /* --------to fit the contents in itienary--------------- */
+    /* .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    } */
+
+    .col-lg-6 {
+        flex: 0 0 45%; /* 45% + 45% + 2rem gap fits nicely */
     }
 
     .border-box {
       border-left: 5px solid #2c3e50;
       border-right: 5px solid #2c3e50;
       padding: 2rem 1.5rem;
-      background-color: #ffffff;
+      background-color: #f8f9fa;
       border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .best-time {
-      background-color: #ffffff;
+      background-color: #f4f4f4;
       padding: 1rem;
       border-radius: 0.5rem;
       margin-top: 1rem;
@@ -152,27 +140,38 @@
       text-align: left;
     }
 
-    /* -----------------------------------------------------itinerary section ------------------------------------------------ */
-.itinerary-section {
-  margin-top: 2rem;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
+    .slider {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
 
-.col-lg-6 {
-  flex: 0 0 48%;
-}
+    .slide {
+      display: none;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
 
-@media (max-width: 768px) {
-  .col-lg-6 {
-    flex: 0 0 100%;
-  }
-}
+    .slide.active {
+      display: block;
+    }
 
+    .itinerary-section {
+        margin-top: 2rem;
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .col-lg-6 {
+        flex: 0 0 48%;
+    }
 
     .itinerary-section h2 {
       color: #2c3e50;
@@ -183,187 +182,167 @@
       margin-bottom: 0.5rem;
     }
 
-.fade-box {
-  position: relative;
-  max-height: 370px;
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
-  padding-right: 10px;
-}
-
-.fade-content p {
-  margin-bottom: 1rem;
-  line-height: 1.7; /* more vertical space between lines */
-}
-
-.extra-content {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-  transition: opacity 0.6s ease, height 0.6s ease;
-  padding-top: 1rem;
-}
-
-
-.extra-content {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-  transition: opacity 0.6s ease, height 0.6s ease;
-}
-
-.fade-box.expanded {
-  max-height: 2000px;
-}
-
-.fade-box.expanded .extra-content {
-  opacity: 1;
-  height: auto;
-}
-
-.fade-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(to top, white, transparent);
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-.fade-box.expanded .fade-overlay {
-  opacity: 0;
-}
-
-.see-more-button {
-  margin-top: 10px;
-  background-color: #027478;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.see-more-button:hover {
-  background-color: #035e61;
-}
-
-
-/*----------------------------------------- for full screen ---------------------------- */
-/*for the  Wrapper that becomes full width when expanded */
-.itinerary-wrapper.fullscreen .itinerary-section {
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  max-width: 100%;
-  padding: 2rem 5%;
-}
-
-/*To  Hide the day-to-day itinerary in fullscreen */
-.itinerary-wrapper.fullscreen .day-itinerary {
-  display: none;
-}
-
-/* Expand detailed itinerary to full width */
-.itinerary-wrapper.fullscreen .detailed-itinerary-box {
-  width: 100%;
-}
-
-/* Make fade-box breathe more in full screen */
-.itinerary-wrapper.fullscreen .fade-box {
-  max-height: none;
-  background-color: #fafafa;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-}
-/* --------to fit the contents in itienary--------------- */
-    .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.col-lg-6 {
-  flex: 0 0 45%; /* 45% + 45% + 2rem gap fits nicely */
-}
-
-/* ------------------------------------map image --------------- */
-
-.nonInteractiveMap{
-    margin-top: 50px;
-}
-.nonInteractiveMap h1{
-    text-align: center;
-    color:rgb(23, 30, 38);
-    font-size: 31px;
-    margin-bottom: 50px;
- }
- .nonInteractiveMap img{
-    height:500px;
-    width:600px;
-    margin-left:270px;
-    box-shadow: 0 0 20px rgba(2, 2, 2, 0.5);
-    border-radius: 30px;
- }
- .nonInteractiveMap img:hover{
-    box-shadow: 0 8px 200px rgba(0, 0, 0, 0.4); /* deeper hover shadow */
-    border-radius: 25px;
-    transform: scale(1.02); /* slight zoom effect */
-}
-/*-------------------- arrow button ------------------ */
-#scrollTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  font-size: 22px;
-  background-color: #027478;
-  color: white;
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  display: none;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-#scrollTopBtn:hover {
-  background-color: #035e61;
-  transform: scale(1.1);
-}
-/* -----------------------------------------------------footer part -------------------- */
-    .footer {
-      background-color: black;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 3rem;
+    .fade-box {
+        position: relative;
+        max-height: 370px;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        padding-right: 10px;
     }
+
+    .fade-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7; /* more vertical space between lines */
+    }
+
+    .extra-content {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.6s ease, height 0.6s ease;
+    padding-top: 1rem;
+    }
+
+
+    .extra-content {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.6s ease, height 0.6s ease;
+    }
+
+    .fade-box.expanded {
+    max-height: 2000px;
+    }
+
+    .fade-box.expanded .extra-content {
+    opacity: 1;
+    height: auto;
+    }
+
+    .fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, white, transparent);
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    }
+
+    .fade-box.expanded .fade-overlay {
+    opacity: 0;
+    }
+
+    .see-more-button {
+    margin-top: 10px;
+    background-color: #027478;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+
+    .see-more-button:hover {
+    background-color: #035e61;
+    }
+
+    .itinerary-wrapper.fullscreen .itinerary-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100%;
+    padding: 2rem 5%;
+    }
+
+    .itinerary-wrapper.fullscreen .day-itinerary {
+    display: none;
+    }
+
+    .itinerary-wrapper.fullscreen .detailed-itinerary-box {
+    width: 100%;
+    }
+
+    .itinerary-wrapper.fullscreen .fade-box {
+    max-height: none;
+    background-color: #fafafa;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    }
+
+    /* ----------------------- map ----------------------- */
+
+    .nonInteractiveMap{
+        margin-top: 50px;
+    }
+    .nonInteractiveMap h1{
+        text-align: center;
+        color:rgb(23, 30, 38);
+        font-size: 31px;
+        margin-bottom: 50px;
+    }
+    .nonInteractiveMap img{
+        height:500px;
+        width:600px;
+        margin-left:270px;
+        box-shadow: 0 0 20px rgba(2, 2, 2, 0.5);
+        border-radius: 30px;
+    }
+    .nonInteractiveMap img:hover{
+        box-shadow: 0 8px 200px rgba(0, 0, 0, 0.4); /* deeper hover shadow */
+        border-radius: 25px;
+        transform: scale(1.02); /* slight zoom effect */
+    }
+    /* -------------------------- footer ------------------------- */
+    .footer {
+        background-color: #027478;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 3rem;
+        }
 
     .footer-container {
       max-width: 1200px;
       margin: 0 auto;
-      /* font-size: 14px; */
     }
+
+    /* ------------------------ scrollbtn ----------------------- */
+
+    #scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    font-size: 22px;
+    background-color: #027478;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+    background-color: #035e61;
+    transform: scale(1.1);
+    }
+
   </style>
-  <link rel="stylesheet" href="{{ asset('css/langtang.css') }}">
->>>>>>> origin/merged-anushree
-
-  <link rel="icon" href="{{ asset('images/logo.png') }}">
->>>>>>> origin/merged-ayushma
 </head>
-<body>
 
+<body>
   <nav class="navbar">
     <a href="#" class="navbar-brand">
-      <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+      <img src="{{ asset('images/logo.jpg') }}" alt="Logo" />
     </a>
     <ul class="nav-links">
       <li><a href="#">Emergency</a></li>
@@ -382,16 +361,25 @@
   <main>
     <div class="row">
       <div class="col-lg-7">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<!-- {{------------------------------------------- images -------------------------------------------}} -->
+=======
+{{------------------------------------------- images -------------------------------------------}}
+>>>>>>> origin/merged-sabita
+=======
+<!-- {{------------------------------------------- images -------------------------------------------}} -->
+>>>>>>> origin/merged-anushree
         <div class="slider">
-           <img class="slide active" src="{{ asset('images/l1.jpg') }}" alt="Langtang Trek 1" />
+            <img class="slide active" src="{{ asset('images/l1.jpg') }}" alt="Langtang Trek 1" />
             <img class="slide" src="{{ asset('images/l2.jpg') }}" alt="Langtang Trek 2" />
             <img class="slide" src="{{ asset('images/l3.jpg') }}" alt="Langtang Trek 3" />
             <img class="slide" src="{{ asset('images/l4.jpg') }}" alt="Langtang Trek 4" />
             <img class="slide" src="{{ asset('images/l5.jpg') }}" alt="Langtang Trek 5" />
+          </div>
 
-        </div>
-        <section class="quote">
-          <h4>"The trails of Langtang don’t just lead to peaks, they lead to peace."</h4>
+        <section class="itinerary">
+          <h4 >“The trails of Langtang don’t just lead to peaks, they lead to peace.”</h4>
         </section>
       </div>
 
@@ -405,29 +393,33 @@
               <li> The Whispering Cliff (“Chhuchhuk Phyang”)</li>
               <li>The Hidden Glacier Cave near Langtang Lirung Base</li>
               <li>Abandoned Meditation Caves in the Bamboo Forests</li>
-
             </ul>
           </div>
           <div class="best-time">
             <h3 style="color: #2c3e50;">Best Time to Visit</h3>
-            <p>The best time to visit Langtang is in spring (March to May) and autumn (September to November), when the weather is clear and pleasant. Avoid the monsoon season (June to August) due to rain and landslides. Winter (December to February) is cold but peaceful with snowy views.</p>
+                <p>
+                  The best time to visit Langtang is in spring (March to May) and autumn (September to November), when the weather is clear and pleasant. Avoid the monsoon season (June to August) due to rain and landslides. Winter (December to February) is cold but peaceful with snowy views.
+                </p>
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<!-- {{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}} -->
+=======
+{{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}}
+>>>>>>> origin/merged-sabita
+=======
+<!-- {{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}} -->
+>>>>>>> origin/merged-anushree
 
- <!-- WRAPPER THAT CAN GO FULL WIDTH -->
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
-      <!-- LEFT SIDE: Day-to-Day Itinerary -->
       <div class="col-lg-6 day-itinerary">
         <h2>Day-to-Day Itinerary</h2>
         <ul>
-           <li>Day 1: Drive from Kathmandu to Syabrubesi (7–8 hours)</li>
-<<<<<<< HEAD
             <li>Day 1: Drive from Kathmandu to Syabrubesi (7–8 hours)</li>
-=======
->>>>>>> origin/merged-anushree
             <li>Day 2: Trek from Syabrubesi to Lama Hotel (6–7 hours)</li>
             <li>Day 3: Trek from Lama Hotel to Langtang Village (5–6 hours)</li>
             <li>Day 4: Trek from Langtang Village to Kyanjin Gompa (3–4 hours)</li>
@@ -437,32 +429,15 @@
             <li>Day 8: Trek from Lama Hotel to Syabrubesi (5–6 hours)</li>
             <li>Day 9: Drive back from Syabrubesi to Kathmandu</li>
             <li>Day 10: Rest or buffer day in Kathmandu</li>
-
-          <p><strong> END OF TREK !! </strong></p>
-
         </ul>
-        
-
-      </div>
-    
-
-<<<<<<< HEAD
-=======
-
-          <p><strong> END OF TREK !! </strong></p>
-
-        </ul>
-
       </div>
 
->>>>>>> origin/merged-anushree
-
-      <!-- RIGHT SIDE: Detailed Itinerary -->
-      <div class="col-lg-6 detailed-itinerary-box">
-        <h2>Detailed Itinerary</h2>
+        <div class="col-lg-6 detailed-itinerary-box">
+            <h2>Detailed Itinerary</h2>
         <div id="detailed-itinerary" class="fade-box">
-          <div class="fade-content">
-            <p><strong>Day 1: Kathmandu to Syabrubesi (1,460m)</strong> <br> Your journey begins with a scenic drive from Kathmandu to Syabrubesi, which takes around 7 to 9 hours depending on road conditions.
+
+        <div class="fade-content">
+                <p><strong>Day 1: Kathmandu to Syabrubesi (1,460m)</strong> <br> Your journey begins with a scenic drive from Kathmandu to Syabrubesi, which takes around 7 to 9 hours depending on road conditions.
                     The road winds through lush hills, picturesque terraced fields, and charming rural villages.
                     As you leave the city behind, the landscapes become more dramatic with distant views of the Ganesh Himal and Manaslu ranges on clear days.
                      The final stretch of the drive, especially after Dhunche, can be bumpy and winding, so it’s wise to carry motion sickness medication.
@@ -480,8 +455,7 @@
                     After about 6 to 7 hours of trekking, you’ll arrive at Langtang Village,
                      which was rebuilt after the 2015 earthquake and now offers a mix of modern guesthouses and authentic cultural experiences.
                 </p>
-
-             <p><strong>Day 4: Acclimatization Day in Langtang Village </strong><br> This day is reserved for rest and acclimatization.
+                <p><strong>Day 4: Acclimatization Day in Langtang Village </strong><br> This day is reserved for rest and acclimatization.
                      Take it easy to help your body adjust to the higher altitude. You can explore the village, visit the local monastery, or take a short hike to nearby viewpoints or yak pastures.
                     The slower pace allows you to connect with the local Tamang culture and enjoy panoramic views of the Langtang Valley, framed by towering peaks and prayer flags fluttering in the wind.
                 </p>
@@ -489,9 +463,9 @@
                      The landscape changes as you move above the tree line, with sweeping views of Langtang Lirung and other surrounding peaks. Upon arrival, you’ll find a picturesque village with a Buddhist monastery, traditional stone houses, and a famous yak cheese factory.
                      Spend the afternoon exploring or relaxing in this high mountain setting.
                 </p>
-
             <div class="extra-content">
-              <p><strong>Day 6: Hike to Kyanjin Ri (4,773m) or Tserko Ri (4,984m)</strong><br>Wake up early for a sunrise hike to either Kyanjin Ri or the more challenging Tserko Ri. These viewpoints offer some of the best panoramic views of the Langtang range, including Langtang Lirung, Dorje Lakpa, and even Shishapangma in Tibet on very clear days. The climb is steep and challenging, especially due to the thin air, but the 360° views from the top are a rewarding highlight of the trek. Return to Kyanjin Gompa by late morning and rest for the remainder of the day.
+
+                <p><strong>Day 6: Hike to Kyanjin Ri (4,773m) or Tserko Ri (4,984m)</strong><br>Wake up early for a sunrise hike to either Kyanjin Ri or the more challenging Tserko Ri. These viewpoints offer some of the best panoramic views of the Langtang range, including Langtang Lirung, Dorje Lakpa, and even Shishapangma in Tibet on very clear days. The climb is steep and challenging, especially due to the thin air, but the 360° views from the top are a rewarding highlight of the trek. Return to Kyanjin Gompa by late morning and rest for the remainder of the day.
                 </p>
                 <p><strong>Day 7: Kyanjin Gompa to Lama Hotel</strong><br> Begin your descent as you retrace your steps back down the valley. The return journey takes around 6 to 7 hours and is mostly downhill, making it easier on the lungs but more taxing on the knees. You’ll pass familiar villages and forests, and with less urgency, you can enjoy the peaceful mountain atmosphere and maybe spot more wildlife along the way. Spend the night again in the forested quiet of Lama Hotel.
                 </p>
@@ -501,82 +475,68 @@
                 </p>
                 <p><strong>Day 10: Explore Kathmandu</strong><br> Use this final day to rest and recover from the trek. If you have energy, consider exploring some of Kathmandu’s cultural gems like Swayambhunath (Monkey Temple), Boudhanath Stupa, or the ancient city of Bhaktapur. It’s also a great day for souvenir shopping or enjoying a traditional Nepali meal before your onward journey.
                 </p>
-
-              <p><strong> END OF THE TREK!!</strong><p>
             </div>
             <strong>MORE INFORMATIONS</strong>
             <br>
             <br>
 <<<<<<< HEAD
+<<<<<<< HEAD
+    <!-- {{------------------------------------------- Table -------------------------------------------}} -->
+=======
     {{------------------------------------------- Table -------------------------------------------}}
+>>>>>>> origin/merged-sabita
+=======
+    <!-- {{------------------------------------------- Table -------------------------------------------}} -->
+>>>>>>> origin/merged-anushree
     <table style="width: 100%; border-collapse: collapse; background: white;">
                 <thead style="background-color: #027478; color: white;">
                   <tr>
-=======
-            <table style="width: 100%; border-collapse: collapse; background: white;">
-            <thead style="background-color: #2e8b57; color: white;">
-              <thead style="background-color: #027478; color: white;">
-                <thead style="background-color: #2e8b57; color: white;">
-
-                   <tr>
->>>>>>> origin/merged-anushree
                     <th style="padding: 12px; border: 1px solid #ccc;">Option</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Cost (Approx)</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Duration</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Comfort</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Details</th>
                   </tr>
-
                 </thead>
                 <tbody>
                   <tr>
-                       <td style="padding: 10px; border: 1px solid #ccc;">Local Bus</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Local Bus</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">NPR 800–1,100</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">7–9 hours</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Basic</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Departs from Machhapokhari, crowded and slow but cheap</td>
-
                   </tr>
                   <tr>
-                   <td style="padding: 10px; border: 1px solid #ccc;">Shared Jeep</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Shared Jeep</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">NPR 2,000–3,000</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">5–6 hours</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Moderate</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Faster than bus, 7–8 seats, leaves when full</td>
-
                   </tr>
                   <tr>
-                   <td style="padding: 10px; border: 1px solid #ccc;">Private Jeep</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Private Jeep</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">NPR 20,000–30,000</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">5 hours</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">High</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Flexible, hotel pickup, comfortable and scenic</td>
-
                   </tr>
                   <tr>
-                       <td style="padding: 10px; border: 1px solid #ccc;">Helicopter</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">Helicopter</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Group Price (Expensive)</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">1 hour</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Luxury</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Lands at Kyanjin Gompa, fastest and scenic option</td>
-
                   </tr>
-                 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/merged-anushree
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
-                <strong>Note:</strong>  All road options require travel to Syabrubesi, the starting point of the Langtang trek. There is no direct road or flight to Langtang Village itself. You must walk from Syabrubesi. If you have a private vehicle, parking is available at some lodges in Syabrubesi, but there is <strong>no vehicle access or parking</strong> beyond that point inside the Langtang Valley.</strong>
+                <strong>Note:</strong> All road options require travel to Syabrubesi, the starting point of the Langtang trek. There is no direct road or flight to Langtang Village itself. You must walk from Syabrubesi. If you have a private vehicle, parking is available at some lodges in Syabrubesi, but there is <strong>no vehicle access or parking</strong> beyond that point inside the Langtang Valley.
               </p>
               <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
-                <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts of Annapurna Base Camp</h2>
+                <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts of Langtang</h2>
 
                 <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
-                   <li><strong>Tamang Shamanism:</strong> The Tamang people practice a mix of Tibetan Buddhism and ancient animist rituals. Traditional healers called "Bonpo" or "Jhankri" perform ceremonies using chants, incense, and rhythmic drum beats.</li>
+                  <li><strong>Tamang Shamanism:</strong> The Tamang people practice a mix of Tibetan Buddhism and ancient animist rituals. Traditional healers called "Bonpo" or "Jhankri" perform ceremonies using chants, incense, and rhythmic drum beats.</li>
 
                   <li><strong>Whispering Cliff Legend:</strong> Locals believe that a specific rock face near Langtang Lirung echoes with whispers if you listen closely believed to be voices of lost souls or spirits of the mountains.</li>
 
@@ -589,89 +549,45 @@
                   <li><strong>Post-Earthquake Rebirth:</strong> After the devastating 2015 earthquake, Langtang Village was rebuilt not only physically but spiritually with memorial walls, prayer flags, and stupas dedicated to those lost in the avalanche.</li>
 
                   <li><strong>Hidden Glacier Cave:</strong> Near the Langtang Lirung base, there are rarely explored glacier caves. Some guides may take you if weather allows, but locals say the caves change shape each year as the glacier shifts.</li>
-
                 </ul>
               </div>
-          </div>
+
+        </div>
+
           <div class="fade-overlay"></div>
         </div>
-<<<<<<< HEAD
 
         <script async
         src="https://js.stripe.com/v3/buy-button.js">
       </script>
 
-      <stripe-buy-button
-        buy-button-id="buy_btn_1RgdzX2EZhQjvwUDe2AtT9da"
-        publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1"
-      >
-      </stripe-buy-button>
-      </div>
-=======
-        <button id="see-more-btn" class="see-more-button">See More</button>
-      </div>
+    <button id="see-more-btn" class="see-more-button">See More</button>
 
-        <script>
-            document.getElementById("see-more-btn").addEventListener("click", function () {
-              const isLoggedIn = @json(Auth::check());
-
-              if (!isLoggedIn) {
-                // Send them to login with redirect
-                const intendedUrl = encodeURIComponent('/shivapuri/payment');
-                window.location.href = "/login?redirect=" + intendedUrl;
-              } else {
-                // Already logged in
-                window.location.href = "/shivapuri/payment";
-              }
-            });
-          </script>
-           </div>
->>>>>>> origin/merged-anushree
+      </div>
     </div>
   </div>
 
   <div class="nonInteractiveMap">
     <h1> "Here is a Normal map for Langtang" </h1>
-<<<<<<< HEAD
     <img src="{{ asset('images/lmap.jpg') }}">
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
-=======
-      <img src="{{ asset('images/lmap.jpg') }}">
-
-
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
-  </div>
-<<<<<<< HEAD
-   </main>
-=======
-
-
-
-
-  </main>
->>>>>>> origin/merged-ayushma
-<!-- Footer -->
->>>>>>> origin/merged-anushree
     <footer class="footer">
       <div class="footer-container">
-        <p>&copy; All rights reserved.</p>
+        <p>&copy; 2025 Langtang Trek. All rights reserved.</p>
         <p>Developed by SpecTrek Team</p>
       </div>
     </footer>
-
+  </main>
 
   <script>
-
-    //for image slider
-
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
 
     function showSlide(index) {
       slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
+        slide.classList.toggle('active', i === index);
       });
     }
 
@@ -680,49 +596,44 @@
       showSlide(currentSlide);
     }
 
-    setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 3000); // change image every 3 seconds
   </script>
-
-
-  <script>
-  const seeMoreBtn = document.getElementById('see-more-btn');
-  const fadeBox = document.getElementById('detailed-itinerary');
-  const wrapper = document.getElementById('itinerary-wrapper');
-
-  seeMoreBtn.addEventListener('click', () => {
-    fadeBox.classList.toggle('expanded');
-    wrapper.classList.toggle('fullscreen');
-
-    if (fadeBox.classList.contains('expanded')) {
-      seeMoreBtn.textContent = 'See Less';
-    } else {
-      seeMoreBtn.textContent = 'See More';
-    }
-  });
-</script>
-<!-- ----------------arrow script ------ -->
 
 <script>
-  const scrollBtn = document.getElementById("scrollTopBtn");
+    const seeMoreBtn = document.getElementById('see-more-btn');
+    const fadeBox = document.getElementById('detailed-itinerary');
+    const wrapper = document.getElementById('itinerary-wrapper');
 
-  window.onscroll = function () {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  };
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    seeMoreBtn.addEventListener('click', () => {
+      fadeBox.classList.toggle('expanded');
+      wrapper.classList.toggle('fullscreen');
+
+      if (fadeBox.classList.contains('expanded')) {
+        seeMoreBtn.textContent = 'See Less';
+      } else {
+        seeMoreBtn.textContent = 'See More';
+      }
     });
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+// Show button after scrolling 300px
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
   }
+};
 
+// Scroll to top
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
   </script>
-
-
-
-
 </body>
 </html>

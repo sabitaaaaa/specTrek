@@ -11,6 +11,7 @@ window.addEventListener("scroll", () => {
   if (front) front.style.transform = `translateY(${scrollY * 0.3}px)`;
 });
 
+
 // Navbar scroll color change
 window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.navbar');
@@ -57,7 +58,9 @@ dots.forEach((dot, i) => {
 // Review modal toggle function
 function toggleReviewModal(show) {
   const modal = document.getElementById('reviewModal');
-  if (modal) {
-    modal.style.display = show ? 'block' : 'none';
+  if (show) {
+    modal.style.display = 'block';
+  } else {
+    modal.style.display = 'none';
   }
 }

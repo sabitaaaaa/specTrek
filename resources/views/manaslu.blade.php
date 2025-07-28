@@ -347,6 +347,7 @@
       /* font-size: 14px; */
     }
   </style>
+   <link rel="stylesheet" href="{{ asset('css/manaslu.css') }}">
 </head>
 <body>
 
@@ -562,10 +563,15 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 =======
 
 >>>>>>> origin/merged-anushree
+=======
+
+
+>>>>>>> origin/merged-ayushma
   </main>
  <!-- Footer -->
     <footer class="footer">
@@ -642,6 +648,10 @@
 </body>
 <<<<<<< HEAD
 </html>
+<<<<<<< HEAD
 =======
 </html>
 >>>>>>> origin/merged-anushree
+=======
+</html>
+>>>>>>> origin/merged-ayushma

@@ -36,7 +36,7 @@ img {
     a.back-link {
         display: inline-block;
         margin-top: 20px;
-        background-color: #027478;
+        background-color: #2e8b57;
         color: white;
         padding: 8px 12px;
         text-decoration: none;
@@ -44,7 +44,7 @@ img {
     }
 
     a.back-link:hover {
-        background-color:rgb(5, 74, 77);
+        background-color: #286040ff;
     }
 </style>
 

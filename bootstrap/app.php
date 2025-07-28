@@ -10,15 +10,21 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/merged-ayushma
     ->withMiddleware(function (Middleware $middleware): void {
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
 
+<<<<<<< HEAD
 
         //
 
      //
+=======
+>>>>>>> origin/merged-ayushma
         //
     })->create();

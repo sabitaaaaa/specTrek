@@ -9,20 +9,24 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::table('itineraries', function (Blueprint $table) {
-            //
-        });
-    }
+   public function up()
+{
+ DB::table('settings')->insert([
+    'key' => 'site_logo',
+    'value' => $path, // e.g., 'logo/your-file.png'
+    'created_at' => now(),
+    'updated_at' => now(),
+]);
+
+
+}
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('itineraries', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('settings');
     }
 };

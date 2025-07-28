@@ -110,14 +110,27 @@ return [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-nishmi
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-sabita
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-ayushma
     | Here you may define the number of seconds before a password confirmation
 =======
     | Here you may define the amount of seconds before a password confirmation
 >>>>>>> feature-admin
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,12 +138,18 @@ return [
 =======
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-anushree
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-ayushma
     | Here you may define the amount of seconds before a password confirmation
 =======
     | Here you may define the number of seconds before a password confirmation
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/merged-ayushma
 <<<<<<< HEAD
 =======
     | Here you may define the number of seconds before a password confirmation
@@ -145,6 +164,7 @@ return [
 >>>>>>> friend-code
 >>>>>>> feature/payment
 =======
+<<<<<<< HEAD
 >>>>>>> origin/merged-anushree
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
@@ -153,6 +173,17 @@ return [
 >>>>>>> feature/itinerary-and-blogs
 =======
 >>>>>>> origin/merged-nishmi
+=======
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+=======
+    | Here you may define the number of seconds before a password confirmation
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
+>>>>>>> origin/merged-ayushma
     | window expires and users are asked to re-enter their password via the
     | confirmation screen. By default, the timeout lasts for three hours.
     |

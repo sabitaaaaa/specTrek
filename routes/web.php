@@ -14,6 +14,22 @@ Route::get('/', function () {
 });
 
 
+// making another route and change in the place of welcome replace it with required file name
+// Route::get('/view', function () {
+//     return view('home');
+// });
+
+
+//Short cut of putting a route
+// Route::view('/home','home');
+// Route::view("/about","about");
+
+
+// Route::get('/about', function () {
+//      return view('about');
+//  });
+// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera
+
 // suppose euta certain naam ko manche ko appear huna paryore data the we should:
 Route::get('/about/{name}', function ($name) {
     echo "$name";//first way to show name
@@ -127,19 +143,32 @@ use App\Http\Controllers\DashboardController;
 
 
 
-Route::get('/users', [UserControllers::class, 'index'])->name('users.index');
+// Public Routes
+Route::view('/', 'welcome')->name('home');
+Route::view('/abc', 'abc');
+Route::view('/shey', 'shey');
+Route::view('/manaslu', 'manaslu');
+Route::view('/example', 'example');
+Route::view('/form', 'form');
+Route::view('/Tours', 'Tours')->name('tours');
+Route::view('/AmaYangriTrek', 'AmaYangriTrek')->name('AmaYangriTrek');
+Route::view('/LangtangTrek', 'LangtangTrek')->name('LangtangTrek');
+Route::view('/ShivapuriTrek', 'ShivapuriTrek')->name('ShivapuriTrek');
+Route::view('/annapurna-base-camp', 'abc');
+Route::view('/shey-phoksundo', 'shey');
+Route::view('/langtang-trek', 'LangtangTrek');
+Route::view('/ama-yangri-trek', 'AmaYangriTrek');
+Route::view('/manaslu-trek', 'manaslu');
+Route::view('/payment-options', 'payment-options');
 
+Route::get('/about/{name}', fn($name) => view('about', ["name" => $name]));
 
-Route::get('/', function () {
-    return view('home'); // Make sure home.blade.php exists
-});
-
-Route::get('/form', function () {
-    return view('form');
-});
-
+// Auth
 Route::get('/register', [AuthController::class, 'showRegister']);
 Route::post('/register', [AuthController::class, 'register']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', fn() => tap(Auth::logout(), fn() => redirect('/')))->name('logout');
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -332,19 +361,20 @@ Route::middleware(['auth'])->group(function () {
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
 
-    // Admin Dashboard (by email)
+    // Admin Dashboard - by checking email (sabita23@gmail.com)
     Route::get('/admin-dashboard', function () {
         if (Auth::user()->email !== 'sabita23@gmail.com') {
             abort(403, 'Unauthorized');
         }
+
         $userCount = User::count();
         return view('admin-dashboard', compact('userCount'));
     })->name('admin.dashboard');
 
-    // Trek/tours
+    // Trek view
     Route::get('/tours', [TrekController::class, 'showTours']);
 
-    // Admin Panel
+    // Admin Panel Routes
     Route::prefix('admin')->group(function () {
         // Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
         Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
@@ -353,6 +383,31 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Users Management
+        Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+        Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
+        Route::post('/users', [UserController::class, 'store'])->name('admin.users.store');
+        Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('admin.users.edit');
+        Route::put('/users/{user}', [UserController::class, 'update'])->name('admin.users.update');
+        Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('admin.users.destroy');
+  
+
+
+//
+Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
+
+
+
+
+// Route::middleware(['auth', 'role:Admin'])->prefix('admin')->group(function () {
+//     Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
+//     Route::get('/users/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.users.edit');
+//     Route::put('/users/{user}', [AdminUserController::class, 'update'])->name('admin.users.update');
+//     Route::delete('/users/{user}', [AdminUserController::class, 'destroy'])->name('admin.users.destroy');
+// });
+
+
+
+Route::resource('/admin/users', UserController::class);
 Route::resource('users', UsersController::class);
 // Route::get('/admin/users/create', [UserController::class, 'create'])->name('admin.users.create');
 
@@ -378,69 +433,43 @@ Route::get('/preferences', [UserPreferenceController::class, 'showForm'])->name(
 
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 
-
-//profile
-
-use App\Http\Controllers\AdminProfileController;
-
-Route::get('/admin/profile', [AdminProfileController::class, 'index'])->name('admin.profile');
-Route::post('/admin/profile/update', [AdminProfileController::class, 'update'])->name('admin.profile.update');
-
-
-
-
-Route::resource('users', UserController::class);
-
-
-//profile admin-dashboard
-
-
-Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
-Route::post('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
-
-
-
-//route for packages
-
-use App\Http\Controllers\PackageController;
-
-Route::prefix('admin')->middleware(['auth'])->group(function () {
-    Route::get('/packages', [PackageController::class, 'index'])->name('packages.index');
-});
-
-
-// route for review
-
-
+// for review =================
 
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 
 Route::get('/', [HomeController::class, 'index']);
-// Show form
-Route::get('/packages/create', [PackageController::class, 'create'])->name('packages.create');
-
-// Store form data
-Route::post('/packages', [PackageController::class, 'store'])->name('packages.store');
 
 
 
-Route::get('/profile/edit', [AdminProfileController::class, 'index'])->name('profile.edit');
-Route::post('/profile/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+// dynamic view for user
+Route::get('/itinerary/{slug}', function ($slug) {
+    $itinerary = \App\Models\Itinerary::where('slug', $slug)->firstOrFail();
+    return view('itinerary.show', compact('itinerary'));
+})->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
+Route::resource('itinerary', ItineraryController::class);
 
+// Payment
+Route::get('/{slug}/payment', fn($slug) => view('payment', ['slug' => $slug]));
+Route::get('/see-more', fn() => view('see_more', ['hasPaid' => \App\Models\PremiumPayment::where('status', 'success')->exists()]));
+Route::post('/charge', [PaymentController::class, 'charge']);
 
+// Stripe
+Route::middleware('auth')->group(function () {
+    Route::get('/stripe', [StripePaymentController::class, 'stripe'])->name('stripe');
+    Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
+    Route::get('/payment-success', [StripePaymentController::class, 'paymentSuccess'])->name('payment.success');
+    Route::get('/payment-cancel', [StripePaymentController::class, 'paymentCancel'])->name('payment.cancel');
+    Route::get('/premium-content', fn() => auth()->user()->is_premium ? view('premium-content') : redirect('/stripe')->with('error', 'Please pay to access premium content.'));
+});
 
-// Route::get('/edit-logo', [AdminProfileController::class, 'editLogo'])->name('profile.editLogo');
-// Route::post('/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
-Route::get('/home', [HomeController::class, 'index']);
+// Esewa
+Route::get('/esewa-pay', [EsewaController::class, 'pay'])->name('esewa.pay');
+Route::get('/esewa-success', [EsewaController::class, 'success']);
+Route::get('/esewa-failure', [EsewaController::class, 'failure']);
 
-
-
-Route::post('/logo/edit', [AdminProfileController::class, 'updateLogo'])->name('logo.edit');
-
-
-
-
+// Khalti
+Route::get('/Khalti', [KhaltiController::class, 'pay']);
 
 use App\Http\Controllers\ProfileController;
 
