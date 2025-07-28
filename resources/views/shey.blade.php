@@ -107,6 +107,7 @@
              <thead style="background-color: #2e8b57; color: white;">
                 <thead style="background-color: #2e8b57; color: white;">
 
+
                   <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Option</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Cost (Approx)</th>
@@ -173,7 +174,22 @@
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
-      </div>
+
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
+          </div>
     </div>
   </div>
 

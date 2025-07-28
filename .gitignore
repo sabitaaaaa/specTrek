@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-nishmi
 =======
@@ -28,12 +29,41 @@
 >>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-ayushma
 =======
+=======
+>>>>>>> origin/merged-nishmi
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merged-anushree
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merged-anushree
+=======
 /.phpunit.cache
 =======
+>>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> feature/payment
+=======
+/.phpunit.cache
+=======
+>>>>>>> origin/merged-anushree
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
 =======
 >>>>>>> origin/merged-nishmi
 *.log
@@ -55,24 +85,79 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/merged-nishmi
+=======
+/.phpunit.cache
+>>>>>>> feature-admin
+=======
+/.phpunit.cache
+=======
+>>>>>>> origin/merged-ayushma
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+>>>>>>> feature/itinerary-and-blogs
+=======
+/.phpunit.cache
+>>>>>>> feature-admin
+=======
+=======
+/.phpunit.cache
+>>>>>>> friend-code
+>>>>>>> feature/payment
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+<<<<<<< HEAD
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-anushree
 <<<<<<< HEAD
 =======
 >>>>>>> feature/itinerary-and-blogs
 =======
 >>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-anushree
 /node_modules
 /public/build
 /public/hot
@@ -85,6 +170,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-nishmi
 =======
@@ -92,10 +178,45 @@
 <<<<<<< HEAD
 >>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-ayushma
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature-admin
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-anushree
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-sabita
+>>>>>>> origin/merged-nishmi
+>>>>>>> origin/merged-anushree
 Homestead.json
 Homestead.yaml
 Thumbs.db
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-nishmi
+>>>>>>> feature/payment
+>>>>>>> origin/merged-anushree
+=======
+>>>>>>> origin/merged-ayushma
 =======
 >>>>>>> feature/trekking-mapp
 .env
@@ -116,6 +237,32 @@ yarn-error.log
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+<<<<<<< HEAD
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> feature/itinerary-and-blogs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-anushree
+=======
+>>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-nishmi
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,9 +275,36 @@ yarn-error.log
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-sabita
+>>>>>>> feature-admin
+=======
+<<<<<<< HEAD
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-nishmi
+>>>>>>> feature-admin
+=======
+>>>>>>> friend-code
+>>>>>>> feature/payment
+=======
+=======
+>>>>>>> origin/merged-anushree
 >>>>>>> feature-admin
 =======
 =======
@@ -138,9 +312,14 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> origin/merged-ayushma
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-anushree
 =======
 <<<<<<< HEAD
 Homestead.json
@@ -150,7 +329,11 @@ Thumbs.db
 <<<<<<< HEAD
 =======
 >>>>>>> feature-admin
+>>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-sabita
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-anushree

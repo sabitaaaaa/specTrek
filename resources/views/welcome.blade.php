@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <h1> WELCOME BACK </h1>
+>>>>>>> origin/merged-sabita
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -12,6 +15,7 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
+<<<<<<< HEAD
 
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
@@ -23,6 +27,25 @@
 
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+=======
+<<<<<<< HEAD
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+        
+=======
+
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
+        <h1> hello , specTrek </h1>
+>>>>>>> origin/merged-sabita
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merged-anushree
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
         <h1> hello , specTrek </h1>
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
@@ -30,8 +53,20 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-ayushma
+=======
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+>>>>>>> origin/merged-nishmi
+=======
+=======
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-anushree
 >>>>>>> origin/merged-sabita
 
         <!-- Styles / Scripts -->
@@ -299,5 +334,19 @@
         @endif
     </body>
 </html>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-nishmi
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+<h1> WELCOME BACK </h1>
+=======
+>>>>>>> feature-admin
+=======
+=======
+>>>>>>> origin/merged-nishmi
+>>>>>>> origin/merged-sabita
+>>>>>>> origin/merged-anushree

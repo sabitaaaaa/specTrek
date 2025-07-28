@@ -45,7 +45,3 @@ return [
 
 ];
 
-<<<<<<< HEAD
- 
-=======
->>>>>>> origin/merged-ayushma

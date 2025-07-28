@@ -127,6 +127,8 @@ Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.de
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+
+// Controllers
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
@@ -169,10 +171,23 @@ Route::post('/logout', function () {
 
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
-use App\Http\Controllers\ItineraryController;
+
+//changed
+
+Route::get('/{slug}/payment', function ($slug) {
+    // optionally you can validate if $slug exists in DB
+    return view('payment', ['slug' => $slug]);
+});
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+Route::get('/signup', function () {
+    return view('register');
+})->name('register');
+
 use App\Http\Controllers\StripePaymentController;
 
-// Stripe Payment Routes (protected by auth)
+
 Route::middleware(['auth'])->group(function () {
 
     // User Dashboard
@@ -182,6 +197,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/payment-success', [StripePaymentController::class, 'paymentSuccess'])->name('payment.success');
     Route::get('/payment-cancel', [StripePaymentController::class, 'paymentCancel'])->name('payment.cancel');
+
+    // Auth
+
 
     Route::get('/premium-content', function () {
         if (auth()->user()->is_premium) {
@@ -214,18 +232,40 @@ Route::resource('/admin/users', UserController::class);
 
 // Authentication Routes
 Route::get('/register', [AuthController::class, 'showRegister']);
-Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/logout', function () {
     Auth::logout();
-    return redirect('/login');
+    return redirect('/');
 })->name('logout.post');
 
-// Home Routes
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+// dynamic view for user
+Route::get('/itinerary/{slug}', function ($slug) {
+    $itinerary = \App\Models\Itinerary::where('slug', $slug)->firstOrFail();
+    return view('itinerary.show', compact('itinerary'));
+})->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
+
+
+use App\Http\Controllers\ItineraryController;
+
+Route::resource('itinerary', ItineraryController::class);
+
+// change
+Route::controller(StripePaymentController::class)->group(function(){
+    Route::get('stripe', 'stripe');
+    Route::post('stripe', 'stripePost')->name('stripe.post');
+});
+
+
+// Home
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
 
 // Static Views
 Route::view('/abc', 'abc')->name('abc');
@@ -237,7 +277,7 @@ Route::view('/Tours', 'Tours')->name('tours');
 Route::view('/AmaYangriTrek', 'AmaYangriTrek')->name('AmaYangriTrek');
 Route::view('/LangtangTrek', 'LangtangTrek')->name('LangtangTrek');
 Route::view('/ShivapuriTrek', 'ShivapuriTrek')->name('ShivapuriTrek');
-// Route::view('/shivapuri-trek', 'ShivapuriTrek')->name('ShivapuriTrek');
+Route::view('/shivapuri-trek', 'ShivapuriTrek')->name('ShivapuriTrek');
 Route::view('/annapurna-base-camp', 'abc');
 Route::view('/shey-phoksundo', 'shey');
 Route::view('/langtang-trek', 'LangtangTrek');
@@ -258,11 +298,11 @@ Route::get('/weathermap', fn () => view('weathermap'));
 Route::get('/weather/test-all', [WeatherController::class, 'fetchAllWeatherData']);
 
 // Trek Recommendation
-// Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
-// Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
-// Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
+Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
+Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
+Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
 Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
-// Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation.form');
+
 // Review
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
@@ -304,13 +344,14 @@ Route::middleware(['auth'])->group(function () {
 
     // Admin Panel
     Route::prefix('admin')->group(function () {
-        // Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
         Route::resource('/users', UserController::class)->names('admin.users');
     });
 });
 
 // Users Management
 Route::resource('users', UsersController::class);
+Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
 // Route::get('/admin/users/create', [UserController::class, 'create'])->name('admin.users.create');
 
 // ITINERARY RESOURCE ROUTE WITH SLUG BINDING
@@ -337,6 +378,40 @@ Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.de
 
 // for review =================
 
+//profile
+
+use App\Http\Controllers\AdminProfileController;
+
+Route::get('/admin/profile', [AdminProfileController::class, 'index'])->name('admin.profile');
+Route::post('/admin/profile/update', [AdminProfileController::class, 'update'])->name('admin.profile.update');
+
+
+
+
+Route::resource('users', UserController::class);
+
+
+//profile admin-dashboard
+
+
+Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
+Route::post('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
+
+
+
+//route for packages
+
+use App\Http\Controllers\PackageController;
+
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    Route::get('/packages', [PackageController::class, 'index'])->name('packages.index');
+});
+
+
+// route for review
+
+
+
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 
@@ -351,9 +426,29 @@ Route::get('/itinerary/{slug}', function ($slug) {
 })->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
 
 
-use App\Http\Controllers\ItineraryController;
+
 
 Route::resource('itinerary', ItineraryController::class);
+// Show form
+Route::get('/packages/create', [PackageController::class, 'create'])->name('packages.create');
+
+// Store form data
+Route::post('/packages', [PackageController::class, 'store'])->name('packages.store');
+
+
+
+Route::get('/profile/edit', [AdminProfileController::class, 'index'])->name('profile.edit');
+Route::post('/profile/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+
+
+
+// Route::get('/edit-logo', [AdminProfileController::class, 'editLogo'])->name('profile.editLogo');
+// Route::post('/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+Route::get('/home', [HomeController::class, 'index']);
+
+
+
+Route::post('/logo/edit', [AdminProfileController::class, 'updateLogo'])->name('logo.edit');
 
 
 

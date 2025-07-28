@@ -9,6 +9,8 @@
 </head>
 
 
+
+
 <body class="h-screen font-sans m-0">
   <div class="flex h-full">
     <!-- Left Split (Hidden on small devices) -->
@@ -82,7 +84,6 @@
         valid = false;
       }
 
-      //  Simple check: just ensure password is not empty (or you can set min length like 6)
       if (password.length < 6) {
         passwordError.textContent = 'Password must be at least 6 characters long';
         valid = false;
@@ -95,4 +96,4 @@
   </script>
 </body>
 </html>
-</html>
+

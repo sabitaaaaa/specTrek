@@ -5,7 +5,6 @@
   <title>Trek Recommendations</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    /* Your CSS styles here */
     .badge-green {
       background-color: #28a745;
       color: white;
@@ -48,11 +47,7 @@
         Couldn't find a perfect match for your query. Here are some similar treks you might like.
       </div>
     @endif
-<<<<<<< HEAD
 
-=======
-
->>>>>>> origin/merged-ayushma
     @if($perfectMatches->isNotEmpty())
       <h3>Perfect Matches</h3>
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
@@ -75,6 +70,7 @@
           </div>
         @endforeach
       </div>
+
     @endif
 
     <h3><span class="badge bg-warning text-dark">Similar Treks</span></h3>
@@ -112,6 +108,7 @@
           @endif
         @endforeach
       </div>
+
     @endif
 
     <h3><span class="badge bg-warning text-dark">Similar Treks</span></h3>
@@ -200,9 +197,10 @@
 @endif
 
 
-    <div class="mt-4">
+
       <a href="{{ route('recommendation.form') }}" class="btn btn-outline-primary">Back to Form</a>
       <a href="{{ route('recommend.form') }}" class="btn btn-outline-primary">Back to Form</a>
+
     </div>
   </div>
 </body>

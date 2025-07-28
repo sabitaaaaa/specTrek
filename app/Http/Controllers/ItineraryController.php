@@ -37,11 +37,61 @@ class ItineraryController extends Controller
             'hidden_gems' => 'nullable|string',
             'day_to_day_itinerary' => 'nullable|string',
             'hidden_traditions' => 'nullable|string',
+            'best_time' => 'nullable|string|max:255',
+            'note' => 'nullable|string',
+            'description' => 'nullable|string',
+            'quote' => 'nullable|string',
             'image1' => 'nullable|image|max:2048',
             'image2' => 'nullable|image|max:2048',
             'image3' => 'nullable|image|max:2048',
             'image4' => 'nullable|image|max:2048',
         ]);
+
+        $itinerary = new Itinerary($request->only([
+            'title',
+            'slug',
+            'quote',
+            'description',
+            'best_time',
+            'detailed_itinerary',
+            'note',
+            'transport_table',
+            'hidden_gems',
+            'day_to_day_itinerary',
+            'hidden_traditions',
+        ]));
+
+        // Convert textarea lists to JSON arrays
+        $hidden_gems = json_encode(array_filter(array_map('trim', explode("\n", strip_tags($request->input('hidden_gems', ''))))));
+        $day_to_day_itinerary = json_encode(array_filter(array_map('trim', explode("\n", strip_tags($request->input('day_to_day_itinerary', ''))))));
+        $hidden_traditions = json_encode(array_filter(array_map('trim', explode("\n", strip_tags($request->input('hidden_traditions', ''))))));
+
+        // Handle image uploads
+        $images = [];
+        for ($i = 1; $i <= 4; $i++) {
+            $images[$i] = $request->file("image{$i}") ? $request->file("image{$i}")->store('images', 'public') : null;
+        }
+
+        // Create itinerary
+        $itinerary = new Itinerary();
+        $itinerary->title = strip_tags($request->input('title'));
+        $itinerary->slug = strip_tags($request->input('slug'));
+        $itinerary->quote = strip_tags($request->input('quote'));
+        $itinerary->description = $request->input('description'); // keep raw HTML
+        $itinerary->best_time = strip_tags($request->input('best_time'));
+        $itinerary->detailed_itinerary = strip_tags($request->input('detailed_itinerary'));
+        $itinerary->note = strip_tags($request->input('note'));
+        $itinerary->transport_table = strip_tags($request->input('transport_table'));
+        $itinerary->hidden_gems = $hidden_gems;
+        $itinerary->day_to_day_itinerary = $day_to_day_itinerary;
+        $itinerary->hidden_traditions = $hidden_traditions;
+        $itinerary->is_featured = $request->has('is_featured');
+
+        // Assign images
+        $itinerary->image1 = $images[1];
+        $itinerary->image2 = $images[2];
+        $itinerary->image3 = $images[3];
+        $itinerary->image4 = $images[4];
 
         $itinerary = new Itinerary($request->only([
             'title',
@@ -69,6 +119,7 @@ class ItineraryController extends Controller
         return redirect()->route('itinerary.show', $itinerary->slug)->with('success', 'Itinerary created successfully!');
     }
 
+    // Show single itinerary by slug
     // Show itinerary detail with recommendations
     public function show(string $slug)
     {
@@ -93,6 +144,7 @@ class ItineraryController extends Controller
         return view('itinerary.edit', compact('itinerary'));
     }
 
+    // Update existing itinerary
     // Update itinerary
     public function update(Request $request, int $id)
     {
@@ -108,6 +160,10 @@ class ItineraryController extends Controller
             'hidden_gems' => 'nullable|string',
             'day_to_day_itinerary' => 'nullable|string',
             'hidden_traditions' => 'nullable|string',
+            'best_time' => 'nullable|string|max:255',
+            'note' => 'nullable|string',
+            'description' => 'nullable|string',
+            'quote' => 'nullable|string',
             'image1' => 'nullable|image|max:2048',
             'image2' => 'nullable|image|max:2048',
             'image3' => 'nullable|image|max:2048',
@@ -115,6 +171,43 @@ class ItineraryController extends Controller
         ]);
 
         $itinerary = Itinerary::findOrFail($id);
+
+        $itinerary->fill($request->only([
+            'title',
+            'slug',
+            'quote',
+            'description',
+            'best_time',
+            'detailed_itinerary',
+            'note',
+            'transport_table',
+            'hidden_gems',
+            'day_to_day_itinerary',
+            'hidden_traditions',
+        ]));
+
+        $hidden_gems = json_encode(array_filter(array_map('trim', explode("\n", strip_tags($request->input('hidden_gems', ''))))));
+        $day_to_day_itinerary = json_encode(array_filter(array_map('trim', explode("\n", strip_tags($request->input('day_to_day_itinerary', ''))))));
+        $hidden_traditions = json_encode(array_filter(array_map('trim', explode("\n", strip_tags($request->input('hidden_traditions', ''))))));
+
+        for ($i = 1; $i <= 4; $i++) {
+            if ($request->hasFile("image{$i}")) {
+                $itinerary->{"image{$i}"} = $request->file("image{$i}")->store('images', 'public');
+            }
+        }
+
+        $itinerary->title = strip_tags($request->input('title'));
+        $itinerary->slug = strip_tags($request->input('slug'));
+        $itinerary->quote = strip_tags($request->input('quote'));
+        $itinerary->description = $request->input('description');
+        $itinerary->best_time = strip_tags($request->input('best_time'));
+        $itinerary->detailed_itinerary = strip_tags($request->input('detailed_itinerary'));
+        $itinerary->note = strip_tags($request->input('note'));
+        $itinerary->transport_table = strip_tags($request->input('transport_table'));
+        $itinerary->hidden_gems = $hidden_gems;
+        $itinerary->day_to_day_itinerary = $day_to_day_itinerary;
+        $itinerary->hidden_traditions = $hidden_traditions;
+        $itinerary->is_featured = $request->has('is_featured');
 
         $itinerary->fill($request->only([
             'title',

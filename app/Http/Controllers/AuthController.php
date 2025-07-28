@@ -8,66 +8,19 @@ use App\Notifications\LoginNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
-
-
-
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
-
     use RegistersUsers;
 
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
     protected $redirectTo = '/';
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
-        return view('register');
+        $this->middleware('guest')->except('logout');
     }
 
-    public function register(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:5|confirmed',
-        ]);
-
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        return redirect('/login')->with('success', 'Registered successfully. Please login.');
-        $this->middleware('guest');
-    }
-
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -77,12 +30,6 @@ class AuthController extends Controller
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\Models\User
-     */
     protected function create(array $data)
     {
         return view('login');
@@ -99,14 +46,34 @@ class AuthController extends Controller
             $user = Auth::user();
             $user->notify(new LoginNotification());
 
-           if (strtolower($user->email) === 'ayushma23@gmail.com') {
-                return redirect('/itinerary');
-           }elseif (strtolower($user->email) === 'sabita23@gmail.com') {
-                return redirect('/admin-dashboard');
-}
+            // Redirect based on email
+            $email = strtolower($user->email);
 
+            if ($email === 'sabita23@gmail.com') {
+                return redirect('/admin-dashboard');
+            } elseif ($email === 'ayushma23@gmail.com') {
+                return redirect('/itinerary');
+            }
 
             return redirect('/home');
+        }
+
+        return back()->with('error', 'Invalid login credentials');
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string|min:5',
+        ]);
+
+        if (Auth::attempt($request->only('email', 'password'))) {
+            $user = Auth::user();
+            $user->notify(new LoginNotification());
+
+            if (strtolower($user->email) === 'sabita23@gmail.com') {
+                return redirect('/admin-dashboard');
+            }
+            else
+
+            return redirect('/');
         }
 
         return back()->with('error', 'Invalid login credentials');
