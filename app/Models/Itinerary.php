@@ -27,4 +27,11 @@ class Itinerary extends Model
     return 'slug';
 }
 
+
+    public function trek()
+{
+    return $this->belongsTo(Trek::class);
 }
+
+}
+

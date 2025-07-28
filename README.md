@@ -1,9 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 spectrek
 =======
 >>>>>>> origin/merged-ayushma
+=======
+<<<<<<< HEAD
+spectrek
+=======
+
+>>>>>>> feature-admin
+=======
+>>>>>>> origin/merged-nishmi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,9 +28,13 @@ spectrek
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feature/trekking-mapp
 =======
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-nishmi
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -102,12 +115,18 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
+=======
 
 >>>>>>> friend-code
 >>>>>>> feature/payment
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,3 +137,7 @@ hello! Welcome to speckTrek.
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi

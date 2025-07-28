@@ -430,10 +430,18 @@
 
         </ul>
 
+
       </div>
 
 
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
         <h2>Detailed Itinerary</h2>
@@ -452,8 +460,15 @@
             <br>
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
-              <thead style="background-color: #027478; color: white;">
+<<<<<<< HEAD
               <thead style="background-color: #2e8b57; color: white;">
+=======
+              <thead style="background-color: #027478; color: white;">
+<<<<<<< HEAD
+              <thead style="background-color: #2e8b57; color: white;">
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi
                   <tr>
                    <th style="padding: 12px; border: 1px solid #ccc;">Entry Point</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Access Method</th>
@@ -483,8 +498,15 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes official parking space near entrance gate</td>
 
                   </tr>
+<<<<<<< HEAD
 
+=======
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -514,6 +536,8 @@
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
+<<<<<<< HEAD
+=======
 
         <script>
             document.getElementById("see-more-btn").addEventListener("click", function () {
@@ -531,6 +555,7 @@
           </script>
 
 
+>>>>>>> origin/merged-anushree
       </div>
     </div>
   </div>
@@ -543,9 +568,15 @@
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
 
+<<<<<<< HEAD
+=======
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi
   </main>
 <!-- Footer -->
     <footer class="footer">
@@ -613,9 +644,7 @@
       behavior: "smooth"
     });
   }
-  </script>
-</body>
-</html>
+<<<<<<< HEAD
 
   </script>
 
@@ -624,3 +653,19 @@
 
 </body>
 </html>
+=======
+  </script>
+</body>
+</html>
+<<<<<<< HEAD
+
+  </script>
+
+
+
+
+</body>
+</html>
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi

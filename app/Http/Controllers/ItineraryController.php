@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Itinerary;
 use Illuminate\Http\Request;
+use App\Services\RecommendationService;
 
 class ItineraryController extends Controller
 {
@@ -26,10 +27,14 @@ class ItineraryController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:itineraries,slug',
+            'quote' => 'nullable|string',
+            'description' => 'nullable|string',
+            'best_time' => 'nullable|string|max:255',
+            'detailed_itinerary' => 'nullable|string',
+            'note' => 'nullable|string',
+            'transport_table' => 'nullable|string',
             'hidden_gems' => 'nullable|string',
             'day_to_day_itinerary' => 'nullable|string',
-            'detailed_itinerary' => 'nullable|string',
-            'transport_table' => 'nullable|string',
             'hidden_traditions' => 'nullable|string',
             'best_time' => 'nullable|string|max:255',
             'note' => 'nullable|string',
@@ -73,16 +78,48 @@ class ItineraryController extends Controller
         $itinerary->image3 = $images[3];
         $itinerary->image4 = $images[4];
 
+        $itinerary = new Itinerary($request->only([
+            'title',
+            'slug',
+            'quote',
+            'description',
+            'best_time',
+            'detailed_itinerary',
+            'note',
+            'transport_table',
+            'hidden_gems',
+            'day_to_day_itinerary',
+            'hidden_traditions',
+        ]));
+
+        // Handle image uploads
+        foreach (['image1', 'image2', 'image3', 'image4'] as $field) {
+            if ($request->hasFile($field)) {
+                $itinerary->$field = $request->file($field)->store('itinerary_images', 'public');
+            }
+        }
+
         $itinerary->save();
 
         return redirect()->route('itinerary.show', $itinerary->slug)->with('success', 'Itinerary created successfully!');
     }
 
     // Show single itinerary by slug
+    // Show itinerary detail with recommendations
     public function show(string $slug)
     {
         $itinerary = Itinerary::where('slug', $slug)->firstOrFail();
-        return view('itinerary.show', compact('itinerary'));
+
+        $recommendations = collect();
+        $preferenceRecommendations = collect();
+
+        if (auth()->check()) {
+            RecommendationService::trackUserView(auth()->id(), $itinerary->id);
+            $recommendations = RecommendationService::getRecommendationsForUser(auth()->id());
+            $preferenceRecommendations = RecommendationService::getPreferenceRecommendationsForUser(auth()->id());
+        }
+
+        return view('itinerary.show', compact('itinerary', 'recommendations', 'preferenceRecommendations'));
     }
 
     // Show form to edit itinerary
@@ -93,15 +130,20 @@ class ItineraryController extends Controller
     }
 
     // Update existing itinerary
+    // Update itinerary
     public function update(Request $request, int $id)
     {
         $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:itineraries,slug,' . $id,
+            'quote' => 'nullable|string',
+            'description' => 'nullable|string',
+            'best_time' => 'nullable|string|max:255',
+            'detailed_itinerary' => 'nullable|string',
+            'note' => 'nullable|string',
+            'transport_table' => 'nullable|string',
             'hidden_gems' => 'nullable|string',
             'day_to_day_itinerary' => 'nullable|string',
-            'detailed_itinerary' => 'nullable|string',
-            'transport_table' => 'nullable|string',
             'hidden_traditions' => 'nullable|string',
             'best_time' => 'nullable|string|max:255',
             'note' => 'nullable|string',
@@ -137,6 +179,26 @@ class ItineraryController extends Controller
         $itinerary->day_to_day_itinerary = $day_to_day_itinerary;
         $itinerary->hidden_traditions = $hidden_traditions;
         $itinerary->is_featured = $request->has('is_featured');
+
+        $itinerary->fill($request->only([
+            'title',
+            'slug',
+            'quote',
+            'description',
+            'best_time',
+            'detailed_itinerary',
+            'note',
+            'transport_table',
+            'hidden_gems',
+            'day_to_day_itinerary',
+            'hidden_traditions',
+        ]));
+
+        foreach (['image1', 'image2', 'image3', 'image4'] as $field) {
+            if ($request->hasFile($field)) {
+                $itinerary->$field = $request->file($field)->store('itinerary_images', 'public');
+            }
+        }
 
         $itinerary->save();
 

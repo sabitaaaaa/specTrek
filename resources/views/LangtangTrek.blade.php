@@ -349,6 +349,7 @@
   <link rel="stylesheet" href="{{ asset('css/langtang.css') }}">
 
   <link rel="icon" href="{{ asset('images/logo.png') }}">
+  <link rel="stylesheet" href="{{ asset('css/langtang.css') }}">
 </head>
 <body>
 
@@ -429,7 +430,9 @@
 
         </ul>
 
+
       </div>
+
 
 
           <p><strong> END OF TREK !! </strong></p>
@@ -490,6 +493,7 @@
             <br>
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
+            <thead style="background-color: #2e8b57; color: white;">
               <thead style="background-color: #027478; color: white;">
                 <thead style="background-color: #2e8b57; color: white;">
 
@@ -537,6 +541,7 @@
                   </tr>
 
 
+
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -566,6 +571,7 @@
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
+      </div>
 
         <script>
             document.getElementById("see-more-btn").addEventListener("click", function () {
@@ -597,6 +603,7 @@
 
 
   </main>
+   </main>
 <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">

@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "6aefad308e55f87c90a3f333bd9072c7",
     "packages": [
         {
@@ -16,6 +17,12 @@
     "packages": [
         {
             "name": "brick/math",
+=======
+    "content-hash": "804c50608cd2a51b8e2fc39f908d0dfb",
+    "packages": [
+        {
+            "name": "brick/math",
+>>>>>>> origin/merged-nishmi
             "version": "0.13.1",
             "source": {
                 "type": "git",
@@ -26,6 +33,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/brick/math/zipball/fc7ed316430118cc7836bf45faff18d5dfc8de04",
                 "reference": "fc7ed316430118cc7836bf45faff18d5dfc8de04",
+<<<<<<< HEAD
 =======
     "packages": [
         {
@@ -62,6 +70,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -101,6 +111,7 @@
             "support": {
                 "issues": "https://github.com/brick/math/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/brick/math/tree/0.13.1"
 =======
 <<<<<<< HEAD
@@ -117,6 +128,9 @@
  
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/brick/math/tree/0.13.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -124,6 +138,7 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2025-03-29T13:50:30+00:00"
         },
@@ -145,6 +160,11 @@
         },
         
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-03-29T13:50:30+00:00"
+        },
+        {
+>>>>>>> origin/merged-nishmi
             "name": "carbonphp/carbon-doctrine-types",
             "version": "3.2.0",
             "source": {
@@ -1135,12 +1155,16 @@
         {
             "name": "laravel/framework",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v12.21.0",
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
             "version": "v12.19.3",
 >>>>>>> origin/merged-ayushma
+=======
+            "version": "v12.21.0",
+>>>>>>> origin/merged-nishmi
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
@@ -1148,6 +1172,7 @@
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "url": "https://api.github.com/repos/laravel/framework/zipball/ac8c4e73bf1b5387b709f7736d41427e6af1c93b",
                 "reference": "ac8c4e73bf1b5387b709f7736d41427e6af1c93b",
@@ -1229,15 +1254,22 @@
                 "url": "https://api.github.com/repos/laravel/framework/zipball/7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
                 "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
 >>>>>>> origin/merged-ayushma
+=======
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ac8c4e73bf1b5387b709f7736d41427e6af1c93b",
+                "reference": "ac8c4e73bf1b5387b709f7736d41427e6af1c93b",
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.11|^0.12|^0.13",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "composer-runtime-api": "^2.2",
                 "doctrine/inflector": "^2.0.5",
                 "dragonmantank/cron-expression": "^3.4",
@@ -1254,6 +1286,7 @@
                 "guzzlehttp/uri-template": "^1.0",
                 "laravel/prompts": "^0.3.0",
                 "laravel/serializable-closure": "^1.3|^2.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "league/commonmark": "^2.7",
 =======
@@ -1282,6 +1315,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "league/commonmark": "^2.7",
+>>>>>>> origin/merged-nishmi
                 "league/flysystem": "^3.25.1",
                 "league/flysystem-local": "^3.25.1",
                 "league/uri": "^7.5.1",
@@ -1374,6 +1410,7 @@
                 "phpstan/phpstan": "^2.0",
                 "phpunit/phpunit": "^10.5.35|^11.5.3|^12.0.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "predis/predis": "^2.3|^3.0",
 =======
 <<<<<<< HEAD
@@ -1400,6 +1437,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "predis/predis": "^2.3|^3.0",
+>>>>>>> origin/merged-nishmi
                 "resend/resend-php": "^0.10.0",
                 "symfony/cache": "^7.2.0",
                 "symfony/http-client": "^7.2.0",
@@ -1432,6 +1472,7 @@
                 "php-http/discovery": "Required to use PSR-7 bridging features (^1.15).",
                 "phpunit/phpunit": "Required to use assertions and run tests (^10.5.35|^11.5.3|^12.0.1).",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
 =======
 <<<<<<< HEAD
@@ -1457,6 +1498,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
+>>>>>>> origin/merged-nishmi
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^6.0|^7.0).",
                 "resend/resend-php": "Required to enable support for the Resend mail transport (^0.10.0).",
@@ -1514,6 +1558,7 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-07-22T15:41:55+00:00"
         },
         {
@@ -1548,6 +1593,11 @@
         
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-07-22T15:41:55+00:00"
+        },
+        {
+>>>>>>> origin/merged-nishmi
             "name": "laravel/prompts",
             "version": "v0.3.6",
             "source": {
@@ -1988,10 +2038,13 @@
         {
             "name": "league/flysystem",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "3.30.0",
             "source": {
                 "type": "git",
@@ -2002,6 +2055,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/2203e3151755d874bb2943649dae1eb8533ac93e",
                 "reference": "2203e3151755d874bb2943649dae1eb8533ac93e",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2022,6 +2076,8 @@
 =======
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -2046,6 +2102,7 @@
                 "ext-fileinfo": "*",
                 "ext-ftp": "*",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "ext-mongodb": "^1.3|^2",
 =======
 <<<<<<< HEAD
@@ -2058,12 +2115,16 @@
                 "ext-mongodb": "^1.3",
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+                "ext-mongodb": "^1.3|^2",
+>>>>>>> origin/merged-nishmi
                 "ext-zip": "*",
                 "friendsofphp/php-cs-fixer": "^3.5",
                 "google/cloud-storage": "^1.23",
                 "guzzlehttp/psr7": "^2.6",
                 "microsoft/azure-storage-blob": "^1.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "mongodb/mongodb": "^1.2|^2",
 =======
 <<<<<<< HEAD
@@ -2076,6 +2137,9 @@
                 "mongodb/mongodb": "^1.2",
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+                "mongodb/mongodb": "^1.2|^2",
+>>>>>>> origin/merged-nishmi
                 "phpseclib/phpseclib": "^3.0.36",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.5.11|^10.0",
@@ -2114,10 +2178,13 @@
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "source": "https://github.com/thephpleague/flysystem/tree/3.30.0"
             },
             "time": "2025-06-25T13:29:59+00:00"
@@ -2134,6 +2201,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/6691915f77c7fb69adfb87dcd550052dc184ee10",
                 "reference": "6691915f77c7fb69adfb87dcd550052dc184ee10",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2160,6 +2228,8 @@
 =======
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -2194,6 +2264,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/thephpleague/flysystem-local/tree/3.30.0"
             },
             "time": "2025-05-21T10:34:19+00:00"
@@ -2214,6 +2285,11 @@
             "time": "2024-08-09T21:24:39+00:00"
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/thephpleague/flysystem-local/tree/3.30.0"
+            },
+            "time": "2025-05-21T10:34:19+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "league/mime-type-detection",
@@ -2603,11 +2679,14 @@
         {
             "name": "nesbot/carbon",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "3.10.1",
             "source": {
                 "type": "git",
@@ -2618,6 +2697,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/1fd1935b2d90aef2f093c5e35f7ae1257c448d00",
                 "reference": "1fd1935b2d90aef2f093c5e35f7ae1257c448d00",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2663,6 +2743,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -2670,6 +2752,7 @@
                 "ext-json": "*",
                 "php": "^8.1",
                 "psr/clock": "^1.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "symfony/clock": "^6.3.12 || ^7.0",
                 "symfony/polyfill-mbstring": "^1.0",
@@ -2697,6 +2780,11 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "symfony/clock": "^6.3.12 || ^7.0",
+                "symfony/polyfill-mbstring": "^1.0",
+                "symfony/translation": "^4.4.18 || ^5.2.1 || ^6.0 || ^7.0"
+>>>>>>> origin/merged-nishmi
             },
             "provide": {
                 "psr/clock-implementation": "1.0"
@@ -2705,10 +2793,13 @@
                 "doctrine/dbal": "^3.6.3 || ^4.0",
                 "doctrine/orm": "^2.15.2 || ^3.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "friendsofphp/php-cs-fixer": "^3.75.0",
                 "kylekatarnls/multi-tester": "^2.5.3",
                 "phpmd/phpmd": "^2.15.0",
@@ -2716,6 +2807,7 @@
                 "phpstan/phpstan": "^2.1.17",
                 "phpunit/phpunit": "^10.5.46",
                 "squizlabs/php_codesniffer": "^3.13.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2745,6 +2837,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             },
             "bin": [
                 "bin/carbon"
@@ -2813,6 +2907,7 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-06-21T15:19:35+00:00"
         },
         {
@@ -2837,6 +2932,11 @@
         },
         
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-06-21T15:19:35+00:00"
+        },
+        {
+>>>>>>> origin/merged-nishmi
             "name": "nette/schema",
             "version": "v1.3.2",
             "source": {
@@ -2901,9 +3001,12 @@
         {
             "name": "nette/utils",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "version": "v4.0.7",
             "source": {
                 "type": "git",
@@ -2914,6 +3017,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nette/utils/zipball/e67c4061eb40b9c113b218214e42cb5a0dda28f2",
                 "reference": "e67c4061eb40b9c113b218214e42cb5a0dda28f2",
+<<<<<<< HEAD
 =======
 =======
 
@@ -2948,6 +3052,8 @@
  
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -3019,24 +3125,28 @@
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "source": "https://github.com/nette/utils/tree/v4.0.7"
             },
             "time": "2025-06-03T04:55:08+00:00"
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.5.0",
+            "version": "v5.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "ae59794362fe85e051a58ad36b289443f57be7a9"
+                "reference": "221b0d0fdf1369c71047ad1d18bb5880017bbc56"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/ae59794362fe85e051a58ad36b289443f57be7a9",
                 "reference": "ae59794362fe85e051a58ad36b289443f57be7a9",
 <<<<<<< HEAD
@@ -3084,6 +3194,10 @@
  
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/221b0d0fdf1369c71047ad1d18bb5880017bbc56",
+                "reference": "221b0d0fdf1369c71047ad1d18bb5880017bbc56",
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -3127,16 +3241,21 @@
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.5.0"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.5.0"
+=======
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.0"
+>>>>>>> origin/merged-nishmi
             },
-            "time": "2025-05-31T08:24:38+00:00"
+            "time": "2025-07-27T20:03:57+00:00"
         },
         {
             "name": "nunomaduro/termwind",
+<<<<<<< HEAD
 =======
 =======
 
@@ -3181,6 +3300,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "v2.3.1",
             "source": {
                 "type": "git",
@@ -3191,6 +3312,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/dfa08f390e509967a15c22493dc0bac5733d9123",
                 "reference": "dfa08f390e509967a15c22493dc0bac5733d9123",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3205,11 +3327,14 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": "^8.2",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3239,6 +3364,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "symfony/console": "^7.2.6"
             },
             "require-dev": {
@@ -3249,6 +3376,7 @@
                 "phpstan/phpstan": "^1.12.25",
                 "phpstan/phpstan-strict-rules": "^1.6.2",
                 "symfony/var-dumper": "^7.2.6",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3263,6 +3391,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "thecodingmachine/phpstan-strict-rules": "^1.0.0"
             },
             "type": "library",
@@ -3306,6 +3436,7 @@
             "support": {
                 "issues": "https://github.com/nunomaduro/termwind/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
 =======
 <<<<<<< HEAD
@@ -3332,6 +3463,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -3347,6 +3481,7 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2025-05-08T08:14:37+00:00"
 =======
@@ -3372,6 +3507,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-05-08T08:14:37+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "phpoption/phpoption",
@@ -3863,10 +4001,13 @@
         {
             "name": "psy/psysh",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "v0.12.9",
             "source": {
                 "type": "git",
@@ -3877,6 +4018,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1b801844becfe648985372cb4b12ad6840245ace",
                 "reference": "1b801844becfe648985372cb4b12ad6840245ace",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -3897,6 +4039,8 @@
 =======
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -3961,6 +4105,7 @@
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/bobthecow/psysh/tree/v0.12.9"
             },
             "time": "2025-06-23T02:35:06+00:00"
@@ -3981,6 +4126,11 @@
             "time": "2025-03-16T03:05:19+00:00"
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.9"
+            },
+            "time": "2025-06-23T02:35:06+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "ralouphie/getallheaders",
@@ -4105,11 +4255,14 @@
         {
             "name": "ramsey/uuid",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "4.9.0",
             "source": {
                 "type": "git",
@@ -4120,6 +4273,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/4e0e23cc785f0724a0e838279a9eb03f28b092a0",
                 "reference": "4e0e23cc785f0724a0e838279a9eb03f28b092a0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -4134,10 +4288,13 @@
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28",
                 "reference": "fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28",
 >>>>>>> feature/payment
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.8.8 || ^0.9 || ^0.10 || ^0.11 || ^0.12 || ^0.13",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 "ext-json": "*",
@@ -4182,6 +4339,8 @@
                 "ext-json": "*",
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "php": "^8.0",
                 "ramsey/collection": "^1.2 || ^2.0"
             },
@@ -4190,9 +4349,12 @@
             },
             "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
                 "captainhook/captainhook": "^5.25",
                 "captainhook/plugin-composer": "^5.3",
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
@@ -4210,6 +4372,7 @@
                 "phpunit/phpunit": "^9.6",
                 "slevomat/coding-standard": "^8.18",
                 "squizlabs/php_codesniffer": "^3.13"
+<<<<<<< HEAD
 =======
 =======
 
@@ -4262,6 +4425,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             },
             "suggest": {
                 "ext-bcmath": "Enables faster math with arbitrary-precision integers using BCMath.",
@@ -4297,11 +4462,14 @@
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "source": "https://github.com/ramsey/uuid/tree/4.9.0"
             },
             "time": "2025-06-25T14:20:11+00:00"
@@ -4366,6 +4534,7 @@
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
                 "source": "https://github.com/stripe/stripe-php/tree/v17.4.0"
+<<<<<<< HEAD
             },
             "time": "2025-07-01T20:23:15+00:00"
 >>>>>>> feature/payment
@@ -4449,6 +4618,8 @@
 
                 "source": "https://github.com/ramsey/uuid/tree/4.8.1"
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             },
             "time": "2025-07-01T20:23:15+00:00"
         },
@@ -4456,10 +4627,13 @@
             "name": "symfony/clock",
             "version": "v7.3.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/clock.git",
@@ -4514,6 +4688,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/clock/tree/v7.3.0"
 =======
 <<<<<<< HEAD
@@ -4530,6 +4705,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/clock/tree/v7.3.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -4547,6 +4725,7 @@
             ],
             "time": "2024-09-25T14:21:43+00:00"
 <<<<<<< HEAD
+<<<<<<< HEAD
         },
 =======
         }
@@ -4557,6 +4736,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        },
+        {
+            "name": "symfony/console",
+>>>>>>> origin/merged-nishmi
             "version": "v7.3.1",
             "source": {
                 "type": "git",
@@ -4567,6 +4751,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/9e27aecde8f506ba0fd1d9989620c04a87697101",
                 "reference": "9e27aecde8f506ba0fd1d9989620c04a87697101",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -4611,18 +4796,24 @@
                 "reference": "66c1440edf6f339fd82ed6c7caa76cb006211b44",
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/service-contracts": "^2.5|^3",
                 "symfony/string": "^7.2"
+<<<<<<< HEAD
 =======
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/service-contracts": "^2.5|^3",
@@ -4644,6 +4835,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             },
             "conflict": {
                 "symfony/dependency-injection": "<6.4",
@@ -4701,6 +4894,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/console/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -4721,6 +4915,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/console/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -4737,11 +4934,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-06-27T19:55:54+00:00"
 =======
             "time": "2025-05-24T10:34:04+00:00"
@@ -4750,6 +4950,7 @@
         {
             "name": "symfony/css-selector",
             "version": "v7.3.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -4774,6 +4975,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -4819,6 +5022,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/css-selector/tree/v7.3.0"
 =======
 <<<<<<< HEAD
@@ -4835,6 +5039,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/css-selector/tree/v7.3.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -4853,6 +5060,7 @@
             "time": "2024-09-25T14:21:43+00:00"
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         {
             "name": "symfony/deprecation-contracts",
 =======
@@ -4862,6 +5070,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+        {
+            "name": "symfony/deprecation-contracts",
+>>>>>>> origin/merged-nishmi
             "version": "v3.6.0",
             "source": {
                 "type": "git",
@@ -4872,6 +5084,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
                 "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -4905,6 +5118,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -4917,6 +5132,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "dev-main": "3.6-dev"
 =======
@@ -4934,6 +5150,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                    "dev-main": "3.6-dev"
+>>>>>>> origin/merged-nishmi
                 }
             },
             "autoload": {
@@ -4959,6 +5178,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
 =======
 <<<<<<< HEAD
@@ -4975,6 +5195,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -4991,9 +5214,12 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2024-09-25T14:21:43+00:00"
         },
         {
@@ -5009,6 +5235,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/error-handler/zipball/35b55b166f6752d6aaf21aa042fc5ed280fce235",
                 "reference": "35b55b166f6752d6aaf21aa042fc5ed280fce235",
+<<<<<<< HEAD
 =======
             "version": "v7.3.0",
             "source": {
@@ -5073,6 +5300,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -5086,15 +5315,19 @@
             },
             "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "symfony/console": "^6.4|^7.0",
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/http-kernel": "^6.4|^7.0",
                 "symfony/serializer": "^6.4|^7.0",
                 "symfony/webpack-encore-bundle": "^1.0|^2.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -5116,6 +5349,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             },
             "bin": [
                 "Resources/bin/patch-type-declarations"
@@ -5147,6 +5382,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/error-handler/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -5165,6 +5401,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/error-handler/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -5181,6 +5420,9 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-06-13T07:48:40+00:00"
 =======
 <<<<<<< HEAD
@@ -5203,6 +5445,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/497f73ac996a598c92409b44ac43b6690c4f666d",
                 "reference": "497f73ac996a598c92409b44ac43b6690c4f666d",
+<<<<<<< HEAD
 =======
 =======
 
@@ -5245,6 +5488,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -5296,6 +5541,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/event-dispatcher/tree/v7.3.0"
 =======
 <<<<<<< HEAD
@@ -5312,6 +5558,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/event-dispatcher/tree/v7.3.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -5328,10 +5577,13 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-04-22T09:11:45+00:00"
         },
         {
@@ -5346,6 +5598,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/59eb412e93815df44f05f342958efa9f46b1e586",
                 "reference": "59eb412e93815df44f05f342958efa9f46b1e586",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -5386,6 +5639,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -5399,6 +5654,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "dev-main": "3.6-dev"
 =======
@@ -5415,6 +5671,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                    "dev-main": "3.6-dev"
+>>>>>>> origin/merged-nishmi
                 }
             },
             "autoload": {
@@ -5448,6 +5707,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.6.0"
 =======
 <<<<<<< HEAD
@@ -5464,6 +5724,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.6.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -5480,10 +5743,13 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2024-09-25T14:21:43+00:00"
         },
         {
@@ -5498,6 +5764,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/finder/zipball/ec2344cf77a48253bbca6939aa3d2477773ea63d",
                 "reference": "ec2344cf77a48253bbca6939aa3d2477773ea63d",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -5539,6 +5806,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -5574,6 +5843,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/finder/tree/v7.3.0"
 =======
 <<<<<<< HEAD
@@ -5590,6 +5860,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/finder/tree/v7.3.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -5606,9 +5879,12 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2024-12-30T19:00:26+00:00"
         },
         {
@@ -5624,6 +5900,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/23dd60256610c86a3414575b70c596e5deff6ed9",
                 "reference": "23dd60256610c86a3414575b70c596e5deff6ed9",
+<<<<<<< HEAD
 =======
             "version": "v7.3.0",
             "source": {
@@ -5690,6 +5967,9 @@
                "shasum": ""
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "shasum": ""
+>>>>>>> origin/merged-nishmi
             },
             "require": {
                 "php": ">=8.2",
@@ -5706,6 +5986,7 @@
                 "predis/predis": "^1.1|^2.0",
                 "symfony/cache": "^6.4.12|^7.1.5",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "symfony/clock": "^6.4|^7.0",
 =======
 <<<<<<< HEAD
@@ -5719,6 +6000,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "symfony/clock": "^6.4|^7.0",
+>>>>>>> origin/merged-nishmi
                 "symfony/dependency-injection": "^6.4|^7.0",
                 "symfony/expression-language": "^6.4|^7.0",
                 "symfony/http-kernel": "^6.4|^7.0",
@@ -5752,6 +6036,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/http-foundation/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -5772,6 +6057,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/http-foundation/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -5788,11 +6076,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-06-23T15:07:14+00:00"
         },
         {
@@ -5807,6 +6098,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/1644879a66e4aa29c36fe33dfa6c54b450ce1831",
                 "reference": "1644879a66e4aa29c36fe33dfa6c54b450ce1831",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -5865,6 +6157,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -5872,6 +6166,7 @@
                 "psr/log": "^1|^2|^3",
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/error-handler": "^6.4|^7.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "symfony/event-dispatcher": "^7.3",
                 "symfony/http-foundation": "^7.3",
@@ -5894,6 +6189,10 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "symfony/event-dispatcher": "^7.3",
+                "symfony/http-foundation": "^7.3",
+>>>>>>> origin/merged-nishmi
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -5970,6 +6269,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/http-kernel/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -5989,6 +6289,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/http-kernel/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -6005,11 +6308,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-06-28T08:24:55+00:00"
         },
         {
@@ -6024,6 +6330,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/mailer/zipball/b5db5105b290bdbea5ab27b89c69effcf1cb3368",
                 "reference": "b5db5105b290bdbea5ab27b89c69effcf1cb3368",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -6081,6 +6388,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -6132,6 +6441,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/mailer/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -6152,6 +6462,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/mailer/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -6168,6 +6481,9 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-06-27T19:55:54+00:00"
 =======
 <<<<<<< HEAD
@@ -6190,6 +6506,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/mime/zipball/0e7b19b2f399c31df0cdbe5d8cbf53f02f6cfcd9",
                 "reference": "0e7b19b2f399c31df0cdbe5d8cbf53f02f6cfcd9",
+<<<<<<< HEAD
 =======
 =======
 
@@ -6231,6 +6548,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -6285,6 +6604,7 @@
                 "mime-type"
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
@@ -6305,6 +6625,10 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "support": {
+                "source": "https://github.com/symfony/mime/tree/v7.3.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -6321,6 +6645,7 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-02-19T08:51:26+00:00"
 =======
 <<<<<<< HEAD
@@ -6335,6 +6660,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-02-19T08:51:26+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -6976,10 +7304,13 @@
         {
             "name": "symfony/process",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "v7.3.0",
             "source": {
                 "type": "git",
@@ -6990,6 +7321,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/process/zipball/40c295f2deb408d5e9d2d32b8ba1dd61e36f05af",
                 "reference": "40c295f2deb408d5e9d2d32b8ba1dd61e36f05af",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -7022,6 +7354,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -7054,6 +7388,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/process/tree/v7.3.0"
 =======
 <<<<<<< HEAD
@@ -7069,6 +7404,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/process/tree/v7.3.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -7085,9 +7423,12 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-04-17T09:11:12+00:00"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-04-17T09:11:12+00:00"
         },
         {
@@ -7102,6 +7443,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/routing/zipball/8e213820c5fea844ecea29203d2a308019007c15",
                 "reference": "8e213820c5fea844ecea29203d2a308019007c15",
+<<<<<<< HEAD
 =======
             "time": "2025-03-13T12:21:46+00:00"
         },
@@ -7140,6 +7482,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -7192,6 +7536,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/routing/tree/v7.3.0"
 =======
 <<<<<<< HEAD
@@ -7208,6 +7553,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/routing/tree/v7.3.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -7224,10 +7572,13 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-05-24T20:43:28+00:00"
         },
         {
@@ -7242,6 +7593,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/service-contracts/zipball/f021b05a130d35510bd6b25fe9053c2a8a15d5d4",
                 "reference": "f021b05a130d35510bd6b25fe9053c2a8a15d5d4",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "shasum": ""
 =======
@@ -7285,6 +7637,9 @@
               "shasum": ""
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "shasum": ""
+>>>>>>> origin/merged-nishmi
             },
             "require": {
                 "php": ">=8.1",
@@ -7302,6 +7657,7 @@
                 },
                 "branch-alias": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "dev-main": "3.6-dev"
 =======
 <<<<<<< HEAD
@@ -7318,6 +7674,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                    "dev-main": "3.6-dev"
+>>>>>>> origin/merged-nishmi
                 }
             },
             "autoload": {
@@ -7354,6 +7713,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/service-contracts/tree/v3.6.0"
 =======
 <<<<<<< HEAD
@@ -7370,6 +7730,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/service-contracts/tree/v3.6.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -7386,10 +7749,13 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-04-25T09:37:31+00:00"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-04-25T09:37:31+00:00"
         },
         {
@@ -7404,6 +7770,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/string/zipball/f3570b8c61ca887a9e2938e85cb6458515d2b125",
                 "reference": "f3570b8c61ca887a9e2938e85cb6458515d2b125",
+<<<<<<< HEAD
 =======
 =======
 
@@ -7445,6 +7812,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -7503,6 +7872,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7515,6 +7885,9 @@
                 "source": "https://github.com/symfony/string/tree/v7.2.6",
                 "source": "https://github.com/symfony/string/tree/v7.3.0"
 >>>>>>> feature/trekking-mapp
+=======
+                "source": "https://github.com/symfony/string/tree/v7.3.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -7531,10 +7904,13 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-04-20T20:19:01+00:00"
         },
         {
@@ -7550,6 +7926,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/241d5ac4910d256660238a7ecf250deba4c73063",
                 "reference": "241d5ac4910d256660238a7ecf250deba4c73063",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -7603,6 +7980,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -7612,6 +7991,7 @@
                 "symfony/translation-contracts": "^2.5|^3.0"
             },
             "conflict": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "nikic/php-parser": "<5.0",
 =======
@@ -7626,6 +8006,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "nikic/php-parser": "<5.0",
+>>>>>>> origin/merged-nishmi
                 "symfony/config": "<6.4",
                 "symfony/console": "<6.4",
                 "symfony/dependency-injection": "<6.4",
@@ -7639,6 +8022,7 @@
                 "symfony/translation-implementation": "2.3|3.0"
             },
             "require-dev": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -7660,6 +8044,10 @@
                "psr/log": "^1|^2|^3",
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "nikic/php-parser": "^5.0",
+                "psr/log": "^1|^2|^3",
+>>>>>>> origin/merged-nishmi
                 "symfony/config": "^6.4|^7.0",
                 "symfony/console": "^6.4|^7.0",
                 "symfony/dependency-injection": "^6.4|^7.0",
@@ -7702,6 +8090,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/translation/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -7721,6 +8110,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/translation/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -7737,6 +8129,9 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-06-27T19:55:54+00:00"
 =======
 <<<<<<< HEAD
@@ -7759,6 +8154,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/df210c7a2573f1913b2d17cc95f90f53a73d8f7d",
                 "reference": "df210c7a2573f1913b2d17cc95f90f53a73d8f7d",
+<<<<<<< HEAD
 =======
 =======
 
@@ -7801,6 +8197,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -7813,6 +8211,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "dev-main": "3.6-dev"
 =======
@@ -7829,6 +8228,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                    "dev-main": "3.6-dev"
+>>>>>>> origin/merged-nishmi
                 }
             },
             "autoload": {
@@ -7865,6 +8267,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/translation-contracts/tree/v3.6.0"
 =======
 <<<<<<< HEAD
@@ -7881,6 +8284,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/translation-contracts/tree/v3.6.0"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -7897,9 +8303,12 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2024-09-27T08:32:26+00:00"
         },
         {
@@ -7915,6 +8324,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/uid/zipball/a69f69f3159b852651a6bf45a9fdd149520525bb",
                 "reference": "a69f69f3159b852651a6bf45a9fdd149520525bb",
+<<<<<<< HEAD
 =======
             "version": "v7.3.0",
             "source": {
@@ -7978,6 +8388,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -8023,6 +8435,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/uid/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -8042,6 +8455,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/uid/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -8058,11 +8474,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-06-27T19:55:54+00:00"
         },
         {
@@ -8077,6 +8496,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6e209fbe5f5a7b6043baba46fe5735a4b85d0d42",
                 "reference": "6e209fbe5f5a7b6043baba46fe5735a4b85d0d42",
+<<<<<<< HEAD
 =======
             "time": "2025-05-24T14:28:13+00:00"
         },
@@ -8118,10 +8538,13 @@
                 "reference": "9c46038cd4ed68952166cf7001b54eb539184ccb",
 <<<<<<< HEAD
 >>>>>>> feature-admin
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "symfony/deprecation-contracts": "^2.5|^3",
 =======
@@ -8153,6 +8576,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "symfony/deprecation-contracts": "^2.5|^3",
+>>>>>>> origin/merged-nishmi
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
@@ -8203,6 +8629,7 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/var-dumper/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -8223,6 +8650,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/var-dumper/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -8238,6 +8668,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2025-06-27T19:55:54+00:00"
 =======
@@ -8259,6 +8690,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-06-27T19:55:54+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -8599,11 +9033,14 @@
         {
             "name": "filp/whoops",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "2.18.3",
             "source": {
                 "type": "git",
@@ -8614,6 +9051,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/filp/whoops/zipball/59a123a3d459c5a23055802237cb317f609867e5",
                 "reference": "59a123a3d459c5a23055802237cb317f609867e5",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "shasum": ""
 =======
@@ -8661,6 +9099,9 @@
               "shasum": ""
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "shasum": ""
+>>>>>>> origin/merged-nishmi
             },
             "require": {
                 "php": "^7.1 || ^8.0",
@@ -8710,6 +9151,7 @@
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/filp/whoops/tree/2.18.3"
 =======
 <<<<<<< HEAD
@@ -8730,6 +9172,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/filp/whoops/tree/2.18.3"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -8737,6 +9182,7 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2025-06-16T00:02:10+00:00"
 =======
@@ -8758,6 +9204,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-06-16T00:02:10+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -8813,10 +9262,13 @@
         {
             "name": "laravel/pail",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "v1.2.3",
             "source": {
                 "type": "git",
@@ -8827,6 +9279,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pail/zipball/8cc3d575c1f0e57eeb923f366a37528c50d2385a",
                 "reference": "8cc3d575c1f0e57eeb923f366a37528c50d2385a",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -8860,6 +9313,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -8880,6 +9335,7 @@
                 "pestphp/pest": "^2.20|^3.0",
                 "pestphp/pest-plugin-type-coverage": "^2.3|^3.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "phpstan/phpstan": "^1.12.27",
 =======
 <<<<<<< HEAD
@@ -8895,6 +9351,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "phpstan/phpstan": "^1.12.27",
+>>>>>>> origin/merged-nishmi
                 "symfony/var-dumper": "^6.3|^7.0"
             },
             "type": "library",
@@ -8931,6 +9390,7 @@
             "homepage": "https://github.com/laravel/pail",
             "keywords": [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "dev",
 =======
 <<<<<<< HEAD
@@ -8945,6 +9405,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "dev",
+>>>>>>> origin/merged-nishmi
                 "laravel",
                 "logs",
                 "php",
@@ -8955,13 +9418,17 @@
                 "source": "https://github.com/laravel/pail"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2025-06-05T13:55:57+00:00"
         },
         {
             "name": "laravel/pint",
+<<<<<<< HEAD
 =======
 =======
 
@@ -8998,6 +9465,9 @@
 >>>>>>> feature/trekking-mapp
             "version": "v1.22.1",
 >>>>>>> origin/merged-ayushma
+=======
+            "version": "v1.24.0",
+>>>>>>> origin/merged-nishmi
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
@@ -9005,6 +9475,7 @@
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "url": "https://api.github.com/repos/laravel/pint/zipball/0345f3b05f136801af8c339f9d16ef29e6b4df8a",
                 "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a",
@@ -9020,6 +9491,10 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "url": "https://api.github.com/repos/laravel/pint/zipball/0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -9031,6 +9506,9 @@
             },
             "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
                 "friendsofphp/php-cs-fixer": "^3.82.2",
                 "illuminate/view": "^11.45.1",
                 "larastan/larastan": "^3.5.0",
@@ -9038,6 +9516,7 @@
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.3.1",
                 "pestphp/pest": "^2.36.0"
+<<<<<<< HEAD
 =======
                 "friendsofphp/php-cs-fixer": "^3.75.0",
 <<<<<<< HEAD
@@ -9074,6 +9553,8 @@
              "pestphp/pest": "^2.36.0"
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             },
             "bin": [
                 "builds/pint"
@@ -9113,6 +9594,7 @@
                 "source": "https://github.com/laravel/pint"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-07-10T18:09:32+00:00"
 =======
 <<<<<<< HEAD
@@ -9123,6 +9605,9 @@
 
             "time": "2025-04-08T22:11:45+00:00"
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-07-10T18:09:32+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "laravel/sail",
@@ -9134,6 +9619,7 @@
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "url": "https://api.github.com/repos/laravel/sail/zipball/a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe",
                 "reference": "a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe",
@@ -9192,6 +9678,10 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "url": "https://api.github.com/repos/laravel/sail/zipball/a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe",
+                "reference": "a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe",
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -9242,6 +9732,7 @@
                 "source": "https://github.com/laravel/sail"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-07-04T16:17:06+00:00"
 =======
 <<<<<<< HEAD
@@ -9265,6 +9756,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-07-04T16:17:06+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "mockery/mockery",
@@ -9412,10 +9906,13 @@
         {
             "name": "nunomaduro/collision",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "v8.8.2",
             "source": {
                 "type": "git",
@@ -9426,6 +9923,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nunomaduro/collision/zipball/60207965f9b7b7a4ce15a0f75d57f9dadb105bdb",
                 "reference": "60207965f9b7b7a4ce15a0f75d57f9dadb105bdb",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -9440,6 +9938,8 @@
                 "url": "https://api.github.com/repos/nunomaduro/collision/zipball/44ccb82e3e21efb5446748d2a3c81a030ac22bd5",
                 "reference": "44ccb82e3e21efb5446748d2a3c81a030ac22bd5",
 >>>>>>> feature/payment
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -9447,6 +9947,7 @@
                 "nunomaduro/termwind": "^2.3.1",
                 "php": "^8.2.0",
                 "symfony/console": "^7.3.0"
+<<<<<<< HEAD
 =======
             "version": "v8.8.0",
             "source": {
@@ -9493,6 +9994,9 @@
 =======
            },
 >>>>>>> origin/merged-ayushma
+=======
+            },
+>>>>>>> origin/merged-nishmi
             "conflict": {
                 "laravel/framework": "<11.44.2 || >=13.0.0",
                 "phpunit/phpunit": "<11.5.15 || >=13.0.0"
@@ -9500,10 +10004,13 @@
             "require-dev": {
                 "brianium/paratest": "^7.8.3",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "larastan/larastan": "^3.4.2",
                 "laravel/framework": "^11.44.2 || ^12.18",
                 "laravel/pint": "^1.22.1",
@@ -9513,6 +10020,7 @@
                 "orchestra/testbench-core": "^9.12.0 || ^10.4",
                 "pestphp/pest": "^3.8.2",
                 "sebastian/environment": "^7.2.1 || ^8.0"
+<<<<<<< HEAD
 =======
 =======
 
@@ -9541,6 +10049,8 @@
                 "pestphp/pest": "^3.8.2",
                 "sebastian/environment": "^7.2.1 || ^8.0"
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> origin/merged-nishmi
             },
             "type": "library",
             "extra": {
@@ -9604,6 +10114,7 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-06-25T02:12:12+00:00"
 =======
 <<<<<<< HEAD
@@ -9623,6 +10134,9 @@
             "time": "2025-06-11T01:04:21+00:00"
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-06-25T02:12:12+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "phar-io/manifest",
@@ -9745,10 +10259,13 @@
         {
             "name": "phpunit/php-code-coverage",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "11.0.10",
             "source": {
                 "type": "git",
@@ -9759,6 +10276,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1a800a7446add2d79cc6b3c01c45381810367d76",
                 "reference": "1a800a7446add2d79cc6b3c01c45381810367d76",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -9779,6 +10297,8 @@
 =======
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -9836,6 +10356,7 @@
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/show"
 =======
 <<<<<<< HEAD
@@ -9848,16 +10369,22 @@
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0.9"
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/show"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 },
                 {
                     "url": "https://liberapay.com/sebastianbergmann",
@@ -9874,6 +10401,7 @@
             ],
             "time": "2025-06-18T08:56:18+00:00"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 }
@@ -9886,6 +10414,8 @@
             "time": "2025-02-25T13:26:39+00:00"
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -10135,6 +10665,7 @@
         {
             "name": "phpunit/phpunit",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "11.5.27",
 =======
 <<<<<<< HEAD
@@ -10142,6 +10673,9 @@
 <<<<<<< HEAD
             "version": "11.5.25",
 >>>>>>> origin/merged-ayushma
+=======
+            "version": "11.5.27",
+>>>>>>> origin/merged-nishmi
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
@@ -10149,6 +10683,7 @@
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/446d43867314781df7e9adf79c3ec7464956fd8f",
                 "reference": "446d43867314781df7e9adf79c3ec7464956fd8f",
@@ -10210,6 +10745,10 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/446d43867314781df7e9adf79c3ec7464956fd8f",
+                "reference": "446d43867314781df7e9adf79c3ec7464956fd8f",
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -10224,6 +10763,7 @@
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "phpunit/php-code-coverage": "^11.0.10",
 =======
 <<<<<<< HEAD
@@ -10236,6 +10776,9 @@
                 "phpunit/php-code-coverage": "^11.0.9",
 >>>>>>> feature-admin
 >>>>>>> origin/merged-ayushma
+=======
+                "phpunit/php-code-coverage": "^11.0.10",
+>>>>>>> origin/merged-nishmi
                 "phpunit/php-file-iterator": "^5.1.0",
                 "phpunit/php-invoker": "^5.0.1",
                 "phpunit/php-text-template": "^4.0.1",
@@ -10244,6 +10787,7 @@
                 "sebastian/code-unit": "^3.0.3",
                 "sebastian/comparator": "^6.3.1",
                 "sebastian/diff": "^6.0.2",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "sebastian/environment": "^7.2.1",
 =======
@@ -10261,6 +10805,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "sebastian/environment": "^7.2.1",
+>>>>>>> origin/merged-nishmi
                 "sebastian/exporter": "^6.3.0",
                 "sebastian/global-state": "^7.0.2",
                 "sebastian/object-enumerator": "^6.0.1",
@@ -10310,6 +10857,7 @@
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.27"
 =======
 <<<<<<< HEAD
@@ -10340,6 +10888,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.27"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -10363,6 +10914,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2025-07-11T04:10:06+00:00"
 =======
@@ -10392,6 +10944,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-07-11T04:10:06+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "sebastian/cli-parser",
@@ -10493,9 +11048,12 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "description": "Collection of value objects that represent the PHP code units",
             "homepage": "https://github.com/sebastianbergmann/code-unit",
             "support": {
@@ -10775,10 +11333,13 @@
         {
             "name": "sebastian/environment",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "7.2.1",
             "source": {
                 "type": "git",
@@ -10789,6 +11350,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/a5c75038693ad2e8d4b6c15ba2403532647830c4",
                 "reference": "a5c75038693ad2e8d4b6c15ba2403532647830c4",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -10822,12 +11384,15 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2"
             },
             "require-dev": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "phpunit/phpunit": "^11.3"
 =======
@@ -10845,6 +11410,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "phpunit/phpunit": "^11.3"
+>>>>>>> origin/merged-nishmi
             },
             "suggest": {
                 "ext-posix": "*"
@@ -10881,6 +11449,7 @@
                 "issues": "https://github.com/sebastianbergmann/environment/issues",
                 "security": "https://github.com/sebastianbergmann/environment/security/policy",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/environment/tree/7.2.1"
 =======
 <<<<<<< HEAD
@@ -10897,16 +11466,22 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/sebastianbergmann/environment/tree/7.2.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 },
                 {
                     "url": "https://liberapay.com/sebastianbergmann",
@@ -10922,6 +11497,7 @@
                 }
             ],
             "time": "2025-05-21T11:55:47+00:00"
+<<<<<<< HEAD
 <<<<<<< HEAD
         },
 =======
@@ -10956,6 +11532,9 @@
         }
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+        },
+>>>>>>> origin/merged-nishmi
         {
             "name": "sebastian/exporter",
             "version": "6.3.0",
@@ -10994,9 +11573,12 @@
                 "BSD-3-Clause"
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
@@ -11020,9 +11602,12 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "description": "Provides the functionality to export PHP variables for visualization",
             "homepage": "https://www.github.com/sebastianbergmann/exporter",
             "keywords": [
@@ -11041,9 +11626,12 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "time": "2024-12-05T09:17:50+00:00"
         },
         {
@@ -11510,11 +12098,14 @@
         {
             "name": "symfony/yaml",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
             "version": "v7.3.1",
             "source": {
                 "type": "git",
@@ -11525,6 +12116,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/0c3555045a46ab3cd4cc5a69d161225195230edb",
                 "reference": "0c3555045a46ab3cd4cc5a69d161225195230edb",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -11570,6 +12162,8 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi
                 "shasum": ""
             },
             "require": {
@@ -11613,6 +12207,7 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/yaml/tree/v7.3.1"
 =======
 <<<<<<< HEAD
@@ -11631,6 +12226,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+                "source": "https://github.com/symfony/yaml/tree/v7.3.1"
+>>>>>>> origin/merged-nishmi
             },
             "funding": [
                 {
@@ -11646,6 +12244,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2025-06-03T06:57:57+00:00"
 =======
@@ -11667,6 +12266,9 @@
 
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-ayushma
+=======
+            "time": "2025-06-03T06:57:57+00:00"
+>>>>>>> origin/merged-nishmi
         },
         {
             "name": "theseer/tokenizer",
@@ -11731,6 +12333,9 @@
     "plugin-api-version": "2.6.0"
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/merged-ayushma
+=======
+>>>>>>> origin/merged-nishmi

@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AmaYangri</title>
+  <link rel="icon" href="{{ asset('images/logo.png') }}">
+  <link rel="stylesheet" href="{{ asset('css/amayangri.css') }}">
   <link rel="stylesheet" href="{{ asset('css/amayangri.css') }}">
   <link rel="icon" href="{{ asset('images/logo.png') }}">
   <style>
@@ -19,6 +21,23 @@
 <body>
 
   <!-- ...navbar and header omitted for brevity... -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Emergency</a></li>
+      <li><a href="#">Tour</a></li>
+      <li><a href="#">User</a></li>
+      <li><a href="#" class="btn">Login</a></li>
+      <li><a href="#" class="btn">Signup</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Amayangri</h1>
+    <p class="subtitle">Every Step, a Closer View of the Annapurna</p>
+  </header>
 
   <main>
     <div class="row">
@@ -67,6 +86,14 @@
 
               <p><strong>Day 1: Kathmandu to Melamchi Ghyang via Timbu</strong><br>Your journey begins with a scenic drive from Kathmandu ...</p>
               <!-- Continue with all days' detailed paragraphs -->
+        </ul>
+
+      </div>
+
+
+          <p><strong> END OF TREK !! </strong></p>
+
+        </ul>
 
               <p><strong>Day 10: Drive from Melamchi Pul Bazaar to Kathmandu</strong><br> After breakfast, begin your return drive to Kathmandu. ...</p>
 
@@ -76,6 +103,44 @@
               <br><br>
               <table style="width: 100%; border-collapse: collapse; background: white;">
                 <thead style="background-color: #2e8b57; color: white;">
+      <!-- RIGHT SIDE: Detailed Itinerary -->
+      <div class="col-lg-6 detailed-itinerary-box">
+        <h2>Detailed Itinerary</h2>
+        <div id="detailed-itinerary" class="fade-box">
+          <div class="fade-content">
+            <p><strong>Day 1: Kathmandu to Melamchi Ghyang via Timbu</strong><br>Your journey begins with a scenic drive from Kathmandu, situated at an elevation of 1,400 meters, heading northeast through the lush hills of the Sindhupalchok District. The road winds past traditional villages, cascading rivers, and terraced farmlands. After approximately 5 to 6 hours of driving, you will reach Timbu, a small village that serves as a gateway to the Helambu region. From Timbu, you either continue the short drive or take a light uphill walk to reach Melamchi Ghyang at 2,530 meters. This peaceful Sherpa village is surrounded by dense forests and features traditional stone houses, Buddhist prayer wheels, and a serene environment. It’s a perfect place to begin your acclimatization and get a feel for mountain village life. You will spend the night in a locally run teahouse.
+                </p>
+                <p><strong>Day 2: Trek from Melamchi Ghyang to Tarkeghyang</strong><br>Today’s trek leads you deeper into the Helambu region. The trail passes through thick forests filled with pine, oak, and rhododendron trees. Along the way, you will encounter traditional Buddhist symbols such as prayer flags, mani walls, and stone chortens. These elements reflect the deep spiritual culture of the local Sherpa and Tamang communities. As you ascend gradually, the views of the hills and valleys become more expansive. After about 4 to 5 hours of walking, you arrive in Tarkeghyang, a charming village at an elevation of 2,600 meters, known for its historic monastery and warm hospitality. The village has a peaceful atmosphere, with narrow stone-paved paths and colorful homes. You will spend the night in a local teahouse.
+                </p>
+                <p><strong>Day 3: Trek from Tarkeghyang to Yangri Village</strong><br>The trail today becomes quieter and more remote as you leave the main route and head toward the hidden gem of Yangri Village. You’ll walk through dense forests filled with chirping birds, moss-covered rocks, and an occasional clearing that offers glimpses of distant snow-capped peaks. The peacefulness of the trail is one of its highlights. You will pass small hamlets and grazing areas used by local herders. The final stretch to Yangri is a gentle uphill walk that takes you to this secluded village, located at approximately 2,800 meters. Yangri is rarely visited by trekkers, making it an ideal spot to enjoy authentic local culture and unspoiled natural surroundings. Overnight stay will be in a basic lodge or homestay.
+                </p>
+
+                <p><strong>Day 4: Rest Day and Exploration in Yangri Village</strong><br>Today is a rest day in Yangri Village, giving your body time to acclimatize to the higher elevation. Use this day to explore the village and its surroundings. You can take a short hike to nearby viewpoints or visit local homes to learn about the Sherpa and Tamang way of life. The villagers are welcoming and proud to share their customs. You may also come across prayer flags on hilltops, small chortens, and grazing yaks. The relaxed pace of the day allows you to enjoy the fresh mountain air and connect more deeply with the landscape and community. Rest well, as the next day brings a more challenging ascent.
+                </p>
+                <p><strong>Day 5: Trek from Yangri Village to Ama Yangri Base Camp</strong><br>Today’s trek leads you steadily uphill toward Ama Yangri Base Camp, situated around 3,500 meters above sea level. The trail becomes steeper as you ascend through forests of fir and rhododendron. You may notice the temperature dropping and the landscape becoming more alpine in character. As you climb higher, the forest thins, and the ridgelines offer increasingly wide views of the surrounding valleys. After 5 to 6 hours of walking, you will reach Base Camp—a simple, serene area set on an open ridge. The location is remote and peaceful, perfect for resting and preparing for the final summit push the following day.
+                </p>
+
+            <div class="extra-content">
+             <p><strong>Day 6: Hike to Ama Yangri Peak and Return to Base Camp</strong><br> Wake up early to begin the final ascent to Ama Yangri Peak, which stands at 3,771 meters. The trail is steep and challenging but well worth the effort. After about 2 to 3 hours of climbing, you’ll reach the summit. At the top, you’ll be rewarded with a stunning 360-degree panorama that includes the Langtang, Ganesh, and Jugal Himal ranges, as well as distant views of the Everest region on clear days. Ama Yangri is considered a sacred site by locals, and a small stupa and prayer flags mark the summit. After spending time enjoying the incredible scenery, you’ll return to Base Camp for the night, retracing your steps carefully along the ridgeline.
+                </p>
+                <p><strong>Day 7: Trek from Ama Yangri Base Camp back to Tarkeghyang</strong><br>Today’s journey involves descending from the high ridges back to the familiar village of Tarkeghyang. The route is the reverse of the uphill trail, but the downhill walk allows for more relaxed pacing and new perspectives on the landscape. You’ll pass through the same serene forests, listening to the rustling leaves and mountain birds. By afternoon, you’ll arrive in Tarkeghyang, where a warm Sherpa meal and a cozy teahouse welcome you back. After the demanding days at higher altitudes, this return to village life brings comfort and relaxation.
+                </p>
+                <p><strong>Day 8: Trek from Tarkeghyang to Sermathang</strong><br>The trail today is gentler and mostly flat or downhill. You’ll walk through forests and terraced fields as you head toward Sermathang, another beautiful Sherpa village at around 2,600 meters. Known for its fruit orchards, colorful houses, and panoramic views of the surrounding hills, Sermathang has a more open and lively feel compared to the other villages. It’s a good place to unwind and reflect on the trek so far. You may also explore the local monastery and interact with villagers who are always eager to share stories about their culture and lifestyle.
+                </p>
+
+             <p><strong>Day 9: Trek from Sermathang to Melamchi Pul Bazaar</strong><br> This is your final day of trekking. The trail descends gradually through rhododendron forests, past hillside farms, and through traditional Tamang and Sherpa settlements. As you descend, the climate becomes warmer, and the greenery thickens. After about 5 to 6 hours of walking, you arrive at Melamchi Pul Bazaar, a bustling market town located near the Melamchi River. This town marks the end of your trekking journey. You can enjoy a proper meal, a hot shower, and celebrate the completion of your trek with your fellow trekkers and guides.
+                </p>
+                <p><strong>Day 10: Drive from Melamchi Pul Bazaar to Kathmandu</strong><br> After breakfast, begin your return drive to Kathmandu. The road climbs out of the Melamchi Valley and re-enters the rolling hills and countryside. As you travel, take in the last views of the Himalayan foothills, rivers, and rural villages. After approximately 5 to 6 hours, you’ll arrive in Kathmandu, where you can check into your hotel and enjoy the comforts of the city. The trek concludes with fond memories of the mountains, the people you met, and the incredible natural beauty of the Helambu region.
+                </p>
+
+              <p><strong> END OF THE TREK!!</strong><p>
+            </div>
+            <strong>MORE INFORMATIONS</strong>
+            <br>
+            <br>
+            <table style="width: 100%; border-collapse: collapse; background: white;">
+             <thead style="background-color: #2e8b57; color: white;">
+              <thead style="background-color: #027478; color: white;">
                   <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Route</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Access Method</th>
@@ -102,6 +167,8 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Free trekking route starts in village</td>
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes, overnight parking possible with lodge owner's permission</td>
                   </tr>
+
+
                 </tbody>
               </table>
 
@@ -128,8 +195,15 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <!-- Map and Scroll button omitted for brevity -->
+=======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/merged-nishmi
+
+>>>>>>> origin/merged-anushree
   </main>
 
   <!-- Footer omitted -->
@@ -179,4 +253,8 @@
   </script>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> origin/merged-anushree

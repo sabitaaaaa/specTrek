@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Manaslu Circuit Trek</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
+   <link rel="stylesheet" href="{{ asset('css/manaslu.css') }}">
 
   <style>
     * {
@@ -561,8 +562,6 @@
   </div>
 
 
-
-
   </main>
  <!-- Footer -->
     <footer class="footer">
@@ -635,7 +634,3 @@
 
 
 
-
-</body>
-</html>
-</html>

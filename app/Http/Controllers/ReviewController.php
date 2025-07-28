@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
+    
     /**
      * Store a newly submitted review.
      */
@@ -26,3 +27,4 @@ class ReviewController extends Controller
         return back()->with('success', 'Review submitted successfully!');
     }
 }
+

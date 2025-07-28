@@ -8,11 +8,45 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <script src="{{ asset('js/Home-mountains.js') }}"></script>
     <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
+
+
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="hero">
         <nav class="navbar">
+    <div class="logo">
+        <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Emergency</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Tour</a></li>
+        <li><a href="#">User</a></li>
+
+        @guest
+            <!-- Guest users see Login & Signup -->
+            <li><a href="{{ route('login') }}">Login</a></li>
+            <li><a class="signup" href="{{ route('register') }}">Signup</a></li>
+        @else
+            <!-- Logged-in users see Trek Recommendation and Logout -->
+            <li><a href="{{ route('recommendation.form') }}">Trek Recommendation</a></li>
+            <li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-link nav-link" style="display:inline; padding:0; border:none; background:none;">
+                        Logout
+                    </button>
+                </form>
+            </li>
+        @endguest
+    </ul>
+</nav>
+
+        <img src="{{ asset('images/pine.jpg') }}" class="layer front" alt="Front Mountain"> 
             <div class="logo">
                 <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
             </div>
@@ -51,6 +85,14 @@
     </header>
 <section class="features-section">
   <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
+  
+  <div class="features-grid top-row">
+    <div class="feature-card">
+      <a href="{{ url('/ShivapuriTrek') }}">
+        <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
+        <div class="overlay-text">SHIVAPURI</div>
+      </a>
+    </div>
 
   <div class="features-grid top-row">
     <div class="feature-card">
@@ -102,6 +144,7 @@
 
 
 <!-- ===============================updated part ----------------------======================= -->
+ 
 
 <section class="testimonial-section">
   <h2 class="testimonial-heading">OUR HAPPY TRAVELLERS</h2>
@@ -109,6 +152,21 @@
   <div class="testimonial-slider">
     @forelse($reviews as $index => $review)
       <div class="testimonial {{ $index === 0 ? 'active' : '' }}">
+        
+        <div class="reviewer-name-container">
+          <h3 class="reviewer-name">
+            {{ $review->name }}
+          </h3>
+        </div>
+
+        <div class="review-text-container">
+          <span class="quote-icon">❝</span>
+          <p class="review-text">
+            {{ $review->review }}
+          </p>
+          <span class="quote-icon">❞</span>
+        </div>
+
 
         <div class="reviewer-name-container">
           <h3 class="reviewer-name">
@@ -135,6 +193,7 @@
       <span class="dot {{ $index === 0 ? 'active' : '' }}"></span>
     @endforeach
   </div>
+</section> 
 </section>
 <!-- ===================================VISUALIZING============================================= -->
 <!-- <section class="hex-section">
@@ -162,6 +221,9 @@
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-5.jpg') }}');">
       <div class="hex-content">
+      
+      </div>
+      
 
       </div>
 
@@ -206,6 +268,7 @@
 
 <!-- VIDEO SECTION -->
 <section class="video-section">
+  <h2>#SPECTREK</h2>
   <h2>SPECTREK</h2>
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/4OiXfDdbtnM?autoplay=1&mute=1&loop=1&playlist=4OiXfDdbtnM&controls=0&showinfo=0&modestbranding=1"
@@ -283,6 +346,7 @@
       2025 Apex college,<br>
       mid baneshowr, kathmandu.</p>
 
+      
 
     </div>
     <div class="footer-column">
@@ -353,6 +417,8 @@
   };
 </script>
 
+</body>
+</html>
 <!-- Emergency Modal -->
 
 <div id="emergency-modal" style="display: none;

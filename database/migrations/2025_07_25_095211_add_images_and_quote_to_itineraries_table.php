@@ -32,4 +32,8 @@ public function down()
      * Reverse the migrations.
      */
    
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/merged-nishmi

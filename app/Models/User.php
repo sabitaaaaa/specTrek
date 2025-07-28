@@ -36,8 +36,26 @@ class User extends Authenticatable
      *
      * @var array
      */
+<<<<<<< HEAD
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
+public function viewedItineraries()
+{
+    return $this->belongsToMany(Itinerary::class, 'user_trek_views', 'user_id', 'itinerary_id')
+                ->withTimestamps()
+                ->withPivot('viewed_at');
+}
+
+
+=======
     protected $casts = [
         // 'email_verified_at' => 'datetime',
         'has_paid_shivapuri' => 'boolean', // Cast to boolean
     ];
+>>>>>>> origin/merged-anushree
 }
