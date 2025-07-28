@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Annapurna Base Camp</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
+<<<<<<< HEAD
 
   <style>
     * {
@@ -347,6 +348,9 @@
     }
   </style>
   <link rel="stylesheet" href="{{ asset('css/dynamic.css') }}">
+=======
+  <link rel="stylesheet" href="{{ asset('css/abc.css') }}">
+>>>>>>> origin/merged-nishmi
 </head>
 <body>
 
@@ -449,8 +453,12 @@
             <br>
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
+<<<<<<< HEAD
                   <thead style="background-color: #2e8b57; color: white;">
 
+=======
+              <thead style="background-color: #2e8b57; color: white;">
+>>>>>>> origin/merged-nishmi
                   <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Option</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Cost (Approx)</th>
@@ -550,8 +558,16 @@
   </div>
 
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi
   </main>
 <!-- Footer -->
     <footer class="footer">

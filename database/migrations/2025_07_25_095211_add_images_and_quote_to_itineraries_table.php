@@ -31,5 +31,6 @@ public function down()
     /**
      * Reverse the migrations.
      */
-   
+
 };
+

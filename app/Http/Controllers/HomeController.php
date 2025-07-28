@@ -6,17 +6,22 @@ use Illuminate\Http\Request;
 use App\Models\Review;
 use App\Models\EmergencyContact;
 
+<<<<<<< HEAD
 use App\Models\Itinerary;  // Add this import
 
+=======
+>>>>>>> origin/merged-nishmi
 class HomeController extends Controller
 {
     public function index()
     {
         $contacts = EmergencyContact::all();
         $reviews = Review::latest()->take(5)->get();  // Fetch latest 5 reviews
-        return view('home', compact('contacts','reviews'));
+
+        return view('home', compact('contacts', 'reviews'));
     }
 }
+<<<<<<< HEAD
 
         $reviews = Review::latest()->take(5)->get();
 
@@ -88,3 +93,5 @@ public function updateLogo(Request $request)
 }
 =======
 >>>>>>> origin/merged-anushree
+=======
+>>>>>>> origin/merged-nishmi

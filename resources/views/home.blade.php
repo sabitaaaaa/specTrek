@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SpecTrek Landing</title>
@@ -45,6 +46,86 @@
         @endauth
       </ul>
     </nav>
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpecTrek Landing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <script src="{{ asset('js/Home-mountains.js') }}"></script>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
+
+
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+    <div class="logo">
+        <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Emergency</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Tour</a></li>
+        <li><a href="#">User</a></li>
+
+        @guest
+            <!-- Guest users see Login & Signup -->
+            <li><a href="{{ route('login') }}">Login</a></li>
+            <li><a class="signup" href="{{ route('register') }}">Signup</a></li>
+        @else
+            <!-- Logged-in users see Trek Recommendation and Logout -->
+            <li><a href="{{ route('recommendation.form') }}">Trek Recommendation</a></li>
+            <li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-link nav-link" style="display:inline; padding:0; border:none; background:none;">
+                        Logout
+                    </button>
+                </form>
+            </li>
+        @endguest
+    </ul>
+</nav>
+
+        <img src="{{ asset('images/pine.jpg') }}" class="layer front" alt="Front Mountain"> 
+            <div class="logo">
+                <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
+            </div>
+            <ul class="nav-links">
+                <button id="emergency-btn">Emergency</button>
+                <li class="naa">Blogs</a></li>
+                <li class="naa">Tour</a></li>
+                <li class="naa">User</a></li>
+                @auth
+                <div x-data="{ open: false }" class="mt-1 ms-2">
+                    <form method="POST" action="{{ route('logout') }}" @submit="open = false">
+                        @csrf
+                        <button class="naa">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+                @else
+                <li class="naa"><a href="{{ route('login') }}">Login</a></li>
+                <li class="naa"><a class="signup" href="{{ route('register') }}">register</a></li>
+                @endauth
+            </ul>
+        </nav>
+        <img src="{{ asset('images/pine .jpg') }}" class="layer front" alt="Front Mountain">
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <p class="to-the">SETTING THE </p>
+            <h1>CLEAR PATH</h1>
+            <a href="{{ route('tours') }}" class="cta-button">VIEW TREKS </a>
+        </div>
+        <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
+  <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
+>>>>>>> origin/merged-nishmi
 
     <img
       src="{{ asset('images/pine.jpg') }}"
@@ -52,11 +133,24 @@
       alt="Front Mountain"
     />
 
+<<<<<<< HEAD
     <!-- Hero Content -->
     <div class="hero-content">
       <p class="to-the">SETTING THE </p>
       <h1>CLEAR PATH</h1>
       <a href="{{ route('tours') }}" class="cta-button">VIEW TREKS</a>
+=======
+    </header>
+<section class="features-section">
+  <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
+  
+  <div class="features-grid top-row">
+    <div class="feature-card">
+      <a href="{{ url('/ShivapuriTrek') }}">
+        <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
+        <div class="overlay-text">SHIVAPURI</div>
+      </a>
+>>>>>>> origin/merged-nishmi
     </div>
 
     <svg
@@ -154,9 +248,38 @@
   <section class="testimonial-section">
     <h2 class="testimonial-heading">OUR HAPPY TRAVELLERS</h2>
 
+<<<<<<< HEAD
     <div class="testimonial-slider">
       @forelse($reviews as $index => $review)
       <div class="testimonial {{ $index === 0 ? 'active' : '' }}">
+=======
+
+<!-- ===============================updated part ----------------------======================= -->
+ 
+
+<section class="testimonial-section">
+  <h2 class="testimonial-heading">OUR HAPPY TRAVELLERS</h2>
+
+  <div class="testimonial-slider">
+    @forelse($reviews as $index => $review)
+      <div class="testimonial {{ $index === 0 ? 'active' : '' }}">
+        
+        <div class="reviewer-name-container">
+          <h3 class="reviewer-name">
+            {{ $review->name }}
+          </h3>
+        </div>
+
+        <div class="review-text-container">
+          <span class="quote-icon">❝</span>
+          <p class="review-text">
+            {{ $review->review }}
+          </p>
+          <span class="quote-icon">❞</span>
+        </div>
+
+
+>>>>>>> origin/merged-nishmi
         <div class="reviewer-name-container">
           <h3 class="reviewer-name">{{ $review->name }}</h3>
         </div>
@@ -174,9 +297,22 @@
     <div class="dots">
       @foreach($reviews as $index => $r)
       <span class="dot {{ $index === 0 ? 'active' : '' }}"></span>
+<<<<<<< HEAD
       @endforeach
     </div>
   </section>
+=======
+    @endforeach
+  </div>
+</section> 
+</section>
+<!-- ===================================VISUALIZING============================================= -->
+<!-- <section class="hex-section">
+  <h2>VISUALIZING THE PLACES</h2>
+  <div class="hex-row">
+    <div class="hex" style="background-image: url('{{ asset('images/view-1.jpg') }}');">
+      <div class="hex-content">
+>>>>>>> origin/merged-nishmi
 
   <!-- STATS SECTION -->
   <section class="stats-banner">
@@ -254,12 +390,27 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <img
       src="{{ asset('images/tree.png') }}"
       class="black-mountain"
       alt="Black silhouette"
     />
   </section>
+=======
+      </div>
+    </div>
+    <div class="hex" style="background-image: url('{{ asset('images/view-4.jpg') }}');">
+      <div class="hex-content">
+
+      </div>
+    </div>
+    <div class="hex" style="background-image: url('{{ asset('images/view-5.jpg') }}');">
+      <div class="hex-content">
+      
+      </div>
+      
+>>>>>>> origin/merged-nishmi
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -286,11 +437,137 @@
           01-4567922
         </p>
 
+<<<<<<< HEAD
         <p>
           <strong>Nepal</strong><br />
           2025 Apex college,<br />
           mid baneshowr, kathmandu.
         </p>
+=======
+      </div>
+    </div>
+    <div class="hex" style="background-image: url('{{ asset('images/view-7.jpg') }}');">
+    </div>
+    <div class="hex" style="background-image: url('{{ asset('images/view-8.jpg') }}');">
+    </div>
+        <div class="hex" style="background-image: url('{{ asset('images/view-9.jpg') }}');">
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- STATS SECTION -->
+<section class="stats-banner">
+  <div class="stats-container">
+    <div class="stat-box">
+      <h3>120+</h3>
+      <p>TREKS COMPLETED</p>
+    </div>
+    <div class="stat-box">
+      <h3>95%</h3>
+      <p>CLIENT SATISFACTION</p>
+    </div>
+    <div class="stat-box">
+      <h3>6,476m</h3>
+      <p>HIGHEST ALTITUDE CONQUERED</p>
+    </div>
+    <div class="stat-box">
+      <h3>8</h3>
+      <p>REGIONS EXPLORED</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <h2>#SPECTREK</h2>
+  <h2>SPECTREK</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4OiXfDdbtnM?autoplay=1&mute=1&loop=1&playlist=4OiXfDdbtnM&controls=0&showinfo=0&modestbranding=1"
+    frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- QUOTE SECTION -->
+<section class="sherpa-banner">
+  <div class="banner-content">
+    <h2>“Because every summit begins with a single step.”</h2>
+    <p>A tribute to the spirit of the mountains and the legends who led the way.</p>
+  </div>
+</section>
+
+<!-- =======================================UPPER-PART-OF-FOOTER======================================== -->
+<section class="quote-mountain-wrapper">
+  <!-- Main scenic mountain -->
+  <img src="{{ asset('images/everest_kalapathar.jpg') }}" class="main-mountain" alt="Mountain">
+
+  <!-- Quotes overlayed above mountain -->
+  <div class="quote-overlay">
+  <div class="quote quote-1">
+    <p>"The journey of a thousand miles begins with a single step."</p>
+    <span>— Lao Tzu</span>
+    <div class="dot"></div>
+    <div class="line"></div>
+  </div>
+  <div class="quote quote-2">
+    <p>"Do not follow where the path may lead. Go instead where there is no path and leave a trail."</p>
+    <span>— Ralph Waldo Emerson</span>
+    <div class="dot"></div>
+    <div class="line"></div>
+  </div>
+  <div class="quote quote-3">
+    <p>"It’s not the mountain we conquer, but ourselves."</p>
+    <span>— Sir Edmund Hillary</span>
+    <div class="dot"></div>
+    <div class="line"></div>
+  </div>
+</div>
+
+
+  <!-- Black silhouette mountain on top of scenic mountain -->
+  <img src="{{ asset('images/tree.png') }}" class="black-mountain" alt="Black silhouette">
+</section>
+
+
+
+<!-- ===========================Footer=========================== -->
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Places</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Services</a></li>
+        <li><a href="#">Press Center</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Spectrek Team</strong><br>
+      <a href="mailto:spectrek29@email.com">spectrek29@gmail.com</a><br>
+      01-4567922 </p>
+
+      <p><strong>Nepal</strong><br>
+      2025 Apex college,<br>
+      mid baneshowr, kathmandu.</p>
+
+      
+
+    </div>
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/spectrek29/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+>>>>>>> origin/merged-nishmi
       </div>
 
       <div class="footer-column">
@@ -420,7 +697,13 @@
   };
 </script>
 
+<<<<<<< HEAD
 =======
+=======
+</body>
+</html>
+<!-- Emergency Modal -->
+>>>>>>> origin/merged-nishmi
 
   <script>
     function toggleReviewModal(show) {

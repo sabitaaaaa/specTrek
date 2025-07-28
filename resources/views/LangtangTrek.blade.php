@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Langtang</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
+<<<<<<< HEAD
 
   <style>
     * {
@@ -354,6 +355,9 @@
 >>>>>>> origin/merged-anushree
 
   <link rel="icon" href="{{ asset('images/logo.png') }}">
+=======
+  <link rel="stylesheet" href="{{ asset('css/langtang.css') }}">
+>>>>>>> origin/merged-nishmi
 </head>
 <body>
 
@@ -437,8 +441,10 @@
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
+        
 
       </div>
+    
 
 <<<<<<< HEAD
 =======
@@ -508,6 +514,7 @@
                   <tr>
 =======
             <table style="width: 100%; border-collapse: collapse; background: white;">
+            <thead style="background-color: #2e8b57; color: white;">
               <thead style="background-color: #027478; color: white;">
                 <thead style="background-color: #2e8b57; color: white;">
 
@@ -554,6 +561,7 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Lands at Kyanjin Gompa, fastest and scenic option</td>
 
                   </tr>
+                 
 
 <<<<<<< HEAD
 =======
@@ -601,6 +609,7 @@
       </div>
 =======
         <button id="see-more-btn" class="see-more-button">See More</button>
+      </div>
 
         <script>
             document.getElementById("see-more-btn").addEventListener("click", function () {
@@ -633,11 +642,15 @@
 
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
+<<<<<<< HEAD
 
 
 
 
   </main>
+=======
+   </main>
+>>>>>>> origin/merged-nishmi
 <!-- Footer -->
 >>>>>>> origin/merged-anushree
     <footer class="footer">

@@ -19,17 +19,43 @@ class LoginController extends Controller
         return view('login');
     }
 
+    // public function login(Request $request)
+    // {
+    //     $request->validate([
+    //         'email' => 'required|email',
+    //         'password' => 'required'
+    //     ]);
+
+    //     if (Auth::attempt($request->only('email', 'password'))) {
+    //         $request->session()->regenerate();
+
+    //         // Redirect admin or user
+    //         if (Auth::user()->role === 'admin') {
+    //             return redirect('/admin-dashboard');
+    //         } else {
+    //             return redirect('/home');
+    //         }
+
+    //     }
+
+    //     return back()->with('error', 'Invalid email or password.');
+    // }
     public function login(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
+{
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
 
-        if (Auth::attempt($request->only('email', 'password'))) {
-            $request->session()->regenerate();
+    if (Auth::attempt($request->only('email', 'password'))) {
+        $request->session()->regenerate();
 
-            $user = Auth::user();
+        // Check role and redirect accordingly
+        if (Auth::user()->role === 'admin') {
+            return redirect('/admin-dashboard');
+        } else {
+            return redirect('/');
+            // Check if there's a custom redirect URL in session
             $redirectTo = Session::pull('url.intended_custom', null);
 
             // Priority: Custom redirect > Role-based redirect > Default
@@ -45,9 +71,10 @@ class LoginController extends Controller
 
             return redirect('/'); // default fallback
         }
-
-        return back()->with('error', 'Invalid email or password.');
     }
+
+    return back()->with('error', 'Invalid email or password.');
+}
 
     public function logout(Request $request)
     {

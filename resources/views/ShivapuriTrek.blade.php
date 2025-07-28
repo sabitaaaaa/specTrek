@@ -422,6 +422,13 @@
             <li>Day 4: Explore nearby trails, waterfalls, Jhule Clearing, overnight near Nagi.</li>
             <li>Day 5: Trek back toward Baghdwar, visit Mani Wall and Tiger’s Footprint, stay near Baghdwar/Sundarijal.</li>
             <li>Day 6: Trek Baghdwar to Sundarijal, return to Kathmandu, rest or explore city.</li>
+<<<<<<< HEAD
+=======
+
+          <p><strong> END OF TREK !! </strong></p>
+
+        </ul>
+>>>>>>> origin/merged-anushree
 
           <p><strong> END OF TREK !! </strong></p>
 
@@ -429,6 +436,8 @@
 
       </div>
 
+
+<<<<<<< HEAD
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
@@ -436,7 +445,12 @@
       </div>
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
 
+>>>>>>> origin/merged-anushree
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
         <h2>Detailed Itinerary</h2>
@@ -455,8 +469,15 @@
             <br>
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
-              <thead style="background-color: #027478; color: white;">
+<<<<<<< HEAD
               <thead style="background-color: #2e8b57; color: white;">
+=======
+              <thead style="background-color: #027478; color: white;">
+<<<<<<< HEAD
+              <thead style="background-color: #2e8b57; color: white;">
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi
                   <tr>
                    <th style="padding: 12px; border: 1px solid #ccc;">Entry Point</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Access Method</th>
@@ -486,7 +507,11 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes official parking space near entrance gate</td>
 
                   </tr>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/merged-anushree
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -516,6 +541,8 @@
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
+<<<<<<< HEAD
+=======
 
         <script>
             document.getElementById("see-more-btn").addEventListener("click", function () {
@@ -533,6 +560,7 @@
           </script>
 
 
+>>>>>>> origin/merged-anushree
       </div>
     </div>
   </div>
@@ -545,9 +573,15 @@
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
 
+<<<<<<< HEAD
+=======
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi
   </main>
 <!-- Footer -->
     <footer class="footer">
@@ -615,9 +649,7 @@
       behavior: "smooth"
     });
   }
-  </script>
-</body>
-</html>
+<<<<<<< HEAD
 
   </script>
 
@@ -626,3 +658,19 @@
 
 </body>
 </html>
+=======
+  </script>
+</body>
+</html>
+<<<<<<< HEAD
+
+  </script>
+
+
+
+
+</body>
+</html>
+=======
+>>>>>>> origin/merged-anushree
+>>>>>>> origin/merged-nishmi

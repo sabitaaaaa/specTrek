@@ -1,41 +1,46 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Notifications\LoginNotification;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use App\Notifications\LoginNotification;
 
 class AuthController extends Controller
 {
-    public function showRegister()
+    use RegistersUsers;
+
+    protected $redirectTo = '/';
+
+    public function __construct()
     {
-        return view('register');
+        $this->middleware('guest')->except('logout');
     }
 
-    public function register(Request $request)
+    protected function validator(array $data)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:5|confirmed',
+        return Validator::make($data, [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
-
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        return redirect('/login')->with('success', 'Registered successfully. Please login.');
     }
 
-    public function showLogin()
+    protected function create(array $data)
     {
-        return view('login');
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
     }
+
+    // If you want to override register method, you can, else RegistersUsers trait will handle it.
 
     public function login(Request $request)
     {

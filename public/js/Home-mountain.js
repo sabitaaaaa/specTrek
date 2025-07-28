@@ -1,4 +1,3 @@
-// public/js/home.js
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
@@ -11,7 +10,17 @@ window.addEventListener("scroll", () => {
   if (front) front.style.transform = `translateY(${scrollY * 0.3}px)`;
 });
 
+// Navbar scroll color
+window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
+// Testimonial slider
 const testimonials = document.querySelectorAll(".testimonial");
 const dots = document.querySelectorAll(".dot");
 let currentIndex = 0;
@@ -40,15 +49,18 @@ dots.forEach((dot, i) => {
     showTestimonial(currentIndex);
   });
 });
+// review one
+const modal = document.getElementById("reviewModal");
 
-setInterval(nextTestimonial, 5000); // Auto-slide every 5 seconds
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
+// Attach toggle function to global scope so inline onclick can find it
+function toggleReviewModal(show) {
+    const modal = document.getElementById('reviewModal');
+    if (show) {
+      modal.style.display = 'block';
+    } else {
+      modal.style.display = 'none';
+    }
   }
-});
+
 
 

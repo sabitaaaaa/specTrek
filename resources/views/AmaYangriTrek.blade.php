@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AmaYangri</title>
+  <link rel="icon" href="{{ asset('images/logo.png') }}">
+  <link rel="stylesheet" href="{{ asset('css/amayangri.css') }}">
   <link rel="stylesheet" href="{{ asset('css/amayangri.css') }}">
   <link rel="icon" href="{{ asset('images/logo.png') }}">
   <style>
@@ -17,8 +19,28 @@
   </style>
 </head>
 <body>
+<<<<<<< HEAD
 
   <!-- ...navbar and header omitted for brevity... -->
+=======
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Emergency</a></li>
+      <li><a href="#">Tour</a></li>
+      <li><a href="#">User</a></li>
+      <li><a href="#" class="btn">Login</a></li>
+      <li><a href="#" class="btn">Signup</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Amayangri</h1>
+    <p class="subtitle">Every Step, a Closer View of the Annapurna</p>
+  </header>
+>>>>>>> origin/merged-nishmi
 
   <main>
     <div class="row">
@@ -67,6 +89,13 @@
 
 <<<<<<< HEAD
         </ul>
+        
+      </div>
+    
+
+          <p><strong> END OF TREK !! </strong></p>
+
+        </ul>
 
       </div>
 
@@ -79,10 +108,34 @@
 
               <p><strong>END OF THE TREK!!</strong></p>
 
+<<<<<<< HEAD
               <strong>MORE INFORMATIONS</strong>
               <br><br>
               <table style="width: 100%; border-collapse: collapse; background: white;">
                 <thead style="background-color: #2e8b57; color: white;">
+=======
+            <div class="extra-content">
+             <p><strong>Day 6: Hike to Ama Yangri Peak and Return to Base Camp</strong><br> Wake up early to begin the final ascent to Ama Yangri Peak, which stands at 3,771 meters. The trail is steep and challenging but well worth the effort. After about 2 to 3 hours of climbing, you’ll reach the summit. At the top, you’ll be rewarded with a stunning 360-degree panorama that includes the Langtang, Ganesh, and Jugal Himal ranges, as well as distant views of the Everest region on clear days. Ama Yangri is considered a sacred site by locals, and a small stupa and prayer flags mark the summit. After spending time enjoying the incredible scenery, you’ll return to Base Camp for the night, retracing your steps carefully along the ridgeline.
+                </p>
+                <p><strong>Day 7: Trek from Ama Yangri Base Camp back to Tarkeghyang</strong><br>Today’s journey involves descending from the high ridges back to the familiar village of Tarkeghyang. The route is the reverse of the uphill trail, but the downhill walk allows for more relaxed pacing and new perspectives on the landscape. You’ll pass through the same serene forests, listening to the rustling leaves and mountain birds. By afternoon, you’ll arrive in Tarkeghyang, where a warm Sherpa meal and a cozy teahouse welcome you back. After the demanding days at higher altitudes, this return to village life brings comfort and relaxation.
+                </p>
+                <p><strong>Day 8: Trek from Tarkeghyang to Sermathang</strong><br>The trail today is gentler and mostly flat or downhill. You’ll walk through forests and terraced fields as you head toward Sermathang, another beautiful Sherpa village at around 2,600 meters. Known for its fruit orchards, colorful houses, and panoramic views of the surrounding hills, Sermathang has a more open and lively feel compared to the other villages. It’s a good place to unwind and reflect on the trek so far. You may also explore the local monastery and interact with villagers who are always eager to share stories about their culture and lifestyle.
+                </p>
+
+             <p><strong>Day 9: Trek from Sermathang to Melamchi Pul Bazaar</strong><br> This is your final day of trekking. The trail descends gradually through rhododendron forests, past hillside farms, and through traditional Tamang and Sherpa settlements. As you descend, the climate becomes warmer, and the greenery thickens. After about 5 to 6 hours of walking, you arrive at Melamchi Pul Bazaar, a bustling market town located near the Melamchi River. This town marks the end of your trekking journey. You can enjoy a proper meal, a hot shower, and celebrate the completion of your trek with your fellow trekkers and guides.
+                </p>
+                <p><strong>Day 10: Drive from Melamchi Pul Bazaar to Kathmandu</strong><br> After breakfast, begin your return drive to Kathmandu. The road climbs out of the Melamchi Valley and re-enters the rolling hills and countryside. As you travel, take in the last views of the Himalayan foothills, rivers, and rural villages. After approximately 5 to 6 hours, you’ll arrive in Kathmandu, where you can check into your hotel and enjoy the comforts of the city. The trek concludes with fond memories of the mountains, the people you met, and the incredible natural beauty of the Helambu region.
+                </p>
+
+              <p><strong> END OF THE TREK!!</strong><p>
+            </div>
+            <strong>MORE INFORMATIONS</strong>
+            <br>
+            <br>
+            <table style="width: 100%; border-collapse: collapse; background: white;">
+             <thead style="background-color: #2e8b57; color: white;">
+              <thead style="background-color: #027478; color: white;">
+>>>>>>> origin/merged-nishmi
                   <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Route</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Access Method</th>
@@ -110,6 +163,10 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes, overnight parking possible with lodge owner's permission</td>
                   </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                 
+>>>>>>> origin/merged-nishmi
 
 =======
 >>>>>>> origin/merged-anushree
@@ -149,7 +206,11 @@
   </div>
 
 
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> origin/merged-anushree
   </main>
 <!-- Footer -->
     <footer class="footer">
@@ -224,6 +285,11 @@
 
 
 </body>
+<<<<<<< HEAD
 </html>
 =======
+<<<<<<< HEAD
+=======
+</html>
+>>>>>>> origin/merged-nishmi
 >>>>>>> origin/merged-anushree
