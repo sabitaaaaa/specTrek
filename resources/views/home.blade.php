@@ -354,42 +354,38 @@
 </script>
 
 <!-- Emergency Modal -->
-<div id="emergency-modal" style="
-  display: none;
+
+<div id="emergency-modal" style="display: none;
   position: fixed;
   z-index: 9999;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
-">
-  <div style="
-    background: white;
+  background: rgba(0,0,0,0.5);">
+
+  <div style="background: white;
     padding: 40px;
     margin: 15% auto;
     width: 90%;
     max-width: 400px;
     border-radius: 10px;
     position: relative;
-    text-align: left;
-  ">
-    <span id="close-modal" style="
-      position: absolute;
+    text-align: left;">
+
+    <span id="close-modal" style="position: absolute;
       top: 10px; right: 15px;
       font-size: 20px;
-      cursor: pointer;
-    ">&times;</span>
+      cursor: pointer;">&times;</span>
     <h2 id="Emergency"> Emergency Contacts</h2>
     <br>
     <ul style="padding-left: 0; list-style: none;">
-        <li><strong>Police:</strong> <a href="tel:100">100</a></li>
-        <li><strong>Fire Brigade:</strong>  <a href="tel:101">101</a></li>
-      <li><strong>Ambulance:</strong>  <a href="tel:102">102</a></li>
-      <li><strong>Traffic control:</strong> <a href="tel:103"> 103</a></li>
-      <li><strong>Missing Child Response:</strong> <a href="tel:104"> 104</a></li>
-      <li><strong>Tourist Police:</strong> <a href="tel:1144"> 1144</a></li>
-      <li><strong>Women Helpline:</strong> <a href="tel:1145"> 1145</a></li>
+        @foreach ($contacts as $contact)
+          <li>
+            <strong>{{ $contact->name }}:</strong>
+            <a href="tel:{{ $contact->number }}">{{ $contact->number }}</a>
+          </li>
+        @endforeach
+      </ul>
 
-    </ul>
   </div>
 </div>
 <script>

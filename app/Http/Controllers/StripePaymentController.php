@@ -11,7 +11,8 @@ class StripePaymentController extends Controller
 public function stripe()
 {
     if (!auth()->check()) {
-        dd('NOT LOGGED IN');
+        //dd
+        ('NOT LOGGED IN');
     }
 
     return view('stripe');
