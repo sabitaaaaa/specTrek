@@ -6,6 +6,7 @@
   <title>Annapurna Base Camp</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
   <link rel="stylesheet" href="{{ asset('css/abc.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/dynamic.css') }}">
 </head>
 <body>
 
@@ -82,9 +83,9 @@
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
-        
+
       </div>
-    
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -109,6 +110,8 @@
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
               <thead style="background-color: #2e8b57; color: white;">
+                  <thead style="background-color: #2e8b57; color: white;">
+
                   <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Option</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Cost (Approx)</th>
@@ -193,7 +196,7 @@
   </div>
 
 
-    
+
   </main>
 <!-- Footer -->
     <footer class="footer">

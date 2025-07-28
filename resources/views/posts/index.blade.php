@@ -18,7 +18,7 @@
 
     a.create-btn {
         display: inline-block;
-        background-color: #027478;
+        background-color: #2e8b57;
         color: white;
         padding: 8px 12px;
         border-radius: 4px;
@@ -27,7 +27,7 @@
     }
 
     a.create-btn:hover {
-        background-color:rgb(5, 74, 77);
+        background-color: #2c6645ff;
     }
     .post-item {
         background: #fff;
@@ -84,6 +84,46 @@
     border-radius: 6px;
     margin-top: 10px;
 }
+
+/* for delete ================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.modal-content button {
+    padding: 8px 14px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cancelDelete {
+    background-color: #ccc;
+}
+
+#confirmDelete {
+    background-color: red;
+    color: white;
+}
+
 /*-------------------- arrow button ------------------ */
 #scrollTopBtn {
   position: fixed;
@@ -91,7 +131,7 @@
   right: 20px;
   z-index: 999;
   font-size: 22px;
-  background-color: #027478;
+  background-color: #2e8b57;
   color: white;
   border: none;
   outline: none;
@@ -104,7 +144,7 @@
 }
 
 #scrollTopBtn:hover {
-  background-color: #035e61;
+  background-color: #276341ff;
   transform: scale(1.1);
 }
 </style>
@@ -128,13 +168,24 @@
         <div class="post-actions">
             <a href="{{ route('posts.show', $post->id) }}">View</a> |
             <a href="{{ route('posts.edit', $post->id) }}">Edit</a> |
-            <form action="{{ route('posts.destroy', $post->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
+           <form action="{{ route('posts.destroy', $post->id) }}" method="POST" class="delete-form">
+
                 @csrf
                 @method('DELETE')
                 <button type="submit">Delete</button>
             </form>
         </div>
     </div>
+
+    <!-- Delete Confirmation Modal -->
+<div id="deleteModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <p>Are you sure you want to delete this post?</p>
+        <button id="cancelDelete">Cancel</button>
+        <button id="confirmDelete">Yes, Delete</button>
+    </div>
+</div>
+
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
 <!-- ----------------arrow script ------ -->
 <script>
@@ -155,6 +206,27 @@
   }
 
   </script>
+  <script>
+  let formToDelete = null;
+
+  document.querySelectorAll('.delete-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      formToDelete = form;
+      document.getElementById('deleteModal').style.display = 'flex';
+    });
+  });
+
+  document.getElementById('cancelDelete').addEventListener('click', function () {
+    document.getElementById('deleteModal').style.display = 'none';
+    formToDelete = null;
+  });
+
+  document.getElementById('confirmDelete').addEventListener('click', function () {
+    if (formToDelete) formToDelete.submit();
+  });
+</script>
+
 @endforeach
 
 @endsection

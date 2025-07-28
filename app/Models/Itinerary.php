@@ -22,10 +22,15 @@ class Itinerary extends Model
         'image4',
         'quote',
     ];
-
     public function trek()
 {
     return $this->belongsTo(Trek::class);
 }
 
+
+
+    public function getRouteKeyName()
+{
+    return 'slug';
+}
 }

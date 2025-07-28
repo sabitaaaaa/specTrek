@@ -34,4 +34,8 @@ return new class extends Migration
     {
         Schema::dropIfExists('itineraries');
     }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/merged-ayushma

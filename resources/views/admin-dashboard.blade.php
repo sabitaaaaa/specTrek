@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
-<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-=======
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
->>>>>>> origin/merged-nishmi
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
@@ -81,11 +78,10 @@
             background-color: white;
             box-shadow: 0 2px 8px rgba(20, 18, 18, 0.05);
             border-radius: 5px;
-            font-size: 20px;
+            font-size: 18px;
             text-align: center;
         }
 
-<<<<<<< HEAD
         .card , .card1 {
             padding: 18px;
             flex: 1 1 50px;
@@ -95,8 +91,15 @@
             font-size: 20px;
             text-align: center;
         }
-=======
->>>>>>> origin/merged-nishmi
+        .card {
+            background-color: white;
+            padding: 20px;
+            flex: 1 1 200px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            font-size: 18px;
+            text-align: center;
+        }
 
 
         .chart-container {
@@ -131,6 +134,7 @@
     <i class="bi bi-box-seam me-2"></i> Packages
 </a> -->
 
+
              <a href="{{ url('/profile') }}" class="{{ request()->is('profile') ? 'active' : '' }}">
                 <i class="bi bi-person me-2"></i> Profile
             </a>
@@ -141,6 +145,7 @@
             <a href="{{ url('/setting') }}" class="{{ request()->is('setting') ? 'active' : '' }}">
                 <i class="bi bi-gear me-2"></i> Settings
             </a>
+
              <a href="{{ url('/profile') }}" class="{{ request()->is('profile') ? 'active' : '' }}">
                 <i class="bi bi-person me-2"></i> Profile
             </a>
@@ -161,13 +166,10 @@
 
             <section class="content">
                 <div class="card">Total Users: {{ $userCount }}</div>
-                <div class="card1"> Total Places</div>
             </section>
                 <div class="card">Total Users: {{ $userCount }}</div>
                 <div class="card1"> Total Places</div>
             </section>
-
-
 
 
 

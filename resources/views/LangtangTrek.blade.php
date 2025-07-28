@@ -6,6 +6,9 @@
   <title>Langtang</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
   <link rel="stylesheet" href="{{ asset('css/langtang.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/langtang.css') }}">
+
+  <link rel="icon" href="{{ asset('images/logo.png') }}">
 </head>
 <body>
 
@@ -72,6 +75,7 @@
         <h2>Day-to-Day Itinerary</h2>
         <ul>
            <li>Day 1: Drive from Kathmandu to Syabrubesi (7–8 hours)</li>
+            <li>Day 1: Drive from Kathmandu to Syabrubesi (7–8 hours)</li>
             <li>Day 2: Trek from Syabrubesi to Lama Hotel (6–7 hours)</li>
             <li>Day 3: Trek from Lama Hotel to Langtang Village (5–6 hours)</li>
             <li>Day 4: Trek from Langtang Village to Kyanjin Gompa (3–4 hours)</li>
@@ -85,9 +89,11 @@
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
-        
+
+
       </div>
-    
+
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -183,7 +189,8 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Lands at Kyanjin Gompa, fastest and scenic option</td>
 
                   </tr>
-                 
+
+
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -226,7 +233,7 @@
   </div>
 
 
-    
+
   </main>
 <!-- Footer -->
     <footer class="footer">

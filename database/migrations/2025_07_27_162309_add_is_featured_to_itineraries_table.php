@@ -12,18 +12,14 @@ return new class extends Migration
     public function up()
 {
     Schema::table('itineraries', function (Blueprint $table) {
-        $table->string('image1')->nullable();
-        $table->string('image2')->nullable();
-        $table->string('image3')->nullable();
-        $table->string('image4')->nullable();
-        $table->text('quote')->nullable();
+        $table->boolean('is_featured')->default(false);
     });
 }
 
 public function down()
 {
     Schema::table('itineraries', function (Blueprint $table) {
-        $table->dropColumn(['image1', 'image2', 'image3', 'image4', 'quote']);
+        $table->dropColumn('is_featured');
     });
 }
 
@@ -31,9 +27,5 @@ public function down()
     /**
      * Reverse the migrations.
      */
-   
-<<<<<<< HEAD
+
 };
-=======
-};
->>>>>>> origin/merged-ayushma

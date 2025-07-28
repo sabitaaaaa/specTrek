@@ -12,7 +12,21 @@ use App\Http\Controllers\TrekController;
 Route::get('/', function () {
     return view('welcome');
 });
+// making another route and change in the place of welcome replace it with required file name
+// Route::get('/view', function () {
+//     return view('home');
+// });
 
+
+//Short cut of putting a route
+// Route::view('/home','home');
+// Route::view("/about","about");
+
+
+// Route::get('/about', function () {
+//      return view('about');
+//  });
+// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera
 
 // suppose euta certain naam ko manche ko appear huna paryore data the we should:
 Route::get('/about/{name}', function ($name) {
@@ -184,6 +198,13 @@ Route::get('/admin/users/create', [UserController::class, 'create'])->name('user
 
 
 
+// Route::middleware(['auth', 'role:Admin'])->prefix('admin')->group(function () {
+//     Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
+//     Route::get('/users/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.users.edit');
+//     Route::put('/users/{user}', [AdminUserController::class, 'update'])->name('admin.users.update');
+//     Route::delete('/users/{user}', [AdminUserController::class, 'destroy'])->name('admin.users.destroy');
+// });
+
 
 
 Route::resource('/admin/users', UserController::class);
@@ -314,65 +335,25 @@ Route::get('/preferences', [UserPreferenceController::class, 'showForm'])->name(
 
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 
-
-//profile
-
-use App\Http\Controllers\AdminProfileController;
-
-Route::get('/admin/profile', [AdminProfileController::class, 'index'])->name('admin.profile');
-Route::post('/admin/profile/update', [AdminProfileController::class, 'update'])->name('admin.profile.update');
-
-
-
-
-Route::resource('users', UserController::class);
-
-
-//profile admin-dashboard
-
-
-Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
-Route::post('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
-
-
-
-//route for packages
-
-use App\Http\Controllers\PackageController;
-
-Route::prefix('admin')->middleware(['auth'])->group(function () {
-    Route::get('/packages', [PackageController::class, 'index'])->name('packages.index');
-});
-
-
-// route for review
-
-
+// for review =================
 
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 
 Route::get('/', [HomeController::class, 'index']);
-// Show form
-Route::get('/packages/create', [PackageController::class, 'create'])->name('packages.create');
-
-// Store form data
-Route::post('/packages', [PackageController::class, 'store'])->name('packages.store');
 
 
 
-Route::get('/profile/edit', [AdminProfileController::class, 'index'])->name('profile.edit');
-Route::post('/profile/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+// dynamic view for user
+Route::get('/itinerary/{slug}', function ($slug) {
+    $itinerary = \App\Models\Itinerary::where('slug', $slug)->firstOrFail();
+    return view('itinerary.show', compact('itinerary'));
+})->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
 
 
+use App\Http\Controllers\ItineraryController;
 
-// Route::get('/edit-logo', [AdminProfileController::class, 'editLogo'])->name('profile.editLogo');
-// Route::post('/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
-Route::get('/home', [HomeController::class, 'index']);
-
-
-
-Route::post('/logo/edit', [AdminProfileController::class, 'updateLogo'])->name('logo.edit');
+Route::resource('itinerary', ItineraryController::class);
 
 
 

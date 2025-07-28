@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 class LoginController extends Controller
 {
     public function showLoginForm()
     {
-        return view('login'); 
+        return view('login');
     }
 
     // public function login(Request $request)
@@ -29,7 +29,7 @@ class LoginController extends Controller
     //         } else {
     //             return redirect('/home');
     //         }
-            
+
     //     }
 
     //     return back()->with('error', 'Invalid email or password.');
@@ -49,6 +49,19 @@ class LoginController extends Controller
             return redirect('/admin-dashboard');
         } else {
             return redirect('/');
+            // Redirect admin or user
+            if (Auth::user()->role === 'admin') {
+                return redirect('/admin-dashboard');
+            }
+            else if(Auth::user()->role=='editor') {
+                return redirect('/itinerary');
+            }
+            else{
+
+            }
+
+
+
         }
     }
 

@@ -14,14 +14,16 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
 
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
-        <h1> hello , specTrek </h1>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-=======
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> 
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+        <h1> hello , specTrek </h1>
+
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
         <h1> hello , specTrek </h1>
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
@@ -30,7 +32,7 @@
 >>>>>>> feature/trekking-mapp
 =======
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
->>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))

@@ -16,18 +16,17 @@
       font-family: Arial, sans-serif;
       line-height: 1.5;
     }
-    .navbar {
-    background-color: #027478;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 50px;
-    height: 90px;
-    position: relative;
-    z-index: 1000;
-    border-bottom: 2px solid #ddd; /* horizontal line */
-    }
 
+    .navbar {
+  background-image: linear-gradient(90deg, #027478, #38b6b1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  height: 90px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
     .navbar-brand img {
       height: 120px;
       margin-top: 15px;
@@ -358,7 +357,11 @@
   <main>
     <div class="row">
       <div class="col-lg-7">
+<<<<<<< HEAD
+<!-- {{------------------------------------------- images -------------------------------------------}} -->
+=======
 {{------------------------------------------- images -------------------------------------------}}
+>>>>>>> origin/merged-sabita
         <div class="slider">
             <img class="slide active" src="{{ asset('images/l1.jpg') }}" alt="Langtang Trek 1" />
             <img class="slide" src="{{ asset('images/l2.jpg') }}" alt="Langtang Trek 2" />
@@ -393,7 +396,11 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+<!-- {{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}} -->
+=======
 {{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}}
+>>>>>>> origin/merged-sabita
 
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
@@ -460,7 +467,11 @@
             <strong>MORE INFORMATIONS</strong>
             <br>
             <br>
+<<<<<<< HEAD
+    <!-- {{------------------------------------------- Table -------------------------------------------}} -->
+=======
     {{------------------------------------------- Table -------------------------------------------}}
+>>>>>>> origin/merged-sabita
     <table style="width: 100%; border-collapse: collapse; background: white;">
                 <thead style="background-color: #027478; color: white;">
                   <tr>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<<<<<<< HEAD
+
   <title>Shivapuri</title>
   <link rel="icon" href="{{ asset('images/logo.jpg') }}">
   <style>
@@ -336,19 +336,27 @@
   <link rel="icon" href="{{ asset('images/logo.png') }}">
   <link rel="stylesheet" href="{{ asset('css/shivapuri.css') }}">
 >>>>>>> origin/merged-nishmi
+=======
+  <title>Shivapuri National park</title>
+  <link rel="icon" href="{{ asset('images/logo.png') }}">
+  <link rel="stylesheet" href="{{ asset('css/shivapuri.css') }}">
+>>>>>>> origin/merged-ayushma
 </head>
 <body>
 
   <nav class="navbar">
        <!-- changed -->
     <a href="#" class="navbar-brand">
-<<<<<<< HEAD
+
         <img src="{{ asset('images/logo.png') }}" alt="Logo" />
       </a>
-=======
+
       <img src="{{ asset('images/logo.png') }}" alt="Logo" />
     </a>
->>>>>>> origin/merged-nishmi
+
+      <img src="{{ asset('images/logo.png') }}" alt="Logo" />
+    </a>
+
     <ul class="nav-links">
       <li><a href="#">Emergency</a></li>
       <li><a href="#">Tour</a></li>
@@ -607,11 +615,8 @@
       behavior: "smooth"
     });
   }
-  </script>
 
   </script>
-
-
 
 
 </body>

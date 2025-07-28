@@ -50,7 +50,7 @@
 
     button {
         margin-top: 20px;
-        background-color: #027478;
+        background-color: #2e8b57;
         color: white;
         border: none;
         padding: 10px 15px;
@@ -60,7 +60,7 @@
     }
 
     button:hover {
-        background-color:rgb(5, 74, 77);
+        background-color: #265e3fff;
     }
 
   img {

@@ -19,4 +19,8 @@ return new class extends Migration
             $table->dropColumn('description');
         });
     }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/merged-ayushma

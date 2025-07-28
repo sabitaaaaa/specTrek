@@ -5,6 +5,7 @@
   <title>Trek Recommendations</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
+    /* Your CSS styles here */
     .badge-green {
       background-color: #28a745;
       color: white;
@@ -47,7 +48,11 @@
         Couldn't find a perfect match for your query. Here are some similar treks you might like.
       </div>
     @endif
-    
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> origin/merged-ayushma
     @if($perfectMatches->isNotEmpty())
       <h3>Perfect Matches</h3>
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
@@ -68,6 +73,43 @@
               </div>
             </div>
           </div>
+        @endforeach
+      </div>
+    @endif
+
+    <h3><span class="badge bg-warning text-dark">Similar Treks</span></h3>
+
+    @if($similarTreks->isEmpty())
+      <div class="alert alert-secondary">No similar treks found.</div>
+    @else
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach($similarTreks as $trekName => $data)
+          @php
+            $trek = $data['trek'] ?? null;
+            $prices = $data['prices'] ?? ['solo' => null, 'couple' => null, 'group' => null];
+          @endphp
+
+          @if ($trek)
+            <div class="col">
+              <div class="card h-100 border-warning shadow-sm">
+                <img src="{{ asset('images/' . $trek->image) }}" alt="{{ $trek->name }}" class="img-fluid mb-3" style="max-height: 180px; object-fit: cover;">
+                <div class="card-body">
+                  <h5>{{ $trek->name }}</h5>
+                  <p><strong>Region:</strong> {{ $trek->region }}</p>
+                  <p><strong>Difficulty:</strong> {{ $trek->difficulty }}</p>
+                  <p><strong>Best Season:</strong> {{ $trek->best_season }}</p>
+
+                  <hr>
+                  <h6>Prices:</h6>
+                  <ul>
+                    <li>Solo: Rs. {{ $prices['solo'] ? number_format($prices['solo']) : 'N/A' }}</li>
+                    <li>Couple: Rs. {{ $prices['couple'] ? number_format($prices['couple']) : 'N/A' }}</li>
+                    <li>Group: Rs. {{ $prices['group'] ? number_format($prices['group']) : 'N/A' }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          @endif
         @endforeach
       </div>
     @endif
@@ -160,7 +202,9 @@
 
     <div class="mt-4">
       <a href="{{ route('recommendation.form') }}" class="btn btn-outline-primary">Back to Form</a>
+      <a href="{{ route('recommend.form') }}" class="btn btn-outline-primary">Back to Form</a>
     </div>
   </div>
 </body>
 </html>
+ani yo results jun recommend bhitra cha hae
