@@ -81,7 +81,7 @@
             @enderror
         </div>
 
-        <!-- 🔽 ADDED: Interest Tags -->
+        <!--  ADDED: Interest Tags -->
         <div class="mb-3">
             <label for="interest_tags" class="form-label">Your Interests</label>
             <input

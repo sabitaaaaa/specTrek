@@ -3,11 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-<<<<<<< HEAD
-=======
 
 // Controllers
->>>>>>> origin/merged-anushree
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
@@ -22,15 +19,14 @@ use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
-<<<<<<< HEAD
 use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\StripePaymentController;
+
 
 // Stripe Payment Routes (protected by auth)
 Route::middleware(['auth'])->group(function () {
     Route::get('/stripe', [StripePaymentController::class, 'stripe'])->name('stripe');
     Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
-=======
 
 //changed
 
@@ -44,14 +40,9 @@ Route::get('/login', function () {
 Route::get('/signup', function () {
     return view('register');
 })->name('register');
-
-use App\Http\Controllers\StripePaymentController;
->>>>>>> origin/merged-anushree
-
     Route::get('/payment-success', [StripePaymentController::class, 'paymentSuccess'])->name('payment.success');
     Route::get('/payment-cancel', [StripePaymentController::class, 'paymentCancel'])->name('payment.cancel');
 
-<<<<<<< HEAD
     Route::get('/premium-content', function () {
         if (auth()->user()->is_premium) {
             return view('premium-content');
@@ -59,7 +50,6 @@ use App\Http\Controllers\StripePaymentController;
         return redirect('/stripe')->with('error', 'Please pay to access premium content.');
     });
 });
-=======
 Route::middleware(['auth'])->group(function () {
     Route::get('/stripe', [StripePaymentController::class, 'stripe'])->name('stripe');
     Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
@@ -68,7 +58,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/payment-cancel', [StripePaymentController::class, 'paymentCancel'])->name('payment.cancel');
 
     // Auth
->>>>>>> origin/merged-anushree
 
 // Authentication Routes
 Route::get('/register', [AuthController::class, 'showRegister']);
@@ -81,12 +70,10 @@ Route::post('/logout', function () {
     return redirect('/login');
 })->name('logout.post');
 
-<<<<<<< HEAD
 // Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-=======
     Route::get('/premium-content', function () {
         if (auth()->user()->is_premium) {
             return view('premium-content');
@@ -114,9 +101,6 @@ Route::get('/itinerary/{slug}', function ($slug) {
     return view('itinerary.show', compact('itinerary'));
 })->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
 
-
-use App\Http\Controllers\ItineraryController;
-
 Route::resource('itinerary', ItineraryController::class);
 
 // change
@@ -130,7 +114,6 @@ Route::controller(StripePaymentController::class)->group(function(){
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
->>>>>>> origin/merged-anushree
 // Static Views
 Route::view('/abc', 'abc')->name('abc');
 Route::view('/shey', 'shey')->name('shey');
@@ -141,11 +124,7 @@ Route::view('/Tours', 'Tours')->name('tours');
 Route::view('/AmaYangriTrek', 'AmaYangriTrek')->name('AmaYangriTrek');
 Route::view('/LangtangTrek', 'LangtangTrek')->name('LangtangTrek');
 Route::view('/ShivapuriTrek', 'ShivapuriTrek')->name('ShivapuriTrek');
-<<<<<<< HEAD
 // Route::view('/shivapuri-trek', 'ShivapuriTrek')->name('ShivapuriTrek');
-=======
-Route::view('/shivapuri-trek', 'ShivapuriTrek')->name('ShivapuriTrek');
->>>>>>> origin/merged-anushree
 Route::view('/annapurna-base-camp', 'abc');
 Route::view('/shey-phoksundo', 'shey');
 Route::view('/langtang-trek', 'LangtangTrek');
@@ -165,7 +144,6 @@ Route::get('/weathermap', fn () => view('weathermap'));
 Route::get('/weather/test-all', [WeatherController::class, 'fetchAllWeatherData']);
 
 // Trek Recommendation
-<<<<<<< HEAD
 // Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
 // Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 // Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
@@ -177,19 +155,6 @@ Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store
 // Posts (CRUD)
 Route::resource('posts', PostController::class);
 
-=======
-Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
-Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
-Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
-Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
-
-// Review
-Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
-
-// Posts (CRUD)
-Route::resource('posts', PostController::class);
-
->>>>>>> origin/merged-anushree
 // Premium content
 Route::get('/see-more', function () {
     $hasPaid = \App\Models\PremiumPayment::where('status', 'success')->exists();
@@ -225,18 +190,14 @@ Route::middleware(['auth'])->group(function () {
 
     // Admin Panel
     Route::prefix('admin')->group(function () {
-<<<<<<< HEAD
         // Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
-=======
         Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
->>>>>>> origin/merged-anushree
         Route::resource('/users', UserController::class)->names('admin.users');
     });
 });
 
 // Users Management
 Route::resource('users', UsersController::class);
-<<<<<<< HEAD
 // Route::get('/admin/users/create', [UserController::class, 'create'])->name('admin.users.create');
 
 // ITINERARY RESOURCE ROUTE WITH SLUG BINDING
@@ -264,6 +225,4 @@ Route::middleware(['auth', 'premium'])->group(function () {
     Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
     Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 });
-=======
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
->>>>>>> origin/merged-anushree

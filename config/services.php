@@ -18,10 +18,7 @@ return [
         'token' => env('POSTMARK_TOKEN'),
     ],
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/merged-anushree
     'resend' => [
         'key' => env('RESEND_KEY'),
     ],
@@ -32,12 +29,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-<<<<<<< HEAD
     'resend' => [
         'key' => env('RESEND_KEY'),
     ],
-=======
->>>>>>> origin/merged-anushree
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
@@ -46,16 +40,14 @@ return [
     ],
 
     'weather' => [
-<<<<<<< HEAD
     'key' => env('WEATHER_API_KEY'),
 ],
    'weather' => [
     'key' => env('WEATHER_API_KEY'),
 ],
 
-=======
         'key' => env('WEATHER_API_KEY'),
-    ],
+    
 
 ];
 // return [
@@ -73,5 +65,4 @@ return [
     'khalti'=>[
         'secret'=>env('KHALTI_SECRET_KEY'),
     ],
->>>>>>> origin/merged-anushree
 ];
