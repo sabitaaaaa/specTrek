@@ -16,18 +16,38 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-anushree
+<<<<<<< HEAD
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> feature/payment
+>>>>>>> origin/merged-anushree
+<<<<<<< HEAD
+=======
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature-admin
+    | Supported: "file", "cookie", "database", "apc",
+    |            "memcached", "redis", "dynamodb", "array"
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+=======
 <<<<<<< HEAD
     | Supported: "file", "cookie", "database", "apc",
     |            "memcached", "redis", "dynamodb", "array"
 =======
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
+<<<<<<< HEAD
 =======
     | Supported: "file", "cookie", "database", "apc",
     |            "memcached", "redis", "dynamodb", "array"
@@ -35,10 +55,14 @@ return [
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 >>>>>>> feature-admin
+=======
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-anushree
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
@@ -49,6 +73,24 @@ return [
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 >>>>>>> feature-admin
+=======
+<<<<<<< HEAD
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> friend-code
+>>>>>>> feature/payment
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-anushree
     |
     */
 
@@ -133,15 +175,40 @@ return [
     |
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     | Affects: "dynamodb", "memcached", "redis"
 =======
     | Affects: "apc", "dynamodb", "memcached", "redis"
 >>>>>>> feature-admin
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-anushree
     | Affects: "apc", "dynamodb", "memcached", "redis"
 =======
     | Affects: "dynamodb", "memcached", "redis"
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    | Affects: "dynamodb", "memcached", "redis"
+>>>>>>> feature/itinerary-and-blogs
+=======
+    | Affects: "apc", "dynamodb", "memcached", "redis"
+>>>>>>> feature-admin
+=======
+    | Affects: "dynamodb", "memcached", "redis"
+=======
+    | Affects: "apc", "dynamodb", "memcached", "redis"
+>>>>>>> friend-code
+>>>>>>> feature/payment
+=======
+>>>>>>> origin/merged-anushree
 >>>>>>> feature/trekking-mapp
     |
     */

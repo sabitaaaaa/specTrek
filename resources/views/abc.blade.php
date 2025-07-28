@@ -82,9 +82,9 @@
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
-        
+
       </div>
-    
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -181,7 +181,22 @@
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
-      </div>
+
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
+          </div>
     </div>
   </div>
 
@@ -193,7 +208,11 @@
   </div>
 
 
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/merged-anushree
   </main>
 <!-- Footer -->
     <footer class="footer">

@@ -6,6 +6,9 @@
   <title>AmaYangri</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
   <link rel="stylesheet" href="{{ asset('css/amayangri.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/amayangri.css') }}">
+
+  <link rel="icon" href="{{ asset('images/logo.png') }}">
 </head>
 <body>
   <nav class="navbar">
@@ -88,6 +91,13 @@
       </div>
     
 
+          <p><strong> END OF TREK !! </strong></p>
+
+        </ul>
+
+      </div>
+
+
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
         <h2>Detailed Itinerary</h2>
@@ -125,6 +135,7 @@
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
              <thead style="background-color: #2e8b57; color: white;">
+              <thead style="background-color: #027478; color: white;">
                   <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Route</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Access Method</th>
@@ -156,6 +167,7 @@
 
                   </tr>
                  
+
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -183,6 +195,21 @@
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
+
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
       </div>
     </div>
   </div>
@@ -196,7 +223,11 @@
   </div>
 
 
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/merged-anushree
   </main>
 <!-- Footer -->
     <footer class="footer">
@@ -271,4 +302,8 @@
 
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> origin/merged-anushree

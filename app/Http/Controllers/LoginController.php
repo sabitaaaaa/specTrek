@@ -3,14 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use App\Models\User;
 
 class LoginController extends Controller
 {
-    public function showLoginForm()
+    public function showLoginForm(Request $request)
     {
-        return view('login'); 
+        // Store redirect URL (if coming from ?redirect=/something)
+        if ($request->has('redirect')) {
+            Session::put('url.intended_custom', $request->query('redirect'));
+        }
+
+        return view('login');
     }
 
     // public function login(Request $request)
@@ -49,6 +55,17 @@ class LoginController extends Controller
             return redirect('/admin-dashboard');
         } else {
             return redirect('/');
+            // Check if there's a custom redirect URL in session
+            $redirectTo = Session::pull('url.intended_custom', null);
+
+            // Redirect based on role or custom URL
+            if (Auth::user()->role === 'admin') {
+                return redirect('/');
+            } elseif ($redirectTo) {
+                return redirect($redirectTo);
+            } else {
+                return redirect('/');
+            }
         }
     }
 
@@ -61,6 +78,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/');
     }
 }

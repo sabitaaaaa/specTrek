@@ -11,45 +11,33 @@
             margin: 0;
             padding: 0;
         }
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-       body {
-         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-         background-color: #f9fafb;
-         color: #333;
-         line-height: 1.6;
-         padding: 0; 
-}
-        /* ----------------navbar ---------------------- */
-.navbar {
-    background-color: #027478;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    height: 80px;
-    border-bottom: 2px solid #ddd;
-    width: 100%;
-    box-sizing: border-box;
-}
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-.navbar-brand img {
-    height: 60px;
-    object-fit: contain;
-}
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    </head>
+    <body class="font-sans antialiased">
+        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+            @include('layouts.navigation')
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
+            <!-- Page Heading -->
+            @isset($header)
+                <header class="bg-white dark:bg-gray-800 shadow">
+                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endisset
 
 .nav-links a {
     text-decoration: none;
@@ -123,4 +111,10 @@
         @yield('content')
     </div>
 </body>
+            <!-- Page Content -->
+            <main>
+                {{ $slot }}
+            </main>
+        </div>
+    </body>
 </html>

@@ -1,4 +1,5 @@
 <!-- @extends('layouts.itinerary') -->
+@extends('layouts.itinerary')
 
 @section('title', 'Itinerary Editor Dashboard')
 
@@ -16,6 +17,7 @@
         <tr>
             <th>Title</th>
             <th>Package name</th>
+            <th>Slug</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -36,4 +38,5 @@
         @endforeach
     </tbody>
 </table>
+@endsection
 @endsection

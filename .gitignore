@@ -1,8 +1,25 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merged-anushree
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 /.phpunit.cache
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> feature/payment
+=======
+/.phpunit.cache
+=======
+>>>>>>> origin/merged-anushree
 >>>>>>> feature/trekking-mapp
 *.log
 .DS_Store
@@ -19,11 +36,29 @@
 /.zed
 /auth.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+>>>>>>> feature/itinerary-and-blogs
+=======
+/.phpunit.cache
+>>>>>>> feature-admin
+=======
+=======
+/.phpunit.cache
+>>>>>>> friend-code
+>>>>>>> feature/payment
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> origin/merged-anushree
 >>>>>>> feature/trekking-mapp
 /node_modules
 /public/build
@@ -34,10 +69,23 @@
 /vendor
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature-admin
+=======
+>>>>>>> origin/merged-anushree
 Homestead.json
 Homestead.yaml
 Thumbs.db
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> feature/payment
+>>>>>>> origin/merged-anushree
 =======
 >>>>>>> feature/trekking-mapp
 .env
@@ -56,6 +104,25 @@ yarn-error.log
 /.vscode
 /.zed
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+<<<<<<< HEAD
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-anushree
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +135,7 @@ yarn-error.log
 <<<<<<< HEAD
 >>>>>>> feature-admin
 =======
+<<<<<<< HEAD
 =======
 Homestead.json
 Homestead.yaml
@@ -76,3 +144,9 @@ Thumbs.db
 >>>>>>> feature/trekking-mapp
 =======
 >>>>>>> feature-admin
+=======
+>>>>>>> friend-code
+>>>>>>> feature/payment
+=======
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-anushree

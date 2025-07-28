@@ -13,6 +13,7 @@
 />
 
 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="hero">
@@ -46,6 +47,30 @@
 </nav>
 
         <img src="{{ asset('images/pine.jpg') }}" class="layer front" alt="Front Mountain"> 
+            <div class="logo">
+                <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
+            </div>
+            <ul class="nav-links">
+                <button id="emergency-btn">Emergency</button>
+                <li class="naa">Blogs</a></li>
+                <li class="naa">Tour</a></li>
+                <li class="naa">User</a></li>
+                @auth
+                <div x-data="{ open: false }" class="mt-1 ms-2">
+                    <form method="POST" action="{{ route('logout') }}" @submit="open = false">
+                        @csrf
+                        <button class="naa">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+                @else
+                <li class="naa"><a href="{{ route('login') }}">Login</a></li>
+                <li class="naa"><a class="signup" href="{{ route('register') }}">register</a></li>
+                @endauth
+            </ul>
+        </nav>
+        <img src="{{ asset('images/pine .jpg') }}" class="layer front" alt="Front Mountain">
         <!-- Hero Content -->
         <div class="hero-content">
             <p class="to-the">SETTING THE </p>
@@ -54,7 +79,7 @@
         </div>
         <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
-  
+
 </svg>
 
     </header>
@@ -68,6 +93,15 @@
         <div class="overlay-text">SHIVAPURI</div>
       </a>
     </div>
+
+  <div class="features-grid top-row">
+    <div class="feature-card">
+        <a href="{{ url('/itinerary/ShivapuriTrek') }}">
+          <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
+          <div class="overlay-text">SHIVAPURI</div>
+        </a>
+      </div>
+
 
     <div class="feature-card">
       <a href="{{ url('/abc') }}">
@@ -111,6 +145,7 @@
 
 <!-- ===============================updated part ----------------------======================= -->
  
+
 <section class="testimonial-section">
   <h2 class="testimonial-heading">OUR HAPPY TRAVELLERS</h2>
 
@@ -118,6 +153,21 @@
     @forelse($reviews as $index => $review)
       <div class="testimonial {{ $index === 0 ? 'active' : '' }}">
         
+        <div class="reviewer-name-container">
+          <h3 class="reviewer-name">
+            {{ $review->name }}
+          </h3>
+        </div>
+
+        <div class="review-text-container">
+          <span class="quote-icon">❝</span>
+          <p class="review-text">
+            {{ $review->review }}
+          </p>
+          <span class="quote-icon">❞</span>
+        </div>
+
+
         <div class="reviewer-name-container">
           <h3 class="reviewer-name">
             {{ $review->name }}
@@ -144,28 +194,29 @@
     @endforeach
   </div>
 </section> 
+</section>
 <!-- ===================================VISUALIZING============================================= -->
 <!-- <section class="hex-section">
   <h2>VISUALIZING THE PLACES</h2>
   <div class="hex-row">
     <div class="hex" style="background-image: url('{{ asset('images/view-1.jpg') }}');">
       <div class="hex-content">
-        
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-2.jpg') }}');">
       <div class="hex-content">
-        
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-3.jpg') }}');">
       <div class="hex-content">
-        
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-4.jpg') }}');">
       <div class="hex-content">
-     
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-5.jpg') }}');">
@@ -173,12 +224,15 @@
       
       </div>
       
+
+      </div>
+
     </div>
   </div> -->
   <!-- <div class="hex-row hex-row-offset">
    <div class="hex" style="background-image: url('{{ asset('images/view-6.jpg') }}');">
       <div class="hex-content">
-     
+
       </div>
     </div>
     <div class="hex" style="background-image: url('{{ asset('images/view-7.jpg') }}');">
@@ -215,6 +269,7 @@
 <!-- VIDEO SECTION -->
 <section class="video-section">
   <h2>#SPECTREK</h2>
+  <h2>SPECTREK</h2>
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/4OiXfDdbtnM?autoplay=1&mute=1&loop=1&playlist=4OiXfDdbtnM&controls=0&showinfo=0&modestbranding=1"
     frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -292,6 +347,7 @@
       mid baneshowr, kathmandu.</p>
 
       
+
     </div>
     <div class="footer-column">
       <h4>Follow Us</h4>
@@ -315,7 +371,7 @@
 </svg>
 
   <div class="footer-bottom">
-    <p>© 2025 SpecTrek. All rights reserved.</p>
+    <p>©️ 2025 SpecTrek. All rights reserved.</p>
   </div>
 </footer>
 
@@ -360,6 +416,63 @@
     }
   };
 </script>
+
+</body>
+</html>
+<!-- Emergency Modal -->
+
+<div id="emergency-modal" style="display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);">
+
+  <div style="background: white;
+    padding: 40px;
+    margin: 15% auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;">
+
+    <span id="close-modal" style="position: absolute;
+      top: 10px; right: 15px;
+      font-size: 20px;
+      cursor: pointer;">&times;</span>
+    <h2 id="Emergency"> Emergency Contacts</h2>
+    <br>
+    <ul style="padding-left: 0; list-style: none;">
+        @foreach ($contacts as $contact)
+          <li>
+            <strong>{{ $contact->name }}:</strong>
+            <a href="tel:{{ $contact->number }}">{{ $contact->number }}</a>
+          </li>
+        @endforeach
+      </ul>
+
+  </div>
+</div>
+<script>
+    const modal = document.getElementById("emergency-modal");
+    const close = document.getElementById("close-modal");
+
+    document.getElementById("emergency-btn").addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+
+    close.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Optional: close modal if user clicks outside of it
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 
 </body>
 </html>

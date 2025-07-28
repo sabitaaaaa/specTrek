@@ -29,3 +29,4 @@ class Itinerary extends Model
 }
 
 }
+

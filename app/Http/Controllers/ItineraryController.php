@@ -21,7 +21,7 @@ class ItineraryController extends Controller
         return view('itinerary.create');
     }
 
-    // Store new itinerary
+    // Store a new itinerary
     public function store(Request $request)
     {
         $request->validate([
@@ -36,41 +36,40 @@ class ItineraryController extends Controller
             'hidden_gems' => 'nullable|string',
             'day_to_day_itinerary' => 'nullable|string',
             'hidden_traditions' => 'nullable|string',
-            'itinerary_id' => 'nullable|exists:itinerary,id',
             'image1' => 'nullable|image|max:2048',
             'image2' => 'nullable|image|max:2048',
             'image3' => 'nullable|image|max:2048',
             'image4' => 'nullable|image|max:2048',
         ]);
 
-        $itinerary = new Itinerary();
+        $itinerary = new Itinerary($request->only([
+            'title',
+            'slug',
+            'quote',
+            'description',
+            'best_time',
+            'detailed_itinerary',
+            'note',
+            'transport_table',
+            'hidden_gems',
+            'day_to_day_itinerary',
+            'hidden_traditions',
+        ]));
 
-        $itinerary->title = $request->title;
-        $itinerary->slug = $request->slug;
-        $itinerary->quote = $request->quote;
-        $itinerary->description = $request->description; // allow HTML
-        $itinerary->best_time = $request->best_time;
-        $itinerary->detailed_itinerary = $request->detailed_itinerary;
-        $itinerary->note = $request->note;
-        $itinerary->transport_table = $request->transport_table;
-        $itinerary->hidden_gems = $request->hidden_gems;
-        $itinerary->day_to_day_itinerary = $request->day_to_day_itinerary;
-        $itinerary->hidden_traditions = $request->hidden_traditions;
-        $itinerary->itinerary_id = $request->itinerary_id;
-
+        // Handle image uploads
         foreach (['image1', 'image2', 'image3', 'image4'] as $field) {
             if ($request->hasFile($field)) {
-                $path = $request->file($field)->store('itinerary_images', 'public');
-                $itinerary->$field = $path;
+                $itinerary->$field = $request->file($field)->store('itinerary_images', 'public');
             }
         }
 
         $itinerary->save();
 
-        return redirect()->route('itinerary.show', $itinerary->slug)->with('success', 'Itinerary created successfully!');
+        return redirect()->route('itinerary.show', $itinerary->slug)
+                         ->with('success', 'Itinerary created successfully!');
     }
 
-    // Show itinerary detail page with recommendations
+    // Show itinerary detail with recommendations
     public function show(string $slug)
     {
         $itinerary = Itinerary::where('slug', $slug)->firstOrFail();
@@ -79,7 +78,7 @@ class ItineraryController extends Controller
         $preferenceRecommendations = collect();
 
         if (auth()->check()) {
-           RecommendationService::trackUserView(auth()->id(), $itinerary->id);
+            RecommendationService::trackUserView(auth()->id(), $itinerary->id);
             $recommendations = RecommendationService::getRecommendationsForUser(auth()->id());
             $preferenceRecommendations = RecommendationService::getPreferenceRecommendationsForUser(auth()->id());
         }
@@ -117,28 +116,30 @@ class ItineraryController extends Controller
 
         $itinerary = Itinerary::findOrFail($id);
 
-        $itinerary->title = $request->title;
-        $itinerary->slug = $request->slug;
-        $itinerary->quote = $request->quote;
-        $itinerary->description = $request->description;
-        $itinerary->best_time = $request->best_time;
-        $itinerary->detailed_itinerary = $request->detailed_itinerary;
-        $itinerary->note = $request->note;
-        $itinerary->transport_table = $request->transport_table;
-        $itinerary->hidden_gems = $request->hidden_gems;
-        $itinerary->day_to_day_itinerary = $request->day_to_day_itinerary;
-        $itinerary->hidden_traditions = $request->hidden_traditions;
+        $itinerary->fill($request->only([
+            'title',
+            'slug',
+            'quote',
+            'description',
+            'best_time',
+            'detailed_itinerary',
+            'note',
+            'transport_table',
+            'hidden_gems',
+            'day_to_day_itinerary',
+            'hidden_traditions',
+        ]));
 
         foreach (['image1', 'image2', 'image3', 'image4'] as $field) {
             if ($request->hasFile($field)) {
-                $path = $request->file($field)->store('itinerary_images', 'public');
-                $itinerary->$field = $path;
+                $itinerary->$field = $request->file($field)->store('itinerary_images', 'public');
             }
         }
 
         $itinerary->save();
 
-        return redirect()->route('itinerary.show', $itinerary->slug)->with('success', 'Itinerary updated successfully!');
+        return redirect()->route('itinerary.show', $itinerary->slug)
+                         ->with('success', 'Itinerary updated successfully!');
     }
 
     // Delete itinerary
@@ -147,6 +148,7 @@ class ItineraryController extends Controller
         $itinerary = Itinerary::findOrFail($id);
         $itinerary->delete();
 
-        return redirect()->route('itinerary.index')->with('success', 'Itinerary deleted successfully!');
+        return redirect()->route('itinerary.index')
+                         ->with('success', 'Itinerary deleted successfully!');
     }
 }

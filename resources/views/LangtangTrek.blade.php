@@ -86,8 +86,10 @@
 
         </ul>
         
+
       </div>
     
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -141,6 +143,7 @@
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
             <thead style="background-color: #2e8b57; color: white;">
+              <thead style="background-color: #027478; color: white;">
                    <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Option</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Cost (Approx)</th>
@@ -184,6 +187,7 @@
 
                   </tr>
                  
+
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -214,6 +218,22 @@
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
       </div>
+
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
+           </div>
     </div>
   </div>
 
@@ -224,10 +244,7 @@
 
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
-
-
-    
-  </main>
+   </main>
 <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
