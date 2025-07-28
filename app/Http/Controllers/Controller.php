@@ -8,12 +8,9 @@ abstract class Controller
 
 public function adminDashboard()
 {
-    $userCount = User::count(); 
+    $userCount = User::count();
 
     return view('admin-dashboard', ['userCount' => $userCount]);
 }
 
-} 
-
-
-
+}

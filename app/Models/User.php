@@ -46,4 +46,12 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+public function viewedItineraries()
+{
+    return $this->belongsToMany(Itinerary::class, 'user_trek_views', 'user_id', 'itinerary_id')
+                ->withTimestamps()
+                ->withPivot('viewed_at');
+}
+
+
 }

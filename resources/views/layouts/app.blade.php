@@ -110,6 +110,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#">Emergency</a></li>
+      <li><a href="#">Blogs</a></li>
       <li><a href="#">Tour</a></li>
       <li><a href="#">User</a></li>
       <li><a href="#" class="btn">Login</a></li>

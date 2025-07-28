@@ -73,7 +73,11 @@ body, html {
 */
 
 .navbar {
+<<<<<<< HEAD
   position:relative;
+=======
+  position: relative;
+>>>>>>> origin/merged-nishmi
   top: 0;
   left: 0;
   right: 0;
@@ -967,4 +971,8 @@ body, html {
     font-size: 24px;
     margin-right: 10px;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/merged-nishmi

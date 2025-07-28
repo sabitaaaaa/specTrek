@@ -20,34 +20,52 @@ return [
     |            "redis", "dynamodb", "array"
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-    | Supported: "file", "cookie", "database", "apc",
-    |            "memcached", "redis", "dynamodb", "array"
 =======
-    | Supported: "file", "cookie", "database", "memcached",
-    |            "redis", "dynamodb", "array"
-=======
-<<<<<<< HEAD
-    | Supported: "file", "cookie", "database", "apc",
-    |            "memcached", "redis", "dynamodb", "array"
-=======
-    | Supported: "file", "cookie", "database", "memcached",
-    |            "redis", "dynamodb", "array"
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+    | Supported: "file", "cookie", "database", "apc",
+    |            "memcached", "redis", "dynamodb", "array"
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+    | Supported: "file", "cookie", "database", "apc",
+    |            "memcached", "redis", "dynamodb", "array"
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+<<<<<<< HEAD
+>>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature-admin
+>>>>>>> origin/merged-nishmi
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-nishmi
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 >>>>>>> feature-admin
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
 =======
+<<<<<<< HEAD
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
+>>>>>>> origin/merged-nishmi
     |
     */
 
@@ -133,6 +151,9 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
     | Affects: "dynamodb", "memcached", "redis"
 =======
     | Affects: "apc", "dynamodb", "memcached", "redis"
@@ -143,9 +164,12 @@ return [
     | Affects: "dynamodb", "memcached", "redis"
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
     | Affects: "dynamodb", "memcached", "redis"
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-nishmi
     |
     */
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <h1> WELCOME BACK </h1>
@@ -296,3 +297,5 @@
         @endif
     </body>
 </html>
+=======
+>>>>>>> origin/merged-nishmi

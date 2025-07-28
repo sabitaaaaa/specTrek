@@ -1,12 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
 =======
 /.phpunit.cache
 =======
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-nishmi
 *.log
 .DS_Store
 .env
@@ -23,14 +29,20 @@
 /auth.json
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-nishmi
 /node_modules
 /public/build
 /public/hot
@@ -41,6 +53,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
 Homestead.json
 Homestead.yaml
 Thumbs.db
@@ -64,11 +79,22 @@ yarn-error.log
 /.zed
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature-admin
  
 
  
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-nishmi
 >>>>>>> feature-admin
 =======
 =======
@@ -78,7 +104,11 @@ Thumbs.db
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
 =======
+<<<<<<< HEAD
 Homestead.json
 Homestead.yaml
 Thumbs.db
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> feature-admin
+>>>>>>> origin/merged-nishmi
