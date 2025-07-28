@@ -9,19 +9,20 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-public function up()
-{
-    Schema::table('settings', function (Blueprint $table) {
-        $table->string('site_logo')->nullable(); // Removed ->after('site_name')
-    });
-}
+    public function up(): void
+    {
+        Schema::table('itineraries', function (Blueprint $table) {
+            //
+        });
+    }
 
-
-public function down()
-{
-    Schema::table('settings', function (Blueprint $table) {
-        $table->dropColumn('site_logo');
-    });
-}
-
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('itineraries', function (Blueprint $table) {
+            //
+        });
+    }
 };

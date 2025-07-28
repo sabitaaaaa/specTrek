@@ -18,14 +18,14 @@
     <header class="hero">
         <nav class="navbar">
             <div class="logo">
-                <img src="{{ asset($site_logo) }}" alt="Site Logo" style="max-height: 120px;">
+                <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
             </div>
             <ul class="nav-links">
                 <li><a href="#">Emergency</a></li>
                 <li><a href="#">Blogs</a></li>
                 <li><a href="#">Tour</a></li>
                 <li><a href="#">User</a></li>
-                <li><a href="/login">Login</a></li>
+                <li><a href="#">Login</a></li>
                 <li><a class="signup" href="#">Signup</a></li>
             </ul>
         </nav>
@@ -270,13 +270,9 @@
       </div>
     </div>
   </div>
-
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
-
 <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
 </svg>
-
 
   <div class="footer-bottom">
     <p>© 2025 SpecTrek. All rights reserved.</p>
@@ -324,28 +320,6 @@
     }
   };
 </script>
-
-<!-- ----------------arrow script ------ -->
-
-<script>
-  const scrollBtn = document.getElementById("scrollTopBtn");
-
-  window.onscroll = function () {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  };
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-
-  </script>
-
 
 </body>
 </html>

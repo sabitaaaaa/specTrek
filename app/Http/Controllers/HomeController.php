@@ -76,5 +76,4 @@ public function updateLogo(Request $request)
     return back()->with('error', 'No file uploaded.');
 }
 
-
 }

@@ -87,9 +87,7 @@
                 </a>
 
 
-                <!-- <a href="{{ route('packages.index') }}" class="{{ request()->is('admin/packages*') ? 'active' : '' }}">
-    <i class="bi bi-box-seam me-2"></i> Packages
-</a> -->
+
                 {{--
             <a href="{{ url('/setting') }}" class="{{ request()->is('setting') ? 'active' : '' }}">
                 <i class="bi bi-gear me-2"></i> Settings
