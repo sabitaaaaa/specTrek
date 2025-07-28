@@ -90,7 +90,7 @@
           <br>
 
           <div class="fade-content">
-            <strong>MORE INFORMATIONS</strong><br><br>
+            <strong>MORE INFORMATIONS</strong>
 @php
     // Decode entities like &nbsp;, strip any HTML, and split by full stop
     $transportText = html_entity_decode(strip_tags($itinerary->transport_table));
@@ -98,7 +98,7 @@
 @endphp
 
 <div class="transport-section" style="margin-top: 2rem;">
-  <h3 style="color: #2c3e50;">Transport Options</h3>
+  {{-- <h3 style="color: #2c3e50;">Transport Options</h3> --}}
   <ul style="font-size: 17px; line-height: 1.7;">
     @foreach($transportSentences as $sentence)
       @if(trim($sentence) !== '')
@@ -107,7 +107,10 @@
     @endforeach
   </ul>
 </div>
->Note:</strong> {{ strip_tags($itinerary->note) }}
+
+
+{{-- for note --}}
+{{ strip_tags($itinerary->note) }}
             </p>
 
             @php
@@ -137,6 +140,7 @@
     </div>
   </div>
 </main>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
 
 <footer class="footer">
   <div class="footer-container">

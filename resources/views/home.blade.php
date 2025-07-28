@@ -273,6 +273,8 @@
 <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
 </svg>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+
 
   <div class="footer-bottom">
     <p>© 2025 SpecTrek. All rights reserved.</p>
@@ -320,6 +322,28 @@
     }
   };
 </script>
+
+<!-- ----------------arrow script ------ -->
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  </script>
+
 
 </body>
 </html>
