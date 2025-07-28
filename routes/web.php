@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use App\Http\Controllers\EsewaController;
 use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\RecommendationController;
@@ -137,9 +136,8 @@ Route::view('/', 'welcome')->name('home');
 Route::view('/abc', 'abc');
 Route::view('/shey', 'shey');
 Route::view('/manaslu', 'manaslu');
-=======
-use Illuminate\Support\Facades\Auth;
-use App\Models\User;
+// use Illuminate\Support\Facades\Auth;
+// use App\Models\User;
 
 // Controllers
 use App\Http\Controllers\HomeController;
@@ -150,10 +148,10 @@ use App\Http\Controllers\Admin\UserControllers;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\TrekController;
-use App\Http\Controllers\WeatherController;
-use App\Http\Controllers\RecommendationController;
-use App\Http\Controllers\PostController;
+// use App\Http\Controllers\TrekController;
+// use App\Http\Controllers\WeatherController;
+// use App\Http\Controllers\RecommendationController;
+// use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ItineraryController;
@@ -255,17 +253,13 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/abc', 'abc')->name('abc');
 Route::view('/shey', 'shey')->name('shey');
 Route::view('/manaslu', 'manaslu')->name('manaslu');
->>>>>>> origin/merged-nishmi
 Route::view('/example', 'example');
 Route::view('/form', 'form');
 Route::view('/Tours', 'Tours')->name('tours');
 Route::view('/AmaYangriTrek', 'AmaYangriTrek')->name('AmaYangriTrek');
 Route::view('/LangtangTrek', 'LangtangTrek')->name('LangtangTrek');
 Route::view('/ShivapuriTrek', 'ShivapuriTrek')->name('ShivapuriTrek');
-<<<<<<< HEAD
-=======
 // Route::view('/shivapuri-trek', 'ShivapuriTrek')->name('ShivapuriTrek');
->>>>>>> origin/merged-nishmi
 Route::view('/annapurna-base-camp', 'abc');
 Route::view('/shey-phoksundo', 'shey');
 Route::view('/langtang-trek', 'LangtangTrek');
@@ -275,7 +269,6 @@ Route::view('/payment-options', 'payment-options');
 
 Route::get('/about/{name}', fn($name) => view('about', ["name" => $name]));
 
-<<<<<<< HEAD
 // Auth
 Route::get('/register', [AuthController::class, 'showRegister']);
 Route::post('/register', [AuthController::class, 'register']);
@@ -356,7 +349,6 @@ use App\Http\Controllers\Admin\UsersController;
 Route::resource('users', UsersController::class);
 
 // Route::resource('admin/users', UserControllers::class);
-=======
 // Weather
 Route::get('/weather', [WeatherController::class, 'getWeather']);
 Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
@@ -383,13 +375,11 @@ Route::get('/see-more', function () {
 });
 
 // Payment Routes
->>>>>>> origin/merged-nishmi
 Route::get('/esewa-pay', [EsewaController::class, 'pay'])->name('esewa.pay');
 Route::get('/esewa-success', [EsewaController::class, 'success']);
 Route::get('/esewa-failure', [EsewaController::class, 'failure']);
 
 
-<<<<<<< HEAD
 
 Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
 
@@ -407,21 +397,18 @@ Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
 
 
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
-=======
 // Authenticated Routes
 Route::middleware(['auth'])->group(function () {
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
->>>>>>> origin/merged-nishmi
 
 // for review =================
 
-use App\Http\Controllers\ReviewController;
+// use App\Http\Controllers\ReviewController;
 
-<<<<<<< HEAD
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
-use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -456,7 +443,7 @@ Route::get('/esewa-failure', [EsewaController::class, 'failure']);
 // Khalti
 Route::get('/Khalti', [KhaltiController::class, 'pay']);
 
-use App\Http\Controllers\ProfileController;
+// use App\Http\Controllers\ProfileController;
 
 // Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 // Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
@@ -475,7 +462,6 @@ Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->n
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/upload-logo', [HomeController::class, 'updateLogo'])->name('site.uploadLogo');
 
-=======
     // Admin Panel
     Route::prefix('admin')->group(function () {
         // Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
@@ -514,4 +500,3 @@ Route::middleware(['auth', 'premium'])->group(function () {
     Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 });
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
->>>>>>> origin/merged-nishmi

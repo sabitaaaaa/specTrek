@@ -14,13 +14,4 @@ public function adminDashboard()
 }
 
 }
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
->>>>>>> origin/merged-anushree
-=======
-
-
->>>>>>> origin/merged-nishmi

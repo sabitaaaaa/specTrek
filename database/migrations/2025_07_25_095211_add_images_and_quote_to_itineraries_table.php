@@ -33,4 +33,3 @@ public function down()
      */
 
 };
-
