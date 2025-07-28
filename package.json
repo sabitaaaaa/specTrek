@@ -1,20 +1,7 @@
 {
-<<<<<<< HEAD
 
     "$schema": "https://json.schemastore.org/package.json",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "$schema": "https://json.schemastore.org/package.json",
-=======
->>>>>>> feature-admin
-=======
-=======
-    "$schema": "https://json.schemastore.org/package.json",
->>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
->>>>>>> feature/trekking-mapp
->>>>>>> origin/merged-nishmi
-    "private": true,
+
     "type": "module",
     "scripts": {
         "build": "vite build",
