@@ -40,11 +40,8 @@ return [
     ],
 
     'weather' => [
-    'key' => env('WEATHER_API_KEY'),
-],
-   'weather' => [
-    'key' => env('WEATHER_API_KEY'),
-],
+        'key' => env('WEATHER_API_KEY'),
+    ],
 
         'key' => env('WEATHER_API_KEY'),
     
@@ -66,3 +63,5 @@ return [
         'secret'=>env('KHALTI_SECRET_KEY'),
     ],
 ];
+
+ 

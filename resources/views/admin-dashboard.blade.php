@@ -5,6 +5,8 @@
     <title>Admin Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
@@ -70,16 +72,6 @@
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
-        } 
-
-        .card , .card1 {   
-            padding: 18px;
-            flex: 1 1 50px; 
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(20, 18, 18, 0.05); 
-            border-radius: 5px; 
-            font-size: 20px;
-            text-align: center; 
         }
 
         .card , .card1 {
@@ -91,8 +83,15 @@
             font-size: 20px;
             text-align: center;
         }
-
-
+        .card , .card1 {
+            padding: 18px;
+            flex: 1 1 50px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(20, 18, 18, 0.05);
+            border-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+        }
         .chart-container {
             background-color: white;
             padding: 20px;
@@ -112,6 +111,7 @@
 <body>
     <div class="dashboard">   
     <div class="dashboard">
+    <div class="dashboard">
  <aside class="sidebar">
         <div class="logo">AdminPanel</div>
         <nav>
@@ -122,12 +122,20 @@
                 <i class="bi bi-people me-2"></i> Users
             </a> 
             </a>
+            <!-- <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
+    <i class="bi bi-box-seam me-2"></i> Packages
+</a> -->
+
+             <a href="{{ url('/profile') }}" class="{{ request()->is('profile') ? 'active' : '' }}">
+                <i class="bi bi-person me-2"></i> Profile
+            </a>
+            </a>
             <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
     <i class="bi bi-box-seam me-2"></i> Packages
 </a>
             <a href="{{ url('/setting') }}" class="{{ request()->is('setting') ? 'active' : '' }}">
                 <i class="bi bi-gear me-2"></i> Settings
-            </a> 
+            </a>
              <a href="{{ url('/profile') }}" class="{{ request()->is('profile') ? 'active' : '' }}">
                 <i class="bi bi-person me-2"></i> Profile
             </a> 
@@ -151,17 +159,15 @@
             </header>
 
             <section class="content">
-                <div class="card">Total Users: {{ $userCount }}</div> 
-                <div class="card1"> Total Places</div>
-            </section> 
-
-            
                 <div class="card">Total Users: {{ $userCount }}</div>
                 <div class="card1"> Total Places</div>
             </section>
-
-
-
+                <div class="card">Total Users: {{ $userCount }}</div>
+                <div class="card1"> Total Places</div>
+            </section>
+                <div class="card">Total Users: {{ $userCount }}</div>
+                <div class="card1"> Total Places</div>
+            </section>
             <section class="content">
                 <div class="chart-container">
                     <h3 style="font-size: 16px; margin-bottom: 10px;">Signups Over Time</h3>

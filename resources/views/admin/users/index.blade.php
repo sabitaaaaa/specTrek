@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.design')
 
 @section('content')
 <div class="container-fluid px-4">
@@ -29,15 +29,18 @@
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $user->name }}</td>
                             <td class="text-center">
-                                <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-warning">Edit</a>
-
-                                <!--Delete form: No confirmation -->  
+                                <a href="{{ route('users.edit', $user->id) }}" title="Edit" class="btn btn-sm btn-outline-warning me-1">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
-    @csrf
-    @method('DELETE')
-    <button class="btn btn-sm btn-danger">Delete</button>
-</form>
-
+                                    @csrf
+                                    @method('DELETE') 
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
+                                        <i class="bi bi-trash3"></i>
+                                    </button>
+                                    
+                                </form>
                             </td>
                         </tr>
                     @empty

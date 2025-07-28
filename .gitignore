@@ -7,6 +7,10 @@
 >>>>>>> origin/merged-anushree
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
 =======
 /.phpunit.cache
 =======
@@ -21,6 +25,11 @@
 =======
 >>>>>>> origin/merged-anushree
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-nishmi
 *.log
 .DS_Store
 .env
@@ -37,6 +46,12 @@
 /auth.json
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+>>>>>>> origin/merged-sabita
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
@@ -60,6 +75,11 @@
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> origin/merged-anushree
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+>>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-nishmi
 /node_modules
 /public/build
 /public/hot
@@ -67,6 +87,7 @@
 /storage/*.key
 /storage/pail
 /vendor
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +99,11 @@
 >>>>>>> feature-admin
 =======
 >>>>>>> origin/merged-anushree
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+>>>>>>> origin/merged-sabita
 Homestead.json
 Homestead.yaml
 Thumbs.db
@@ -124,6 +150,10 @@ Thumbs.db
 >>>>>>> origin/merged-anushree
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/merged-nishmi
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> feature-admin
@@ -133,6 +163,9 @@ Thumbs.db
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-nishmi
 >>>>>>> feature-admin
 =======
 <<<<<<< HEAD
@@ -143,10 +176,20 @@ Thumbs.db
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
 =======
+<<<<<<< HEAD
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> feature/itinerary-and-blogs
+=======
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 >>>>>>> friend-code
 >>>>>>> feature/payment
 =======
 >>>>>>> feature/trekking-mapp
 >>>>>>> origin/merged-anushree
+=======
+>>>>>>> origin/merged-nishmi
+>>>>>>> origin/merged-sabita
