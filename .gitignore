@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.log
 .DS_Store
 .env
@@ -18,8 +19,14 @@
 /.phpunit.cache
 >>>>>>> feature-admin
 =======
+<<<<<<< HEAD
+>>>>>>> origin/merged-sabita
+=======
 /.phpunit.cache
 =======
+>>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature/itinerary-and-blogs
 *.log
 .DS_Store
 .env
@@ -34,8 +41,19 @@
 /.vscode
 /.zed
 /auth.json
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/.phpunit.cache
+>>>>>>> feature-admin
+=======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
 /node_modules
 /public/build
 /public/hot
@@ -45,6 +63,10 @@
 /vendor
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-sabita
 Homestead.json
 Homestead.yaml
 Thumbs.db
@@ -81,3 +103,11 @@ Homestead.yaml
 Thumbs.db
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita

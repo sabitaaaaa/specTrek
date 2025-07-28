@@ -197,6 +197,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
+//
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
 
 
@@ -232,13 +233,6 @@ Route::get('/esewa-failure', [EsewaController::class, 'failure']);
 
 Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
 
-// Route::get('/recommend', [RecommendationController::class, 'showForm'])->name('recommend.form');
-// Route::post('/recommend', [RecommendationController::class, 'processForm'])->name('recommend.process');
-
-
-
-// Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
-// Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
 
 
 //RECOMENDATION
@@ -280,4 +274,23 @@ Route::resource('itinerary', ItineraryController::class);
 
 
 
+
+use App\Http\Controllers\ProfileController;
+
+// Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+// Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+// Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+// use App\Http\Controllers\ProfileController;
+
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+
+
+
+
+//new chnages
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/upload-logo', [HomeController::class, 'updateLogo'])->name('site.uploadLogo');
 

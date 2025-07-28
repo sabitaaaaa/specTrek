@@ -10,6 +10,7 @@
 <body>
 
   <nav class="navbar">
+       <!-- changed -->
     <a href="#" class="navbar-brand">
       <img src="{{ asset('images/logo.png') }}" alt="Logo" />
     </a>
@@ -84,9 +85,9 @@
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
-        
+
       </div>
-    
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -136,7 +137,7 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes official parking space near entrance gate</td>
 
                   </tr>
-                 
+
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -166,30 +167,40 @@
           <div class="fade-overlay"></div>
         </div>
         <button id="see-more-btn" class="see-more-button">See More</button>
-      </div>
+
+        <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+
+              if (!isLoggedIn) {
+                // Send them to login with redirect
+                const intendedUrl = encodeURIComponent('/shivapuri/payment');
+                window.location.href = "/login?redirect=" + intendedUrl;
+              } else {
+                // Already logged in
+                window.location.href = "/shivapuri/payment";
+              }
+            });
+          </script>
+
+
+
+</div>
     </div>
   </div>
 
   <div class="nonInteractiveMap">
     <h1> "Here is a Normal map for Shivapuri" </h1>
     <img src="{{ asset('images/smap.jpg') }}">
-
-
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
-
-
-    
   </main>
-<!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <p>&copy; All rights reserved.</p>
-        <p>Developed by SpecTrek Team</p>
-      </div>
-    </footer>
-
-
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Shivapuri Trek. All rights reserved.</p>
+      <p>Developed by SpecTrek Team</p>
+    </div>
+  </footer>
   <script>
 
     //for image slider

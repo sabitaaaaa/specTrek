@@ -1,3 +1,4 @@
+// Parallax scroll effect
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
@@ -10,7 +11,8 @@ window.addEventListener("scroll", () => {
   if (front) front.style.transform = `translateY(${scrollY * 0.3}px)`;
 });
 
-// Navbar scroll color
+
+// Navbar scroll color change
 window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.navbar');
   if (window.scrollY > 50) {
@@ -42,6 +44,9 @@ function nextTestimonial() {
   currentIndex = (currentIndex + 1) % testimonials.length;
   showTestimonial(currentIndex);
 }
+
+// Automatically cycle testimonials (optional)
+setInterval(nextTestimonial, 5000); // change every 5 seconds
 
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {

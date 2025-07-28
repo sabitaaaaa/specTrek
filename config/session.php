@@ -15,6 +15,10 @@ return [
     |
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-sabita
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 =======
@@ -43,6 +47,13 @@ return [
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
     |
     */
 
@@ -127,6 +138,10 @@ return [
     |
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-sabita
     | Affects: "dynamodb", "memcached", "redis"
 =======
     | Affects: "apc", "dynamodb", "memcached", "redis"
@@ -137,6 +152,12 @@ return [
     | Affects: "dynamodb", "memcached", "redis"
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
+=======
+=======
+    | Affects: "dynamodb", "memcached", "redis"
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
     |
     */
 

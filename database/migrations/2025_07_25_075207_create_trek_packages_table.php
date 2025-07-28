@@ -11,21 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('premium_payments', function (Blueprint $table) {
+        Schema::create('trek_packages', function (Blueprint $table) {
             $table->id();
-            $table->string('transaction_id')->nullable();
-            $table->decimal('amount', 10, 2)->nullable();
-            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('premium_payments');
+        Schema::dropIfExists('trek_packages');
     }
 };

@@ -9,15 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-   public function up(): void
+   public function up()
 {
-    Schema::create('reviews', function (Blueprint $table) {
-        $table->id();
-        $table->string('name');
-        $table->string('email');
-        $table->text('review');
-        $table->timestamps();
-    });
+ DB::table('settings')->insert([
+    'key' => 'site_logo',
+    'value' => $path, // e.g., 'logo/your-file.png'
+    'created_at' => now(),
+    'updated_at' => now(),
+]);
+
+
 }
 
 
@@ -26,7 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('settings');
     }
 };
-

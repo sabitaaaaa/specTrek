@@ -86,9 +86,9 @@
           <p><strong> END OF TREK !! </strong></p>
 
         </ul>
-        
+
       </div>
-    
+
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -158,7 +158,7 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes, overnight parking possible with lodge owner's permission</td>
 
                   </tr>
-                 
+
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -185,7 +185,14 @@
           </div>
           <div class="fade-overlay"></div>
         </div>
-        <button id="see-more-btn" class="see-more-button">See More</button>
+        <script async
+        src="https://js.stripe.com/v3/buy-button.js">
+      </script>
+
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RgSCw2EZhQjvwUDvcMN1a8X"
+        publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1">
+      </stripe-buy-button>
       </div>
     </div>
   </div>
@@ -199,7 +206,7 @@
   </div>
 
 
-    
+
   </main>
 <!-- Footer -->
     <footer class="footer">
@@ -267,6 +274,10 @@
       behavior: "smooth"
     });
   }
+  </script>
+
+</body>
+</html>
 
   </script>
 

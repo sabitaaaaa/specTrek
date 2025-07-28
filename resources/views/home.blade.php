@@ -18,14 +18,14 @@
     <header class="hero">
         <nav class="navbar">
             <div class="logo">
-                <img src="{{ asset('images/final-logo.png') }}" alt="SpecTrek" style="height: 90px; width: 100px;">
+                <img src="{{ asset($site_logo) }}" alt="Site Logo" style="max-height: 120px;">
             </div>
             <ul class="nav-links">
                 <li><a href="#">Emergency</a></li>
                 <li><a href="#">Blogs</a></li>
                 <li><a href="#">Tour</a></li>
                 <li><a href="#">User</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="/login">Login</a></li>
                 <li><a class="signup" href="#">Signup</a></li>
             </ul>
         </nav>
@@ -325,6 +325,7 @@
   };
 </script>
 
+<<<<<<< HEAD
 <!-- ----------------arrow script ------ -->
 
 <script>
@@ -347,5 +348,7 @@
   </script>
 
 
+=======
+>>>>>>> origin/merged-sabita
 </body>
 </html>

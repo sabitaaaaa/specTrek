@@ -1,13 +1,11 @@
+
+
+specTrek
+
 <<<<<<< HEAD
-spectrek
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
-=======
->>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -45,18 +43,6 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-=======
-=======
->>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 - **[Vehikl](https://vehikl.com)**
 - **[Tighten Co.](https://tighten.co)**
 - **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
@@ -64,10 +50,6 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[Curotec](https://www.curotec.com/services/technologies/laravel)**
 - **[DevSquad](https://devsquad.com/hire-laravel-developers)**
 - **[Redberry](https://redberry.international/laravel-development)**
-<<<<<<< HEAD
->>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
-=======
->>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 - **[Active Logic](https://activelogic.com)**
 
 ## Contributing
@@ -87,6 +69,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 hello! Welcome to speckTrek.
@@ -95,3 +78,6 @@ hello! Welcome to speckTrek.
 =======
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/merged-sabita
