@@ -40,4 +40,19 @@ return [
     ],
 
 ];
+// return [
+//     // ... other services
 
+//     'stripe' => [
+//         'key' => env('STRIPE_KEY'),
+//         'secret' => env('STRIPE_SECRET'), // You might want to rename STRIPE_KEY in .env to STRIPE_SECRET for clarity
+//         'publishable_key' => env('STRIPE_PUBLISHABLE_KEY'),
+//     ],
+
+// ];
+
+return [
+    'khalti'=>[
+        'secret'=>env('KHALTI_SECRET_KEY'),
+    ],
+];

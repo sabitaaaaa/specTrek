@@ -17,9 +17,11 @@
 <form action="{{ route('itinerary.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
-
     <label>Title:</label><br>
     <input type="text" name="title" value="{{ old('title') }}" required><br><br>
+
+    <label>Slug:</label><br>
+    <input type="text" name="slug" value="{{ old('slug') }}" required><br><br>
 
     <label>Image 1:</label><br>
     <input type="file" name="image1"><br><br>
@@ -32,9 +34,6 @@
 
     <label>Image 4:</label><br>
     <input type="file" name="image4"><br><br>
-
-    <label>Slug:</label><br>
-    <input type="text" name="slug" value="{{ old('slug') }}" required><br><br>
 
     <label>Quote:</label><br>
     <textarea name="quote" class="rich-text" rows="3">{{ old('quote') }}</textarea><br><br>
@@ -60,13 +59,10 @@
     <label>Note:</label><br>
     <textarea name="note" class="rich-text" rows="3">{{ old('note') }}</textarea><br><br>
 
-
-
     <label>
-  <input type="checkbox" name="is_featured" value="1" {{ old('is_featured') ? 'checked' : '' }}>
-  Mark as Homepage Highlight
-</label><br><br>
-
+        <input type="checkbox" name="is_featured" value="1" {{ old('is_featured') ? 'checked' : '' }}>
+        Mark as Homepage Highlight
+    </label><br><br>
 
     <button type="submit">Create Itinerary</button>
 </form>

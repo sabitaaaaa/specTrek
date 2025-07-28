@@ -3,6 +3,317 @@
   General Body and Font Styles
 =================================================================
 */
+
+/* changed */
+
+#Emergency{
+    color: rgba(137, 5, 5, 0.55);
+}
+
+  .cta-button:hover {
+    background-color: #88C3CE;
+    color: white;
+    border-radius: 20px;
+  }
+  .naa {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .naa:hover{
+    color: #190404da;
+    border-radius: 30px;
+  }
+    #emergency-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #emergency-btn:hover {
+    /* background-color: rgba(173, 196, 23, 0.586); */
+    color: #9e2b2bda;
+    border-radius: 30px;
+    }
+
+    /* till here */
+
+:root {
+    --light-teal: #B8DDE3;
+    --medium-teal: #88C3CE;
+    --olive-brown: #816836;
+    --white: #FFFFFF;
+    --green-accent: #94B03A;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body, html {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #fff;
+  }
+
+  /*
+  =================================================================
+    Hero Section & Parallax Mountain Layers
+  =================================================================
+  */
+
+  .hero {
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+    background: url('images/blue-mountain-0.jpg') center/cover no-repeat;
+  }
+
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    will-change: transform;
+    transition: transform 0.9s ease-out;
+    pointer-events: none;
+  }
+
+  .layer.bg {
+    z-index: 1;
+    top: -0px;
+    height: 700px;
+  }
+  .layer.mid {
+    z-index: 2;
+    top: -140px;
+  }
+  .layer.front {
+    z-index: 3;
+    top: -130px;
+  }
+
+  /*
+  =================================================================
+    Navbar & Scroll Effect
+  =================================================================
+  */
+
+  .navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: transparent;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.4s ease;
+  }
+
+  /* .signup {
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.4s ease, border-color 0.4s ease;
+  } */
+
+  /* ==================REVIEW========================= */
+
+  /* Modal overlay with centered content */
+  .modern-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+
+    /* These three are mandatory */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+  }
+
+  /* Modal box */
+  .modern-modal-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .btn {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background-color:#4682b4;
+    font-weight: 600;
+  }
+
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+    .signup {
+      border: 1px solid white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+  /* Floating Button */
+  .floating-review-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background:#2e8b57;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  .floating-review-btn:hover {
+    transform: scale(1.05);
+  }
+
+  /* Modal Backdrop */
+  .modern-modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Modal Content with glass effect */
+  .modern-modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.3s ease-in-out;
+    color: #fff;
+  }
+
+  /* Close Button */
+  .modern-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Form Elements */
+  .modern-modal-content form input,
+  .modern-modal-content form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+
+  .modern-modal-content form textarea::placeholder,
+  .modern-modal-content form input::placeholder {
+    color: #ddd;
+  }
+
+  .modern-modal-content form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .modern-modal-content form button:hover {
+    background: linear-gradient(135deg, #4338ca, #2563eb);
+  }
+
+  .modal-heading {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 :root {
   --light-teal: #B8DDE3;
   --medium-teal: #88C3CE;
@@ -72,6 +383,46 @@ body, html {
 =================================================================
 */
 
+  /*
+  =================================================================
+    Hero Content
+  =================================================================
+  */
+
+  .hero-content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 5;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  }
+
+  .hero-content .to-the {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+    margin: 10px 0;
+  }
+
+  .cta-button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: yellow;
+    color: black;
+    padding: 15px 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 20px;
+
+  }
 .navbar {
   position:relative;
   top: 0;
@@ -327,18 +678,45 @@ body, html {
 =================================================================
 */
 
+  .hero-curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 345px;
+    z-index: 5;
+    pointer-events: none;
+  }
 .features-section {
   text-align: center;
   padding: 60px 20px;
   background: white;
 }
 
-.features-section h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-  color: #333;
-}
+  /*
+  =================================================================
+    Features Section (Highlights)
+  =================================================================
+  */
 
+  .features-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+  }
+
+  .features-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .features-grid {
+    display: grid;
+    gap: 30px 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
 .features-grid {
   display: grid;
   gap: 30px 20px;
@@ -388,7 +766,67 @@ body, html {
     grid-template-columns: 1fr;
   }
 }
+  .top-row {
+    grid-template-columns: repeat(3, 220px);
+  }
 
+  .bottom-row {
+    grid-template-columns: repeat(3, 220px);
+  }
+
+  .feature-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    aspect-ratio: 3 / 4;
+    width: 100%;
+  }
+
+  .feature-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .top-row,
+    .bottom-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /*
+  =================================================================
+    Testimonial & Review Section
+  =================================================================
+  */
+
+  .testimonial-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f8f8;
+  }
+
+  .testimonial-heading {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+  }
 /*
 =================================================================
   Testimonial & Review Section
@@ -780,29 +1218,151 @@ body, html {
   padding: 0 20px;
 }
 
-.quote {
-  max-width: 250px;
-  text-align: center;
-  color: black;
-  pointer-events: auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 150px;
+  }
 
-.quote p {
-  font-weight: bold;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
+  .testimonial {
+    display: none; /* Controlled by JS */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-.quote span {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 10px;
-}
+  .testimonial.active {
+    display: flex;
+  }
 
+  .reviewer-name-container {
+    margin-bottom: 20px;
+  }
+
+  .reviewer-name {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #333;
+  }
+
+  .review-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .review-text {
+    font-size: 16px;
+    color: #444;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .quote-icon {
+    font-size: 40px;
+    color: #ccc;
+    user-select: none;
+  }
+
+  .dots {
+    margin-top: 20px;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.active {
+    background: #333;
+  }
+
+  /*
+  =================================================================
+    Floating Review Button & Modal
+  =================================================================
+  */
+
+  .floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e4d0bd;
+    color: black;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+
+  .floating-btn:hover {
+    background-color: #baa99a;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background: white;
+    margin: 15% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+  }
+
+  .modal input, .modal textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    background-color: #e4d0bd;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
 .quote .dot {
   width: 16px;
   height: 16px;
@@ -852,6 +1412,419 @@ body, html {
 =================================================================
 */
 
+  /*
+  =================================================================
+    Hexagon Image Gallery
+  =================================================================
+  */
+
+  .hex-section {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hex-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .hex-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .hex-row-offset {
+    margin-top: -30px;
+  }
+
+  .hex {
+    width: 270px;
+    height: 208px;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+
+  .hex:hover {
+      transform: scale(1.05);
+  }
+
+  .hex-content {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hex-content h4 {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .hex-content span {
+    font-size: 12px;
+  }
+  /*
+  /* ===== Banner Section ===== */
+  .sherpa-banner {
+    background: #B8DDE3;
+    padding: 90px 20px;
+    color: #816836;
+    text-align: center;
+    position: relative;
+  }
+
+  .sherpa-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.35); /* Subtle overlay */
+    z-index: 0;
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .sherpa-banner h2 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    color: #816836;
+  }
+
+  .sherpa-banner p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 25px;
+    color: #816836;
+  }
+
+  .btn-banner {
+    background-color: #94B03A;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .btn-banner:hover {
+    background-color: #7a902f;
+  }
+
+  /* ===== Stats Section ===== */
+  .stats-banner {
+    background-color: #88C3CE;
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .stat-box {
+    flex: 1 1 200px;
+    max-width: 250px;
+  }
+
+  .stat-box h3 {
+    font-size: 2.5rem;
+    color: #ffffff;
+  }
+
+  .stat-box p {
+    font-size: 1.1rem;
+    color: #ffffff;
+  }
+
+  /* ===== Video Section ===== */
+  .video-section {
+    background-color: #ffffff;
+    color: #816836;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .video-section h2 {
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #816836;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /*
+  =================================================================
+    Quote / Upper Footer Section
+  =================================================================
+  */
+
+  .quote-mountain-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .main-mountain {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-top: 320px;
+  }
+
+  .black-mountain {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .quote-overlay {
+    position: absolute;
+    bottom: 400px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    z-index: 3;
+    pointer-events: none;
+    padding: 0 20px;
+  }
+
+  .quote {
+    max-width: 250px;
+    text-align: center;
+    color: black;
+    pointer-events: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote p {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .quote span {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .quote .dot {
+    width: 16px;
+    height: 16px;
+    background-color: #027478;
+    border-radius: 50%;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .line {
+    width: 2px;
+    height: 0;
+    background-color: black;
+    margin-top: 5px;
+    transition: height 0.4s ease;
+  }
+
+  .quote:hover .line {
+    height: 50px;
+  }
+  /*-------------------- arrow button ------------------ */
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    font-size: 22px;
+    background-color: #027478;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  #scrollTopBtn:hover {
+    background-color: #035e61;
+    transform: scale(1.1);
+  }
+  /*
+  =================================================================
+    Main Footer
+  =================================================================
+  */
+
+  .site-footer {
+    background-color: #0c0c0c; /* Very dark background */
+    color: #fff;
+    padding: 30px 127px 30px;
+    position: relative;
+    z-index: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 549px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+
+  .footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #94B03A; /* Using green accent for headings */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+
+  .footer-column ul li a:hover {
+    color: #94B03A; /* Accent color on hover */
+  }
+
+  .footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+    font-weight: 400;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #ccc;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #94B03A;
+  }
+
+  .payment-icons img {
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    filter: brightness(0) invert(1); /* White icons */
+    transition: filter 0.3s ease;
+  }
+
+  .payment-icons img:hover {
+    filter: brightness(0.8) invert(0.8);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+  }
+  .payment-icons img {
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    filter: brightness(1); /* normal, white stays white */
+    transition: filter 0.3s ease;
+    background-color: transparent; /* no background */
+  }
+
+  .payment-icons img:hover {
+    filter: brightness(0.8) drop-shadow(0 0 5px #94B03A); /* dims slightly + green glow */
+    cursor: pointer;
+  }
+
+  .footer-bottom .hero-curve {
+    display: none; /* Hide SVG curve in footer */
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .social-icons a {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  }
 .site-footer {
   background-color: #0c0c0c; /* Very dark background */
   color: #fff;

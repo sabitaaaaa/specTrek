@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 *.log
 .DS_Store
 .env
@@ -18,15 +17,14 @@
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
-=======
+
 <<<<<<< HEAD
->>>>>>> origin/merged-sabita
-=======
-/.phpunit.cache
-=======
 >>>>>>> feature/trekking-mapp
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
 *.log
 .DS_Store
 .env
@@ -43,11 +41,31 @@
 /auth.json
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /.phpunit.cache
 >>>>>>> feature-admin
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merged-anushree
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+>>>>>>> feature/itinerary-and-blogs
+=======
+/.phpunit.cache
+>>>>>>> feature-admin
+=======
+=======
+/.phpunit.cache
+>>>>>>> friend-code
+>>>>>>> feature/payment
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> origin/merged-ayushma
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
 =======
@@ -64,13 +82,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/merged-sabita
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature-admin
+=======
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
 Homestead.json
 Homestead.yaml
 Thumbs.db
 =======
+<<<<<<< HEAD
+>>>>>>> feature/payment
+=======
+>>>>>>> origin/merged-ayushma
 =======
 >>>>>>> feature/trekking-mapp
 .env
@@ -90,24 +123,41 @@ yarn-error.log
 /.zed
 <<<<<<< HEAD
 <<<<<<< HEAD
- 
+<<<<<<< HEAD
+=======
+>>>>>>> feature/trekking-mapp
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+<<<<<<< HEAD
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> feature/itinerary-and-blogs
+=======
+=======
+>>>>>>> origin/merged-ayushma
+<<<<<<< HEAD
 
- 
+
+
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> feature-admin
+=======
+>>>>>>> friend-code
+>>>>>>> feature/payment
+=======
+=======
 >>>>>>> feature-admin
 =======
 =======
 Homestead.json
 Homestead.yaml
 Thumbs.db
->>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
->>>>>>> feature/trekking-mapp
-<<<<<<< HEAD
-=======
-=======
-Homestead.json
-Homestead.yaml
-Thumbs.db
->>>>>>> feature/itinerary-and-blogs
->>>>>>> origin/merged-sabita
+

@@ -3,11 +3,23 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
+<<<<<<< HEAD
 
     "content-hash": "e1317f2e4cf1dd10b85132ab50a087a0",
 
 
 
+=======
+    ],
+<<<<<<< HEAD
+    "content-hash": "6aefad308e55f87c90a3f333bd9072c7",
+    "packages": [
+        {
+            "name": "brick/math",
+=======
+    "content-hash": "88970a0117c062eed55fa8728fc43833",
+<<<<<<< HEAD
+>>>>>>> origin/merged-anushree
     "content-hash": "e1317f2e4cf1dd10b85132ab50a087a0",
     "packages": [
         {
@@ -44,11 +56,15 @@
                 "url": "https://api.github.com/repos/brick/math/zipball/866551da34e9a618e64a819ee1e01c20d8a588ba",
                 "reference": "866551da34e9a618e64a819ee1e01c20d8a588ba",
 
+<<<<<<< HEAD
     "content-hash": "88970a0117c062eed55fa8728fc43833",
     "packages": [
         {
             "name": "brick/math",
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "0.13.1",
             "source": {
                 "type": "git",
@@ -59,6 +75,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/brick/math/zipball/fc7ed316430118cc7836bf45faff18d5dfc8de04",
                 "reference": "fc7ed316430118cc7836bf45faff18d5dfc8de04",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -85,6 +102,12 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+=======
+
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -124,6 +147,9 @@
             "support": {
                 "issues": "https://github.com/brick/math/issues",
 <<<<<<< HEAD
+                "source": "https://github.com/brick/math/tree/0.13.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -141,11 +167,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/brick/math/tree/0.13.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -153,6 +183,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-03-29T13:50:30+00:00"
+        },
+        {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,12 +206,17 @@
 
 >>>>>>> feature/trekking-mapp
         },
+<<<<<<< HEAD
 
 =======
             "time": "2025-03-29T13:50:30+00:00"
         },
         {
 >>>>>>> feature/itinerary-and-blogs
+=======
+        
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "name": "carbonphp/carbon-doctrine-types",
             "version": "3.2.0",
             "source": {
@@ -1167,16 +1207,24 @@
         {
             "name": "laravel/framework",
 <<<<<<< HEAD
+            "version": "v12.21.0",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             "version": "v12.19.3",
+>>>>>>> origin/merged-ayushma
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "4e6ec689ef704bb4bd282f29d9dd658dfb4fb262"
+                "reference": "ac8c4e73bf1b5387b709f7736d41427e6af1c93b"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ac8c4e73bf1b5387b709f7736d41427e6af1c93b",
+                "reference": "ac8c4e73bf1b5387b709f7736d41427e6af1c93b",
+=======
                 "url": "https://api.github.com/repos/laravel/framework/zipball/4e6ec689ef704bb4bd282f29d9dd658dfb4fb262",
                 "reference": "4e6ec689ef704bb4bd282f29d9dd658dfb4fb262",
             "version": "v12.18.0",
@@ -1274,6 +1322,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
                 "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
@@ -1291,10 +1340,14 @@
 >>>>>>> feature/itinerary-and-blogs
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.11|^0.12|^0.13",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1339,6 +1392,12 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+=======
+
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "composer-runtime-api": "^2.2",
                 "doctrine/inflector": "^2.0.5",
                 "dragonmantank/cron-expression": "^3.4",
@@ -1356,6 +1415,9 @@
                 "laravel/prompts": "^0.3.0",
                 "laravel/serializable-closure": "^1.3|^2.0",
 <<<<<<< HEAD
+                "league/commonmark": "^2.7",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1384,11 +1446,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "league/commonmark": "^2.7",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "league/flysystem": "^3.25.1",
                 "league/flysystem-local": "^3.25.1",
                 "league/uri": "^7.5.1",
@@ -1481,6 +1547,9 @@
                 "phpstan/phpstan": "^2.0",
                 "phpunit/phpunit": "^10.5.35|^11.5.3|^12.0.1",
 <<<<<<< HEAD
+                "predis/predis": "^2.3|^3.0",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1508,11 +1577,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "predis/predis": "^2.3|^3.0",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "resend/resend-php": "^0.10.0",
                 "symfony/cache": "^7.2.0",
                 "symfony/http-client": "^7.2.0",
@@ -1545,6 +1618,9 @@
                 "php-http/discovery": "Required to use PSR-7 bridging features (^1.15).",
                 "phpunit/phpunit": "Required to use assertions and run tests (^10.5.35|^11.5.3|^12.0.1).",
 <<<<<<< HEAD
+                "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1571,11 +1647,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^6.0|^7.0).",
                 "resend/resend-php": "Required to enable support for the Resend mail transport (^0.10.0).",
@@ -1633,6 +1713,11 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+            "time": "2025-07-22T15:41:55+00:00"
+        },
+        {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2025-06-18T12:56:23+00:00"
@@ -1676,6 +1761,7 @@
         },
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
 >>>>>>> feature/trekking-mapp
         },
@@ -1686,17 +1772,20 @@
         {
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "name": "laravel/prompts",
-            "version": "v0.3.5",
+            "version": "v0.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "57b8f7efe40333cdb925700891c7d7465325d3b1"
+                "reference": "86a8b692e8661d0fb308cec64f3d176821323077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/57b8f7efe40333cdb925700891c7d7465325d3b1",
-                "reference": "57b8f7efe40333cdb925700891c7d7465325d3b1",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/86a8b692e8661d0fb308cec64f3d176821323077",
+                "reference": "86a8b692e8661d0fb308cec64f3d176821323077",
                 "shasum": ""
             },
             "require": {
@@ -1740,9 +1829,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.5"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.6"
             },
-            "time": "2025-02-11T13:34:40+00:00"
+            "time": "2025-07-07T14:17:42+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -1872,17 +1961,80 @@
             "time": "2025-01-27T14:24:01+00:00"
         },
         {
-            "name": "league/commonmark",
-            "version": "2.7.0",
+            "name": "laravel/ui",
+            "version": "v4.6.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "6fbb36d44824ed4091adbcf4c7d4a3923cdb3405"
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "7d6ffa38d79f19c9b3e70a751a9af845e8f41d88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/6fbb36d44824ed4091adbcf4c7d4a3923cdb3405",
-                "reference": "6fbb36d44824ed4091adbcf4c7d4a3923cdb3405",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/7d6ffa38d79f19c9b3e70a751a9af845e8f41d88",
+                "reference": "7d6ffa38d79f19c9b3e70a751a9af845e8f41d88",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^9.21|^10.0|^11.0|^12.0",
+                "illuminate/filesystem": "^9.21|^10.0|^11.0|^12.0",
+                "illuminate/support": "^9.21|^10.0|^11.0|^12.0",
+                "illuminate/validation": "^9.21|^10.0|^11.0|^12.0",
+                "php": "^8.0",
+                "symfony/console": "^6.0|^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.35|^8.15|^9.0|^10.0",
+                "phpunit/phpunit": "^9.3|^10.4|^11.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/ui/tree/v4.6.1"
+            },
+            "time": "2025-01-28T15:15:29+00:00"
+        },
+        {
+            "name": "league/commonmark",
+            "version": "2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/commonmark.git",
+                "reference": "10732241927d3971d28e7ea7b5712721fa2296ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/10732241927d3971d28e7ea7b5712721fa2296ca",
+                "reference": "10732241927d3971d28e7ea7b5712721fa2296ca",
                 "shasum": ""
             },
             "require": {
@@ -1911,7 +2063,7 @@
                 "symfony/process": "^5.4 | ^6.0 | ^7.0",
                 "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0 | ^6.0 | ^7.0",
                 "unleashedtech/php-coding-standard": "^3.1.1",
-                "vimeo/psalm": "^4.24.0 || ^5.0.0"
+                "vimeo/psalm": "^4.24.0 || ^5.0.0 || ^6.0.0"
             },
             "suggest": {
                 "symfony/yaml": "v2.3+ required if using the Front Matter extension"
@@ -1976,7 +2128,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-05T12:20:28+00:00"
+            "time": "2025-07-20T12:47:49+00:00"
         },
         {
             "name": "league/config",
@@ -2063,8 +2215,13 @@
         {
             "name": "league/flysystem",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "3.30.0",
             "source": {
                 "type": "git",
@@ -2075,6 +2232,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/2203e3151755d874bb2943649dae1eb8533ac93e",
                 "reference": "2203e3151755d874bb2943649dae1eb8533ac93e",
+<<<<<<< HEAD
+=======
 =======
 =======
 <<<<<<< HEAD
@@ -2096,6 +2255,7 @@
 >>>>>>> feature/payment
 =======
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2117,6 +2277,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -2141,6 +2304,9 @@
                 "ext-fileinfo": "*",
                 "ext-ftp": "*",
 <<<<<<< HEAD
+                "ext-mongodb": "^1.3|^2",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "ext-mongodb": "^1.3|^2",
@@ -2150,6 +2316,7 @@
 =======
                 "ext-mongodb": "^1.3",
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 "ext-mongodb": "^1.3",
@@ -2163,12 +2330,18 @@
                 "ext-mongodb": "^1.3|^2",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "ext-zip": "*",
                 "friendsofphp/php-cs-fixer": "^3.5",
                 "google/cloud-storage": "^1.23",
                 "guzzlehttp/psr7": "^2.6",
                 "microsoft/azure-storage-blob": "^1.1",
 <<<<<<< HEAD
+                "mongodb/mongodb": "^1.2|^2",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "mongodb/mongodb": "^1.2|^2",
@@ -2178,6 +2351,7 @@
 =======
                 "mongodb/mongodb": "^1.2",
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 "mongodb/mongodb": "^1.2",
@@ -2191,6 +2365,9 @@
                 "mongodb/mongodb": "^1.2|^2",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "phpseclib/phpseclib": "^3.0.36",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.5.11|^10.0",
@@ -2229,8 +2406,13 @@
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "source": "https://github.com/thephpleague/flysystem/tree/3.30.0"
             },
             "time": "2025-06-25T13:29:59+00:00"
@@ -2247,6 +2429,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/6691915f77c7fb69adfb87dcd550052dc184ee10",
                 "reference": "6691915f77c7fb69adfb87dcd550052dc184ee10",
+<<<<<<< HEAD
+=======
 =======
 =======
 <<<<<<< HEAD
@@ -2274,6 +2458,7 @@
 >>>>>>> feature/payment
 =======
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2301,6 +2486,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -2335,6 +2523,11 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/thephpleague/flysystem-local/tree/3.30.0"
+            },
+            "time": "2025-05-21T10:34:19+00:00"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "source": "https://github.com/thephpleague/flysystem-local/tree/3.30.0"
@@ -2362,6 +2555,7 @@
             "time": "2024-08-09T21:24:39+00:00"
 >>>>>>> feature-admin
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/thephpleague/flysystem-local/tree/3.30.0"
@@ -2369,6 +2563,9 @@
             "time": "2025-05-21T10:34:19+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "league/mime-type-detection",
@@ -2704,11 +2901,68 @@
             "time": "2025-03-24T10:02:05+00:00"
         },
         {
+            "name": "neputertech/khalti",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neputertech/khalti.git",
+                "reference": "4c654f5d67408660969a2a943861a05cb6b84209"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neputertech/khalti/zipball/4c654f5d67408660969a2a943861a05cb6b84209",
+                "reference": "4c654f5d67408660969a2a943861a05cb6b84209",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4.0|^8.0"
+            },
+            "require-dev": {
+                "illuminate/console": "^7|^8|^9",
+                "illuminate/support": "^7|^8|^9",
+                "illuminate/validation": "^9.52"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Neputer\\Laravel\\KhaltiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Neputer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "735l4",
+                    "email": "pratibimbakhadka@gmail.com"
+                }
+            ],
+            "description": "Php wrapper for khalti integration",
+            "support": {
+                "issues": "https://github.com/neputertech/khalti/issues",
+                "source": "https://github.com/neputertech/khalti/tree/v1.1.2"
+            },
+            "time": "2025-06-18T09:44:32+00:00"
+        },
+        {
             "name": "nesbot/carbon",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "3.10.1",
             "source": {
                 "type": "git",
@@ -2719,6 +2973,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/1fd1935b2d90aef2f093c5e35f7ae1257c448d00",
                 "reference": "1fd1935b2d90aef2f093c5e35f7ae1257c448d00",
+<<<<<<< HEAD
+=======
 =======
             "version": "3.10.0",
             "source": {
@@ -2800,10 +3056,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -2811,6 +3071,11 @@
                 "ext-json": "*",
                 "php": "^8.1",
                 "psr/clock": "^1.0",
+<<<<<<< HEAD
+                "symfony/clock": "^6.3.12 || ^7.0",
+                "symfony/polyfill-mbstring": "^1.0",
+                "symfony/translation": "^4.4.18 || ^5.2.1 || ^6.0 || ^7.0"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2837,6 +3102,7 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "symfony/clock": "^6.3.12 || ^7.0",
@@ -2844,6 +3110,9 @@
                 "symfony/translation": "^4.4.18 || ^5.2.1 || ^6.0 || ^7.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "provide": {
                 "psr/clock-implementation": "1.0"
@@ -2852,6 +3121,8 @@
                 "doctrine/dbal": "^3.6.3 || ^4.0",
                 "doctrine/orm": "^2.15.2 || ^3.0",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2859,6 +3130,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "friendsofphp/php-cs-fixer": "^3.75.0",
                 "kylekatarnls/multi-tester": "^2.5.3",
                 "phpmd/phpmd": "^2.15.0",
@@ -2869,7 +3143,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-anushree
 =======
 =======
 
@@ -2897,10 +3174,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "bin": [
                 "bin/carbon"
@@ -2969,6 +3250,11 @@
                 }
             ],
 <<<<<<< HEAD
+            "time": "2025-06-21T15:19:35+00:00"
+        },
+        {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2994,12 +3280,17 @@
 
 >>>>>>> feature/trekking-mapp
         },
+<<<<<<< HEAD
 
 =======
             "time": "2025-06-21T15:19:35+00:00"
         },
         {
 >>>>>>> feature/itinerary-and-blogs
+=======
+        
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "name": "nette/schema",
             "version": "v1.3.2",
             "source": {
@@ -3064,6 +3355,8 @@
         {
             "name": "nette/utils",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             "version": "v4.0.7",
@@ -3102,9 +3395,13 @@
 =======
 >>>>>>> origin/merged-sabita
 
+<<<<<<< HEAD
 >>>>>>> feature/trekking-mapp
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "v4.0.7",
             "source": {
                 "type": "git",
@@ -3115,6 +3412,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nette/utils/zipball/e67c4061eb40b9c113b218214e42cb5a0dda28f2",
                 "reference": "e67c4061eb40b9c113b218214e42cb5a0dda28f2",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3137,6 +3435,12 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+=======
+ 
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -3208,8 +3512,13 @@
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "source": "https://github.com/nette/utils/tree/v4.0.7"
             },
             "time": "2025-06-03T04:55:08+00:00"
@@ -3226,6 +3535,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/ae59794362fe85e051a58ad36b289443f57be7a9",
                 "reference": "ae59794362fe85e051a58ad36b289443f57be7a9",
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -3301,10 +3612,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -3347,6 +3662,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
+<<<<<<< HEAD
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.5.0"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3411,18 +3729,25 @@
 >>>>>>> feature-admin
 =======
         "source": "https://github.com/nikic/PHP-Parser/tree/v5.5.0"
+>>>>>>> origin/merged-ayushma
             },
             "time": "2025-05-31T08:24:38+00:00"
         },
         {
             "name": "nunomaduro/termwind",
+<<<<<<< HEAD
+=======
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "v2.3.1",
             "source": {
                 "type": "git",
@@ -3433,6 +3758,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/dfa08f390e509967a15c22493dc0bac5733d9123",
                 "reference": "dfa08f390e509967a15c22493dc0bac5733d9123",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3449,15 +3776,21 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": "^8.2",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3489,10 +3822,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/console": "^7.2.6"
             },
             "require-dev": {
@@ -3503,6 +3840,8 @@
                 "phpstan/phpstan": "^1.12.25",
                 "phpstan/phpstan-strict-rules": "^1.6.2",
                 "symfony/var-dumper": "^7.2.6",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3519,10 +3858,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "thecodingmachine/phpstan-strict-rules": "^1.0.0"
             },
             "type": "library",
@@ -3566,6 +3909,9 @@
             "support": {
                 "issues": "https://github.com/nunomaduro/termwind/issues",
 <<<<<<< HEAD
+                "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3593,11 +3939,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/nunomaduro/termwind/tree/v2.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -3613,6 +3963,9 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-05-08T08:14:37+00:00"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3639,11 +3992,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "time": "2025-05-08T08:14:37+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "phpoption/phpoption",
@@ -4135,8 +4492,13 @@
         {
             "name": "psy/psysh",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "v0.12.9",
             "source": {
                 "type": "git",
@@ -4147,6 +4509,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1b801844becfe648985372cb4b12ad6840245ace",
                 "reference": "1b801844becfe648985372cb4b12ad6840245ace",
+<<<<<<< HEAD
+=======
 =======
 =======
 <<<<<<< HEAD
@@ -4168,6 +4532,7 @@
 >>>>>>> feature/payment
 =======
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -4189,6 +4554,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -4253,6 +4621,11 @@
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
 <<<<<<< HEAD
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.9"
+            },
+            "time": "2025-06-23T02:35:06+00:00"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "source": "https://github.com/bobthecow/psysh/tree/v0.12.9"
@@ -4280,6 +4653,7 @@
             "time": "2025-03-16T03:05:19+00:00"
 >>>>>>> feature-admin
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/bobthecow/psysh/tree/v0.12.9"
@@ -4287,6 +4661,9 @@
             "time": "2025-06-23T02:35:06+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "ralouphie/getallheaders",
@@ -4411,6 +4788,8 @@
         {
             "name": "ramsey/uuid",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4430,6 +4809,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "4.9.0",
             "source": {
                 "type": "git",
@@ -4441,6 +4823,10 @@
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/4e0e23cc785f0724a0e838279a9eb03f28b092a0",
                 "reference": "4e0e23cc785f0724a0e838279a9eb03f28b092a0",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-anushree
 =======
             "version": "4.8.1",
             "source": {
@@ -4505,19 +4891,26 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28",
                 "reference": "fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28",
+>>>>>>> origin/merged-ayushma
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.8.8 || ^0.9 || ^0.10 || ^0.11 || ^0.12 || ^0.13",
+<<<<<<< HEAD
+=======
 
 >>>>>>> feature/trekking-mapp
                 "ext-json": "*",
 >>>>>>> feature-admin
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "php": "^8.0",
                 "ramsey/collection": "^1.2 || ^2.0"
             },
@@ -4525,6 +4918,8 @@
                 "rhumsaa/uuid": "self.version"
             },
             "require-dev": {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4583,6 +4978,7 @@
 =======
                 "vimeo/psalm": "^4.9",
 
+>>>>>>> origin/merged-ayushma
                 "captainhook/captainhook": "^5.25",
                 "captainhook/plugin-composer": "^5.3",
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
@@ -4600,13 +4996,19 @@
                 "phpunit/phpunit": "^9.6",
                 "slevomat/coding-standard": "^8.18",
                 "squizlabs/php_codesniffer": "^3.13"
+<<<<<<< HEAD
+=======
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "suggest": {
                 "ext-bcmath": "Enables faster math with arbitrary-precision integers using BCMath.",
@@ -4642,9 +5044,14 @@
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "source": "https://github.com/ramsey/uuid/tree/4.9.0"
             },
             "time": "2025-06-25T14:20:11+00:00"
@@ -4712,6 +5119,7 @@
             },
             "time": "2025-07-01T20:23:15+00:00"
 >>>>>>> feature/payment
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 "source": "https://github.com/ramsey/uuid/tree/4.8.1"
@@ -4787,8 +5195,18 @@
             "time": "2025-06-25T14:20:11+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-anushree
         },
         {
+<<<<<<< HEAD
+            "name": "stripe/stripe-php",
+            "version": "v17.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "893946057e43b145826b0dfd7f398673e381e2ae"
+=======
             "name": "symfony/clock",
             "version": "v7.3.0",
 <<<<<<< HEAD
@@ -4800,17 +5218,58 @@
 
 >>>>>>> feature/trekking-mapp
                 "source": "https://github.com/ramsey/uuid/tree/4.7.6"
+>>>>>>> origin/merged-ayushma
             },
-            "funding": [
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/893946057e43b145826b0dfd7f398673e381e2ae",
+                "reference": "893946057e43b145826b0dfd7f398673e381e2ae",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.72.0",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^5.7 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
                 {
-                    "url": "https://github.com/ramsey",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/ramsey/uuid",
-                    "type": "tidelift"
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
                 }
             ],
+<<<<<<< HEAD
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v17.4.0"
+=======
             "time": "2024-04-27T21:32:50+00:00"
         },
 
@@ -4821,19 +5280,26 @@
 =======
 
                 "source": "https://github.com/ramsey/uuid/tree/4.8.1"
+>>>>>>> origin/merged-ayushma
             },
-            "time", "2025-06-01T06:28:46+00:00"
-        ,
+            "time": "2025-07-01T20:23:15+00:00"
+        },
         {
             "name": "symfony/clock",
             "version": "v7.3.0",
+<<<<<<< HEAD
+=======
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/clock.git",
@@ -4888,6 +5354,9 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/clock/tree/v7.3.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -4905,11 +5374,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/clock/tree/v7.3.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -4927,8 +5400,14 @@
             ],
             "time": "2024-09-25T14:21:43+00:00"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        },
+=======
+>>>>>>> origin/merged-anushree
         }
     ],
+>>>>>>> origin/merged-ayushma
         {
             "name": "symfony/console",
 <<<<<<< HEAD
@@ -4945,6 +5424,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/9e27aecde8f506ba0fd1d9989620c04a87697101",
                 "reference": "9e27aecde8f506ba0fd1d9989620c04a87697101",
+<<<<<<< HEAD
+=======
 =======
             "version": "v7.3.0",
             "source": {
@@ -4995,6 +5476,7 @@
                 "reference": "66c1440edf6f339fd82ed6c7caa76cb006211b44",
 <<<<<<< HEAD
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -5032,10 +5514,15 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5057,13 +5544,18 @@
                 "symfony/service-contracts": "^2.5|^3",
                 "symfony/string": "^6.4|^7.0",
 
+<<<<<<< HEAD
 >>>>>>> feature/trekking-mapp
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/service-contracts": "^2.5|^3",
                 "symfony/string": "^7.2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -5079,6 +5571,12 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+=======
+
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "conflict": {
                 "symfony/dependency-injection": "<6.4",
@@ -5136,6 +5634,9 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/console/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5161,11 +5662,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/console/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -5182,9 +5687,14 @@
                 }
             ],
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2025-06-27T19:55:54+00:00"
 =======
             "time": "2025-05-24T10:34:04+00:00"
@@ -5206,7 +5716,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-anushree
 =======
 =======
 
@@ -5229,10 +5742,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -5278,6 +5795,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/css-selector/tree/v7.3.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -5295,11 +5815,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/css-selector/tree/v7.3.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -5318,12 +5842,23 @@
             "time": "2024-09-25T14:21:43+00:00"
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        {
+            "name": "symfony/deprecation-contracts",
+=======
+    
+>>>>>>> origin/merged-anushree
         {
             "name": "symfony/deprecation-contracts",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "v3.6.0",
             "source": {
                 "type": "git",
@@ -5334,6 +5869,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
                 "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -5392,10 +5929,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -5408,6 +5949,9 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
+<<<<<<< HEAD
+                    "dev-main": "3.6-dev"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5426,11 +5970,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                     "dev-main": "3.6-dev"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 }
             },
             "autoload": {
@@ -5456,6 +6004,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -5473,11 +6024,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -5493,6 +6048,8 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5572,10 +6129,23 @@
 >>>>>>> feature-admin
 =======
 
+>>>>>>> origin/merged-ayushma
             "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/error-handler",
+<<<<<<< HEAD
+            "version": "v7.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/error-handler.git",
+                "reference": "35b55b166f6752d6aaf21aa042fc5ed280fce235"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/35b55b166f6752d6aaf21aa042fc5ed280fce235",
+                "reference": "35b55b166f6752d6aaf21aa042fc5ed280fce235",
+=======
             "version": "v7.3.0",
             "source": {
                 "type": "git",
@@ -5589,10 +6159,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -5605,6 +6179,8 @@
                 "symfony/http-kernel": "<6.4"
             },
             "require-dev": {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5620,6 +6196,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/console": "^6.4|^7.0",
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/http-kernel": "^6.4|^7.0",
@@ -5629,7 +6208,10 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-anushree
 =======
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/http-kernel": "^6.4|^7.0",
@@ -5649,11 +6231,15 @@
                 "symfony/webpack-encore-bundle": "^1.0|^2.0"
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
 >>>>>>> feature/trekking-mapp
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "bin": [
                 "Resources/bin/patch-type-declarations"
@@ -5685,6 +6271,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/error-handler/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5708,11 +6297,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/error-handler/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -5728,6 +6321,9 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-06-13T07:48:40+00:00"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5786,6 +6382,7 @@
 =======
 
             "time": "2025-05-29T07:19:49+00:00"
+>>>>>>> origin/merged-ayushma
         },
         {
             "name": "symfony/event-dispatcher",
@@ -5799,13 +6396,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/497f73ac996a598c92409b44ac43b6690c4f666d",
                 "reference": "497f73ac996a598c92409b44ac43b6690c4f666d",
+<<<<<<< HEAD
+=======
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -5857,6 +6460,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/event-dispatcher/tree/v7.3.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -5874,11 +6480,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/event-dispatcher/tree/v7.3.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -5895,8 +6505,13 @@
                 }
             ],
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2025-04-22T09:11:45+00:00"
         },
         {
@@ -5911,6 +6526,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/59eb412e93815df44f05f342958efa9f46b1e586",
                 "reference": "59eb412e93815df44f05f342958efa9f46b1e586",
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -5979,10 +6596,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -5996,6 +6617,9 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
+<<<<<<< HEAD
+                    "dev-main": "3.6-dev"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6013,11 +6637,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                     "dev-main": "3.6-dev"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 }
             },
             "autoload": {
@@ -6051,6 +6679,9 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.6.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -6068,11 +6699,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.6.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -6089,8 +6724,13 @@
                 }
             ],
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2024-09-25T14:21:43+00:00"
         },
         {
@@ -6105,6 +6745,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/finder/zipball/ec2344cf77a48253bbca6939aa3d2477773ea63d",
                 "reference": "ec2344cf77a48253bbca6939aa3d2477773ea63d",
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -6174,10 +6816,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -6213,6 +6859,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/finder/tree/v7.3.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -6230,11 +6879,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/finder/tree/v7.3.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -6250,6 +6903,8 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6330,10 +6985,24 @@
                 "shasum": ""
 =======
 
+>>>>>>> origin/merged-ayushma
             "time": "2024-12-30T19:00:26+00:00"
         },
         {
             "name": "symfony/http-foundation",
+<<<<<<< HEAD
+            "version": "v7.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-foundation.git",
+                "reference": "23dd60256610c86a3414575b70c596e5deff6ed9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/23dd60256610c86a3414575b70c596e5deff6ed9",
+                "reference": "23dd60256610c86a3414575b70c596e5deff6ed9",
+                "shasum": ""
+=======
             "version": "v7.3.0",
             "source": {
                 "type": "git",
@@ -6347,11 +7016,15 @@
                "shasum": ""
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "shasum": ""
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "require": {
                 "php": ">=8.2",
@@ -6368,6 +7041,9 @@
                 "predis/predis": "^1.1|^2.0",
                 "symfony/cache": "^6.4.12|^7.1.5",
 <<<<<<< HEAD
+                "symfony/clock": "^6.4|^7.0",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -6382,11 +7058,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "symfony/clock": "^6.4|^7.0",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/dependency-injection": "^6.4|^7.0",
                 "symfony/expression-language": "^6.4|^7.0",
                 "symfony/http-kernel": "^6.4|^7.0",
@@ -6420,6 +7100,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/http-foundation/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6445,11 +7128,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/http-foundation/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -6466,9 +7153,14 @@
                 }
             ],
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2025-06-23T15:07:14+00:00"
         },
         {
@@ -6483,6 +7175,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/1644879a66e4aa29c36fe33dfa6c54b450ce1831",
                 "reference": "1644879a66e4aa29c36fe33dfa6c54b450ce1831",
+<<<<<<< HEAD
+=======
 =======
             "time": "2025-05-12T14:48:23+00:00"
         },
@@ -6585,10 +7279,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -6596,6 +7294,10 @@
                 "psr/log": "^1|^2|^3",
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/error-handler": "^6.4|^7.0",
+<<<<<<< HEAD
+                "symfony/event-dispatcher": "^7.3",
+                "symfony/http-foundation": "^7.3",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6618,12 +7320,16 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "symfony/event-dispatcher": "^7.3",
                 "symfony/http-foundation": "^7.3",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -6700,6 +7406,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/http-kernel/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6724,11 +7433,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/http-kernel/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -6745,9 +7458,14 @@
                 }
             ],
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2025-06-28T08:24:55+00:00"
         },
         {
@@ -6762,6 +7480,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/mailer/zipball/b5db5105b290bdbea5ab27b89c69effcf1cb3368",
                 "reference": "b5db5105b290bdbea5ab27b89c69effcf1cb3368",
+<<<<<<< HEAD
+=======
 =======
             "time": "2025-05-29T07:47:32+00:00"
         },
@@ -6863,10 +7583,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -6918,6 +7642,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/mailer/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6943,11 +7670,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/mailer/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -6963,6 +7694,9 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-06-27T19:55:54+00:00"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7020,6 +7754,7 @@
 >>>>>>> feature-admin
 =======
            "time": "2025-04-04T09:51:09+00:00"
+>>>>>>> origin/merged-ayushma
         },
         {
             "name": "symfony/mime",
@@ -7033,13 +7768,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/mime/zipball/0e7b19b2f399c31df0cdbe5d8cbf53f02f6cfcd9",
                 "reference": "0e7b19b2f399c31df0cdbe5d8cbf53f02f6cfcd9",
+<<<<<<< HEAD
+=======
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -7095,12 +7836,20 @@
             ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/merged-sabita
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "support": {
 <<<<<<< HEAD
                 "source": "https://github.com/symfony/mime/tree/v7.3.0"
+<<<<<<< HEAD
+=======
 =======
                 "source": "https://github.com/symfony/mime/tree/v7.2.6"
 >>>>>>> feature-admin
@@ -7113,12 +7862,16 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "support": {
                 "source": "https://github.com/symfony/mime/tree/v7.3.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -7135,6 +7888,9 @@
                 }
             ],
 <<<<<<< HEAD
+            "time": "2025-02-19T08:51:26+00:00"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -7150,11 +7906,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "time": "2025-02-19T08:51:26+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -7796,8 +8556,13 @@
         {
             "name": "symfony/process",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "v7.3.0",
             "source": {
                 "type": "git",
@@ -7808,6 +8573,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/process/zipball/40c295f2deb408d5e9d2d32b8ba1dd61e36f05af",
                 "reference": "40c295f2deb408d5e9d2d32b8ba1dd61e36f05af",
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -7864,10 +8631,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -7900,6 +8671,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/process/tree/v7.3.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -7916,11 +8690,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/process/tree/v7.3.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -7937,6 +8715,9 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+            "time": "2025-04-17T09:11:12+00:00"
+=======
 <<<<<<< HEAD
             "time": "2025-04-17T09:11:12+00:00"
         },
@@ -7979,10 +8760,14 @@
 =======
 >>>>>>> origin/merged-sabita
            "time": "2025-04-17T09:11:12+00:00"
+<<<<<<< HEAD
 >>>>>>> feature/trekking-mapp
 =======
             "time": "2025-04-17T09:11:12+00:00"
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "symfony/routing",
@@ -7996,6 +8781,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/routing/zipball/8e213820c5fea844ecea29203d2a308019007c15",
                 "reference": "8e213820c5fea844ecea29203d2a308019007c15",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -8022,6 +8808,12 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+=======
+
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -8074,6 +8866,9 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/routing/tree/v7.3.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -8091,11 +8886,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/routing/tree/v7.3.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -8112,8 +8911,13 @@
                 }
             ],
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2025-05-24T20:43:28+00:00"
         },
         {
@@ -8128,6 +8932,9 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/service-contracts/zipball/f021b05a130d35510bd6b25fe9053c2a8a15d5d4",
                 "reference": "f021b05a130d35510bd6b25fe9053c2a8a15d5d4",
+<<<<<<< HEAD
+                "shasum": ""
+=======
 =======
 =======
 
@@ -8199,11 +9006,15 @@
               "shasum": ""
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "shasum": ""
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "require": {
                 "php": ">=8.1",
@@ -8220,6 +9031,9 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
+<<<<<<< HEAD
+                    "dev-main": "3.6-dev"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8238,11 +9052,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                     "dev-main": "3.6-dev"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 }
             },
             "autoload": {
@@ -8279,6 +9097,9 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/service-contracts/tree/v3.6.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -8296,11 +9117,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/service-contracts/tree/v3.6.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -8316,6 +9141,9 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-04-25T09:37:31+00:00"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8364,10 +9192,14 @@
 =======
 >>>>>>> origin/merged-sabita
            "time": "2025-04-25T09:37:31+00:00"
+<<<<<<< HEAD
 >>>>>>> feature/trekking-mapp
 =======
             "time": "2025-04-25T09:37:31+00:00"
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "symfony/string",
@@ -8381,6 +9213,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/string/zipball/f3570b8c61ca887a9e2938e85cb6458515d2b125",
                 "reference": "f3570b8c61ca887a9e2938e85cb6458515d2b125",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -8407,6 +9240,12 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+=======
+
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -8465,11 +9304,16 @@
             ],
             "support": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "source": "https://github.com/symfony/string/tree/v7.3.0"
 =======
                 "source": "https://github.com/symfony/string/tree/v7.2.6"
@@ -8500,6 +9344,8 @@
                 }
             ],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -8507,6 +9353,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2025-04-20T20:19:01+00:00"
         },
         {
@@ -8540,6 +9389,10 @@
                 "url": "https://api.github.com/repos/symfony/translation/zipball/241d5ac4910d256660238a7ecf250deba4c73063",
                 "reference": "241d5ac4910d256660238a7ecf250deba4c73063",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-anushree
 =======
             "version": "v7.3.0",
             "source": {
@@ -8595,10 +9448,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -8608,6 +9465,9 @@
                 "symfony/translation-contracts": "^2.5|^3.0"
             },
             "conflict": {
+<<<<<<< HEAD
+                "nikic/php-parser": "<5.0",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8623,11 +9483,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "nikic/php-parser": "<5.0",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/config": "<6.4",
                 "symfony/console": "<6.4",
                 "symfony/dependency-injection": "<6.4",
@@ -8642,16 +9506,23 @@
             },
             "require-dev": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "nikic/php-parser": "^5.0",
 =======
                 "nikic/php-parser": "^4.18|^5.0",
 >>>>>>> feature-admin
                 "psr/log": "^1|^2|^3",
+<<<<<<< HEAD
+=======
 =======
 
                 "nikic/php-parser": "^4.18|^5.0",
@@ -8661,12 +9532,16 @@
                "psr/log": "^1|^2|^3",
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "nikic/php-parser": "^5.0",
                 "psr/log": "^1|^2|^3",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/config": "^6.4|^7.0",
                 "symfony/console": "^6.4|^7.0",
                 "symfony/dependency-injection": "^6.4|^7.0",
@@ -8709,6 +9584,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/translation/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8733,11 +9611,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/translation/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -8753,6 +9635,9 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-06-27T19:55:54+00:00"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8811,6 +9696,7 @@
 =======
 
             "time": "2025-05-29T07:19:49+00:00"
+>>>>>>> origin/merged-ayushma
         },
         {
             "name": "symfony/translation-contracts",
@@ -8824,13 +9710,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/df210c7a2573f1913b2d17cc95f90f53a73d8f7d",
                 "reference": "df210c7a2573f1913b2d17cc95f90f53a73d8f7d",
+<<<<<<< HEAD
+=======
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -8843,6 +9735,9 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
+<<<<<<< HEAD
+                    "dev-main": "3.6-dev"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8860,11 +9755,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                     "dev-main": "3.6-dev"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 }
             },
             "autoload": {
@@ -8901,6 +9800,9 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/translation-contracts/tree/v3.6.0"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -8918,11 +9820,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/translation-contracts/tree/v3.6.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -8938,6 +9844,8 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9016,10 +9924,23 @@
 <<<<<<< HEAD
 >>>>>>> feature-admin
 =======
+>>>>>>> origin/merged-ayushma
             "time": "2024-09-27T08:32:26+00:00"
         },
         {
             "name": "symfony/uid",
+<<<<<<< HEAD
+            "version": "v7.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/uid.git",
+                "reference": "a69f69f3159b852651a6bf45a9fdd149520525bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/uid/zipball/a69f69f3159b852651a6bf45a9fdd149520525bb",
+                "reference": "a69f69f3159b852651a6bf45a9fdd149520525bb",
+=======
             "version": "v7.3.0",
             "source": {
                 "type": "git",
@@ -9033,10 +9954,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -9082,6 +10007,9 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/uid/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9106,11 +10034,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/uid/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -9127,9 +10059,14 @@
                 }
             ],
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2025-06-27T19:55:54+00:00"
         },
         {
@@ -9155,6 +10092,11 @@
                 "url": "https://github.com/symfony/var-dumper.git",
                 "reference": "548f6760c54197b1084e1e5c71f6d9d523f2f78e"
             },
+<<<<<<< HEAD
+            "require": {
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3",
+=======
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/548f6760c54197b1084e1e5c71f6d9d523f2f78e",
@@ -9272,11 +10214,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "symfony/deprecation-contracts": "^2.5|^3",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
@@ -9327,6 +10273,9 @@
             ],
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/var-dumper/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9352,11 +10301,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/var-dumper/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -9372,6 +10325,9 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-06-27T19:55:54+00:00"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9398,11 +10354,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "time": "2025-06-27T19:55:54+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -9743,9 +10703,14 @@
         {
             "name": "filp/whoops",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "2.18.3",
             "source": {
                 "type": "git",
@@ -9756,6 +10721,9 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/filp/whoops/zipball/59a123a3d459c5a23055802237cb317f609867e5",
                 "reference": "59a123a3d459c5a23055802237cb317f609867e5",
+<<<<<<< HEAD
+                "shasum": ""
+=======
 =======
             "version": "2.18.2",
             "source": {
@@ -9839,11 +10807,15 @@
               "shasum": ""
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "shasum": ""
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "require": {
                 "php": "^7.1 || ^8.0",
@@ -9893,6 +10865,9 @@
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
 <<<<<<< HEAD
+                "source": "https://github.com/filp/whoops/tree/2.18.3"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9918,11 +10893,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/filp/whoops/tree/2.18.3"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -9930,6 +10909,9 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-06-16T00:02:10+00:00"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9956,11 +10938,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "time": "2025-06-16T00:02:10+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -10016,8 +11002,13 @@
         {
             "name": "laravel/pail",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "v1.2.3",
             "source": {
                 "type": "git",
@@ -10028,6 +11019,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pail/zipball/8cc3d575c1f0e57eeb923f366a37528c50d2385a",
                 "reference": "8cc3d575c1f0e57eeb923f366a37528c50d2385a",
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -10085,10 +11078,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -10109,6 +11106,9 @@
                 "pestphp/pest": "^2.20|^3.0",
                 "pestphp/pest-plugin-type-coverage": "^2.3|^3.0",
 <<<<<<< HEAD
+                "phpstan/phpstan": "^1.12.27",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -10125,11 +11125,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "phpstan/phpstan": "^1.12.27",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "symfony/var-dumper": "^6.3|^7.0"
             },
             "type": "library",
@@ -10166,6 +11170,9 @@
             "homepage": "https://github.com/laravel/pail",
             "keywords": [
 <<<<<<< HEAD
+                "dev",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -10181,11 +11188,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "dev",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "laravel",
                 "logs",
                 "php",
@@ -10195,6 +11206,8 @@
                 "issues": "https://github.com/laravel/pail/issues",
                 "source": "https://github.com/laravel/pail"
             },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10243,10 +11256,14 @@
 >>>>>>> feature-admin
 =======
 
+>>>>>>> origin/merged-ayushma
             "time": "2025-06-05T13:55:57+00:00"
         },
         {
             "name": "laravel/pint",
+<<<<<<< HEAD
+            "version": "v1.24.0",
+=======
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
@@ -10255,13 +11272,18 @@
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
             "version": "v1.22.1",
+>>>>>>> origin/merged-ayushma
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "941d1927c5ca420c22710e98420287169c7bcaf7"
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
+                "url": "https://api.github.com/repos/laravel/pint/zipball/0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+=======
                 "url": "https://api.github.com/repos/laravel/pint/zipball/941d1927c5ca420c22710e98420287169c7bcaf7",
                 "reference": "941d1927c5ca420c22710e98420287169c7bcaf7",
 <<<<<<< HEAD
@@ -10277,10 +11299,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -10291,6 +11317,15 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
+<<<<<<< HEAD
+                "friendsofphp/php-cs-fixer": "^3.82.2",
+                "illuminate/view": "^11.45.1",
+                "larastan/larastan": "^3.5.0",
+                "laravel-zero/framework": "^11.45.0",
+                "mockery/mockery": "^1.6.12",
+                "nunomaduro/termwind": "^2.3.1",
+                "pestphp/pest": "^2.36.0"
+=======
                 "friendsofphp/php-cs-fixer": "^3.75.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10340,17 +11375,24 @@
              "pestphp/pest": "^2.36.0"
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "pestphp/pest": "^2.36.0"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "bin": [
                 "builds/pint"
             ],
             "type": "project",
             "autoload": {
+                "files": [
+                    "overrides/Runner/Parallel/ProcessFactory.php"
+                ],
                 "psr-4": {
                     "App\\": "app/",
                     "Database\\Seeders\\": "database/seeders/",
@@ -10381,6 +11423,9 @@
                 "source": "https://github.com/laravel/pint"
             },
 <<<<<<< HEAD
+            "time": "2025-07-10T18:09:32+00:00"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -10391,17 +11436,22 @@
 >>>>>>> feature/trekking-mapp
 
             "time": "2025-04-08T22:11:45+00:00"
+>>>>>>> origin/merged-ayushma
         },
         {
             "name": "laravel/sail",
-            "version": "v1.42.0",
+            "version": "v1.44.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "2edaaf77f3c07a4099965bb3d7dfee16e801c0f6"
+                "reference": "a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
+                "url": "https://api.github.com/repos/laravel/sail/zipball/a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe",
+                "reference": "a09097bd2a8a38e23ac472fa6a6cf5b0d1c1d3fe",
+=======
                 "url": "https://api.github.com/repos/laravel/sail/zipball/2edaaf77f3c07a4099965bb3d7dfee16e801c0f6",
                 "reference": "2edaaf77f3c07a4099965bb3d7dfee16e801c0f6",
 
@@ -10491,9 +11541,13 @@
 =======
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -10544,6 +11598,9 @@
                 "source": "https://github.com/laravel/sail"
             },
 <<<<<<< HEAD
+            "time": "2025-07-04T16:17:06+00:00"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -10568,11 +11625,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "time": "2025-05-19T13:19:21+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "mockery/mockery",
@@ -10659,16 +11720,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.13.1",
+            "version": "1.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "1720ddd719e16cf0db4eb1c6eca108031636d46c"
+                "reference": "faed855a7b5f4d4637717c2b3863e277116beb36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/1720ddd719e16cf0db4eb1c6eca108031636d46c",
-                "reference": "1720ddd719e16cf0db4eb1c6eca108031636d46c",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/faed855a7b5f4d4637717c2b3863e277116beb36",
+                "reference": "faed855a7b5f4d4637717c2b3863e277116beb36",
                 "shasum": ""
             },
             "require": {
@@ -10707,7 +11768,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.1"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.3"
             },
             "funding": [
                 {
@@ -10715,10 +11776,12 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-29T12:36:36+00:00"
+            "time": "2025-07-05T12:25:42+00:00"
         },
         {
             "name": "nunomaduro/collision",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10739,6 +11802,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "v8.8.2",
             "source": {
                 "type": "git",
@@ -10750,6 +11816,10 @@
                 "url": "https://api.github.com/repos/nunomaduro/collision/zipball/60207965f9b7b7a4ce15a0f75d57f9dadb105bdb",
                 "reference": "60207965f9b7b7a4ce15a0f75d57f9dadb105bdb",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-anushree
 =======
             "version": "v8.8.1",
             "source": {
@@ -10822,6 +11892,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nunomaduro/collision/zipball/44ccb82e3e21efb5446748d2a3c81a030ac22bd5",
                 "reference": "44ccb82e3e21efb5446748d2a3c81a030ac22bd5",
+>>>>>>> origin/merged-ayushma
                 "shasum": ""
             },
             "require": {
@@ -10829,11 +11900,18 @@
                 "nunomaduro/termwind": "^2.3.1",
                 "php": "^8.2.0",
                 "symfony/console": "^7.3.0"
+<<<<<<< HEAD
+            },
+=======
            },
+<<<<<<< HEAD
 >>>>>>> feature/trekking-mapp
 =======
             },
 >>>>>>> feature/itinerary-and-blogs
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "conflict": {
                 "laravel/framework": "<11.44.2 || >=13.0.0",
                 "phpunit/phpunit": "<11.5.15 || >=13.0.0"
@@ -10841,8 +11919,13 @@
             "require-dev": {
                 "brianium/paratest": "^7.8.3",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "larastan/larastan": "^3.4.2",
                 "laravel/framework": "^11.44.2 || ^12.18",
                 "laravel/pint": "^1.22.1",
@@ -10974,6 +12057,9 @@
                 }
             ],
 <<<<<<< HEAD
+            "time": "2025-06-25T02:12:12+00:00"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10998,11 +12084,15 @@
             "time": "2025-06-11T01:04:21+00:00"
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "time": "2025-06-25T02:12:12+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "phar-io/manifest",
@@ -11125,8 +12215,13 @@
         {
             "name": "phpunit/php-code-coverage",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "11.0.10",
             "source": {
                 "type": "git",
@@ -11137,6 +12232,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1a800a7446add2d79cc6b3c01c45381810367d76",
                 "reference": "1a800a7446add2d79cc6b3c01c45381810367d76",
+<<<<<<< HEAD
+=======
 =======
 =======
 <<<<<<< HEAD
@@ -11158,6 +12255,7 @@
 >>>>>>> feature/payment
 =======
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -11179,6 +12277,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -11236,6 +12337,9 @@
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
 <<<<<<< HEAD
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/show"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/show"
@@ -11245,6 +12349,7 @@
 =======
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0.9"
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0.9"
@@ -11258,11 +12363,16 @@
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/show"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11275,6 +12385,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 },
                 {
                     "url": "https://liberapay.com/sebastianbergmann",
@@ -11293,8 +12406,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-anushree
 =======
                 }
             ],
@@ -11306,11 +12422,15 @@
             ],
             "time": "2025-02-25T13:26:39+00:00"
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 >>>>>>> feature-admin
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -11560,17 +12680,25 @@
         {
             "name": "phpunit/phpunit",
 <<<<<<< HEAD
+            "version": "11.5.27",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             "version": "11.5.25",
+>>>>>>> origin/merged-ayushma
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "864ab32b3ff52058f917c5b19b3cef821e4a4f1b"
+                "reference": "446d43867314781df7e9adf79c3ec7464956fd8f"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/446d43867314781df7e9adf79c3ec7464956fd8f",
+                "reference": "446d43867314781df7e9adf79c3ec7464956fd8f",
+=======
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/864ab32b3ff52058f917c5b19b3cef821e4a4f1b",
                 "reference": "864ab32b3ff52058f917c5b19b3cef821e4a4f1b",
 =======
@@ -11682,9 +12810,13 @@
 =======
 
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -11694,10 +12826,13 @@
                 "ext-mbstring": "*",
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
-                "myclabs/deep-copy": "^1.13.1",
+                "myclabs/deep-copy": "^1.13.3",
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.2",
+<<<<<<< HEAD
+                "phpunit/php-code-coverage": "^11.0.10",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11708,6 +12843,7 @@
 =======
                 "phpunit/php-code-coverage": "^11.0.9",
 >>>>>>> feature-admin
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 "phpunit/php-code-coverage": "^11.0.9",
@@ -11721,6 +12857,9 @@
                 "phpunit/php-code-coverage": "^11.0.10",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "phpunit/php-file-iterator": "^5.1.0",
                 "phpunit/php-invoker": "^5.0.1",
                 "phpunit/php-text-template": "^4.0.1",
@@ -11729,6 +12868,9 @@
                 "sebastian/code-unit": "^3.0.3",
                 "sebastian/comparator": "^6.3.1",
                 "sebastian/diff": "^6.0.2",
+<<<<<<< HEAD
+                "sebastian/environment": "^7.2.1",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11747,11 +12889,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "sebastian/environment": "^7.2.1",
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "sebastian/exporter": "^6.3.0",
                 "sebastian/global-state": "^7.0.2",
                 "sebastian/object-enumerator": "^6.0.1",
@@ -11801,6 +12947,9 @@
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
 <<<<<<< HEAD
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.27"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11836,11 +12985,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.25"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -11864,6 +13017,9 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2025-07-11T04:10:06+00:00"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11898,11 +13054,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "time": "2025-06-27T04:36:07+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "sebastian/cli-parser",
@@ -12004,9 +13164,15 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+=======
+            
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "description": "Collection of value objects that represent the PHP code units",
             "homepage": "https://github.com/sebastianbergmann/code-unit",
             "support": {
@@ -12286,8 +13452,13 @@
         {
             "name": "sebastian/environment",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "7.2.1",
             "source": {
                 "type": "git",
@@ -12298,6 +13469,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/a5c75038693ad2e8d4b6c15ba2403532647830c4",
                 "reference": "a5c75038693ad2e8d4b6c15ba2403532647830c4",
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -12355,16 +13528,23 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2"
             },
             "require-dev": {
+<<<<<<< HEAD
+                "phpunit/phpunit": "^11.3"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12383,11 +13563,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "phpunit/phpunit": "^11.3"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "suggest": {
                 "ext-posix": "*"
@@ -12424,6 +13608,9 @@
                 "issues": "https://github.com/sebastianbergmann/environment/issues",
                 "security": "https://github.com/sebastianbergmann/environment/security/policy",
 <<<<<<< HEAD
+                "source": "https://github.com/sebastianbergmann/environment/tree/7.2.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -12441,16 +13628,22 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/sebastianbergmann/environment/tree/7.2.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12466,6 +13659,9 @@
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 },
                 {
                     "url": "https://liberapay.com/sebastianbergmann",
@@ -12482,10 +13678,15 @@
             ],
             "time": "2025-05-21T11:55:47+00:00"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/merged-sabita
+=======
+        },
+=======
+>>>>>>> origin/merged-anushree
 =======
                 }
             ],
@@ -12517,6 +13718,7 @@
 
         }
 >>>>>>> feature/trekking-mapp
+<<<<<<< HEAD
 =======
 
         }
@@ -12525,6 +13727,9 @@
         },
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         {
             "name": "sebastian/exporter",
             "version": "6.3.0",
@@ -12563,9 +13768,15 @@
                 "BSD-3-Clause"
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+=======
+        
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
@@ -12589,9 +13800,15 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+=======
+            
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "description": "Provides the functionality to export PHP variables for visualization",
             "homepage": "https://www.github.com/sebastianbergmann/exporter",
             "keywords": [
@@ -12610,9 +13827,15 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+=======
+        
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "time": "2024-12-05T09:17:50+00:00"
         },
         {
@@ -13079,9 +14302,14 @@
         {
             "name": "symfony/yaml",
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             "version": "v7.3.1",
             "source": {
                 "type": "git",
@@ -13092,6 +14320,8 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/0c3555045a46ab3cd4cc5a69d161225195230edb",
                 "reference": "0c3555045a46ab3cd4cc5a69d161225195230edb",
+<<<<<<< HEAD
+=======
 =======
             "version": "v7.3.0",
             "source": {
@@ -13173,10 +14403,14 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
                 "shasum": ""
             },
             "require": {
@@ -13220,6 +14454,9 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+                "source": "https://github.com/symfony/yaml/tree/v7.3.1"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 "source": "https://github.com/symfony/yaml/tree/v7.3.1"
@@ -13249,11 +14486,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                 "source": "https://github.com/symfony/yaml/tree/v7.3.1"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
             },
             "funding": [
                 {
@@ -13270,6 +14511,9 @@
                 }
             ],
 <<<<<<< HEAD
+            "time": "2025-06-03T06:57:57+00:00"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13295,11 +14539,15 @@
 
 >>>>>>> feature/trekking-mapp
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             "time": "2025-06-03T06:57:57+00:00"
 >>>>>>> feature/itinerary-and-blogs
 >>>>>>> origin/merged-sabita
+=======
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree
         },
         {
             "name": "theseer/tokenizer",
@@ -13364,6 +14612,12 @@
     "plugin-api-version": "2.6.0"
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> feature/itinerary-and-blogs
+=======
+=======
+
+>>>>>>> origin/merged-ayushma
+>>>>>>> origin/merged-anushree

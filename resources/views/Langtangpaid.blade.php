@@ -16,7 +16,11 @@
       font-family: Arial, sans-serif;
       line-height: 1.5;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/merged-anushree
     .navbar {
   background-image: linear-gradient(90deg, #027478, #38b6b1);
   display: flex;
@@ -358,10 +362,14 @@
     <div class="row">
       <div class="col-lg-7">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- {{------------------------------------------- images -------------------------------------------}} -->
 =======
 {{------------------------------------------- images -------------------------------------------}}
 >>>>>>> origin/merged-sabita
+=======
+<!-- {{------------------------------------------- images -------------------------------------------}} -->
+>>>>>>> origin/merged-anushree
         <div class="slider">
             <img class="slide active" src="{{ asset('images/l1.jpg') }}" alt="Langtang Trek 1" />
             <img class="slide" src="{{ asset('images/l2.jpg') }}" alt="Langtang Trek 2" />
@@ -397,10 +405,14 @@
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- {{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}} -->
 =======
 {{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}}
 >>>>>>> origin/merged-sabita
+=======
+<!-- {{------------------------------------------- Day-to-Day Itinerary -------------------------------------------}} -->
+>>>>>>> origin/merged-anushree
 
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
@@ -468,10 +480,14 @@
             <br>
             <br>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- {{------------------------------------------- Table -------------------------------------------}} -->
 =======
     {{------------------------------------------- Table -------------------------------------------}}
 >>>>>>> origin/merged-sabita
+=======
+    <!-- {{------------------------------------------- Table -------------------------------------------}} -->
+>>>>>>> origin/merged-anushree
     <table style="width: 100%; border-collapse: collapse; background: white;">
                 <thead style="background-color: #027478; color: white;">
                   <tr>

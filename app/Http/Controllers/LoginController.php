@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use App\Models\User;
 
 class LoginController extends Controller
 {
-    public function showLoginForm()
+    public function showLoginForm(Request $request)
     {
+        // Save custom redirect if passed as query (?redirect=/something)
+        if ($request->has('redirect')) {
+            Session::put('url.intended_custom', $request->query('redirect'));
+        }
+
         return view('login');
     }
 
@@ -23,19 +29,21 @@ class LoginController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
             $request->session()->regenerate();
 
-            // Redirect admin or user
-            if (Auth::user()->role === 'admin') {
-                return redirect('/admin-dashboard');
+            $user = Auth::user();
+            $redirectTo = Session::pull('url.intended_custom', null);
+
+            // Priority: Custom redirect > Role-based redirect > Default
+            if ($redirectTo) {
+                return redirect($redirectTo);
             }
-            else if(Auth::user()->role=='editor') {
+
+            if ($user->role === 'admin') {
+                return redirect('/admin-dashboard');
+            } elseif ($user->role === 'editor') {
                 return redirect('/itinerary');
             }
-            else{
 
-            }
-
-
-
+            return redirect('/'); // default fallback
         }
 
         return back()->with('error', 'Invalid email or password.');
@@ -47,6 +55,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/');
     }
 }

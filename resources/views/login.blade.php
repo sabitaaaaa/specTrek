@@ -5,9 +5,7 @@
   <title>SpecTrek | Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
-
 
 <body class="h-screen font-sans m-0">
   <div class="flex h-full">
@@ -82,7 +80,6 @@
         valid = false;
       }
 
-      //  Simple check: just ensure password is not empty (or you can set min length like 6)
       if (password.length < 6) {
         passwordError.textContent = 'Password must be at least 6 characters long';
         valid = false;

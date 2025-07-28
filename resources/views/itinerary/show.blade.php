@@ -14,7 +14,7 @@
       <div class="slider">
         @foreach ([$itinerary->image1, $itinerary->image2, $itinerary->image3, $itinerary->image4] as $img)
           @if($img)
-            <img class="slide {{ $loop->first ? 'active' : '' }}" src="{{ asset('storage/' . $img) }}" alt="Trek Image {{ $loop->iteration }}" />
+            <img class="slide {{ $loop->first ? 'active' : '' }}" src="{{ asset('images/' . $img) }}" alt="Trek Image {{ $loop->iteration }}" />
           @endif
         @endforeach
       </div>
@@ -26,21 +26,18 @@
 
     <div class="col-lg-4">
       <div class="border-box">
-        <div>
-          <h2 style="color: #2c3e50;">Hidden Gems</h2>
+        <h2 style="color: #2c3e50;">Hidden Gems</h2>
+        <ul>
           @php
-  $gems = preg_split('/[.,]/', strip_tags($itinerary->hidden_gems));
-@endphp
+            $gems = preg_split('/[.,]/', strip_tags($itinerary->hidden_gems));
+          @endphp
+          @foreach($gems as $gem)
+            @if(trim($gem) !== '')
+              <li>{{ trim($gem, ' "“”') }}</li>
+            @endif
+          @endforeach
+        </ul>
 
-<ul>
-  @foreach($gems as $gem)
-    @if(trim($gem) !== '')
-      <li>{{ trim($gem, ' "“”') }}</li>
-    @endif
-  @endforeach
-</ul>
-
-        </div>
         <div class="best-time">
           <h3 style="color: #2c3e50;">Best Time to Visit</h3>
           <p>{{ strip_tags($itinerary->best_time) }}</p>
@@ -51,11 +48,10 @@
 
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
-    @php
-  $decodedDayText = html_entity_decode(strip_tags($itinerary->day_to_day_itinerary));
-  $cleanDayText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $decodedDayText);
-@endphp
-
+      @php
+        $decodedDayText = html_entity_decode(strip_tags($itinerary->day_to_day_itinerary));
+        $cleanDayText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $decodedDayText);
+      @endphp
 
       <div class="col-lg-6 day-itinerary">
         <h2>Day-to-Day Itinerary</h2>
@@ -72,83 +68,78 @@
         <h2>Detailed Itinerary</h2>
 
         @php
-  $decodedDetailed = html_entity_decode(strip_tags($itinerary->detailed_itinerary));
-  $cleanDetailed = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $decodedDetailed);
-@endphp
+          $cleanDetailed = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", strip_tags($itinerary->detailed_itinerary));
+        @endphp
 
+        @if(auth()->check() && auth()->user()->is_premium)
+          <div id="detailed-itinerary" class="fade-box expanded">
+            {!! nl2br(e($cleanDetailed)) !!}
+            <div class="fade-content">
+              <strong>MORE INFORMATION</strong><br><br>
+              @php
+                $transportText = html_entity_decode(strip_tags($itinerary->transport_table));
+                $transportSentences = preg_split('/\.\s+|\.$/', $transportText, -1, PREG_SPLIT_NO_EMPTY);
+              @endphp
+              <ul style="font-size: 17px; line-height: 1.7;">
+                @foreach($transportSentences as $sentence)
+                  <li>{{ trim($sentence) }}.</li>
+                @endforeach
+              </ul>
 
-        <div id="detailed-itinerary" class="fade-box">
-          <ul>
-            @foreach(explode("\n", $cleanDetailed) as $line)
-              @if(trim($line) !== '')
-                <li>{{ trim($line) }}</li>
-              @endif
-            @endforeach
-          </ul>
+              <p><strong>Note:</strong> {{ strip_tags($itinerary->note) }}</p>
 
-          <br>
-          <br>
-
-          <div class="fade-content">
-            <strong>MORE INFORMATIONS</strong>
-@php
-    // Decode entities like &nbsp;, strip any HTML, and split by full stop
-    $transportText = html_entity_decode(strip_tags($itinerary->transport_table));
-    $transportSentences = preg_split('/\.\s+|\.$/', $transportText, -1, PREG_SPLIT_NO_EMPTY);
-@endphp
-
-<div class="transport-section" style="margin-top: 2rem;">
-  {{-- <h3 style="color: #2c3e50;">Transport Options</h3> --}}
-  <ul style="font-size: 17px; line-height: 1.7;">
-    @foreach($transportSentences as $sentence)
-      @if(trim($sentence) !== '')
-        <li>{{ trim($sentence) }}.</li>
-      @endif
-    @endforeach
-  </ul>
-</div>
-
-
-{{-- for note --}}
-{{ strip_tags($itinerary->note) }}
-            </p>
-
-            @php
-  // 1. Strip all HTML tags to get plain text
-  $plainText = strip_tags($itinerary->hidden_traditions);
-
-  // 2. Split the text by full stops (periods) followed by space or end of string
-  // The regex splits on ". " or "." at the end, but keeps the sentences clean.
-  $sentences = preg_split('/\.\s+|\.$/', $plainText, -1, PREG_SPLIT_NO_EMPTY);
-@endphp
-
-<div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
-  <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
-  <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
-    @foreach($sentences as $sentence)
-      <li>{!! trim($sentence) !!}.</li> {{-- Add period back since split removes it --}}
-    @endforeach
-  </ul>
-</div>
-
+              @php
+                $facts = preg_split('/\.\s+|\.$/', strip_tags($itinerary->hidden_traditions), -1, PREG_SPLIT_NO_EMPTY);
+              @endphp
+              <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
+                <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
+                <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
+                  @foreach($facts as $fact)
+                    <li>{{ trim($fact) }}.</li>
+                  @endforeach
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="fade-overlay"></div>
-        </div>
-        <button id="see-more-btn" class="see-more-button">See More</button>
+        @else
+          <div id="detailed-itinerary" class="fade-box">
+            {!! nl2br(e($cleanDetailed)) !!}
+            <div class="fade-overlay"></div>
+          </div>
+          <button id="see-more-btn" class="see-more-button">See More</button>
+          <script>
+            document.getElementById("see-more-btn").addEventListener("click", function () {
+              const isLoggedIn = @json(Auth::check());
+              const trekSlug = "{{ $itinerary->slug }}";
+
+              if (!isLoggedIn) {
+                window.location.href = "/login?redirect=/itinerary/" + trekSlug;
+              } else {
+                window.location.href = "/" + trekSlug + "/payment";
+              }
+            });
+          </script>
+        @endif
       </div>
     </div>
   </div>
 </main>
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
-
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⇧</button>
 <footer class="footer">
   <div class="footer-container">
     <p>&copy; All rights reserved.</p>
     <p>Developed by SpecTrek Team</p>
   </div>
 </footer>
-
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function () {
+    scrollBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
 <script>
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
@@ -159,16 +150,13 @@
       slide.style.display = i === index ? 'block' : 'none';
     });
   }
-
   function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
   }
-
   showSlide(currentSlide);
   setInterval(nextSlide, 3000);
 </script>
-
 <script>
   const seeMoreBtn = document.getElementById('see-more-btn');
   const fadeBox = document.getElementById('detailed-itinerary');
@@ -178,15 +166,5 @@
     wrapper.classList.toggle('fullscreen');
     seeMoreBtn.textContent = fadeBox.classList.contains('expanded') ? 'See Less' : 'See More';
   });
-</script>
-
-<script>
-  const scrollBtn = document.getElementById("scrollTopBtn");
-  window.onscroll = function () {
-    scrollBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
-  };
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
 </script>
 @endsection
