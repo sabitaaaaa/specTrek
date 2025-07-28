@@ -325,7 +325,6 @@
   };
 </script>
 
-<<<<<<< HEAD
 <!-- ----------------arrow script ------ -->
 
 <script>
@@ -348,7 +347,5 @@
   </script>
 
 
-=======
->>>>>>> origin/merged-sabita
 </body>
 </html>

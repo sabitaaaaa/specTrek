@@ -72,11 +72,8 @@
       <div class="col-lg-6 day-itinerary">
         <h2>Day-to-Day Itinerary</h2>
         <ul>
-<<<<<<< HEAD
            <li>Day 1: Drive from Kathmandu to Syabrubesi (7–8 hours)</li>
-=======
             <li>Day 1: Drive from Kathmandu to Syabrubesi (7–8 hours)</li>
->>>>>>> origin/merged-sabita
             <li>Day 2: Trek from Syabrubesi to Lama Hotel (6–7 hours)</li>
             <li>Day 3: Trek from Lama Hotel to Langtang Village (5–6 hours)</li>
             <li>Day 4: Trek from Langtang Village to Kyanjin Gompa (3–4 hours)</li>
@@ -86,7 +83,6 @@
             <li>Day 8: Trek from Lama Hotel to Syabrubesi (5–6 hours)</li>
             <li>Day 9: Drive back from Syabrubesi to Kathmandu</li>
             <li>Day 10: Rest or buffer day in Kathmandu</li>
-<<<<<<< HEAD
 
           <p><strong> END OF TREK !! </strong></p>
 
@@ -98,13 +94,6 @@
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
         <h2>Detailed Itinerary</h2>
-=======
-        </ul>
-      </div>
-
-        <div class="col-lg-6 detailed-itinerary-box">
-            <h2>Detailed Itinerary</h2>
->>>>>>> origin/merged-sabita
         <div id="detailed-itinerary" class="fade-box">
           <div class="fade-content">
             <p><strong>Day 1: Kathmandu to Syabrubesi (1,460m)</strong> <br> Your journey begins with a scenic drive from Kathmandu to Syabrubesi, which takes around 7 to 9 hours depending on road conditions.
@@ -152,17 +141,10 @@
             <strong>MORE INFORMATIONS</strong>
             <br>
             <br>
-<<<<<<< HEAD
-            <table style="width: 100%; border-collapse: collapse; background: white;">
-                <thead style="background-color: #2e8b57; color: white;">
-
-                   <tr>
-=======
     {{------------------------------------------- Table -------------------------------------------}}
     <table style="width: 100%; border-collapse: collapse; background: white;">
                 <thead style="background-color: #027478; color: white;">
                   <tr>
->>>>>>> origin/merged-sabita
                     <th style="padding: 12px; border: 1px solid #ccc;">Option</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Cost (Approx)</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Duration</th>
@@ -233,9 +215,6 @@
           </div>
           <div class="fade-overlay"></div>
         </div>
-<<<<<<< HEAD
-        <button id="see-more-btn" class="see-more-button">See More</button>
-=======
 
         <script async
         src="https://js.stripe.com/v3/buy-button.js">
@@ -246,29 +225,15 @@
         publishable-key="pk_test_51RgQnH2EZhQjvwUDmT9XNp8uJ2b6RMK5LWPXGZL6jdlkCKlG8T5wW9LtVL9MOExF5bt9zU57OuUhkyPEMzRiwVES00xM6dZTI1"
       >
       </stripe-buy-button>
->>>>>>> origin/merged-sabita
       </div>
     </div>
   </div>
 
   <div class="nonInteractiveMap">
     <h1> "Here is a Normal map for Langtang" </h1>
-<<<<<<< HEAD
-      <img src="{{ asset('images/lmap.jpg') }}">
-
-
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
-  </div>
-
-
-
-  </main>
-<!-- Footer -->
-=======
     <img src="{{ asset('images/lmap.jpg') }}">
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
->>>>>>> origin/merged-sabita
     <footer class="footer">
       <div class="footer-container">
         <p>&copy; All rights reserved.</p>
