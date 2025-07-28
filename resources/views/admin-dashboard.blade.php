@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Admin Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -26,7 +25,7 @@
         }
 
         .sidebar {
-            width: 250px;
+            width: 220px;
             background-color: #1e293b;
             color: white;
             padding: 20px;
@@ -46,7 +45,8 @@
             border-radius: 6px;
         }
 
-        .sidebar nav a:hover {
+        .sidebar nav a:hover,
+        .sidebar nav a.active {
             background-color: #334155;
         }
 
@@ -64,23 +64,22 @@
         }
 
         .content {
-            padding: 10px;
+            padding: 20px;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 20px;
             justify-content: center;
         }
 
-        .card , .card1 {
+        .card, .card1 {
             padding: 18px;
-            flex: 1 1 50px;
+            flex: 1 1 300px;
             background-color: white;
             box-shadow: 0 2px 8px rgba(20, 18, 18, 0.05);
             border-radius: 5px;
             font-size: 20px;
             text-align: center;
         }
-
 
         .chart-container {
             background-color: white;
@@ -100,33 +99,32 @@
 </head>
 <body>
     <div class="dashboard">
- <aside class="sidebar">
-        <div class="logo">AdminPanel</div>
-        <nav>
-            <a href="{{ url('/admin-dashboard') }}" class="{{ request()->is('admin-dashboard') ? 'active' : '' }}">
-                <i class="bi bi-speedometer2 me-2"></i> Dashboard
-            </a>
-            <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
-                <i class="bi bi-people me-2"></i> Users
-            </a>
-            <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
-    <i class="bi bi-box-seam me-2"></i> Packages
-</a>
-            <a href="{{ url('/setting') }}" class="{{ request()->is('setting') ? 'active' : '' }}">
-                <i class="bi bi-gear me-2"></i> Settings
-            </a>
-             <a href="{{ url('/profile') }}" class="{{ request()->is('profile') ? 'active' : '' }}">
-                <i class="bi bi-person me-2"></i> Profile
-            </a>
-            <form method="POST" action="{{ route('logout') }}" class="mt-3">
-                @csrf
-                <button type="submit" class="btn btn-danger w-100">
-                    <i class="bi bi-box-arrow-right me-1"></i> Logout
-                </button>
-            </form>
-        </nav>
-    </aside>
-
+        <aside class="sidebar">
+            <div class="logo">AdminPanel</div>
+            <nav>
+                <a href="{{ url('/admin-dashboard') }}" class="{{ request()->is('admin-dashboard') ? 'active' : '' }}">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
+                    <i class="bi bi-people me-2"></i> Users
+                </a>
+                <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
+                    <i class="bi bi-box-seam me-2"></i> Packages
+                </a>
+                <a href="{{ url('/setting') }}" class="{{ request()->is('setting') ? 'active' : '' }}">
+                    <i class="bi bi-gear me-2"></i> Settings
+                </a>
+                <a href="{{ url('/profile') }}" class="{{ request()->is('profile') ? 'active' : '' }}">
+                    <i class="bi bi-person me-2"></i> Profile
+                </a>
+                <form method="POST" action="{{ route('logout') }}" class="mt-3">
+                    @csrf
+                    <button type="submit" class="btn btn-danger w-100">
+                        <i class="bi bi-box-arrow-right me-1"></i> Logout
+                    </button>
+                </form>
+            </nav>
+        </aside>
 
         <main class="main-content">
             <header class="navbar">
@@ -135,10 +133,8 @@
 
             <section class="content">
                 <div class="card">Total Users: {{ $userCount }}</div>
-                <div class="card1"> Total Places</div>
+                <div class="card1">Total Places: {{ $placesCount ?? 'N/A' }}</div>
             </section>
-
-
 
             <section class="content">
                 <div class="chart-container">
@@ -163,7 +159,7 @@
                 labels: [ 'May 26', 'Jun 02', 'Jun 09', 'Jun 16', 'Jun 23', 'Jun 30'],
                 datasets: [{
                     label: 'Signups',
-                    data: [ 0, 0, 0, 0, 1, 2],
+                    data: [0, 0, 0, 0, 1, 2],
                     borderColor: '#E91E63',
                     backgroundColor: 'rgba(233, 30, 99, 0.1)',
                     fill: true,

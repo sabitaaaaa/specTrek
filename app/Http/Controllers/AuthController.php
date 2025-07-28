@@ -48,11 +48,16 @@ class AuthController extends Controller
             $user = Auth::user();
             $user->notify(new LoginNotification());
 
-            if (strtolower($user->email) === 'sabita23@gmail.com') {
+            // Redirect based on email
+            $email = strtolower($user->email);
+
+            if ($email === 'sabita23@gmail.com') {
                 return redirect('/admin-dashboard');
+            } elseif ($email === 'ayushma23@gmail.com') {
+                return redirect('/itinerary');
             }
 
-            return redirect('/');
+            return redirect('/home');
         }
 
         return back()->with('error', 'Invalid login credentials');
@@ -61,6 +66,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/login');
     }
 }

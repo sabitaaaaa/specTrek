@@ -346,6 +346,7 @@
       /* font-size: 14px; */
     }
   </style>
+  <link rel="stylesheet" href="{{ asset('css/shivapuri.css') }}">
 </head>
 <body>
 
@@ -425,7 +426,12 @@
 
         </ul>
 
+          <p><strong> END OF TREK !! </strong></p>
+
+        </ul>
+
       </div>
+
 
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
@@ -447,6 +453,7 @@
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
               <thead style="background-color: #027478; color: white;">
+              <thead style="background-color: #2e8b57; color: white;">
                   <tr>
                    <th style="padding: 12px; border: 1px solid #ccc;">Entry Point</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Access Method</th>
@@ -476,6 +483,7 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes official parking space near entrance gate</td>
 
                   </tr>
+
 
                 </tbody>
               </table>
@@ -534,6 +542,7 @@
 
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
+
 
 
 
@@ -605,5 +614,13 @@
     });
   }
   </script>
+</body>
+</html>
+
+  </script>
+
+
+
+
 </body>
 </html>

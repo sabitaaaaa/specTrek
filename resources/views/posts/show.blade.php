@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="icon" href="{{ asset('images/logo.png') }}">
+
 
 <style>
     body {
@@ -19,21 +21,22 @@
         color: #555;
         line-height: 1.6;
     }
+img {
+    max-width: 400px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 10px;
+    object-fit: contain;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
 
-    img {
-        max-width: 10px;
-        height: auto;
-        border-radius: 6px;
-        margin: 15px 0;
-        box-shadow: 0 0 8px rgba(0,0,0,0.1);
-       
-      
-    }
 
     a.back-link {
         display: inline-block;
         margin-top: 20px;
-        background-color: #027478;
+        background-color: #2e8b57;
         color: white;
         padding: 8px 12px;
         text-decoration: none;
@@ -41,7 +44,7 @@
     }
 
     a.back-link:hover {
-        background-color:rgb(5, 74, 77);
+        background-color: #286040ff;
     }
 </style>
 

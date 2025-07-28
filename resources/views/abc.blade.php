@@ -346,6 +346,7 @@
       /* font-size: 14px; */
     }
   </style>
+  <link rel="stylesheet" href="{{ asset('css/dynamic.css') }}">
 </head>
 <body>
 
@@ -448,7 +449,8 @@
             <br>
             <br>
             <table style="width: 100%; border-collapse: collapse; background: white;">
-              <thead style="background-color: #027478; color: white;">
+                  <thead style="background-color: #2e8b57; color: white;">
+
                   <tr>
                     <th style="padding: 12px; border: 1px solid #ccc;">Option</th>
                     <th style="padding: 12px; border: 1px solid #ccc;">Cost (Approx)</th>
@@ -546,6 +548,7 @@
 
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
+
 
 
 

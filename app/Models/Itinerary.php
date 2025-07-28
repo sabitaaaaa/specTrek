@@ -22,4 +22,9 @@ class Itinerary extends Model
         'image4',
         'quote',
     ];
+    public function getRouteKeyName()
+{
+    return 'slug';
+}
+
 }
