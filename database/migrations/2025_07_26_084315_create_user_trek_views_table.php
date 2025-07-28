@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('user_trek_views', function (Blueprint $table) {
             $table->id();
         $table->foreignId('user_id')->constrained()->onDelete('cascade');
-        $table->foreignId('trek_id')->constrained()->onDelete('cascade');
+        $table->foreignId('itinerary_id')->constrained()->onDelete('cascade');
         $table->timestamp('viewed_at')->useCurrent();
         $table->timestamps();
         });

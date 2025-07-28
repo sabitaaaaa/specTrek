@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserTrekView extends Model
 {
-    protected $table = 'user_trek_views';
-    protected $fillable = ['user_id', 'trek_id', 'viewed_at'];
-    // In UserTrekView.php
-public function trek() {
-    return $this->belongsTo(Trek::class);
-}
+    protected $fillable = ['user_id', 'itinerary_id', 'viewed_at'];
 
-public function user() {
-    return $this->belongsTo(User::class);
-}
+    public function itinerary()
+    {
+        return $this->belongsTo(Itinerary::class);
+    }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

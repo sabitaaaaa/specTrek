@@ -45,4 +45,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+public function viewedItineraries()
+{
+    return $this->belongsToMany(Itinerary::class, 'user_trek_views', 'user_id', 'itinerary_id')
+                ->withTimestamps()
+                ->withPivot('viewed_at');
+}
+
+
 }

@@ -161,4 +161,3 @@ Route::middleware(['auth', 'premium'])->group(function () {
     Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
     Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 });
-

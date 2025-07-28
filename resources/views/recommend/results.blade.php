@@ -159,7 +159,7 @@
 
 
     <div class="mt-4">
-      <a href="{{ route('recommend.form') }}" class="btn btn-outline-primary">Back to Form</a>
+      <a href="{{ route('recommendation.form') }}" class="btn btn-outline-primary">Back to Form</a>
     </div>
   </div>
 </body>

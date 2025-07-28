@@ -1,4 +1,4 @@
-<!-- itinerary/show.blade.php -->
+<!-- 
 @extends('layouts.itinerary')
 
 @section('title', $itinerary->title)
@@ -106,15 +106,15 @@
       <div class="col-md-4">
         <div class="card mb-3">
           @if($rec->image1)
-            <img src="{{ asset('storage/' . $rec->image1) }}" class="card-img-top" alt="{{ $rec->name }}">
+            <img src="{{ asset('storage/' . $rec->image1) }}" class="card-img-top" alt="{{ $rec->title }}">
           @endif
           <div class="card-body">
-            <h5 class="card-title">{{ $rec->name }}</h5>
+            <h5 class="card-title">{{ $rec->title }}</h5>
             <p class="card-text">
               Region: {{ $rec->region }}<br>
               Difficulty: {{ $rec->difficulty }}
             </p>
-            <a href="{{ route('treks.show', $rec->id) }}" class="btn btn-primary">View Trek</a>
+            <a href="{{ route('itinerary.show', $rec->slug) }}" class="btn btn-primary">View Itinerary</a>
           </div>
         </div>
       </div>
@@ -130,15 +130,15 @@
       <div class="col-md-4">
         <div class="card mb-3">
           @if($rec->image1)
-            <img src="{{ asset('storage/' . $rec->image1) }}" class="card-img-top" alt="{{ $rec->name }}">
+            <img src="{{ asset('storage/' . $rec->image1) }}" class="card-img-top" alt="{{ $rec->title }}">
           @endif
           <div class="card-body">
-            <h5 class="card-title">{{ $rec->name }}</h5>
+            <h5 class="card-title">{{$rec->title }}</h5>
             <p class="card-text">
               Budget: Rs. {{ $rec->price }}<br>
               Days: {{ $rec->duration_days }}
             </p>
-            <a href="{{ route('treks.show', $rec->id) }}" class="btn btn-success">View Trek</a>
+            <a href="{{ route('itinera.show', $rec->id) }}" class="btn btn-success">View Trek</a>
           </div>
         </div>
       </div>
@@ -194,4 +194,27 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
-@endsection
+@endsection 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

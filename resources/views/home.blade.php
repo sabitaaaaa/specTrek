@@ -32,7 +32,7 @@
             <li><a class="signup" href="{{ route('register') }}">Signup</a></li>
         @else
             <!-- Logged-in users see Trek Recommendation and Logout -->
-            <li><a href="{{ route('recommend.form') }}">Trek Recommendation</a></li>
+            <li><a href="{{ route('recommendation.form') }}">Trek Recommendation</a></li>
             <li>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -110,7 +110,7 @@
 
 
 <!-- ===============================updated part ----------------------======================= -->
-<!-- 
+ 
 <section class="testimonial-section">
   <h2 class="testimonial-heading">OUR HAPPY TRAVELLERS</h2>
 
@@ -143,7 +143,7 @@
       <span class="dot {{ $index === 0 ? 'active' : '' }}"></span>
     @endforeach
   </div>
-</section> -->
+</section> 
 <!-- ===================================VISUALIZING============================================= -->
 <!-- <section class="hex-section">
   <h2>VISUALIZING THE PLACES</h2>
