@@ -19,8 +19,31 @@ use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\AdminProfileController;
+
 
 // more changes
+Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
+Route::post('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
+Route::get('/profile/edit', [AdminProfileController::class, 'index'])->name('profile.edit');
+Route::post('/profile/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+
+
+
+Route::get('/', [HomeController::class, 'index']);
+
+
+Route::post('/logo/edit', [AdminProfileController::class, 'updateLogo'])->name('logo.edit');
+
+use App\Http\Controllers\ProfileController;
+
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+
+//new chnages
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/upload-logo', [HomeController::class, 'updateLogo'])->name('site.uploadLogo');
+// up to here
 
     // Admin Panel
     Route::prefix('admin')->group(function () {
@@ -157,9 +180,6 @@ Route::get('/see-more', function () {
 });
 
 // Payment Routes
-Route::get('/esewa-pay', [EsewaController::class, 'pay'])->name('esewa.pay');
-Route::get('/esewa-success', [EsewaController::class, 'success']);
-Route::get('/esewa-failure', [EsewaController::class, 'failure']);
 
 Route::get('/Khalti', [KhaltiController::class, 'pay']);
 Route::get('/shivapuri/payment', function () {
