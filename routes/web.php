@@ -225,7 +225,7 @@ Route::get('/admin/users/create', [UserController::class, 'create'])->name('user
 
 
 
-Route::resource('/admin/users', UserController::class);
+
 Route::resource('users', UsersController::class);
 
 Route::resource('/admin/users', UserController::class);
@@ -480,3 +480,11 @@ Route::middleware(['auth', 'premium'])->group(function () {
     Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
     Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 });
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+
