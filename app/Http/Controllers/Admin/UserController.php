@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User; 
+use App\Models\User;
+use App\Http\Controllers\UsersController;
 
 class UserController extends Controller
 {
@@ -17,7 +18,7 @@ class UserController extends Controller
     public function create()
     {
         return view('admin.users.create');
-    } 
+    }
 
     public function edit($id)
 {
@@ -43,7 +44,7 @@ class UserController extends Controller
         return redirect()->route('users.index')->with('success', 'User created successfully.');
     }
 
-   
+
 
     public function update(Request $request, User $user)
     {
@@ -64,7 +65,7 @@ class UserController extends Controller
 
         return redirect()->route('users.index')->with('success', 'User deleted successfully.');
     }
-} 
+}
 
 
 

@@ -9,15 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-   public function up()
+   public function up():void
 {
  DB::table('settings')->insert([
     'key' => 'site_logo',
-    'value' => $path, // e.g., 'logo/your-file.png'
+    'value' => 'upload/logo/1753609018_logoforlandingpage.jpg',
+     // e.g., 'logo/your-file.png'
     'created_at' => now(),
     'updated_at' => now(),
 ]);
-
 
 }
 

@@ -18,10 +18,8 @@
             </div>
             <ul class="nav-links">
                 <button id="emergency-btn">Emergency</button>
-                <li class="naa">Blogs</a></li>
-                <li class="naa">Tour</a></li>
-                <li class="naa">User</a></li>
-                @auth
+                <li><a href="{{ url('/posts') }}" class="naa">Post</a></li>
+                <li><a href="{{ route('recommend.form') }}">Trek Recommendation</a></li>                @auth
                 <div x-data="{ open: false }" class="mt-1 ms-2">
                     <form method="POST" action="{{ route('logout') }}" @submit="open = false">
                         @csrf

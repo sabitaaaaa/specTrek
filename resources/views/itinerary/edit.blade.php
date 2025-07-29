@@ -75,33 +75,6 @@
     <label>Note:</label><br>
     <textarea name="note" class="rich-text">{{ old('note', $itinerary->note) }}</textarea><br><br>
 
-    <label>Image 1:</label><br>
-    <input type="file" name="image1"><br>
-    @if($itinerary->image1)
-        <img src="{{ asset('storage/' . $itinerary->image1) }}" alt="Image 1" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
-    @endif
-    <br>
-
-    <label>Image 2:</label><br>
-    <input type="file" name="image2"><br>
-    @if($itinerary->image2)
-        <img src="{{ asset('storage/' . $itinerary->image2) }}" alt="Image 2" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
-    @endif
-    <br>
-
-    <label>Image 3:</label><br>
-    <input type="file" name="image3"><br>
-    @if($itinerary->image3)
-        <img src="{{ asset('storage/' . $itinerary->image3) }}" alt="Image 3" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
-    @endif
-    <br>
-
-    <label>Image 4:</label><br>
-    <input type="file" name="image4"><br>
-    @if($itinerary->image4)
-        <img src="{{ asset('storage/' . $itinerary->image4) }}" alt="Image 4" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
-    @endif
-    <br>
 
     <label>
 
