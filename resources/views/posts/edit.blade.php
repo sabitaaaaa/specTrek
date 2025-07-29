@@ -1,6 +1,7 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
 @section('content')
+<link rel="icon" href="{{ asset('images/logo.png') }}">
 
 <style>
     body {
@@ -49,7 +50,7 @@
 
     button {
         margin-top: 20px;
-        background-color: #027478;
+        background-color: #2e8b57;
         color: white;
         border: none;
         padding: 10px 15px;
@@ -59,14 +60,21 @@
     }
 
     button:hover {
-        background-color:rgb(5, 74, 77);
+        background-color: #265e3fff;
     }
 
-    img {
-        margin-top: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
+  img {
+    max-width: 400px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 10px;
+    object-fit: contain;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
     .errors {
         background: #f8d7da;

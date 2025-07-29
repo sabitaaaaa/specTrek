@@ -6,10 +6,32 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
   
+
 </head>
+<style>
+  /* -----------------------------------------------------footer part -------------------- */
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      /* font-size: 14px; */
+    }
+  
+  </style>
 <body>
 
-<nav class="navbar navbar-expand-lg px-4 !important text-white" style="background-color: #027478;">
+<nav class="navbar navbar-expand-lg px-4 !important text-white" style="    background: linear-gradient(135deg, #4682b4, #5f9ea0);
+);
+"
+
+>
   <style>
   .navbar .nav-link {
     color: white !important;

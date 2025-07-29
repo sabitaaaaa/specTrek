@@ -82,6 +82,7 @@
             <li><strong>Day 8:</strong> Trek from Tarkeghyang to Sermathang</li>
             <li><strong>Day 9:</strong> Trek down to Melamchi Pul Bazaar</li>
             <li><strong>Day 10:</strong> Drive back to Kathmandu</li>
+<<<<<<< HEAD
 
           <p><strong> END OF TREK !! </strong></p>
 
@@ -89,6 +90,15 @@
 
       </div>
 
+=======
+
+          <p><strong> END OF TREK !! </strong></p>
+
+        </ul>
+
+      </div>
+
+>>>>>>> origin/backup-ayushma
 
       <!-- RIGHT SIDE: Detailed Itinerary -->
       <div class="col-lg-6 detailed-itinerary-box">
@@ -157,7 +167,6 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes, overnight parking possible with lodge owner's permission</td>
 
                   </tr>
-
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -211,7 +220,6 @@
 
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
-
 
 
   </main>

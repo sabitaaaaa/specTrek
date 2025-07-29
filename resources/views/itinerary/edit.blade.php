@@ -21,12 +21,38 @@
     <label>Slug:</label><br>
     <input type="text" name="slug" value="{{ old('slug', $itinerary->slug) }}" required><br><br>
 
+     <label>Image 1:</label><br>
+    <input type="file" name="image1"><br>
+    @if($itinerary->image1)
+        <img src="{{ asset('storage/' . $itinerary->image1) }}" alt="Image 1" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
+    @endif
+    <br>
+
+    <label>Image 2:</label><br>
+    <input type="file" name="image2"><br>
+    @if($itinerary->image2)
+        <img src="{{ asset('storage/' . $itinerary->image2) }}" alt="Image 2" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
+    @endif
+    <br>
+
+    <label>Image 3:</label><br>
+    <input type="file" name="image3"><br>
+    @if($itinerary->image3)
+        <img src="{{ asset('storage/' . $itinerary->image3) }}" alt="Image 3" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
+    @endif
+    <br>
+
+    <label>Image 4:</label><br>
+    <input type="file" name="image4"><br>
+    @if($itinerary->image4)
+        <img src="{{ asset('storage/' . $itinerary->image4) }}" alt="Image 4" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
+    @endif
+
     <label>Quote:</label><br>
     <textarea name="quote" class="rich-text">{{ old('quote', $itinerary->quote) }}</textarea><br><br>
 
     <label>Description:</label><br>
     <textarea name="description" class="rich-text">{{ old('description', $itinerary->description) }}</textarea><br><br>
-
 
     <label>Hidden Gems:</label><br>
     <textarea name="hidden_gems" class="rich-text">{{ old('hidden_gems', $itinerary->hidden_gems) }}</textarea><br><br>
@@ -52,31 +78,49 @@
     <label>Image 1:</label><br>
     <input type="file" name="image1"><br>
     @if($itinerary->image1)
-        <small>Current: {{ $itinerary->image1 }}</small><br>
+        <img src="{{ asset('storage/' . $itinerary->image1) }}" alt="Image 1" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
     @endif
     <br>
 
     <label>Image 2:</label><br>
     <input type="file" name="image2"><br>
     @if($itinerary->image2)
-        <small>Current: {{ $itinerary->image2 }}</small><br>
+        <img src="{{ asset('storage/' . $itinerary->image2) }}" alt="Image 2" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
     @endif
     <br>
 
     <label>Image 3:</label><br>
     <input type="file" name="image3"><br>
     @if($itinerary->image3)
-        <small>Current: {{ $itinerary->image3 }}</small><br>
+        <img src="{{ asset('storage/' . $itinerary->image3) }}" alt="Image 3" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
     @endif
     <br>
 
     <label>Image 4:</label><br>
     <input type="file" name="image4"><br>
     @if($itinerary->image4)
-        <small>Current: {{ $itinerary->image4 }}</small><br>
+        <img src="{{ asset('storage/' . $itinerary->image4) }}" alt="Image 4" style="max-width: 200px; max-height: 150px; display:block; margin-bottom:10px;">
     @endif
     <br>
 
+    <label>
+
+  <input type="checkbox" name="is_featured" value="1" {{ old('is_featured', $itinerary->is_featured) ? 'checked' : '' }}>
+  Mark as Homepage Highlight
+    </label>
+
+
+
+
     <button type="submit">Update Itinerary</button>
 </form>
+
+<!-- Include your rich-text editor JS here (example CKEditor) -->
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+<script>
+  document.querySelectorAll('textarea.rich-text').forEach(textarea => {
+    CKEDITOR.replace(textarea);
+  });
+</script>
+
 @endsection

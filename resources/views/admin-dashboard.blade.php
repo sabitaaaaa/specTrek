@@ -26,7 +26,7 @@
         }
 
         .sidebar {
-            width: 250px;
+            width: 220px;
             background-color: #1e293b;
             color: white;
             padding: 20px;
@@ -77,10 +77,19 @@
             background-color: white;
             box-shadow: 0 2px 8px rgba(20, 18, 18, 0.05);
             border-radius: 5px;
-            font-size: 20px;
+            font-size: 18px;
             text-align: center;
         }
 
+        /* .card {
+            background-color: white;
+            padding: 18px;
+            flex: 1 1 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            font-size: 18px;
+            text-align: center;
+        } */
 
         .chart-container {
             background-color: white;
@@ -100,33 +109,15 @@
 </head>
 <body>
     <div class="dashboard">
- <aside class="sidebar">
-        <div class="logo">AdminPanel</div>
-        <nav>
-            <a href="{{ url('/admin-dashboard') }}" class="{{ request()->is('admin-dashboard') ? 'active' : '' }}">
-                <i class="bi bi-speedometer2 me-2"></i> Dashboard
-            </a>
-            <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
-                <i class="bi bi-people me-2"></i> Users
-            </a>
-            <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
-    <i class="bi bi-box-seam me-2"></i> Packages
-</a>
-            <a href="{{ url('/setting') }}" class="{{ request()->is('setting') ? 'active' : '' }}">
-                <i class="bi bi-gear me-2"></i> Settings
-            </a>
-             <a href="{{ url('/profile') }}" class="{{ request()->is('profile') ? 'active' : '' }}">
-                <i class="bi bi-person me-2"></i> Profile
-            </a>
-            <form method="POST" action="{{ route('logout') }}" class="mt-3">
-                @csrf
-                <button type="submit" class="btn btn-danger w-100">
-                    <i class="bi bi-box-arrow-right me-1"></i> Logout
-                </button>
-            </form>
-        </nav>
-    </aside>
-
+        <aside class="sidebar">
+            <h2 class="logo">MyDash</h2>
+            <nav>
+                <a href="{{ url('/admin-dashboard') }}">Dashboard</a>
+                <a href="{{ route('users.index') }}">Users</a>
+                <a href="setting.blade.php">Settings</a>
+                <a href="{{ route('logout') }}">Logout</a>
+            </nav>
+        </aside>
 
         <main class="main-content">
             <header class="navbar">

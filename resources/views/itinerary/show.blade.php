@@ -14,21 +14,33 @@
       <div class="slider">
         @foreach ([$itinerary->image1, $itinerary->image2, $itinerary->image3, $itinerary->image4] as $img)
           @if($img)
-            <img class="slide {{ $loop->first ? 'active' : '' }}" src="{{ asset('images/' . $img) }}" alt="Trek Image {{ $loop->iteration }}" />
+            <img class="slide {{ $loop->first ? 'active' : '' }}" src="{{ asset('storage/' . $img) }}" alt="Trek Image {{ $loop->iteration }}" />
           @endif
         @endforeach
       </div>
+
+      <section class="quote">
+        <h4>“<p>{{ strip_tags($itinerary->description) }}</p>”</h4>
+      </section>
     </div>
 
     <div class="col-lg-4">
       <div class="border-box">
-        <h2 style="color: #2c3e50;">Hidden Gems</h2>
-        <ul>
-          @foreach(json_decode($itinerary->hidden_gems, true) ?? [] as $gem)
-            <li>{{ strip_tags($gem) }}</li>
-          @endforeach
-        </ul>
+        <div>
+          <h2 style="color: #2c3e50;">Hidden Gems</h2>
+          @php
+  $gems = preg_split('/[.,]/', strip_tags($itinerary->hidden_gems));
+@endphp
 
+<ul>
+  @foreach($gems as $gem)
+    @if(trim($gem) !== '')
+      <li>{{ trim($gem, ' "“”') }}</li>
+    @endif
+  @endforeach
+</ul>
+
+        </div>
         <div class="best-time">
           <h3 style="color: #2c3e50;">Best Time to Visit</h3>
           <p>{{ strip_tags($itinerary->best_time) }}</p>
@@ -39,17 +51,20 @@
 
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
-      @php
-        $decoded = json_decode($itinerary->day_to_day_itinerary, true);
-        $text = is_array($decoded) ? implode("\n", $decoded) : $itinerary->day_to_day_itinerary;
-        $cleanText = strip_tags($text);
-        $cleanText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $cleanText);
-      @endphp
+    @php
+  $decodedDayText = html_entity_decode(strip_tags($itinerary->day_to_day_itinerary));
+  $cleanDayText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $decodedDayText);
+@endphp
+
 
       <div class="col-lg-6 day-itinerary">
         <h2>Day-to-Day Itinerary</h2>
         <ul>
-          {!! nl2br(e($cleanText)) !!}
+          @foreach(explode("\n", $cleanDayText) as $line)
+            @if(trim($line) !== '')
+              <li>{{ trim($line) }}</li>
+            @endif
+          @endforeach
         </ul>
       </div>
 
@@ -107,6 +122,7 @@
     </div>
   </div>
 </main>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
 
 <footer class="footer">
   <div class="footer-container">
@@ -146,6 +162,29 @@
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
   }
+
+  showSlide(currentSlide);
   setInterval(nextSlide, 3000);
+</script>
+
+<script>
+  const seeMoreBtn = document.getElementById('see-more-btn');
+  const fadeBox = document.getElementById('detailed-itinerary');
+  const wrapper = document.getElementById('itinerary-wrapper');
+  seeMoreBtn?.addEventListener('click', () => {
+    fadeBox.classList.toggle('expanded');
+    wrapper.classList.toggle('fullscreen');
+    seeMoreBtn.textContent = fadeBox.classList.contains('expanded') ? 'See Less' : 'See More';
+  });
+</script>
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function () {
+    scrollBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 </script>
 @endsection

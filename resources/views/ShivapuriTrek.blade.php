@@ -425,6 +425,10 @@
 
         </ul>
 
+          <p><strong> END OF TREK !! </strong></p>
+
+        </ul>
+
       </div>
 
 
@@ -476,7 +480,6 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Yes official parking space near entrance gate</td>
 
                   </tr>
-
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -534,7 +537,6 @@
 
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
-
 
 
   </main>

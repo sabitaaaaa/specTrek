@@ -53,53 +53,28 @@
   <h2>EXPLORE NEPAL'S HIGHLIGHTS</h2>
 
   <div class="features-grid top-row">
-    <div class="feature-card">
-        <a href="{{ url('/itinerary/ShivapuriTrek') }}">
-          <img src="{{ asset('images/h-1.jpg') }}" alt="Shivapuri">
-          <div class="overlay-text">SHIVAPURI</div>
+    @foreach($highlights->take(3) as $highlight)
+      <div class="feature-card">
+       <a href="{{ route('itinerary.show', $highlight->slug) }}">
+          <img src="{{ asset('storage/' . $highlight->image1) }}" alt="{{ $highlight->title }}">
+          <div class="overlay-text">{{ strtoupper($highlight->title) }}</div>
         </a>
       </div>
-
-
-    <div class="feature-card">
-      <a href="{{ url('/abc') }}">
-        <img src="{{ asset('images/h-2.jpg') }}" alt="ABC">
-        <div class="overlay-text">ANNAPURNA BASE CAMP</div>
-      </a>
-    </div>
-
-    <div class="feature-card">
-      <a href="{{ url('/shey') }}">
-        <img src="{{ asset('images/h-3.jpg') }}" alt="Shey Phoksundo">
-        <div class="overlay-text">SHEY PHOKSUNDO</div>
-      </a>
-    </div>
+    @endforeach
   </div>
 
   <div class="features-grid bottom-row">
-    <div class="feature-card">
-      <a href="{{ url('/Langtangtrek') }}">
-        <img src="{{ asset('images/h-4.jpg') }}" alt="Langtang">
-        <div class="overlay-text">LANGTANG</div>
-      </a>
-    </div>
+    @foreach($highlights->slice(3, 3) as $highlight)
+      <div class="feature-card">
+  <a href="{{ route('itinerary.show', $highlight->slug) }}">
 
-    <div class="feature-card">
-      <a href="{{ url('/AmaYangriTrek') }}">
-        <img src="{{ asset('images/h-5.jpg') }}" alt="Amayangri">
-        <div class="overlay-text">AMAYANGRI</div>
-      </a>
-    </div>
-
-    <div class="feature-card">
-      <a href="{{ url('/manaslu') }}">
-        <img src="{{ asset('images/h-6.jpg') }}" alt="Manaslu">
-        <div class="overlay-text">MANASLU</div>
-      </a>
-    </div>
+    <img src="{{ asset('storage/' . $highlight->image1) }}" alt="{{ $highlight->title }}">
+    <div class="overlay-text">{{ strtoupper($highlight->title) }}</div>
+  </a>
+</div>
+    @endforeach
   </div>
 </section>
-
 
 <!-- ===============================updated part ----------------------======================= -->
 
@@ -302,9 +277,13 @@
       </div>
     </div>
   </div>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+
 <svg class="hero-curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#ffffff" d="M0,0 C480,300 960,300 1440,0 L1440,320 L0,320 Z"></path>
 </svg>
+
 
   <div class="footer-bottom">
     <p>©️ 2025 SpecTrek. All rights reserved.</p>

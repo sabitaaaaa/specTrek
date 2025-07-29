@@ -523,7 +523,6 @@
                     <td style="padding: 10px; border: 1px solid #ccc;">Lands at Kyanjin Gompa, fastest and scenic option</td>
 
                   </tr>
-
                 </tbody>
               </table>
               <p style="margin-top: 1.5rem; font-size: 17px; line-height: 1.7;">
@@ -579,7 +578,6 @@
 
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
   </div>
-
 
 
   </main>

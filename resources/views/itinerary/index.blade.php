@@ -15,7 +15,7 @@
     <thead>
         <tr>
             <th>Title</th>
-            <th>Slug</th>
+            <th>Package name</th>
             <th>Actions</th>
         </tr>
     </thead>

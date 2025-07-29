@@ -62,6 +62,10 @@ Route::post('/logout', function () {
     Auth::logout();
     return redirect('/');
 })->name('logout.post');
+// Route::get('/about', function () {
+//      return view('about');
+//  });
+// /about chai huna parcha haina url ma /about lekhda about ko page aaos bhanera
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
