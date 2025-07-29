@@ -350,6 +350,7 @@
 <body>
 
   <nav class="navbar">
+       <!-- changed -->
     <a href="#" class="navbar-brand">
       <img src="{{ asset('images/logo.png') }}" alt="Logo" />
     </a>

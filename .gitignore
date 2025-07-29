@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/.phpunit.cache
+=======
+>>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/backup/sabita
 *.log
 .DS_Store
 .env
@@ -12,6 +24,19 @@
 /.vscode
 /.zed
 /auth.json
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/.phpunit.cache
+>>>>>>> feature-admin
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/backup/sabita
 /node_modules
 /public/build
 /public/hot
@@ -19,8 +44,55 @@
 /storage/*.key
 /storage/pail
 /vendor
+<<<<<<< HEAD
 Homestead.json
 Homestead.yaml
 Thumbs.db
 npm-debug.log
 yarn-error.log
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+Homestead.json
+Homestead.yaml
+Thumbs.db
+=======
+=======
+>>>>>>> feature/trekking-mapp
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/auth.json
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+<<<<<<< HEAD
+<<<<<<< HEAD
+ 
+
+ 
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
+=======
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
+=======
+Homestead.json
+Homestead.yaml
+Thumbs.db
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/backup/sabita

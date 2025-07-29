@@ -16,6 +16,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     | Supported: "file", "cookie", "database", "memcached",
@@ -27,6 +28,11 @@ return [
     |            "redis", "dynamodb", "array"
 =======
 >>>>>>> origin/backup-ayushma
+=======
+    | Supported: "file", "cookie", "database", "memcached",
+    |            "redis", "dynamodb", "array"
+=======
+>>>>>>> origin/backup/sabita
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,7 +52,10 @@ return [
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/backup/sabita
 =======
 <<<<<<< HEAD
     | Supported: "file", "cookie", "database", "apc",
@@ -54,7 +63,10 @@ return [
 =======
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
+<<<<<<< HEAD
 >>>>>>> origin/backup-ayushma
+=======
+>>>>>>> origin/backup/sabita
 >>>>>>> feature/trekking-mapp
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 =======
@@ -64,11 +76,20 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+=======
+>>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
+>>>>>>> feature-admin
+=======
+>>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+>>>>>>> feature/trekking-mapp
+>>>>>>> origin/backup/sabita
 =======
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
 >>>>>>> feature/itinerary-and-blogs
+<<<<<<< HEAD
 =======
 >>>>>>> 984c64976086bcf7202c3d6842f57cf725e74a5d
 >>>>>>> feature-admin
@@ -85,6 +106,8 @@ return [
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
 >>>>>>> origin/backup-ayushma
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> origin/backup/sabita
     |
     */
 
@@ -173,19 +196,26 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> feature/trekking-mapp
 =======
+=======
+>>>>>>> origin/backup/sabita
     | Affects: "dynamodb", "memcached", "redis"
 =======
     | Affects: "apc", "dynamodb", "memcached", "redis"
 >>>>>>> feature-admin
 =======
+<<<<<<< HEAD
 >>>>>>> origin/backup-ayushma
+=======
+>>>>>>> origin/backup/sabita
     | Affects: "apc", "dynamodb", "memcached", "redis"
 =======
     | Affects: "dynamodb", "memcached", "redis"
 >>>>>>> 51ff48e5d0d0cb0414c83e974f23d7e2b268dd6c
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -204,6 +234,12 @@ return [
 =======
 >>>>>>> origin/backup-ayushma
 >>>>>>> feature/trekking-mapp
+=======
+>>>>>>> feature/trekking-mapp
+=======
+    | Affects: "dynamodb", "memcached", "redis"
+>>>>>>> feature/itinerary-and-blogs
+>>>>>>> origin/backup/sabita
     |
     */
 

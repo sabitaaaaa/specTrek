@@ -43,6 +43,9 @@ function nextTestimonial() {
   showTestimonial(currentIndex);
 }
 
+// Automatically cycle testimonials (optional)
+setInterval(nextTestimonial, 5000); // change every 5 seconds
+
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {
     currentIndex = i;

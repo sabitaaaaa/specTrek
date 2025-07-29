@@ -1,6 +1,119 @@
 <?php
+<<<<<<< HEAD
+=======
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EsewaController;
+use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\RecommendationController;
+use App\Http\Controllers\TrekController;
+
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+// suppose euta certain naam ko manche ko appear huna paryore data the we should:
+Route::get('/about/{name}', function ($name) {
+    echo "$name";//first way to show name
+     return view('about',["name"=>$name]);//second way to show name
+ });
+ Route::get('/weather', [WeatherController::class, 'getWeather']);
+ Route ::get('/Tours',function(){
+    return view('Tours');
+ });
+
+Route::get('/home', function () {
+    return view('home');
+});
+// routes/web.php
+Route::get('/recommend', [TrekRecommendationController::class, 'showForm'])->name('recommendation.form');
+Route::post('/recommend', [TrekRecommendationController::class, 'processForm'])->name('recommendation.process');
+
+// ====API
+Route::get('/api/weather-places', [WeatherController::class, 'fetchAllWeatherData'])->name('weather.places');
+Route::get('/weathermap', function () {
+    return view('weathermap');
+});
+Route::get('/weather/test-all', [WeatherController::class, 'fetchAllWeatherData']);
+
+
+//TOURS PAGE ROUTE
+Route ::get('/Tours',function(){
+    return view('Tours');
+ })->name('tours');
+// use App\Http\Controllers\TrekController;
+Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
+
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+Route::get('/AmaYangriTrek', function () {
+    return view('AmaYangriTrek');
+});
+
+
+Route::get('/LangtangTrek', function () {
+    return view('LangtangTrek');
+});
+
+Route::get('/ShivapuriTrek', function () {
+    return view('ShivapuriTrek');
+});
+
+Route::get('/AmaYangriPaid', function () {
+    return view('AmaYangriPaid');
+});
+
+Route::get('/Langtangpaid', function () {
+    return view('Langtangpaid');
+});
+
+Route::get('/Shivapuripaid', function () {
+    return view('Shivapuripaid');
+});
+
+
+
+use App\Http\Controllers\PaymentController;
+
+Route::post('/charge', [PaymentController::class, 'charge']);
+Route::get('/example', function () {
+    return view('example');
+});
+
+Route::get('/abc', function () {
+    return view('abc');
+});
+
+Route::get('/shey', function () {
+    return view('shey');
+});
+
+Route::get('/manaslu', function () {
+    return view('manaslu');
+});
+
+
+use App\Http\Controllers\PostController;
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
+Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update');
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+
+>>>>>>> origin/backup/sabita
+
+
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
@@ -9,16 +122,25 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/backup/sabita
 use App\Http\Controllers\Admin\UserControllers;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+<<<<<<< HEAD
 use App\Http\Controllers\TrekController;
 use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
+=======
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminUserController;
+>>>>>>> origin/backup/sabita
 
 //changed
 
@@ -37,8 +159,14 @@ use App\Http\Controllers\StripePaymentController;
 
 
 Route::middleware(['auth'])->group(function () {
+<<<<<<< HEAD
     Route::get('/stripe', [StripePaymentController::class, 'stripe'])->name('stripe');
     Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
+=======
+
+    // User Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
+>>>>>>> origin/backup/sabita
 
     Route::get('/payment-success', [StripePaymentController::class, 'paymentSuccess'])->name('payment.success');
     Route::get('/payment-cancel', [StripePaymentController::class, 'paymentCancel'])->name('payment.cancel');
@@ -89,8 +217,13 @@ Route::controller(StripePaymentController::class)->group(function(){
 });
 
 
+<<<<<<< HEAD
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
+=======
+//
+Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
+>>>>>>> origin/backup/sabita
 
 
 // Static Views
@@ -115,6 +248,7 @@ Route::get('/about/{name}', function ($name) {
     return view('about', ["name" => $name]);
 });
 
+<<<<<<< HEAD
 // Weather
 Route::get('/weather', [WeatherController::class, 'getWeather']);
 Route::get('/weather-preview', [WeatherController::class, 'previewWeather']);
@@ -127,6 +261,8 @@ Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.f
 Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 Route::get('/recommendation', [TrekController::class, 'showForm'])->name('recommendation');
 Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
+=======
+>>>>>>> origin/backup/sabita
 
 // Review
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
@@ -140,7 +276,18 @@ Route::get('/see-more', function () {
     return view('see_more', compact('hasPaid'));
 });
 
+<<<<<<< HEAD
 // Payment Routes
+=======
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+
+use App\Http\Controllers\Admin\UsersController;
+Route::resource('users', UsersController::class);
+
+// Route::resource('admin/users', UserControllers::class);
+>>>>>>> origin/backup/sabita
 Route::get('/esewa-pay', [EsewaController::class, 'pay'])->name('esewa.pay');
 Route::get('/esewa-success', [EsewaController::class, 'success']);
 Route::get('/esewa-failure', [EsewaController::class, 'failure']);
@@ -164,6 +311,7 @@ Route::middleware(['auth'])->group(function () {
         return view('admin-dashboard', compact('userCount'));
     })->name('admin.dashboard');
 
+<<<<<<< HEAD
     // Trek/tours
     Route::get('/tours', [TrekController::class, 'showTours']);
 
@@ -177,3 +325,106 @@ Route::middleware(['auth'])->group(function () {
 // Users Management
 Route::resource('users', UsersController::class);
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
+=======
+
+
+//RECOMENDATION
+Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation.form');
+Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommendation.result');
+Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
+
+
+//TOURS PRICE RANGE
+Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
+
+
+
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+
+//profile
+
+use App\Http\Controllers\AdminProfileController;
+
+Route::get('/admin/profile', [AdminProfileController::class, 'index'])->name('admin.profile');
+Route::post('/admin/profile/update', [AdminProfileController::class, 'update'])->name('admin.profile.update');
+
+
+
+
+Route::resource('users', UserController::class);
+
+
+//profile admin-dashboard
+
+
+Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
+Route::post('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
+
+
+
+//route for packages
+
+use App\Http\Controllers\PackageController;
+
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    Route::get('/packages', [PackageController::class, 'index'])->name('packages.index');
+});
+
+
+// route for review
+
+
+
+use App\Http\Controllers\ReviewController;
+
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);
+// Show form
+Route::get('/packages/create', [PackageController::class, 'create'])->name('packages.create');
+
+// Store form data
+Route::post('/packages', [PackageController::class, 'store'])->name('packages.store');
+
+
+
+Route::get('/profile/edit', [AdminProfileController::class, 'index'])->name('profile.edit');
+Route::post('/profile/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+
+
+
+// Route::get('/edit-logo', [AdminProfileController::class, 'editLogo'])->name('profile.editLogo');
+// Route::post('/update-logo', [AdminProfileController::class, 'updateLogo'])->name('profile.updateLogo');
+Route::get('/home', [HomeController::class, 'index']);
+
+
+
+Route::post('/logo/edit', [AdminProfileController::class, 'updateLogo'])->name('logo.edit');
+
+
+
+
+
+use App\Http\Controllers\ProfileController;
+
+// Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+// Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+// Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+// use App\Http\Controllers\ProfileController;
+
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::post('/profile/upload-logo', [ProfileController::class, 'uploadLogo'])->name('profile.uploadLogo');
+
+
+
+
+//new chnages
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/upload-logo', [HomeController::class, 'updateLogo'])->name('site.uploadLogo');
+
+>>>>>>> origin/backup/sabita
