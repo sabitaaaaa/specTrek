@@ -106,8 +106,8 @@
             <a href="{{ url('/admin-dashboard') }}" class="{{ request()->is('admin-dashboard') ? 'active' : '' }}">
                 <i class="bi bi-speedometer2 me-2"></i> Dashboard
             </a>
-            <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
-                <i class="bi bi-people me-2"></i> Users
+            <a href="{{ route('user.index') }}" class="{{ request()->is('user*') ? 'active' : '' }}">
+                <i class="bi bi-people me-2"></i> User
             </a>
             <!-- <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
     <i class="bi bi-box-seam me-2"></i> Packages
@@ -132,7 +132,7 @@
             </header>
 
             <section class="content">
-                <div class="card">Total Users: {{ $userCount }}</div>
+                <div class="card">Total User: {{ $userCount }}</div>
                 <div class="card1"> Total Places</div>
             </section>
 
@@ -179,12 +179,12 @@
             }
         });
 
-        // Pie Chart (Only Users)
+        // Pie Chart (Only User)
         const overviewCtx = document.getElementById('overviewChart').getContext('2d');
         new Chart(overviewCtx, {
             type: 'pie',
             data: {
-                labels: ['Total Users'],
+                labels: ['Total User'],
                 datasets: [{
                     data: [{{ $userCount }}],
                     backgroundColor: ['#03A9F4'],

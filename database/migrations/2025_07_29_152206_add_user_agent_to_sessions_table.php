@@ -11,21 +11,16 @@ return new class extends Migration
      */
     public function up()
 {
-    Schema::table('itineraries', function (Blueprint $table) {
-        $table->boolean('is_featured')->default(false);
+    Schema::table('sessions', function (Blueprint $table) {
+        $table->text('user_agent')->nullable()->after('ip_address');
     });
 }
 
 public function down()
 {
-    Schema::table('itineraries', function (Blueprint $table) {
-        $table->dropColumn('is_featured');
+    Schema::table('sessions', function (Blueprint $table) {
+        $table->dropColumn('user_agent');
     });
 }
-
-
-    /**
-     * Reverse the migrations.
-     */
 
 };

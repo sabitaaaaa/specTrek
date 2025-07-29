@@ -9,16 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-   public function up():void
-{
- DB::table('settings')->insert([
-    'key' => 'site_logo',
-    'value' => 'upload/logo/1753609018_logoforlandingpage.jpg',
-     // e.g., 'logo/your-file.png'
-    'created_at' => now(),
-    'updated_at' => now(),
-]);
 
+public function up()
+{
+    if (!DB::table('settings')->where('key', 'site_logo')->exists()) {
+        DB::table('settings')->insert([
+            'key' => 'site_logo',
+            'value' => 'upload/logo/1753609018_logoforlandingpage.jpg',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+    }
 }
 
 

@@ -10,11 +10,14 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-{
-    Schema::table('itineraries', function (Blueprint $table) {
-        $table->boolean('is_featured')->default(false);
-    });
-}
+    {
+        if (!Schema::hasColumn('itineraries', 'is_featured')) {
+            Schema::table('itineraries', function (Blueprint $table) {
+                $table->boolean('is_featured')->default(false);
+            });
+        }
+    }
+
 
 public function down()
 {

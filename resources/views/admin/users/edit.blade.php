@@ -1,4 +1,4 @@
- @extends('layout')
+@extends('layout')
 
 @section('content')
 <div class="container-fluid px-4">
@@ -45,8 +45,4 @@
         </div>
     </div>
 </div>
-@endsection 
-
-
-
-
+@endsection

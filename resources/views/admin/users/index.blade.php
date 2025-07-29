@@ -34,12 +34,12 @@
                                 </a>
                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
                                     @csrf
-                                    @method('DELETE') 
+                                    @method('DELETE')
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
                                         <i class="bi bi-trash3"></i>
                                     </button>
-                                    
+
                                 </form>
                             </td>
                         </tr>

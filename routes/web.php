@@ -20,6 +20,22 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
 
+// more changes
+
+    // Admin Panel
+    Route::prefix('admin')->group(function () {
+        Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
+        Route::resource('/user', UserController::class)->names('admin.user');
+    });
+
+// User Management
+Route::resource('user', UserController::class);
+Route::get('/admin/user/create', [UserController::class, 'create'])->name('user.create');
+
+Route::get('/user', [UserController::class, 'index'])->name('user.index');
+
+Route::get('/user', [UserController::class, 'index'])->name('user.index');
+
 //changed
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/{slug}/payment', function ($slug) {
@@ -167,13 +183,6 @@ Route::middleware(['auth'])->group(function () {
     // Trek/tours
     Route::get('/tours', [TrekController::class, 'showTours']);
 
-    // Admin Panel
-    Route::prefix('admin')->group(function () {
-        Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
-        Route::resource('/users', UserController::class)->names('admin.users');
-    });
 });
 
-// Users Management
-Route::resource('users', UsersController::class);
-Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
+
