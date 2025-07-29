@@ -234,8 +234,8 @@ Route::get('/admin/users/create', [UserController::class, 'create'])->name('user
 
 
 
- Route::resource('/admin/users', UserController::class);
-// Route::resource('users', UsersController::class);
+Route::resource('/admin/users', UserController::class);
+Route::resource('users', UsersController::class);
 
 Route::resource('/admin/users', UserController::class);
 
@@ -276,10 +276,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 // dynamic view for user
-// Route::get('/itinerary/{slug}', function ($slug) {
-//     $itinerary = \App\Models\Itinerary::where('slug', $slug)->firstOrFail();
-//     return view('itinerary.show', compact('itinerary'));
-// })->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
+Route::get('/itinerary/{slug}', function ($slug) {
+    $itinerary = \App\Models\Itinerary::where('slug', $slug)->firstOrFail();
+    return view('itinerary.show', compact('itinerary'));
+})->where('slug', '^(?!create$|edit$|delete$)[a-zA-Z0-9\-]+$');
 
 Route::resource('itinerary', ItineraryController::class);
 
@@ -408,7 +408,7 @@ Route::resource('users', UsersController::class);
 Route::resource('itinerary', ItineraryController::class);
 
 // Removed duplicate manual itinerary routes with same URI and name
-// Route::get('/treks/{id}', [TrekController::class, 'show'])->name('treks.show');
+Route::get('/treks/{id}', [TrekController::class, 'show'])->name('treks.show');
 
 //preferencecontroller
 use App\Http\Controllers\PreferenceController;
@@ -494,10 +494,10 @@ Route::get('/admin/users/create', [UserController::class, 'create'])->name('user
 // Store/update the preferences
 // Route::post('/preferences', [UserPreferenceController::class, 'store'])->name('preferences.store')->middleware('auth');
 //authenticted recommendation
-Route::middleware(['auth', 'premium'])->group(function () {
-    Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
-    Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
-});
+// Route::middleware(['auth', 'premium'])->group(function () {
+//     Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommendation\.form');
+//     Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
+// });
 // routes/web.php
 // Route::get('/recommend', [TrekRecommendationController::class, 'showForm'])->name('recommendation.form');
 // Route::post('/recommend', [TrekRecommendationController::class, 'processForm'])->name('recommendation.process');
@@ -508,5 +508,5 @@ Route::middleware(['auth', 'premium'])->group(function () {
 
 
 
-// Route::post('/recommend/result', [TrekController::class, 'processForm'])->name('recommend.result');
-// Route::get('/recommend/form', [TrekController::class, 'showForm'])->name('recommend.form');
+Route::post('/recommend/result', [TrekController::class, 'processForm'])->name('recommend.result');
+Route::get('/recommend/form', [TrekController::class, 'showForm'])->name('recommend.form');

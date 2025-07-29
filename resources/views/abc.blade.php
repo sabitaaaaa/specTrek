@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Annapurna Base Camp</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="{{ asset('css/abc.css') }}">
-=======
 
   <style>
     * {
@@ -350,7 +347,6 @@
     }
   </style>
   <link rel="stylesheet" href="{{ asset('css/dynamic.css') }}">
->>>>>>> origin/merged-ayushma
 </head>
 <body>
 

@@ -10,12 +10,10 @@ class CheckPremiumUser
     public function handle(Request $request, Closure $next)
     {
         if (auth()->check() && !auth()->user()->is_premium) {
-            return redirect()->route('stripe')->with('error', 'Please pay to access recommendations.');
+            return redirect()->route('stripe')->with('error', 'Please pay to access premium features.');
         }
-        return $next($request);
-        if (!auth()->user()->is_premium) {
-    return redirect('/stripe')->with('error', 'Please upgrade to premium to access recommendations.');
-}
 
+        return $next($request);
     }
 }
+

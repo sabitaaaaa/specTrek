@@ -56,14 +56,11 @@ class AuthController extends Controller
             } elseif ($email === 'ayushma23@gmail.com') {
                 return redirect('/itinerary');
             }
-<<<<<<< HEAD
             else
 
             return redirect('/dashboard');
-=======
 
             return redirect('/home');
->>>>>>> origin/merged-ayushma
         }
 
         return back()->with('error', 'Invalid login credentials');

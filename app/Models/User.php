@@ -37,7 +37,6 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
-<<<<<<< HEAD
     protected function casts(): array
     {
         return [
@@ -53,10 +52,8 @@ public function viewedItineraries()
 }
 
 
-=======
     protected $casts = [
         // 'email_verified_at' => 'datetime',
         'has_paid_shivapuri' => 'boolean', // Cast to boolean
     ];
->>>>>>> origin/merged-anushree
 }
