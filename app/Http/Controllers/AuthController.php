@@ -73,7 +73,7 @@ class AuthController extends Controller
             }
             else
 
-            return redirect('/');
+            return redirect('/home');
         }
 
         return back()->with('error', 'Invalid login credentials');
