@@ -19,7 +19,26 @@
             <ul class="nav-links">
                 <button id="emergency-btn">Emergency</button>
                 <li><a href="{{ url('/posts') }}" class="naa">Post</a></li>
-                <li><a href="{{ route('recommend.form') }}">Trek Recommendation</a></li>                @auth
+                <li><a href="{{ route('recommend.form') }}" id="trek-recommendation-link">Trek Recommendation</a></li>
+
+                <script>
+                    document.getElementById('trek-recommendation-link').addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        const isLoggedIn = @json(Auth::check());
+                        const isPremium = @json(Auth::check() && Auth::user()->is_premium);
+
+                        if (!isLoggedIn) {
+                            window.location.href = "/login?redirect=/recommendation";
+                        } else if (!isPremium) {
+                            window.location.href = "/stripe";
+                        } else {
+                            window.location.href = "{{ route('recommend.form') }}";
+                        }
+                    });
+                </script>
+
+                                  @auth
                 <div x-data="{ open: false }" class="mt-1 ms-2">
                     <form method="POST" action="{{ route('logout') }}" @submit="open = false">
                         @csrf
@@ -155,28 +174,6 @@
     </div>
   </div>
 </section> -->
-<!-- STATS SECTION -->
-<section class="stats-banner">
-  <div class="stats-container">
-    <div class="stat-box">
-      <h3>120+</h3>
-      <p>TREKS COMPLETED</p>
-    </div>
-    <div class="stat-box">
-      <h3>95%</h3>
-      <p>CLIENT SATISFACTION</p>
-    </div>
-    <div class="stat-box">
-      <h3>6,476m</h3>
-      <p>HIGHEST ALTITUDE CONQUERED</p>
-    </div>
-    <div class="stat-box">
-      <h3>8</h3>
-      <p>REGIONS EXPLORED</p>
-    </div>
-  </div>
-</section>
-
 <!-- VIDEO SECTION -->
 <section class="video-section">
   <h2>SPECTREK</h2>

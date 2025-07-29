@@ -10,30 +10,22 @@ class AdminProfileController extends Controller
         return view('profile.edit'); // Make sure this Blade file exists
     }
     public function updateLogo(Request $request)
-    {
-        // Validate input
-        $request->validate([
-            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+{
+    if ($request->hasFile('site_logo')) {
+        $file = $request->file('site_logo');
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $path = public_path('logo'); // or storage_path()
 
-        // Ensure the folder exists
-        $logoPath = public_path('logo');
-        if (!File::exists($logoPath)) {
-            File::makeDirectory($logoPath, 0777, true);
-        }
+        // Store file
+        $file->move($path, $filename);
 
-        // Handle file upload
-        if ($request->hasFile('logo')) {
-            $file = $request->file('logo');
-            $filename = time() . '_' . $file->getClientOriginalName();
-            $file->move($logoPath, $filename);
-
-            // Optional: Store file path in DB or session, example:
-            // Setting::updateOrInsert(['key' => 'site_logo'], ['value' => $filename]);
-
-            return back()->with('success', 'Logo uploaded successfully!');
-        }
-
-        return back()->with('error', 'Logo upload failed!');
+        // Save to database (make sure model is correct)
+        Setting::updateOrCreate(
+            ['key' => 'site_logo'], // condition
+            ['value' => 'logo/' . $filename] // update this value
+        );
     }
+
+    return redirect()->back()->with('success', 'Logo updated successfully.');
+}
 }

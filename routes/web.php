@@ -185,12 +185,12 @@ Route::get('/see-more', function () {
     return view('see_more', compact('hasPaid'));
 });
 
-// Payment Routes
+// // Payment Routes
 
-Route::get('/Khalti', [KhaltiController::class, 'pay']);
-Route::get('/shivapuri/payment', function () {
-    return Auth::check() ? view('payment-options') : redirect('/login?redirect=/shivapuri/payment');
-})->middleware('auth')->name('shivapuri.payment');
+// Route::get('/Khalti', [KhaltiController::class, 'pay']);
+// Route::get('/shivapuri/payment', function () {
+//     return Auth::check() ? view('payment-options') : redirect('/login?redirect=/shivapuri/payment');
+// })->middleware('auth')->name('shivapuri.payment');
 
 // Authenticated Routes
 Route::middleware(['auth'])->group(function () {
