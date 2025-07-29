@@ -17,7 +17,7 @@
 
     <div class="card shadow-sm">
         <div class="card-body">
-            <form action="{{ route('users.update', $user->id) }}" method="POST">
+            <form action="{{ route('user.update', $user->id) }}" method="POST">
                 @csrf
                 @method('PUT')
 
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="d-flex justify-content-between">
-                    <a href="{{ route('users.index') }}" class="btn btn-secondary">
+                    <a href="{{ route('user.index') }}" class="btn btn-secondary">
                         <i class="bi bi-x-circle"></i> Cancel
                     </a>
                     <button type="submit" class="btn btn-success">

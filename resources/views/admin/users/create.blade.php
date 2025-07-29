@@ -9,7 +9,7 @@
 <div class="container mt-5">
     <h2>Add New User</h2>
 
-    <form action="{{ route('users.store') }}" method="POST">
+    <form action="{{ route('user.store') }}" method="POST">
         @csrf
 
         <div class="mb-3">
@@ -31,7 +31,7 @@
         </div>
 
         <button class="btn btn-success">Create</button>
-        <a href="{{ route('users.index') }}" class="btn btn-secondary">Back</a>
+        <a href="{{ route('user.index') }}" class="btn btn-secondary">Back</a>
     </form>
 </div>
 </body>
@@ -63,7 +63,7 @@
 
     <div class="card shadow-sm">
         <div class="card-body">
-            <form action="{{ route('users.store') }}" method="POST">
+            <form action="{{ route('user.store') }}" method="POST">
                 @csrf
 
                 <div class="mb-3">
@@ -85,7 +85,7 @@
                 </div>
 
                 <button class="btn btn-success">Create</button>
-                <a href="{{ route('users.index') }}" class="btn btn-secondary">Back</a>
+                <a href="{{ route('user.index') }}" class="btn btn-secondary">Back</a>
             </form>
         </div>
     </div>

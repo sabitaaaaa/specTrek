@@ -82,14 +82,12 @@
                 <a href="{{ url('/admin-dashboard') }}" class="{{ request()->is('admin-dashboard') ? 'active' : '' }}">
                     <i class="bi bi-speedometer2 me-2"></i> Dashboard
                 </a>
-                <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
+                <a href="{{ route('user.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
                     <i class="bi bi-people me-2"></i> Users
                 </a>
 
 
-                <!-- <a href="{{ route('packages.index') }}" class="{{ request()->is('admin/packages*') ? 'active' : '' }}">
-    <i class="bi bi-box-seam me-2"></i> Packages
-</a> -->
+
                 {{--
             <a href="{{ url('/setting') }}" class="{{ request()->is('setting') ? 'active' : '' }}">
                 <i class="bi bi-gear me-2"></i> Settings

@@ -12,7 +12,7 @@
         <div class="card-body">
             <div class="d-flex justify-content-between mb-3">
                 <h5 class="card-title mb-0">Users List</h5>
-                <a href="{{ route('users.create') }}" class="btn btn-primary">+ Add User</a>
+                <a href="{{ route('user.create') }}" class="btn btn-primary">+ Add User</a>
             </div>
 
             <table class="table table-hover table-bordered">
@@ -29,10 +29,10 @@
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $user->name }}</td>
                             <td class="text-center">
-                                <a href="{{ route('users.edit', $user->id) }}" title="Edit" class="btn btn-sm btn-outline-warning me-1">
+                                <a href="{{ route('user.edit', $user->id) }}" title="Edit" class="btn btn-sm btn-outline-warning me-1">
                                     <i class="bi bi-pencil"></i>
                                 </a>
-                                <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
+                                <form action="{{ route('user.destroy', $user->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     @method('DELETE')

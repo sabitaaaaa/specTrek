@@ -80,7 +80,7 @@
             <a href="{{ url('/admin-dashboard') }}" class="{{ request()->is('admin-dashboard') ? 'active' : '' }}">
                 <i class="bi bi-speedometer2 me-2"></i> Dashboard
             </a>
-            <a href="{{ route('users.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
+            <a href="{{ route('user.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
                 <i class="bi bi-people me-2"></i> Users
             </a>
 
