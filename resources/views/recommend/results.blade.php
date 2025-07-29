@@ -5,7 +5,6 @@
   <title>Trek Recommendations</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    /* Your CSS styles here */
     .badge-green {
       background-color: #28a745;
       color: white;
@@ -102,6 +101,17 @@
                     <li>Couple: Rs. {{ $prices['couple'] ? number_format($prices['couple']) : 'N/A' }}</li>
                     <li>Group: Rs. {{ $prices['group'] ? number_format($prices['group']) : 'N/A' }}</li>
                   </ul>
+
+                  @if (!empty($data['notes']) && collect($data['notes'])->filter()->isNotEmpty())
+                    <div class="alert alert-info small mt-2">
+                      @foreach ($data['notes'] as $note)
+                        @if (!empty($note))
+                          <p class="mb-1">{{ $note }}</p>
+                        @endif
+                      @endforeach
+                    </div>
+                  @endif
+
                 </div>
               </div>
             </div>
@@ -110,10 +120,48 @@
       </div>
     @endif
 
+    {{-- ✅ Related Treks Section --}}
+    @if(isset($relatedTreks) && $relatedTreks->isNotEmpty())
+  <h3 class="mt-5"><span class="badge bg-secondary">Because You Liked...</span></h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach($relatedTreks as $item)
+      @php
+        $trek = $item['trek'] ?? null;
+        $prices = $item['prices'] ?? ['solo' => null, 'couple' => null, 'group' => null];
+      @endphp
+
+      @if ($trek)
+        <div class="col">
+          <div class="card h-100 border-secondary shadow-sm">
+            <img src="{{ asset('images/' . $trek->image) }}" alt="{{ $trek->name }}" class="img-fluid mb-3" style="max-height: 180px; object-fit: cover;">
+            <div class="card-body">
+              <h5>{{ $trek->name }}</h5>
+              <p><strong>Region:</strong> {{ $trek->region }}</p>
+              <p><strong>Difficulty:</strong> {{ $trek->difficulty }}</p>
+              <p><strong>Best Season:</strong> {{ $trek->best_season }}</p>
+
+              <hr>
+              <h6>Prices:</h6>
+              <ul>
+                <li>Solo: Rs. {{ $prices['solo'] ? number_format($prices['solo']) : 'N/A' }}</li>
+                <li>Couple: Rs. {{ $prices['couple'] ? number_format($prices['couple']) : 'N/A' }}</li>
+                <li>Group: Rs. {{ $prices['group'] ? number_format($prices['group']) : 'N/A' }}</li>
+              </ul>
+
+              <span class="badge bg-secondary">Suggested for You</span>
+            </div>
+          </div>
+        </div>
+      @endif
+    @endforeach
+  </div>
+@endif
+
+
     <div class="mt-4">
       <a href="{{ route('recommend.form') }}" class="btn btn-outline-primary">Back to Form</a>
     </div>
   </div>
+  </div>
 </body>
 </html>
-ani yo results jun recommend bhitra cha hae

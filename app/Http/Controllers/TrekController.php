@@ -4,130 +4,273 @@ namespace App\Http\Controllers;
 
 use App\Models\Trek;
 use App\Models\UserPreference;
+use App\Models\UserTrekView;
 use Illuminate\Http\Request;
 
 class TrekController extends Controller
 {
     public function showForm()
     {
-        $userPreferences = null;
-        if (auth()->check()) {
-            $userPreferences = UserPreference::where('user_id', auth()->id())->first();
-        }
+        // Check if user is premium
+        // if (!auth()->user()->is_premium) {
+        //     return redirect()->route('stripe')->with('error', 'Please pay to access recommendations.');
+        // }
+        $userPreferences = auth()->check()
+            ? UserPreference::where('users_id', auth()->id())->first()
+            : null;
+
         return view('recommend.form', compact('userPreferences'));
     }
 
     public function processForm(Request $request)
-{
-    // Step 0: Save user preferences
-    if (auth()->check()) {
-        UserPreference::updateOrCreate(
-            ['user_id' => auth()->id()],
-            [
-                'budget' => $request->price_max,
-                'available_days' => $request->duration_days,
-                'difficulty_pref' => $request->difficulty,
-                'interest_tags' => $request->region,
-                'season_pref' => $request->best_season,
-                'expectation_notes' => $request->expectation_notes ?? null,
-            ]
-        );
-    }
+    {
+        $validated = $request->validate([
+            'price_min' => 'required|numeric|min:1000',
+            'price_max' => 'required|numeric|gte:price_min',
+            'duration_days' => 'required|integer|min:1',
+            'group_size' => 'required|string',
+            'difficulty' => 'nullable|string',
+            'accommodation' => 'nullable|string',
+            'region' => 'nullable|string',
+            'best_season' => 'nullable|string',
+            'interest_tags' => 'nullable|string',  // Added this for interest tags validation
+            'experience_level' => 'nullable|string', // Added this for experience level validation
+        ]);
 
-    // Step 1: Perfect Match (Strict Query)
-    $strictQuery = Trek::query();
+        $experienceToDifficultyMap = [
+            'beginner' => ['easy'],
+            'moderate' => ['moderate'],
+            'advanced' => ['hard'],
+        ];
 
-    if ($request->filled('price_min') && $request->filled('price_max')) {
-        $strictQuery->whereBetween('price', [$request->price_min, $request->price_max]);
-    }
-    if ($request->filled('duration_days')) {
-        $strictQuery->where('duration_days', '<=', $request->duration_days);
-    }
-    if ($request->filled('best_season')) {
-        $strictQuery->whereRaw('LOWER(best_season) = ?', [strtolower($request->best_season)]);
-    }
-    if ($request->filled('difficulty')) {
-        $strictQuery->whereRaw('LOWER(difficulty) = ?', [strtolower($request->difficulty)]);
-    }
-    if ($request->filled('region')) {
-        $strictQuery->whereRaw('LOWER(region) = ?', [strtolower($request->region)]);
-    }
-    if ($request->filled('group_size')) {
-        $strictQuery->whereRaw('LOWER(group_size) = ?', [strtolower($request->group_size)]);
-    }
+        $userExpLevel = strtolower($validated['experience_level'] ?? '');
 
-    $perfectMatches = $strictQuery->get()->groupBy('name');
+        $expectedDifficulties = $experienceToDifficultyMap[$userExpLevel] ?? [];
 
-    // If perfect match found, return immediately
-    if ($perfectMatches->isNotEmpty()) {
+        if (auth()->check()) {
+            UserPreference::updateOrCreate(
+                ['users_id' => auth()->id()],
+                [
+                    'price_min' => $validated['price_min'],
+                    'price_max' => $validated['price_max'],
+                    'available_days' => $validated['duration_days'],
+                    'region' => $validated['region'] ?? null,
+                    'difficulty' => $validated['difficulty'] ?? null,
+                ]
+            );
+        }
+
+        $interestArray = array_map('trim', explode(',', strtolower($validated['interest_tags'] ?? '')));
+
+        // Perfect matches query
+        $perfectMatches = Trek::query()
+            ->whereBetween('price', [$validated['price_min'], $validated['price_max']])
+            ->where('duration_days', '<=', $validated['duration_days'])
+            ->whereRaw('LOWER(group_size) = ?', [strtolower($validated['group_size'])])
+            ->when($validated['difficulty'] || $userExpLevel, function ($q) use ($validated, $expectedDifficulties) {
+                if (!empty($validated['difficulty'])) {
+                    $q->whereRaw('LOWER(difficulty) = ?', [strtolower($validated['difficulty'])]);
+                } elseif (!empty($expectedDifficulties)) {
+                    $q->whereIn('difficulty', $expectedDifficulties);
+                }
+            })
+            ->when($validated['region'], fn($q) => $q->whereRaw('LOWER(region) = ?', [strtolower($validated['region'])]))
+            ->when($validated['accommodation'], fn($q) => $q->whereRaw('LOWER(accommodation) = ?', [strtolower($validated['accommodation'])]))
+            ->when($validated['best_season'], fn($q) => $q->whereRaw('LOWER(best_season) = ?', [strtolower($validated['best_season'])]))
+            ->get()
+            ->unique('name')
+            ->groupBy('name');
+
+        // Fallback matches with scoring
+        $fallbackTreks = Trek::query()
+            ->where('price', '<=', $validated['price_max'] + 5000)
+            ->where('duration_days', '<=', $validated['duration_days'] + 3)
+            ->get();
+
+        $scoredTreks = $fallbackTreks->map(function ($trek) use ($validated, $interestArray, $expectedDifficulties, $userExpLevel) {
+            $score = 0;
+            $notes = [];
+
+            if (!empty($validated['region']) && strtolower($trek->region) === strtolower($validated['region'])) {
+                $score += 2;
+                $notes[] = "Matches your preferred region.";
+            }
+
+            if (!empty($validated['difficulty']) || !empty($userExpLevel)) {
+                $matchesDifficulty = false;
+
+                if (!empty($validated['difficulty']) && strtolower($trek->difficulty) === strtolower($validated['difficulty'])) {
+                    $matchesDifficulty = true;
+                } elseif (!empty($expectedDifficulties) && in_array(strtolower($trek->difficulty), $expectedDifficulties)) {
+                    $matchesDifficulty = true;
+                }
+
+                if ($matchesDifficulty) {
+                    $score += 2;
+                    $notes[] = "Matches your selected difficulty or experience level.";
+                } else {
+                    $notes[] = "Selected difficulty/experience level does not match trek difficulty '{$trek->difficulty}'.";
+                }
+            }
+
+            if (!empty($validated['best_season']) && strtolower($trek->best_season) === strtolower($validated['best_season'])) {
+                $score += 1;
+                $notes[] = "Best during your selected season.";
+            }
+
+            if (!empty($validated['accommodation']) && strtolower($trek->accommodation) === strtolower($validated['accommodation'])) {
+                $score += 1;
+                $notes[] = "Matches your accommodation preference.";
+            }
+
+            if (strtolower($trek->group_size) === strtolower($validated['group_size'])) {
+                $score += 1;
+                $notes[] = "Fits your group size.";
+            }
+
+            if (!empty($interestArray)) {
+                $matchedCount = 0;
+
+                foreach ($interestArray as $interest) {
+                    if (
+                        stripos($trek->description ?? '', $interest) !== false ||
+                        stripos($trek->name ?? '', $interest) !== false
+                    ) {
+                        $matchedCount++;
+                    }
+                }
+
+                if ($matchedCount > 0) {
+                    $score += min(3, $matchedCount);
+                    $notes[] = "Related to your interests: " . implode(', ', $interestArray);
+                } else {
+                    $notes[] = "Your interests like " . implode(', ', $interestArray) . " may not match this trek.";
+                }
+            }
+
+            return [
+                'trek' => $trek,
+                'score' => $score,
+                'notes' => collect($notes)->unique()->values(),
+            ];
+        });
+
+        $groupedFallback = $scoredTreks
+            ->sortByDesc('score')
+            ->groupBy(fn ($item) => $item['trek']->name)
+            ->map(function ($items) {
+                $trek = $items->first()['trek'];
+                $prices = ['solo' => null, 'couple' => null, 'group' => null];
+
+                foreach ($items as $item) {
+                    $size = strtolower($item['trek']->group_size);
+                    if (in_array($size, ['solo', 'couple', 'group'])) {
+                        $prices[$size] = $item['trek']->price;
+                    }
+                }
+
+                return [
+                    'trek' => $trek,
+                    'prices' => $prices,
+                    'score' => $items->max('score'),
+                    'notes' => $items->flatMap(fn ($item) => $item['notes'])->unique()->values(),
+                ];
+            });
+
+        // "Because You Liked..." recommendations
+        $relatedTreksRaw = Trek::query()
+            ->where('visibility', 'public')
+            ->when($validated['region'], fn ($q) => $q->orWhere('region', $validated['region']))
+            ->when($validated['difficulty'], fn ($q) => $q->orWhere('difficulty', $validated['difficulty']))
+            ->where('price', '>=', $validated['price_min'] - 10000)
+            ->where('price', '<=', $validated['price_max'] + 10000)
+            ->whereNotIn('name', $perfectMatches->keys())
+            ->get();
+
+        $relatedTreks = $relatedTreksRaw
+            ->groupBy('name')
+            ->map(function ($items) {
+                $trek = $items->first();
+                $prices = ['solo' => null, 'couple' => null, 'group' => null];
+
+                foreach ($items as $item) {
+                    $size = strtolower($item->group_size);
+                    if (in_array($size, ['solo', 'couple', 'group'])) {
+                        $prices[$size] = $item->price;
+                    }
+                }
+
+                return [
+                    'trek' => $trek,
+                    'prices' => $prices,
+                ];
+            })
+            ->take(3);
+
         return view('recommend.results', [
             'recommendedTreks' => $perfectMatches,
-            'otherTreks' => collect(), // No need for fallback
+            'otherTreks' => $groupedFallback,
+            'relatedTreks' => $relatedTreks,
         ]);
     }
 
-    // Step 2: Fallback Logic (adjusted)
-$fallbackQuery = Trek::query();
+    /**
+     * Show single trek detail and track user views
+     */
+    public function show($id)
+    {
+        // Load trek with itineraries or 404
+        $trek = Trek::with('itineraries')->findOrFail($id);
 
-// Loosened price and duration
-if ($request->filled('price_max')) {
-    $fallbackQuery->where('price', '<=', $request->price_max + 5000);
-}
-if ($request->filled('duration_days')) {
-    $fallbackQuery->where('duration_days', '<=', $request->duration_days + 3);
-}
+        // Log info (put here after loading trek to avoid error)
+        \Log::info('Saving trek view', ['users_id' => auth()->id(), 'trek_id' => $trek->id]);
 
-$fallbackTreks = $fallbackQuery->get();
-
-// Score fallback results
-$scoredTreks = $fallbackTreks->map(function ($trek) use ($request) {
-    $score = 0;
-    if ($request->filled('region') && strtolower($trek->region) === strtolower($request->region)) $score += 2;
-    if ($request->filled('difficulty') && strtolower($trek->difficulty) === strtolower($request->difficulty)) $score += 2;
-    if ($request->filled('best_season') && strtolower($trek->best_season) === strtolower($request->best_season)) $score += 1;
-    if ($request->filled('accommodation') && strtolower($trek->accommodation) === strtolower($request->accommodation)) $score += 1;
-    if ($request->filled('group_size') && strtolower($trek->group_size) === strtolower($request->group_size)) $score += 1;
-
-    return ['trek' => $trek, 'score' => $score];
-});
-
-// Sort by score descending
-$sortedFallback = $scoredTreks->sortByDesc('score');
-
-// Group by trek name
-$grouped = $sortedFallback->groupBy(fn($item) => $item['trek']->name);
-
-// Aggregate prices per group_size inside each trek group
-$groupedFallback = $grouped->map(function ($items, $trekName) {
-    $firstTrek = $items->first()['trek'];
-
-    // Prepare prices container
-    $prices = [
-        'solo' => null,
-        'couple' => null,
-        'group' => null,
-    ];
-
-    foreach ($items as $item) {
-        $trek = $item['trek'];
-        $groupSize = strtolower($trek->group_size ?? '');
-        if (in_array($groupSize, ['solo', 'couple', 'group'])) {
-            $prices[$groupSize] = $trek->price;
+        // Track user view if logged in
+        if (auth()->check()) {
+            try {
+                UserTrekView::updateOrCreate(
+                    ['user_id' => auth()->id(), 'itinerary_id' => $id],
+                    ['viewed_at' => now()]
+                );
+            } catch (\Exception $e) {
+                \Log::error('Failed to save user trek view: ' . $e->getMessage());
+            }
         }
+
+        // Content-based recommendations based on recent views
+        $recommendations = collect();
+        if (auth()->check()) {
+            $recentViewedIds = UserTrekView::where('users_id', auth()->id())
+                ->orderByDesc('viewed_at')
+                ->limit(3)
+                ->pluck('itinerary_id');
+
+            $viewedTreks = Trek::whereIn('id', $recentViewedIds)->get();
+
+            $recommendations = Trek::whereNotIn('id', $recentViewedIds)
+                ->where(function ($query) use ($viewedTreks) {
+                    foreach ($viewedTreks as $vt) {
+                        $query->orWhere('region', $vt->region)
+                              ->orWhere('difficulty', $vt->difficulty);
+                    }
+                })
+                ->limit(5)
+                ->get();
+        }
+
+        // Preference-based recommendations
+        $preferenceRecommendations = collect();
+        if (auth()->check()) {
+            $pref = UserPreference::where('users_id', auth()->id())->first();
+            if ($pref) {
+                $preferenceRecommendations = Trek::where('price', '<=', $pref->price_max ?? 0)
+                    ->where('price', '>=', $pref->price_min ?? 0)
+                    ->where('duration_days', '<=', $pref->available_days ?? 0)
+                    ->limit(5)
+                    ->get();
+            }
+        }
+
+        return view('itinerary.show', compact('trek', 'recommendations', 'preferenceRecommendations'));
     }
-
-    return [
-        'trek' => $firstTrek,
-        'prices' => $prices,
-        'score' => $items->max('score'),
-    ];
-});
-
-return view('recommend.results', [
-    'recommendedTreks' => collect(), // no perfect match in fallback
-    'otherTreks' => $groupedFallback,
-]);
-
-}
-
 }

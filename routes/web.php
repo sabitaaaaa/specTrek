@@ -21,8 +21,14 @@ use App\Http\Controllers\KhaltiController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\AdminProfileController;
 
+// more changes (nishmi)
 
-// more changes
+Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
+Route::post('/recommend/results', [TrekController::class, 'processForm'])->name('recommend.results');
+
+ // till here
+
+// more changes (sabita)
 Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
 Route::post('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
 Route::get('/profile/edit', [AdminProfileController::class, 'index'])->name('profile.edit');

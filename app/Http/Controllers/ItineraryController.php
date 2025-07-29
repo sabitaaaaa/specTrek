@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Itinerary;
 use Illuminate\Http\Request;
 
+
+
+
 class ItineraryController extends Controller
 {
     // List all itineraries
@@ -119,6 +122,26 @@ class ItineraryController extends Controller
         $itinerary = Itinerary::findOrFail($id);
         return view('itinerary.show', compact('itinerary'));
     }
+//ayushma koooo hoo
+//nishmi ko changes
+        // Show itinerary detail page with recommendations
+        // public function show(string $slug)
+        // {
+        //     $itinerary = Itinerary::where('slug', $slug)->firstOrFail();
+
+        //     $recommendations = collect();
+        //     $preferenceRecommendations = collect();
+
+        //     if (auth()->check()) {
+        //        RecommendationService::trackUserView(auth()->id(), $itinerary->id);
+        //         $recommendations = RecommendationService::getRecommendationsForUser(auth()->id());
+        //         $preferenceRecommendations = RecommendationService::getPreferenceRecommendationsForUser(auth()->id());
+        //     }
+
+        //     return view('itinerary.show', compact('itinerary', 'recommendations', 'preferenceRecommendations'));
+        // }
+
+        // till hereee
 
     // Delete an itinerary
     public function destroy($id)

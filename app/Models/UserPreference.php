@@ -6,23 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserPreference extends Model
 {
-    protected $fillable = [
-    'user_id',
-    'budget',
+   protected $fillable = [
+    'users_id',
     'available_days',
-    'difficulty_pref',
-    'interest_tags',
-    'season_pref',
-    'expectation_notes',
+    'region',
+    'difficulty',
+    'experience_level',
+    'price_min',
+    'price_max',
+
 ];
+
+
 public function user()
 {
     return $this->belongsTo(User::class);
 }
+
 }
-
-
-
-
-
-
