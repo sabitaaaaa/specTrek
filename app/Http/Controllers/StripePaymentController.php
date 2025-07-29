@@ -8,10 +8,11 @@ use Stripe\Checkout\Session;
 class StripePaymentController extends Controller
 {
 
+
 public function stripe()
 {
     if (!auth()->check()) {
-        //dd
+
         ('NOT LOGGED IN');
     }
 
