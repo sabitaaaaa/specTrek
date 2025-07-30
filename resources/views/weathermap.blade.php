@@ -1,63 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Weather Suitability Map - Trekking Places</title>
+    <title>Weather Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
     <style>
-        #map { height: 600px; }
-        .marker-green { background-color: green; width: 15px; height: 15px; border-radius: 50%; }
-        .marker-red { background-color: red; width: 15px; height: 15px; border-radius: 50%; }
+        #map {
+            height: 90vh;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
+    <h2 style="text-align: center; margin: 10px;">Trek Suitability Weather Map</h2>
+    <div id="map"></div>
 
-<h1>Weather Suitability for Trekking Places</h1>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<div id="map"></div>
+    <script>
+        // Initialize the map centered on Nepal
+        const map = L.map('map').setView([28.2, 84.0], 7);
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+        }).addTo(map);
 
-<script>
-    const map = L.map('map').setView([27.8, 84.5], 7);
+        // Define icons
+        const greenIcon = L.icon({
+            iconUrl: '/images/green-marker.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+        });
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 13,
-    }).addTo(map);
+        const redIcon = L.icon({
+            iconUrl: '/images/red-marker.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+        });
 
-    // Fetch weather data from Laravel API
-    axios.get('{{ route("weather.places") }}')
-        .then(response => {
-            const places = response.data;
+        // Fetch weather data
+        async function loadWeatherData() {
+            const response = await fetch('/api/weather'); // adjust the URL if different
+            const data = await response.json();
 
-            places.forEach(place => {
-                const markerColor = place.suitable ? 'green' : 'red';
+            data.forEach(place => {
+                console.log(place.place, 'Suitable:', place.suitable);
 
-                const marker = L.circleMarker([place.lat, place.lon], {
-                    radius: 10,
-                    fillColor: markerColor,
-                    color: markerColor,
-                    weight: 1,
-                    opacity: 1,
-                    fillOpacity: 0.7
-                }).addTo(map);
+                L.marker([place.lat, place.lon], {
+                    icon: place.suitable ? greenIcon : redIcon
+                })
+                .addTo(map)
+                .bindPopup(`
+                    <strong>${place.place}</strong><br>
+                    Temp: ${place.temp ?? 'N/A'}°C<br>
 
-                marker.bindPopup(`
-                    <b>${place.place}</b><br/>
-                    Temp: ${place.temp ?? 'N/A'} °C<br/>
-                    
-                    Suitable: ${place.suitable ? 'Yes' : 'No'}
+                    <span style="color: ${place.suitable ? 'green' : 'red'};">
+                        ${place.suitable ? 'Suitable for Trek' : 'Not Suitable'}
+                    </span>
                 `);
             });
-        })
-        .catch(error => {
-            alert('Error fetching weather data.');
-            console.error(error);
-        });
-</script>
+        }
 
+        loadWeatherData();
+    </script>
 </body>
 </html>

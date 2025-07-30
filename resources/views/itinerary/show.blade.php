@@ -73,6 +73,8 @@
 
                 <strong>MORE INFORMATIONS</strong><br><br>
                 {!! $itinerary->transport_table !!}
+
+                <br><br><br>
                 <p><strong>Note:</strong> {{ strip_tags($itinerary->note) }}</p>
 
                 <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
@@ -126,15 +128,10 @@
 
     </div>
   </div>
+
 </main>
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">&#8679;</button>
 
-<footer class="footer">
-  <div class="footer-container">
-    <p>&copy; All rights reserved.</p>
-    <p>Developed by SpecTrek Team</p>
-  </div>
-</footer>
 <script>
     const scrollBtn = document.getElementById("scrollTopBtn");
 
@@ -192,6 +189,11 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
+<footer class="footer">
+    <div class="footer-container">
+      <p>&copy; All rights reserved.</p>
+      <p>Developed by SpecTrek Team</p>
+    </div>
+  </footer>
 @endsection
-
 

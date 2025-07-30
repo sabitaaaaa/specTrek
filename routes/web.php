@@ -22,6 +22,8 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\AdminProfileController;
 
 // more changes (nishmi)
+Route::get('/map', [WeatherController::class, 'showMap']);
+Route::get('/api/weather', [WeatherController::class, 'fetchAllWeatherData']);
 
 Route::get('/recommend', [TrekController::class, 'showForm'])->name('recommend.form');
 Route::post('/recommend/results', [TrekController::class, 'processForm'])->name('recommend.results');

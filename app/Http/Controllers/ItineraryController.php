@@ -34,6 +34,8 @@ class ItineraryController extends Controller
             'image2' => 'nullable|image',
             'image3' => 'nullable|image',
             'image4' => 'nullable|image',
+            'latitude' => 'required|numeric',
+            'longitude' => 'required|numeric',
         ]);
 
         $itinerary = new Itinerary();
@@ -51,6 +53,11 @@ class ItineraryController extends Controller
         $itinerary->day_to_day_itinerary = $request->input('day_to_day_itinerary');
         $itinerary->hidden_traditions = $request->input('hidden_traditions');
         $itinerary->is_featured = $request->has('is_featured');//for highlights
+
+        // Update new location fields
+        $itinerary->place_name = $request->input('place_name');
+        $itinerary->latitude = floatval(strip_tags($request->input('latitude')));
+        $itinerary->longitude = floatval(strip_tags($request->input('longitude')));
 
 
         // Handle image uploads if any

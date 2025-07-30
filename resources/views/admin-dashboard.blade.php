@@ -1,5 +1,3 @@
-@extends('layouts.design')
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,8 +106,8 @@
             <a href="{{ url('/admin-dashboard') }}" class="{{ request()->is('admin-dashboard') ? 'active' : '' }}">
                 <i class="bi bi-speedometer2 me-2"></i> Dashboard
             </a>
-            <a href="{{ route('user.index') }}" class="{{ request()->is('user*') ? 'active' : '' }}">
-                <i class="bi bi-people me-2"></i> User
+            <a href="{{ route('user.index') }}" class="{{ request()->is('users*') ? 'active' : '' }}">
+                <i class="bi bi-people me-2"></i> Users
             </a>
             <!-- <a href="{{ url('/admin/packageAdmin') }}" class="{{ request()->is('admin/packageAdmin') ? 'active' : '' }}">
     <i class="bi bi-box-seam me-2"></i> Packages
@@ -133,16 +131,11 @@
                 <h1>Admin Dashboard</h1>
             </header>
 
-            {{-- <section class="content">
-                <div class="card">Total User: {{ $userCount }}</div>
-
-            </section> --}}
-
             <section class="content">
-                <div style="background-color: #f5f5f5; border: 3px solid #ccc; padding: 20px 20px; width: fit-content; font-size: 14px; border-radius: 8px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
-                    Total Users: {{ $userCount }}
-                </div>
+                <div class="card">Total Users: {{ $userCount }}</div>
+                <div class="card1"> Total Places</div>
             </section>
+
 
 
             <section class="content">
@@ -186,12 +179,12 @@
             }
         });
 
-        // Pie Chart (Only User)
+        // Pie Chart (Only Users)
         const overviewCtx = document.getElementById('overviewChart').getContext('2d');
         new Chart(overviewCtx, {
             type: 'pie',
             data: {
-                labels: ['Total User'],
+                labels: ['Total Users'],
                 datasets: [{
                     data: [{{ $userCount }}],
                     backgroundColor: ['#03A9F4'],

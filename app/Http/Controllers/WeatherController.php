@@ -54,7 +54,6 @@ class WeatherController extends Controller
                     'lat' => $coords['lat'],
                     'lon' => $coords['lon'],
                     'temp' => $temp,
-                    'weatherId' => $weatherId,
                     'suitable' => $suitable,
                 ];
             } else {
@@ -63,7 +62,6 @@ class WeatherController extends Controller
                     'lat' => $coords['lat'],
                     'lon' => $coords['lon'],
                     'temp' => null,
-                    'weatherId' => null,
                     'suitable' => false,
                 ];
             }

@@ -19,8 +19,8 @@
             <ul class="nav-links">
                 <button id="emergency-btn">Emergency</button>
                 <li><a href="{{ url('/posts') }}" class="naa">Post</a></li>
-                <li class="naa"><a href="{{ route('recommend.form') }}" id="trek-recommendation-link">Trek Recommendation</a></li>
-
+                <li><a href="{{ url('/weathermap') }}" class="naa">Map</a></li>
+                <li class="naa"><a href="{{ route('recommend.form') }}" id="trek-recommendation-link">Filtering</a></li>
                 <script>
                     document.getElementById('trek-recommendation-link').addEventListener('click', function(e) {
                         e.preventDefault();
@@ -38,7 +38,7 @@
                     });
                 </script>
 
-                                  @auth
+                @auth
                 <div x-data="{ open: false }" class="mt-1 ms-2">
                     <form method="POST" action="{{ route('logout') }}" @submit="open = false">
                         @csrf
@@ -234,11 +234,9 @@
       <ul>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Places</a></li>
-        <li><a href="#">Explore</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Careers</a></li>
         <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Services</a></li>
         <li><a href="#">Press Center</a></li>
       </ul>
     </div>
@@ -263,11 +261,6 @@
         <a href="https://www.instagram.com/spectrek29/"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-google-plus-g"></i></a>
       </div>
-
-      <h4>Secure Payments By</h4>
-      <div class="payment-icons">
-        <img src="{{ asset('images/stripe.png') }}" alt="Stripe" style="height: 30px;">
-        <img src="{{ asset('images/khalti.png') }}" alt="Khalti" style="height: 30px;">
 
       </div>
     </div>

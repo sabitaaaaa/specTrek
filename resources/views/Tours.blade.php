@@ -121,7 +121,7 @@
 
         <div class="col" data-price="65000">
           <div class="card h-100">
-           <img src="{{ asset('images/Annapurna.jpeg') }}" alt="SpecTrek" style="height: 115px;">
+           <img src="{{ asset('images/abc1.jpg') }}" alt="SpecTrek" style="height: 115px;">
             <div class="card-body">
               <h5 class="card-title">Annapurna Base Camp</h5>
               <p class="card-text">Starts at NPR 65000p</p>
@@ -151,7 +151,7 @@
 
         <div class="col" data-price="25000">
           <div class="card h-100">
-            <img src="{{ asset('images/Amayangri.jpeg') }}" alt="SpecTrek" style="height: 115px;">
+            <img src="{{ asset('images/a1.jpg') }}" alt="SpecTrek" style="height: 115px;">
             <div class="card-body">
               <h5 class="card-title">Amayangri</h5>
               <p class="card-text">Starts at NPR 25000</p>
