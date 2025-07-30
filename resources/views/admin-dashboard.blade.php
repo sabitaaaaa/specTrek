@@ -1,3 +1,5 @@
+@extends('layouts.design')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -131,11 +133,16 @@
                 <h1>Admin Dashboard</h1>
             </header>
 
-            <section class="content">
+            {{-- <section class="content">
                 <div class="card">Total User: {{ $userCount }}</div>
-                <div class="card1"> Total Places</div>
-            </section>
 
+            </section> --}}
+
+            <section class="content">
+                <div style="background-color: #f5f5f5; border: 3px solid #ccc; padding: 20px 20px; width: fit-content; font-size: 14px; border-radius: 8px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+                    Total Users: {{ $userCount }}
+                </div>
+            </section>
 
 
             <section class="content">

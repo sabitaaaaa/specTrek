@@ -122,26 +122,42 @@ class ItineraryController extends Controller
         $itinerary = Itinerary::findOrFail($id);
         return view('itinerary.show', compact('itinerary'));
     }
-//ayushma koooo hoo
-//nishmi ko changes
-        // Show itinerary detail page with recommendations
-        // public function show(string $slug)
-        // {
-        //     $itinerary = Itinerary::where('slug', $slug)->firstOrFail();
+//ayushma koooo hoo mathi ko
+// //nishmi ko changes tala ko
+// public function show($id)
+// {
+//     // Get the itinerary details
+//     $itinerary = Itinerary::findOrFail($id);
 
-        //     $recommendations = collect();
-        //     $preferenceRecommendations = collect();
+//     $lastViewed = null;
 
-        //     if (auth()->check()) {
-        //        RecommendationService::trackUserView(auth()->id(), $itinerary->id);
-        //         $recommendations = RecommendationService::getRecommendationsForUser(auth()->id());
-        //         $preferenceRecommendations = RecommendationService::getPreferenceRecommendationsForUser(auth()->id());
-        //     }
+//     if (Auth::check()) {
+//         $view = UserItineraryView::where('user_id', Auth::id())
+//             ->where('itinerary_id', $itinerary->id)
+//             ->first();
 
-        //     return view('itinerary.show', compact('itinerary', 'recommendations', 'preferenceRecommendations'));
-        // }
+//         if ($view && $view->last_viewed_at) {
+//             $lastViewed = $view->last_viewed_at;
+//         }
+//     }
 
-        // till hereee
+//     // Track or update the view timestamp
+//     if (Auth::check()) {
+//         UserItineraryView::updateOrCreate(
+//             [
+//                 'user_id' => Auth::id(),
+//                 'itinerary_id' => $itinerary->id,
+//             ],
+//             [
+//                 'last_viewed_at' => Carbon::now(),
+//             ]
+//         );
+//     }
+
+//     // Pass data to the view
+//     return view('itinerary.show', compact('itinerary', 'lastViewed'));
+// }
+//         // till hereee
 
     // Delete an itinerary
     public function destroy($id)

@@ -19,7 +19,7 @@
             <ul class="nav-links">
                 <button id="emergency-btn">Emergency</button>
                 <li><a href="{{ url('/posts') }}" class="naa">Post</a></li>
-                <li><a href="{{ route('recommend.form') }}" id="trek-recommendation-link">Trek Recommendation</a></li>
+                <li class="naa"><a href="{{ route('recommend.form') }}" id="trek-recommendation-link">Trek Recommendation</a></li>
 
                 <script>
                     document.getElementById('trek-recommendation-link').addEventListener('click', function(e) {

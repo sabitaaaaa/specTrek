@@ -51,74 +51,79 @@
 
   <div id="itinerary-wrapper" class="itinerary-wrapper">
     <div class="row itinerary-section">
-    @php
-  $decodedDayText = html_entity_decode(strip_tags($itinerary->day_to_day_itinerary));
-  $cleanDayText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $decodedDayText);
-@endphp
-
-
-      <div class="col-lg-6 day-itinerary">
-        <h2>Day-to-Day Itinerary</h2>
-        <ul>
-          @foreach(explode("\n", $cleanDayText) as $line)
-            @if(trim($line) !== '')
-              <li>{{ trim($line) }}</li>
-            @endif
-          @endforeach
-        </ul>
-      </div>
-
-      <div class="col-lg-6 detailed-itinerary-box">
-        <h2>Detailed Itinerary</h2>
-
         @php
+          $decodedDayText = html_entity_decode(strip_tags($itinerary->day_to_day_itinerary));
+          $cleanDayText = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $decodedDayText);
+
           $cleanDetailed = strip_tags($itinerary->detailed_itinerary);
           $cleanDetailed = preg_replace('/(?<!\s)(Day \d+:)/', "\n$1", $cleanDetailed);
         @endphp
 
         @if(auth()->check() && auth()->user()->is_premium)
-          <!--  Premium user: show all content -->
-          <div id="detailed-itinerary" class="fade-box expanded">
-            {!! nl2br(e($cleanDetailed)) !!}
-            <div class="fade-content">
-              <strong>MORE INFORMATIONS</strong><br><br>
-              {!! $itinerary->transport_table !!}
-              <p><strong>Note:</strong> {{ strip_tags($itinerary->note) }}</p>
+          <!-- PREMIUM: Full-width Detailed Itinerary -->
+          <div class="col-lg-12 detailed-itinerary-box">
+            <h2>Detailed Itinerary</h2>
+            <div id="detailed-itinerary" class="fade-box expanded">
+              {!! nl2br(e($cleanDetailed)) !!}
+              <div class="fade-content">
 
-              <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
-                <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
-                <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
-                  @foreach(json_decode($itinerary->hidden_traditions, true) ?? [] as $fact)
-                    <li>{{ strip_tags($fact) }}</li>
-                  @endforeach
-                </ul>
+                <br>
+                <br>
+                <br>
+
+                <strong>MORE INFORMATIONS</strong><br><br>
+                {!! $itinerary->transport_table !!}
+                <p><strong>Note:</strong> {{ strip_tags($itinerary->note) }}</p>
+
+                <div class="hidden-culture" style="margin-top: 3rem; padding: 2rem; background-color: #fef6f0; border-radius: 10px;">
+                  <h2 style="color: #2c3e50; text-align: center; margin-bottom: 1rem;">Hidden Traditions & Interesting Facts</h2>
+                  <ul style="font-size: 18px; line-height: 1.8; padding-left: 1.5rem;">
+                    @foreach(json_decode($itinerary->hidden_traditions, true) ?? [] as $fact)
+                      <li>{{ strip_tags($fact) }}</li>
+                    @endforeach
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-
         @else
-          <!--  Non-premium user: show locked version -->
-          <div id="detailed-itinerary" class="fade-box">
-            {!! nl2br(e($cleanDetailed)) !!}
-            <div class="fade-overlay"></div>
+          <!-- NON-PREMIUM: 2-Column Layout -->
+          <div class="col-lg-6 day-itinerary">
+            <h2>Day-to-Day Itinerary</h2>
+            <ul>
+              @foreach(explode("\n", $cleanDayText) as $line)
+                @if(trim($line) !== '')
+                  <li>{{ trim($line) }}</li>
+                @endif
+              @endforeach
+            </ul>
           </div>
 
-          <button id="see-more-btn" class="see-more-button">See More</button>
+          <div class="col-lg-6 detailed-itinerary-box">
+            <h2>Detailed Itinerary</h2>
+            <div id="detailed-itinerary" class="fade-box">
+              {!! nl2br(e($cleanDetailed)) !!}
+              <div class="fade-overlay"></div>
+            </div>
 
-          <script>
-            document.getElementById("see-more-btn").addEventListener("click", function () {
-              const isLoggedIn = @json(Auth::check());
-              const trekSlug = "{{ $itinerary->slug }}";
+            <button id="see-more-btn" class="see-more-button">See More</button>
 
-              if (!isLoggedIn) {
-                window.location.href = "/login?redirect=/itinerary/" + trekSlug;
-              } else {
-                window.location.href = "/" + trekSlug + "/payment";
-              }
-            });
-          </script>
+            <script>
+              document.getElementById("see-more-btn").addEventListener("click", function () {
+                const isLoggedIn = @json(Auth::check());
+                const trekSlug = "{{ $itinerary->slug }}";
+
+                if (!isLoggedIn) {
+                  window.location.href = "/login?redirect=/itinerary/" + trekSlug;
+                } else {
+                  window.location.href = "/" + trekSlug + "/payment";
+                }
+              });
+            </script>
+          </div>
         @endif
       </div>
+
     </div>
   </div>
 </main>
@@ -188,3 +193,5 @@
   }
 </script>
 @endsection
+
+

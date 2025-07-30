@@ -120,7 +120,7 @@
       </div>
     @endif
 
-    {{-- ✅ Related Treks Section --}}
+    {{-- Related Treks Section --}}
     @if(isset($relatedTreks) && $relatedTreks->isNotEmpty())
   <h3 class="mt-5"><span class="badge bg-secondary">Because You Liked...</span></h3>
   <div class="row row-cols-1 row-cols-md-3 g-4">

@@ -5,7 +5,7 @@
   <title>SpecTrek Navbar</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
-  
+
 
 </head>
 <style>
@@ -23,7 +23,7 @@
       margin: 0 auto;
       /* font-size: 14px; */
     }
-  
+
   </style>
 <body>
 
@@ -81,7 +81,7 @@
                   <span>90K</span>
     </div>
     <p class="mt-2">Selected Price: <span id="valueDisplay">5000</span></p>
-    
+
 </form>
     </div>
 </div>
@@ -114,11 +114,11 @@
 
 </script>
 </div>
-    
+
     <div class="col-md-9">
       <div class="row row-cols-1 row-cols-md-3 g-4">
 
-      
+
         <div class="col" data-price="65000">
           <div class="card h-100">
            <img src="{{ asset('images/Annapurna.jpeg') }}" alt="SpecTrek" style="height: 115px;">
@@ -128,7 +128,7 @@
             </div>
           </div>
         </div>
-    
+
         <div class="col" data-price="65000">
           <div class="card h-100">
             <img src="{{ asset('images/SheyPhoksundo.jpeg') }}" alt="SpecTrek" style="height: 115px;">

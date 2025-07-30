@@ -66,7 +66,7 @@
             @enderror
         </div>
 
-        <!-- 🔽 ADDED: Trekking Experience -->
+        <!-- ADDED: Trekking Experience -->
         <!-- <div class="mb-3">
             <label for="experience_level" class="form-label">Your Trekking Experience</label>
             <select name="experience_level" id="experience_level" class="form-select">
@@ -81,7 +81,7 @@
             @enderror
         </div> -->
 
-        <!-- 🔽 ADDED: Interest Tags -->
+        <!-- ADDED: Interest Tags -->
         <!-- <div class="mb-3">
             <label for="interest_tags" class="form-label">Your Interests</label>
             <input

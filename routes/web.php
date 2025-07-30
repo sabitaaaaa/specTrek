@@ -210,5 +210,3 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tours', [TrekController::class, 'showTours']);
 
 });
-
-

@@ -238,26 +238,29 @@ class TrekController extends Controller
         }
 
         // Content-based recommendations based on recent views
-        $recommendations = collect();
-        if (auth()->check()) {
-            $recentViewedIds = UserTrekView::where('users_id', auth()->id())
-                ->orderByDesc('viewed_at')
-                ->limit(3)
-                ->pluck('itinerary_id');
+// Content-based recommendations based on recent views
+$recommendations = collect();
+if (auth()->check()) {
+    $recentViewedIds = UserTrekView::where('user_id', auth()->id())  // fixed 'user_id' key name for consistency
+        ->orderByDesc('viewed_at')
+        ->limit(3)
+        ->pluck('itinerary_id');
 
-            $viewedTreks = Trek::whereIn('id', $recentViewedIds)->get();
+    if ($recentViewedIds->isNotEmpty()) {
+        $viewedTreks = Trek::whereIn('id', $recentViewedIds)->get();
 
-            $recommendations = Trek::whereNotIn('id', $recentViewedIds)
-                ->where(function ($query) use ($viewedTreks) {
-                    foreach ($viewedTreks as $vt) {
-                        $query->orWhere('region', $vt->region)
-                              ->orWhere('difficulty', $vt->difficulty);
-                    }
-                })
-                ->limit(5)
-                ->get();
-        }
-
+        $recommendations = Trek::whereNotIn('id', $recentViewedIds)
+            ->where(function ($query) use ($viewedTreks) {
+                foreach ($viewedTreks as $vt) {
+                    $query->orWhere('region', $vt->region)
+                          ->orWhere('difficulty', $vt->difficulty);
+                }
+            })
+            ->limit(5)
+            ->get();
+    }
+    // else: $recommendations remains empty collection
+}
         // Preference-based recommendations
         $preferenceRecommendations = collect();
         if (auth()->check()) {
