@@ -80,6 +80,7 @@
         valid = false;
       }
 
+      //  Simple check: just ensure password is not empty (or you can set min length like 6)
       if (password.length < 6) {
         passwordError.textContent = 'Password must be at least 6 characters long';
         valid = false;
@@ -92,7 +93,3 @@
   </script>
 </body>
 </html>
-<<<<<<< HEAD
-=======
-</html>
->>>>>>> origin/merged-nishmi

@@ -293,7 +293,7 @@
 <div id="reviewModal" class="modern-modal" style="display: none;">
   <div class="modern-modal-content">
     <span class="modern-close" onclick="toggleReviewModal(false)">&times;</span>
-    <h3 class="modal-heading">We value your feedback 💬</h3>
+    <h3 class="modal-heading">We value your feedback </h3>
     <form method="POST" action="{{ route('reviews.store') }}">
       @csrf
       <input type="text" name="name" placeholder="Your Name" required>

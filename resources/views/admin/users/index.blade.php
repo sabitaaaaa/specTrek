@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @extends('layouts.design')
-=======
-@extends('layout')
->>>>>>> origin/merged-nishmi
 
 @section('content')
 <div class="container-fluid px-4">
@@ -33,30 +29,18 @@
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $user->name }}</td>
                             <td class="text-center">
-<<<<<<< HEAD
                                 <a href="{{ route('users.edit', $user->id) }}" title="Edit" class="btn btn-sm btn-outline-warning me-1">
                                     <i class="bi bi-pencil"></i>
                                 </a>
                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
                                     @csrf
-                                    @method('DELETE') 
+                                    @method('DELETE')
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
                                         <i class="bi bi-trash3"></i>
                                     </button>
-                                    
+
                                 </form>
-=======
-                                <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-warning">Edit</a>
-
-                                <!--Delete form: No confirmation -->  
-                                <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
-    @csrf
-    @method('DELETE')
-    <button class="btn btn-sm btn-danger">Delete</button>
-</form>
-
->>>>>>> origin/merged-nishmi
                             </td>
                         </tr>
                     @empty

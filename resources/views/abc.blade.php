@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Annapurna Base Camp</title>
   <link rel="icon" href="{{ asset('images/logo.png') }}">
-<<<<<<< HEAD
 
   <style>
     * {
@@ -348,9 +347,6 @@
     }
   </style>
   <link rel="stylesheet" href="{{ asset('css/dynamic.css') }}">
-=======
-  <link rel="stylesheet" href="{{ asset('css/abc.css') }}">
->>>>>>> origin/merged-nishmi
 </head>
 <body>
 
@@ -563,7 +559,7 @@
 
 =======
 <<<<<<< HEAD
-    
+
 =======
 
 >>>>>>> origin/merged-anushree

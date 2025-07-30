@@ -147,7 +147,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\UserControllers;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\DashboardController;
+// use App\Http\Controllers\DashboardController;
 // use App\Http\Controllers\TrekController;
 // use App\Http\Controllers\WeatherController;
 // use App\Http\Controllers\RecommendationController;
@@ -292,8 +292,7 @@ Route::post('/logout', function () {
 
 Route::middleware(['auth'])->group(function () {
 
-    // User Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
+
 
     // Admin Dashboard - by checking email (sabita23@gmail.com)
     Route::get('/admin-dashboard', function () {
@@ -399,8 +398,7 @@ Route::get('/api/treks-by-price', [TrekController::class, 'filterByPrice']);
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 // Authenticated Routes
 Route::middleware(['auth'])->group(function () {
-    // Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
+
 
 // for review =================
 
@@ -500,3 +498,5 @@ Route::middleware(['auth', 'premium'])->group(function () {
     Route::post('/recommend', [TrekController::class, 'processForm'])->name('recommend.process');
 });
 Route::get('/admin/users/create', [UserController::class, 'create'])->name('users.create');
+//API
+Route::get('/weather', [WeatherController::class, 'getWeatherByCoordinates']);

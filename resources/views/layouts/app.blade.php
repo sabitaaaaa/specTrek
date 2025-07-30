@@ -103,6 +103,11 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
     </style>
+    <!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
 </head>
 <body>
     <nav class="navbar">
@@ -122,5 +127,12 @@
     <div class="container">
         @yield('content')
     </div>
+    <!-- Leaflet JS -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<!-- This line lets your page add map code -->
+@stack('scripts')
 </body>
 </html>
